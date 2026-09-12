@@ -23,6 +23,12 @@ export const DEMO_ACCOUNTS: DemoAccount[] = [
   { username: "faculty-demo", role: "faculty", displayName: "Faculty Member" },
   { username: "et-demo", role: "et", displayName: "Engineering & Technical" },
   { username: "admin-demo", role: "admin", displayName: "Administrator" },
+  // Mid-onboarding accounts, seeded in data/store.ts so the onboarding and
+  // approval screens are reachable without signing up first.
+  { username: "faculty-new", role: "faculty", displayName: "Faculty — onboarding not started" },
+  { username: "hod-new", role: "hod", displayName: "HoD — onboarding not started" },
+  { username: "faculty-pending", role: "faculty", displayName: "Faculty — awaiting approval" },
+  { username: "hod-pending", role: "hod", displayName: "HoD — awaiting approval" },
 ];
 
 export const SESSION_COOKIE = "session";

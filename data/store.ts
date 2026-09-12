@@ -39,8 +39,90 @@ const seedUsers = (): UserAccount[] => [
   { id: "u-admin", username: "admin-demo", password: "demo123", role: "admin", displayName: "Administrator", status: "active", createdAt: "2026-01-01T00:00:00.000Z" },
 ];
 
-export const users: UserAccount[] = globalSingleton("users", seedUsers);
-export const changeRequests: ChangeRequest[] = globalSingleton("changeRequests", () => []);
+/**
+ * Accounts that sit mid-onboarding so those screens stay demonstrable.
+ *
+ * Self-service signups only live in this process (see the note above), so a
+ * restart, redeploy or a second instance wipes them out. Without these the
+ * "onboarding_incomplete" and "pending_approval" screens — and the Admin
+ * approvals queue — could only be reached by signing up and then never
+ * letting the server restart. Seeding them keeps the demo reproducible from
+ * a cold start. Same password as the rest: demo123.
+ */
+const seedOnboardingUsers = (): UserAccount[] => [
+  { id: "u-seed-faculty-new", username: "faculty-new", password: "demo123", role: "faculty", displayName: "Aarti Verma", deptId: "cse", status: "onboarding_incomplete", createdAt: "2026-01-01T00:00:00.000Z" },
+  { id: "u-seed-hod-new", username: "hod-new", password: "demo123", role: "hod", displayName: "Sanjay Mishra", deptId: "it", status: "onboarding_incomplete", createdAt: "2026-01-01T00:00:00.000Z" },
+  { id: "u-seed-faculty-pending", username: "faculty-pending", password: "demo123", role: "faculty", displayName: "Rohit Yadav", deptId: "cse", status: "pending_approval", createdAt: "2026-01-01T00:00:00.000Z" },
+  { id: "u-seed-hod-pending", username: "hod-pending", password: "demo123", role: "hod", displayName: "Neha Gupta", deptId: "ece", status: "pending_approval", createdAt: "2026-01-01T00:00:00.000Z" },
+];
+
+/**
+ * Typed exactly as applyChangeRequest below casts it, so a drift between this
+ * seed and the Faculty edit shapes is a compile error rather than a crash at
+ * approval time.
+ */
+const seedFacultyOnboardingPayload: {
+  profile: FacultyProfileEdit;
+  research: FacultyResearchEdit;
+  projects: FacultyProjectEdit[];
+} = {
+  profile: {
+    name: "Rohit Yadav",
+    designation: "Assistant Professor",
+    appointmentType: "Contractual",
+    dateOfJoining: "2025-08-01",
+    hasPhd: false,
+    programmesAppointedFor: "B.Tech CSE",
+    teachingLoadHrsPerWeek: 16,
+    additionalResponsibility: "NA",
+  },
+  research: {
+    journalPublications: { sciScieSsci: 1, scopusUgcCare: 2, other: 0 },
+    conferencePublications: { international: 1, national: 2 },
+    hIndex: 2,
+    i10Index: 1,
+    googleScholarOrcidLink: "",
+    patents: { filed: 0, published: 0, granted: 0 },
+    phdSupervision: { registered: 0, awarded: 0 },
+  },
+  projects: [],
+};
+
+/** The submissions the two "pending_approval" accounts above are waiting on. */
+const seedChangeRequests = (): ChangeRequest[] => [
+  {
+    id: "cr-seed-1",
+    type: "onboarding",
+    targetEntity: "Faculty",
+    targetId: null,
+    submittedByUserId: "u-seed-faculty-pending",
+    submittedByRole: "faculty",
+    deptId: "cse",
+    status: "pending",
+    submittedAt: "2026-01-02T09:00:00.000Z",
+    payload: seedFacultyOnboardingPayload,
+  },
+  {
+    id: "cr-seed-2",
+    type: "onboarding",
+    targetEntity: "HoD",
+    targetId: null,
+    submittedByUserId: "u-seed-hod-pending",
+    submittedByRole: "hod",
+    deptId: "ece",
+    status: "pending",
+    submittedAt: "2026-01-02T10:30:00.000Z",
+    payload: { name: "Neha Gupta", mobileContact: "9450011223" },
+  },
+];
+
+export const users: UserAccount[] = globalSingleton("users", () => [
+  ...seedUsers(),
+  ...seedOnboardingUsers(),
+]);
+export const changeRequests: ChangeRequest[] = globalSingleton("changeRequests", seedChangeRequests);
+// Generated ids are "u-signup-<n>"/"cr-<n>"; the seeds above use "u-seed-*"/
+// "cr-seed-*" prefixes, so these counters cannot collide with them.
 const seq = globalSingleton("idSeq", () => ({ user: 1, cr: 1 }));
 
 /* --------------------------------------------------------------------- users */
