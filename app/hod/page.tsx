@@ -9,7 +9,7 @@ export default function HodDashboard() {
   return (
     <div>
       <PageHeading
-        crumbs={[{ label: "Roles", href: "/" }, { label: `Head of Department · ${dept.shortName}` }]}
+        crumbs={[{ label: `Head of Department · ${dept.shortName}` }]}
         title={dept.name}
         subtitle={`Signed in as ${dept.hodName}. You see this department only.`}
         meta={submission ? <StatusBadge status={submission.status} /> : null}

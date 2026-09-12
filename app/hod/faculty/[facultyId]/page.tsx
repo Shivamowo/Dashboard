@@ -14,7 +14,6 @@ export default function HodFacultyProfile({ params }: { params: { facultyId: str
 
   const dept = departmentById(CURRENT_HOD_DEPT_ID)!;
   const crumbRoot = [
-    { label: "Roles", href: "/" },
     { label: `Head of Department · ${dept.shortName}`, href: "/hod" },
   ];
 

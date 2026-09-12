@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans, Spectral } from "next/font/google";
 import "./globals.css";
-import AppSidebar from "@/components/AppSidebar";
+import AppShell from "@/components/AppShell";
+import LogoutButton from "@/components/LogoutButton";
+import { getSessionRole } from "@/lib/session";
 
 const plex = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -24,6 +26,10 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // Demo session — see lib/demo-accounts.ts. Signed-out pages (login) get a
+  // plain shell with no navigation rail.
+  const role = getSessionRole();
+
   return (
     <html lang="en" className={`${plex.variable} ${spectral.variable}`}>
       <body className="min-h-screen">
@@ -34,14 +40,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
 
-        <div className="lg:flex">
-          <AppSidebar />
-          <div className="min-w-0 flex-1">
-            <main id="main" className="mx-auto max-w-[110rem] px-4 py-7 sm:px-7 lg:py-9">
-              {children}
-            </main>
-          </div>
-        </div>
+        {role ? (
+          <AppShell role={role} logout={<LogoutButton />}>
+            {children}
+          </AppShell>
+        ) : (
+          <main id="main" className="mx-auto max-w-[110rem] px-4 py-7 sm:px-7">
+            {children}
+          </main>
+        )}
       </body>
     </html>
   );

@@ -9,7 +9,7 @@ export default function FacultySelfView() {
   return (
     <div>
       <PageHeading
-        crumbs={[{ label: "Roles", href: "/" }, { label: "My record" }]}
+        crumbs={[{ label: "My record" }]}
         title={f.name}
         subtitle={`${f.designation} · ${dept?.name ?? ""}. This view shows your own record only.`}
         meta={<Badge tone="seal">{f.appointmentType}</Badge>}

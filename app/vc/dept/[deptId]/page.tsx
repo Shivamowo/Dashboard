@@ -16,7 +16,6 @@ export default function VcDeptDetail({ params }: { params: { deptId: string } })
     <div>
       <PageHeading
         crumbs={[
-          { label: "Roles", href: "/" },
           { label: "Vice Chancellor", href: "/vc" },
           { label: dept.shortName },
         ]}

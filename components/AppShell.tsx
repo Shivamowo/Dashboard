@@ -1,23 +1,25 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { Menu, X } from "lucide-react";
-import RoleSwitcher from "./RoleSwitcher";
-import { roleForPath } from "./roles";
+import RoleNav from "./RoleNav";
+import { roleMeta } from "./roles";
+import type { Role } from "@/data";
 
-export default function AppSidebar() {
-  const pathname = usePathname() ?? "/";
-  const active = roleForPath(pathname);
+export default function AppShell({
+  role,
+  logout,
+  children,
+}: {
+  role: Role;
+  logout: ReactNode;
+  children: ReactNode;
+}) {
   const [open, setOpen] = useState(false);
+  const meta = roleMeta(role);
 
   const brand = (
-    <Link
-      href="/"
-      onClick={() => setOpen(false)}
-      className="group flex items-start gap-3 rounded-control px-1 py-1"
-    >
+    <div className="flex items-start gap-3 px-1 py-1">
       <span
         aria-hidden
         className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-control border border-brass-500/40 bg-ink-900 font-display text-meta font-semibold text-brass-200"
@@ -25,18 +27,31 @@ export default function AppSidebar() {
         VB
       </span>
       <span className="min-w-0">
-        <span className="block font-display text-lead font-semibold leading-tight text-paper group-hover:text-brass-200">
+        <span className="block font-display text-lead font-semibold leading-tight text-paper">
           Department Records
         </span>
         <span className="mt-0.5 block text-micro leading-snug text-ink-400">
           V.B.S. Purvanchal University, Jaunpur
         </span>
       </span>
-    </Link>
+    </div>
+  );
+
+  const footer = (
+    <div className="space-y-3">
+      <div>
+        <p className="text-micro text-ink-500">Signed in as</p>
+        <p className="mt-0.5 text-meta font-medium text-ink-300">{meta.label}</p>
+      </div>
+      {logout}
+      <p className="text-micro leading-relaxed text-ink-500">
+        Demonstration build. Figures are sample data and nothing is saved.
+      </p>
+    </div>
   );
 
   return (
-    <>
+    <div className="lg:flex">
       {/* Tablet and below: a bar that opens the same navigation as a drawer. */}
       <div className="sticky top-0 z-40 flex items-center justify-between gap-3 border-b border-ink-800 bg-ink-950 px-4 py-3 lg:hidden">
         {brand}
@@ -44,7 +59,7 @@ export default function AppSidebar() {
           type="button"
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
-          aria-controls="role-drawer"
+          aria-controls="section-drawer"
           aria-label={open ? "Close navigation" : "Open navigation"}
           className="rounded-control border border-ink-700 p-2 text-ink-300 transition-colors hover:bg-ink-900 hover:text-paper active:bg-ink-800"
         >
@@ -54,10 +69,11 @@ export default function AppSidebar() {
 
       {open ? (
         <div
-          id="role-drawer"
-          className="sticky top-[3.75rem] z-30 border-b border-ink-800 bg-ink-950 px-4 py-4 lg:hidden"
+          id="section-drawer"
+          className="sticky top-[3.75rem] z-30 space-y-5 border-b border-ink-800 bg-ink-950 px-4 py-4 lg:hidden"
         >
-          <RoleSwitcher active={active} onNavigate={() => setOpen(false)} />
+          <RoleNav role={role} onNavigate={() => setOpen(false)} />
+          <div className="border-t border-ink-800 pt-4">{footer}</div>
         </div>
       ) : null}
 
@@ -65,13 +81,17 @@ export default function AppSidebar() {
       <aside className="sticky top-0 hidden h-screen w-[17.5rem] shrink-0 flex-col justify-between overflow-y-auto border-r border-ink-800 bg-ink-950 px-4 py-5 lg:flex">
         <div>
           {brand}
-          <p className="mb-3 mt-6 px-1 text-micro font-semibold text-ink-500">Viewing as</p>
-          <RoleSwitcher active={active} />
+          <p className="mb-3 mt-6 px-1 text-micro font-semibold text-ink-500">Your view</p>
+          <RoleNav role={role} />
         </div>
-        <p className="mt-6 border-t border-ink-800 px-1 pt-4 text-micro leading-relaxed text-ink-500">
-          Demonstration build. Figures are sample data and nothing is saved.
-        </p>
+        <div className="mt-6 border-t border-ink-800 px-1 pt-4">{footer}</div>
       </aside>
-    </>
+
+      <div className="min-w-0 flex-1">
+        <main id="main" className="mx-auto max-w-[110rem] px-4 py-7 sm:px-7 lg:py-9">
+          {children}
+        </main>
+      </div>
+    </div>
   );
 }

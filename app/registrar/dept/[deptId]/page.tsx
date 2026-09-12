@@ -16,7 +16,6 @@ export default function RegistrarDeptDetail({ params }: { params: { deptId: stri
     <div>
       <PageHeading
         crumbs={[
-          { label: "Roles", href: "/" },
           { label: "Registrar", href: "/registrar" },
           { label: dept.shortName },
         ]}

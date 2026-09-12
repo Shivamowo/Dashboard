@@ -42,7 +42,7 @@ export default function EtDashboard() {
   return (
     <div>
       <PageHeading
-        crumbs={[{ label: "Roles", href: "/" }, { label: "Engineering & Technical" }]}
+        crumbs={[{ label: "Engineering & Technical" }]}
         title="Rooms and utilisation"
         subtitle="Laboratories and classrooms across every department. This view carries no faculty, programme or target data."
       />

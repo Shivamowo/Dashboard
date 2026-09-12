@@ -68,7 +68,7 @@ export default function VcDashboard() {
   return (
     <div>
       <PageHeading
-        crumbs={[{ label: "Roles", href: "/" }, { label: "Vice Chancellor" }]}
+        crumbs={[{ label: "Vice Chancellor" }]}
         title="University overview"
         subtitle="Every figure below is calculated from the departmental submissions as they stand today."
       />

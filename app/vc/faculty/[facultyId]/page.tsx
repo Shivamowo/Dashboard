@@ -16,7 +16,6 @@ export default function VcFacultyProfile({ params }: { params: { facultyId: stri
     <div>
       <PageHeading
         crumbs={[
-          { label: "Roles", href: "/" },
           { label: "Vice Chancellor", href: "/vc" },
           { label: dept?.shortName ?? f.deptId, href: `/vc/dept/${f.deptId}` },
           { label: f.name },

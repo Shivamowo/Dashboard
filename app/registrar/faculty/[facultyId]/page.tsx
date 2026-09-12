@@ -16,7 +16,6 @@ export default function RegistrarFacultyProfile({ params }: { params: { facultyI
     <div>
       <PageHeading
         crumbs={[
-          { label: "Roles", href: "/" },
           { label: "Registrar", href: "/registrar" },
           { label: dept?.shortName ?? f.deptId, href: `/registrar/dept/${f.deptId}` },
           { label: f.name },

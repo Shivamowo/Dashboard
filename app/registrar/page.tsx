@@ -33,7 +33,7 @@ export default function RegistrarDashboard() {
   return (
     <div>
       <PageHeading
-        crumbs={[{ label: "Roles", href: "/" }, { label: "Registrar" }]}
+        crumbs={[{ label: "Registrar" }]}
         title="University register"
         subtitle="Faculty appointments, departmental submissions and programme admissions across the university."
       />

@@ -12,6 +12,29 @@ npm run dev     # http://localhost:3000
 npm run build && npm start
 ```
 
+
+## Signing in
+
+The app opens at `/login`. Roles are fixed at sign-in and cannot be switched afterwards.
+
+| Username | Password | Opens |
+|---|---|---|
+| vc-demo | demo123 | /vc |
+| registrar-demo | demo123 | /registrar |
+| hod-demo | demo123 | /hod |
+| faculty-demo | demo123 | /faculty |
+| et-demo | demo123 | /et |
+
+**Mock authentication, demo only.** Credentials live in `lib/demo-accounts.ts` in plain text,
+nothing is hashed, and the `session` cookie holds the bare role name unsigned — anyone can forge
+it. There is no user store, expiry policy, rate limiting or CSRF protection. Replace the whole
+auth layer with a real identity provider before any real use.
+
+`middleware.ts` enforces route ownership: a missing or invalid session goes to `/login`; a valid
+session in the wrong section is sent to its own home instead. Protected pages are served
+`no-store`, so pressing back after logging out bounces to `/login` rather than showing stale
+content. The sidebar renders only the signed-in role — the other four are absent from the DOM.
+
 ## Roles
 
 Selected from the header switcher (no login). `/` lists all five roles.
