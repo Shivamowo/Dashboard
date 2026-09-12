@@ -2,6 +2,7 @@ import type { Infrastructure } from "./types";
 import { makeRng, hashString, int, pick, chance } from "./rng";
 import { facultyByDept } from "./faculty";
 import { programsByDept } from "./programs";
+import { globalSingleton } from "./globalStore";
 
 type RoomSeed = { room: string; floor: string; capacity: number; equipment: string };
 
@@ -110,10 +111,20 @@ function buildInfrastructure(): Infrastructure[] {
   return rows;
 }
 
-export const infrastructure: Infrastructure[] = buildInfrastructure();
+export const infrastructure: Infrastructure[] = globalSingleton("infrastructure", buildInfrastructure);
 
 export const infrastructureByDept = (deptId: string) =>
   infrastructure.filter((x) => x.deptId === deptId);
+
+export const infrastructureById = (id: string) => infrastructure.find((x) => x.id === id);
+
+export type InfrastructureEdit = Omit<Infrastructure, "id" | "deptId" | "sNo">;
+
+/** Applied on approval of an ET edit, or immediately for Admin. */
+export function updateInfrastructureRecord(id: string, data: InfrastructureEdit) {
+  const idx = infrastructure.findIndex((x) => x.id === id);
+  if (idx >= 0) infrastructure[idx] = { ...infrastructure[idx], ...data };
+}
 
 export type UtilisationFlag = "Under-utilised" | "Optimal" | "Over-utilised";
 

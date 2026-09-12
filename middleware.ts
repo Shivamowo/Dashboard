@@ -5,15 +5,16 @@ import { ROLE_HOME, SESSION_COOKIE, isRole } from "@/lib/demo-accounts";
  * DEMO-ONLY route protection. The session cookie is unsigned, so this enforces
  * navigation scoping for the demo — it is not a security boundary.
  */
-const SECTIONS = ["vc", "registrar", "hod", "faculty", "et"] as const;
+const SECTIONS = ["vc", "registrar", "hod", "faculty", "et", "admin"] as const;
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const role = request.cookies.get(SESSION_COOKIE)?.value;
+  const raw = request.cookies.get(SESSION_COOKIE)?.value;
+  const role = raw?.split("|")[1];
   const valid = isRole(role) ? role : null;
 
-  // Already signed in? The login page and root send you to your own home.
-  if (pathname === "/login" || pathname === "/") {
+  // Already signed in? Login, signup and root send you to your own home.
+  if (pathname === "/login" || pathname === "/signup" || pathname === "/") {
     if (valid) return NextResponse.redirect(new URL(ROLE_HOME[valid], request.url));
     if (pathname === "/") return NextResponse.redirect(new URL("/login", request.url));
     return NextResponse.next();
@@ -39,5 +40,15 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/", "/login", "/vc/:path*", "/registrar/:path*", "/hod/:path*", "/faculty/:path*", "/et/:path*"],
+  matcher: [
+    "/",
+    "/login",
+    "/signup",
+    "/vc/:path*",
+    "/registrar/:path*",
+    "/hod/:path*",
+    "/faculty/:path*",
+    "/et/:path*",
+    "/admin/:path*",
+  ],
 };

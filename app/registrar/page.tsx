@@ -11,9 +11,10 @@ export default function RegistrarDashboard() {
   const uni = rollupUniversity();
   const roster = rosterRows();
   const deptNames = deptNameMap();
-  const received = hodSubmissions.filter((s) => s.status === "Submitted").length;
+  const submissions = hodSubmissions();
+  const received = submissions.filter((s) => s.status === "Submitted").length;
 
-  const complianceRows = hodSubmissions.map((s) => {
+  const complianceRows = submissions.map((s) => {
     const d = departments.find((x) => x.id === s.deptId)!;
     return {
       deptId: s.deptId,
@@ -57,8 +58,8 @@ export default function RegistrarDashboard() {
           />
           <KpiCard
             label="Submissions certified"
-            value={`${received} / ${hodSubmissions.length}`}
-            tone={received === hodSubmissions.length ? "positive" : "caution"}
+            value={`${received} / ${submissions.length}`}
+            tone={received === submissions.length ? "positive" : "caution"}
             hint="Departments with a signed HoD certificate"
             icon={FileCheck2}
           />

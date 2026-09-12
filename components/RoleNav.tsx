@@ -3,6 +3,7 @@
 import {
   ClipboardList,
   Landmark,
+  ShieldCheck,
   UserRound,
   Users,
   Wrench,
@@ -17,6 +18,7 @@ const ICONS: Record<string, LucideIcon> = {
   Users,
   UserRound,
   Wrench,
+  ShieldCheck,
 };
 
 /**

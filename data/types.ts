@@ -178,4 +178,53 @@ export interface FacultyTarget {
   yearEndAchievementSummary: string;
 }
 
-export type Role = "vc" | "registrar" | "hod" | "faculty" | "et";
+export type Role = "vc" | "registrar" | "hod" | "faculty" | "et" | "admin";
+
+export type UserStatus = "active" | "pending" | "rejected";
+
+/** Mock user record — see lib/demo-accounts.ts and data/store.ts. */
+export interface UserAccount {
+  id: string;
+  username: string;
+  password: string;
+  role: Role;
+  displayName: string;
+  /** Set for hod/faculty accounts — the department they belong to (or are onboarding into). */
+  deptId?: string;
+  /** Set for faculty accounts once their onboarding is approved and a Faculty record exists. */
+  facultyId?: string;
+  status: UserStatus;
+  rejectionReason?: string;
+  createdAt: string;
+}
+
+export type ChangeRequestType = "edit" | "onboarding";
+export type ChangeRequestTargetEntity = "Faculty" | "HoD" | "Infrastructure";
+export type ChangeRequestStatus = "pending" | "approved" | "rejected";
+/** Which sub-entity of a Faculty record a 'Faculty'-targeted change request touches. */
+export type FacultyChangeSection = "profile" | "research" | "projects" | "target";
+
+/**
+ * Drives both the edit-approval workflow and Faculty/HoD onboarding. Submitting
+ * one does not touch the underlying record — only an Admin approval does, via
+ * data/store.ts#approveChangeRequest.
+ */
+export interface ChangeRequest {
+  id: string;
+  type: ChangeRequestType;
+  targetEntity: ChangeRequestTargetEntity;
+  /** null for onboarding — the record does not exist yet. */
+  targetId: string | null;
+  submittedByUserId: string;
+  submittedByRole: Role;
+  deptId: string;
+  /** Only meaningful when targetEntity is 'Faculty'. */
+  section?: FacultyChangeSection;
+  /** Full proposed record (or sub-record) for the given targetEntity/section. */
+  payload: Record<string, unknown>;
+  status: ChangeRequestStatus;
+  submittedAt: string;
+  reviewedByUserId?: string;
+  reviewedAt?: string;
+  reviewNotes?: string;
+}

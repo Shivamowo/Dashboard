@@ -183,6 +183,15 @@ export function StatusBadge({ status }: { status: QuarterStatus | string }) {
   );
 }
 
+/**
+ * Marks a record with an unapproved ChangeRequest awaiting review. Deliberately
+ * brand-gold, not the maroon/red used for at-risk or delayed — pending
+ * approval is a workflow state, not a performance flag (design.md §6).
+ */
+export function PendingBadge() {
+  return <Badge tone="gold">Pending approval</Badge>;
+}
+
 export function BoolBadge({ value, yes = "Yes", no = "No" }: { value: boolean; yes?: string; no?: string }) {
   return value ? (
     <Badge tone="positive">{yes}</Badge>

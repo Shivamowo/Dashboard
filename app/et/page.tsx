@@ -1,5 +1,5 @@
 import { BarChart3, DoorOpen, MonitorSmartphone, TriangleAlert, Users } from "lucide-react";
-import { departments, infrastructure, infrastructureByDept, utilisationFlag } from "@/data";
+import { departments, infrastructure, infrastructureByDept, pendingInfraIds, utilisationFlag } from "@/data";
 import { deptNameMap } from "@/lib/rows";
 import InfrastructureTable from "@/components/tables/InfrastructureTable";
 import TrendChart from "@/components/TrendChart";
@@ -164,7 +164,13 @@ export default function EtDashboard() {
           icon={DoorOpen}
           accent="teal"
         >
-          <InfrastructureTable rows={rooms} deptNames={deptNames} showDept />
+          <InfrastructureTable
+            rows={rooms}
+            deptNames={deptNames}
+            showDept
+            pendingIds={pendingInfraIds()}
+            editHrefBase="/et/infra"
+          />
         </Section>
       </div>
     </div>

@@ -7,8 +7,9 @@ export function generateStaticParams() {
   return faculty.map((f) => ({ facultyId: f.id }));
 }
 
-export default function RegistrarFacultyProfile({ params }: { params: { facultyId: string } }) {
-  const f = facultyById(params.facultyId);
+export default async function RegistrarFacultyProfile({ params }: { params: Promise<{ facultyId: string }> }) {
+  const { facultyId } = await params;
+  const f = facultyById(facultyId);
   if (!f) notFound();
   const dept = departmentById(f.deptId);
 

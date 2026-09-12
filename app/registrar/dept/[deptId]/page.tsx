@@ -7,8 +7,9 @@ export function generateStaticParams() {
   return departments.map((d) => ({ deptId: d.id }));
 }
 
-export default function RegistrarDeptDetail({ params }: { params: { deptId: string } }) {
-  const dept = departmentById(params.deptId);
+export default async function RegistrarDeptDetail({ params }: { params: Promise<{ deptId: string }> }) {
+  const { deptId } = await params;
+  const dept = departmentById(deptId);
   if (!dept) notFound();
   const submission = hodSubmissionOf(dept.id);
 

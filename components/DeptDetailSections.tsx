@@ -9,11 +9,16 @@ import {
   TrendingUp,
   Users,
 } from "lucide-react";
+import { Pencil } from "lucide-react";
+import Link from "next/link";
 import {
   departmentById,
   deptTargetSummaryOf,
   hodSubmissionOf,
   infrastructureByDept,
+  pendingFacultyEditIds,
+  pendingHodDeptIds,
+  pendingInfraIds,
   programsByDept,
 } from "@/data";
 import { intakeTrend, rollupDept } from "@/lib/aggregate";
@@ -29,6 +34,7 @@ import {
   FieldGrid,
   KpiCard,
   KpiRow,
+  PendingBadge,
   Section,
   StatusBadge,
   SubHeading,
@@ -38,10 +44,19 @@ export default function DeptDetailSections({
   deptId,
   facultyHrefBase,
   showTargets = true,
+  facultyEditHrefBase,
+  infraEditHrefBase,
+  hodEditHref,
 }: {
   deptId: string;
   facultyHrefBase: string;
   showTargets?: boolean;
+  /** When set (HoD/Admin), adds an Edit column to the faculty roster. */
+  facultyEditHrefBase?: string;
+  /** When set (Admin), adds an Edit column to the infrastructure table. */
+  infraEditHrefBase?: string;
+  /** When set (Admin), adds an Edit link on the HoD submission card. */
+  hodEditHref?: string;
 }) {
   const dept = departmentById(deptId);
   if (!dept)
@@ -60,6 +75,9 @@ export default function DeptDetailSections({
   const roster = rosterRows(deptId);
   const targets = targetTrackerRows(deptId);
   const trend = intakeTrend(deptId);
+  const pendingFaculty = pendingFacultyEditIds();
+  const pendingInfra = pendingInfraIds();
+  const hodPending = pendingHodDeptIds().has(deptId);
 
   return (
     <div className="space-y-6">
@@ -151,7 +169,12 @@ export default function DeptDetailSections({
         description="Open a row to read that faculty member's full record."
         icon={Users}
       >
-        <FacultyRosterTable rows={roster} hrefBase={facultyHrefBase} />
+        <FacultyRosterTable
+          rows={roster}
+          hrefBase={facultyHrefBase}
+          pendingIds={pendingFaculty}
+          editHrefBase={facultyEditHrefBase}
+        />
       </Section>
 
       {/* -------------------------------------------------------------- targets */}
@@ -200,7 +223,11 @@ export default function DeptDetailSections({
         icon={BarChart3}
         accent="teal"
       >
-        <InfrastructureTable rows={infra} />
+        <InfrastructureTable
+          rows={infra}
+          pendingIds={pendingInfra}
+          editHrefBase={infraEditHrefBase}
+        />
       </Section>
 
       {/* ------------------------------------------------------ HoD submission */}
@@ -209,6 +236,17 @@ export default function DeptDetailSections({
         title="HoD submission"
         description="The department snapshot, recalculated from the reporting sheets rather than stored."
         icon={FileCheck2}
+        actions={
+          <span className="flex items-center gap-2">
+            {hodPending ? <PendingBadge /> : null}
+            {hodEditHref ? (
+              <Link href={hodEditHref} className="btn-quiet">
+                <Pencil aria-hidden className="h-3.5 w-3.5" />
+                Edit
+              </Link>
+            ) : null}
+          </span>
+        }
       >
         {!submission ? (
           <EmptyState

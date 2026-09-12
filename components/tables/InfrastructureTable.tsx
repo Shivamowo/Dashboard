@@ -1,23 +1,37 @@
 "use client";
 
+import Link from "next/link";
+import { Pencil } from "lucide-react";
 import DataTable, { type Column, type FilterDef } from "@/components/DataTable";
-import { BoolBadge, ProgressBar, StatusBadge } from "@/components/ui";
+import { BoolBadge, PendingBadge, ProgressBar, StatusBadge } from "@/components/ui";
 import { utilisationFlag, type Infrastructure } from "@/data";
 
 export default function InfrastructureTable({
   rows,
   deptNames,
   showDept = false,
+  pendingIds,
+  editHrefBase,
 }: {
   rows: Infrastructure[];
   deptNames?: Record<string, string>;
   showDept?: boolean;
+  /** Infrastructure ids with a pending edit awaiting approval. */
+  pendingIds?: Set<string>;
+  /** When set, adds an Edit column linking to `${editHrefBase}/${id}/edit`. */
+  editHrefBase?: string;
 }) {
   const columns: Column<Infrastructure>[] = [
     {
       key: "name",
       header: "Lab / Classroom Name",
       value: (r) => r.labClassroomName,
+      render: (r) => (
+        <span className="flex flex-wrap items-center gap-1.5">
+          <span>{r.labClassroomName}</span>
+          {pendingIds?.has(r.id) ? <PendingBadge /> : null}
+        </span>
+      ),
       className: "min-w-[16rem] font-medium text-ink-900",
       wrap: true,
     },
@@ -92,6 +106,22 @@ export default function InfrastructureTable({
       align: "center",
     }
   );
+
+  if (editHrefBase) {
+    columns.push({
+      key: "edit",
+      header: "Edit",
+      value: () => "",
+      sortable: false,
+      align: "center",
+      render: (r) => (
+        <Link href={`${editHrefBase}/${r.id}/edit`} className="btn-quiet">
+          <Pencil aria-hidden className="h-3.5 w-3.5" />
+          Edit
+        </Link>
+      ),
+    });
+  }
 
   const filters: FilterDef<Infrastructure>[] = [];
   if (showDept && deptNames) {

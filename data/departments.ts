@@ -1,6 +1,7 @@
 import type { Department } from "./types";
+import { globalSingleton } from "./globalStore";
 
-export const departments: Department[] = [
+const seedDepartments = (): Department[] => [
   {
     id: "cse",
     facultyOfEngineering: "Faculty of Engineering & Technology",
@@ -47,4 +48,12 @@ export const departments: Department[] = [
   },
 ];
 
+export const departments: Department[] = globalSingleton("departments", seedDepartments);
+
 export const departmentById = (id: string) => departments.find((d) => d.id === id);
+
+/** Applied on approval of a HoD edit/onboarding change request. */
+export function updateDepartmentHod(deptId: string, patch: { hodName?: string; hodContact?: string }) {
+  const d = departmentById(deptId);
+  if (d) Object.assign(d, patch);
+}

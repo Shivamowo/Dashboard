@@ -1,8 +1,9 @@
 import type { DeptFacultyTargetSummary, HodSubmission } from "./types";
-import { departments } from "./departments";
+import { departments, departmentById } from "./departments";
 import { programsByDept } from "./programs";
 import { facultyByDept, targetOf } from "./faculty";
 import { infrastructureByDept } from "./infrastructure";
+import { globalSingleton } from "./globalStore";
 
 const submissionMeta: Record<
   string,
@@ -14,18 +15,34 @@ const submissionMeta: Record<
   me: { status: "Pending", certificationDate: "-" },
 };
 
+type SubmissionOverride = Partial<
+  Pick<HodSubmission, "mobileContact" | "certificationSignedBy" | "certificationDate" | "status">
+>;
+
+/** Mutable fields edited by the HoD (or Admin) go here, applied on top of the seed above. */
+const overrides: Record<string, SubmissionOverride> = globalSingleton("hodSubmissionOverrides", () => ({}));
+
+/** Applied on approval of a HoD edit, or immediately for Admin. */
+export function updateHodSubmission(deptId: string, patch: SubmissionOverride) {
+  overrides[deptId] = { ...overrides[deptId], ...patch };
+}
+
 /**
  * Snapshot values are recomputed from the underlying rows rather than stored,
- * per the aggregation rules in SYSTEM_DESIGN.md section 4.
+ * per the aggregation rules in SYSTEM_DESIGN.md section 4 — this also means an
+ * approved edit or onboarding is reflected immediately, with nothing to re-seed.
  */
-export const hodSubmissions: HodSubmission[] = departments.map((d) => {
+export function hodSubmissionOf(deptId: string): HodSubmission | undefined {
+  const d = departmentById(deptId);
+  if (!d) return undefined;
   const progs = programsByDept(d.id);
   const facs = facultyByDept(d.id);
   const infra = infrastructureByDept(d.id);
-  const meta = submissionMeta[d.id];
+  const meta = submissionMeta[d.id] ?? { status: "Pending" as const, certificationDate: "-" };
+  const o = overrides[deptId];
   return {
     deptId: d.id,
-    mobileContact: d.hodContact,
+    mobileContact: o?.mobileContact ?? d.hodContact,
     dateOfSubmission: d.dateOfSubmission,
     snapshot: {
       noOfProgrammes: progs.length,
@@ -38,16 +55,18 @@ export const hodSubmissions: HodSubmission[] = departments.map((d) => {
       digitalSmartBoardAvailable: infra.filter((x) => x.digitalSmartBoard).length,
       projectorAvailable: infra.filter((x) => x.projector).length,
     },
-    certificationSignedBy: d.hodName,
-    certificationDate: meta.certificationDate,
-    status: meta.status,
+    certificationSignedBy: o?.certificationSignedBy ?? d.hodName,
+    certificationDate: o?.certificationDate ?? meta.certificationDate,
+    status: o?.status ?? meta.status,
   };
-});
+}
 
-export const hodSubmissionOf = (deptId: string) =>
-  hodSubmissions.find((s) => s.deptId === deptId);
+export const hodSubmissions = (): HodSubmission[] =>
+  departments.map((d) => hodSubmissionOf(d.id)!);
 
-export const deptTargetSummaries: DeptFacultyTargetSummary[] = departments.map((d) => {
+export function deptTargetSummaryOf(deptId: string): DeptFacultyTargetSummary | undefined {
+  const d = departmentById(deptId);
+  if (!d) return undefined;
   const facs = facultyByDept(d.id);
   const tgts = facs.map((f) => targetOf(f.id)).filter(Boolean) as NonNullable<
     ReturnType<typeof targetOf>
@@ -76,7 +95,7 @@ export const deptTargetSummaries: DeptFacultyTargetSummary[] = departments.map((
         ) / 10
       : 0,
   };
-});
+}
 
-export const deptTargetSummaryOf = (deptId: string) =>
-  deptTargetSummaries.find((s) => s.deptId === deptId);
+export const deptTargetSummaries = (): DeptFacultyTargetSummary[] =>
+  departments.map((d) => deptTargetSummaryOf(d.id)!);

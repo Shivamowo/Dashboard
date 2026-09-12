@@ -1,24 +1,24 @@
 import { notFound } from "next/navigation";
-import { Lock } from "lucide-react";
-import { CURRENT_HOD_DEPT_ID, departmentById, facultyByDept, facultyById } from "@/data";
+import Link from "next/link";
+import { Lock, Pencil } from "lucide-react";
+import { departmentById, facultyById, pendingFacultyEditIds } from "@/data";
+import { getSessionUser } from "@/lib/session";
 import FacultyProfileSections from "@/components/FacultyProfileSections";
-import { Badge, EmptyState, PageHeading } from "@/components/ui";
+import { Badge, EmptyState, PageHeading, PendingBadge } from "@/components/ui";
 
-export function generateStaticParams() {
-  return facultyByDept(CURRENT_HOD_DEPT_ID).map((f) => ({ facultyId: f.id }));
-}
-
-export default function HodFacultyProfile({ params }: { params: { facultyId: string } }) {
-  const f = facultyById(params.facultyId);
+export default async function HodFacultyProfile({ params }: { params: Promise<{ facultyId: string }> }) {
+  const { facultyId } = await params;
+  const user = (await getSessionUser())!;
+  const f = facultyById(facultyId);
   if (!f) notFound();
 
-  const dept = departmentById(CURRENT_HOD_DEPT_ID)!;
+  const dept = departmentById(user.deptId!)!;
   const crumbRoot = [
     { label: `Head of Department · ${dept.shortName}`, href: "/hod" },
   ];
 
   // A head of department sees only their own department's records.
-  if (f.deptId !== CURRENT_HOD_DEPT_ID) {
+  if (f.deptId !== user.deptId) {
     return (
       <div>
         <PageHeading
@@ -34,13 +34,24 @@ export default function HodFacultyProfile({ params }: { params: { facultyId: str
     );
   }
 
+  const pending = pendingFacultyEditIds().has(f.id);
+
   return (
     <div>
       <PageHeading
         crumbs={[...crumbRoot, { label: f.name }]}
         title={f.name}
         subtitle={`${f.designation} · ${dept.name}`}
-        meta={<Badge tone="seal">{f.appointmentType}</Badge>}
+        meta={
+          <span className="flex items-center gap-2">
+            <Badge tone="seal">{f.appointmentType}</Badge>
+            {pending ? <PendingBadge /> : null}
+            <Link href={`/hod/faculty/${f.id}/edit`} className="btn-quiet">
+              <Pencil aria-hidden className="h-3.5 w-3.5" />
+              Edit
+            </Link>
+          </span>
+        }
       />
       <FacultyProfileSections facultyId={f.id} />
     </div>

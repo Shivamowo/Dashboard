@@ -8,6 +8,7 @@ import type {
 } from "./types";
 import { makeRng, hashString, int, pick, chance } from "./rng";
 import { programsByDept } from "./programs";
+import { globalSingleton } from "./globalStore";
 
 type NameSeed = {
   name: string;
@@ -389,7 +390,7 @@ function buildAll() {
   return { facultyRows, researchRows, projectRows, targetRows };
 }
 
-const built = buildAll();
+const built = globalSingleton("faculty:built", buildAll);
 
 export const faculty: Faculty[] = built.facultyRows;
 export const facultyResearch: FacultyResearch[] = built.researchRows;
@@ -404,3 +405,51 @@ export const projectsOf = (facultyId: string) =>
   facultyProjects.filter((x) => x.facultyId === facultyId);
 export const targetOf = (facultyId: string) =>
   facultyTargets.find((x) => x.facultyId === facultyId);
+
+/* --------------------------------------------------------------------------
+ * Mutation helpers for the edit/approval workflow (data/store.ts) and Admin's
+ * direct-write access. These mutate the in-memory arrays above in place —
+ * see data/store.ts for why that is fine in the current phase.
+ * ------------------------------------------------------------------------ */
+
+export type FacultyProfileEdit = Omit<Faculty, "id" | "deptId" | "sNo">;
+export type FacultyResearchEdit = Omit<FacultyResearch, "id" | "facultyId" | "yearly">;
+export type FacultyTargetEdit = Omit<FacultyTarget, "id" | "facultyId" | "sNo">;
+export type FacultyProjectEdit = Omit<FacultyProject, "id" | "facultyId">;
+
+/** Onboarding: creates the Faculty record and returns its new id. */
+export function addFacultyRecord(deptId: string, data: FacultyProfileEdit): string {
+  const id = deptId + "-f" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+  const sNo = facultyByDept(deptId).length + 1;
+  faculty.push({ id, deptId, sNo, ...data });
+  return id;
+}
+
+export function updateFacultyRecord(id: string, data: FacultyProfileEdit) {
+  const f = facultyById(id);
+  if (f) Object.assign(f, data);
+}
+
+export function setFacultyResearch(facultyId: string, data: FacultyResearchEdit) {
+  const idx = facultyResearch.findIndex((r) => r.facultyId === facultyId);
+  if (idx >= 0) facultyResearch[idx] = { ...facultyResearch[idx], ...data };
+  else facultyResearch.push({ id: facultyId + "-res", facultyId, yearly: [], ...data });
+}
+
+export function setFacultyTarget(facultyId: string, sNo: number, data: FacultyTargetEdit) {
+  const idx = facultyTargets.findIndex((t) => t.facultyId === facultyId);
+  const full: FacultyTarget = { id: facultyId + "-tgt", facultyId, sNo, ...data };
+  if (idx >= 0) facultyTargets[idx] = full;
+  else facultyTargets.push(full);
+}
+
+export function setFacultyProjects(facultyId: string, list: FacultyProjectEdit[]) {
+  const others = facultyProjects.filter((p) => p.facultyId !== facultyId);
+  const fresh: FacultyProject[] = list.map((p, i) => ({
+    ...p,
+    id: facultyId + "-pr" + (i + 1),
+    facultyId,
+  }));
+  facultyProjects.length = 0;
+  facultyProjects.push(...others, ...fresh);
+}

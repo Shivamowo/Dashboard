@@ -25,10 +25,10 @@ export const metadata: Metadata = {
     "Role-based department performance records for Veer Bahadur Singh Purvanchal University, Jaunpur.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
   // Demo session — see lib/demo-accounts.ts. Signed-out pages (login) get a
   // plain shell with no navigation rail.
-  const role = getSessionRole();
+  const role = await getSessionRole();
 
   return (
     <html lang="en" className={`${plex.variable} ${spectral.variable}`}>

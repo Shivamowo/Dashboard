@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   title: "Sign in — Department Records",
 };
 
-export default function LoginPage({
+export default async function LoginPage({
   searchParams,
 }: {
-  searchParams: { error?: string };
+  searchParams: Promise<{ error?: string }>;
 }) {
-  const failed = searchParams.error === "1";
+  const failed = (await searchParams).error === "1";
   return (
     <div className="mx-auto grid min-h-[calc(100vh-3rem)] max-w-5xl items-center gap-12 py-8 lg:grid-cols-[1.1fr_1fr]">
       <div>
@@ -103,6 +103,13 @@ export default function LoginPage({
             Sign in
           </button>
         </form>
+        <p className="mt-4 text-center text-meta text-ink-600">
+          New faculty or HoD?{" "}
+          <a href="/signup" className="btn-link">
+            Sign up
+          </a>
+        </p>
+
         <p className="mt-6 border-t border-ink-200 pt-4 text-micro leading-relaxed text-ink-500">
           Demonstration build with mock authentication — credentials are held in source, nothing is
           hashed and no session is stored on a server.

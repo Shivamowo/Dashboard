@@ -42,7 +42,8 @@ export default function VcDashboard() {
     atRiskFaculty: r.atRiskFaculty,
   }));
 
-  const complianceRows = hodSubmissions.map((s) => {
+  const submissions = hodSubmissions();
+  const complianceRows = submissions.map((s) => {
     const d = departments.find((x) => x.id === s.deptId)!;
     return {
       deptId: s.deptId,
@@ -63,7 +64,7 @@ export default function VcDashboard() {
     conference: r.conferencePublications,
   }));
 
-  const pending = hodSubmissions.filter((s) => s.status !== "Submitted").length;
+  const pending = submissions.filter((s) => s.status !== "Submitted").length;
 
   return (
     <div>

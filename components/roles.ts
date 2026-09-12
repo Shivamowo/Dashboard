@@ -7,7 +7,7 @@ export interface RoleMeta {
   home: string;
   scope: string;
   /** lucide-react icon name, resolved in AppSidebar. */
-  icon: "Landmark" | "ClipboardList" | "Users" | "UserRound" | "Wrench";
+  icon: "Landmark" | "ClipboardList" | "Users" | "UserRound" | "Wrench" | "ShieldCheck";
 }
 
 export const ROLES: RoleMeta[] = [
@@ -51,6 +51,14 @@ export const ROLES: RoleMeta[] = [
     scope: "Laboratories and classrooms across every department",
     icon: "Wrench",
   },
+  {
+    id: "admin",
+    label: "Administrator",
+    shortLabel: "Admin",
+    home: "/admin",
+    scope: "Every department and record, plus the edit-approval queue",
+    icon: "ShieldCheck",
+  },
 ];
 
 export const roleMeta = (id: Role) => ROLES.find((r) => r.id === id) ?? ROLES[0];
@@ -93,5 +101,10 @@ export const ROLE_SECTIONS: Record<Role, { id: string; label: string }[]> = {
     { id: "kpis", label: "Estate summary" },
     { id: "trends", label: "Utilisation by department" },
     { id: "register", label: "Room register" },
+  ],
+  admin: [
+    { id: "approvals", label: "Approval queue" },
+    { id: "kpis", label: "University summary" },
+    { id: "departments", label: "Departments" },
   ],
 };

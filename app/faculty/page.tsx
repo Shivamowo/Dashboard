@@ -1,9 +1,29 @@
-import { CURRENT_FACULTY_ID, departmentById, facultyById } from "@/data";
+import Link from "next/link";
+import { Pencil } from "lucide-react";
+import { departmentById, facultyById, latestOnboardingForUser } from "@/data";
+import { getSessionUser } from "@/lib/session";
 import FacultyProfileSections from "@/components/FacultyProfileSections";
+import { PendingRequestNotice, RejectedRequestNotice } from "@/components/PendingNotice";
 import { Badge, PageHeading } from "@/components/ui";
 
-export default function FacultySelfView() {
-  const f = facultyById(CURRENT_FACULTY_ID)!;
+export default async function FacultySelfView() {
+  const user = (await getSessionUser())!;
+  const onboarding = user.status !== "active" ? latestOnboardingForUser(user.id) : undefined;
+
+  if (!user.facultyId) {
+    return (
+      <div>
+        <PageHeading crumbs={[{ label: "My record" }]} title={user.displayName} />
+        {onboarding && user.status === "rejected" ? (
+          <RejectedRequestNotice cr={onboarding} title="Your onboarding" />
+        ) : onboarding ? (
+          <PendingRequestNotice cr={onboarding} title="Your onboarding" />
+        ) : null}
+      </div>
+    );
+  }
+
+  const f = facultyById(user.facultyId)!;
   const dept = departmentById(f.deptId);
 
   return (
@@ -12,7 +32,15 @@ export default function FacultySelfView() {
         crumbs={[{ label: "My record" }]}
         title={f.name}
         subtitle={`${f.designation} · ${dept?.name ?? ""}. This view shows your own record only.`}
-        meta={<Badge tone="seal">{f.appointmentType}</Badge>}
+        meta={
+          <span className="flex items-center gap-2">
+            <Badge tone="seal">{f.appointmentType}</Badge>
+            <Link href="/faculty/edit" className="btn-quiet">
+              <Pencil aria-hidden className="h-3.5 w-3.5" />
+              Edit my record
+            </Link>
+          </span>
+        }
       />
       <FacultyProfileSections facultyId={f.id} />
     </div>

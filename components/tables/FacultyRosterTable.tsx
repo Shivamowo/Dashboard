@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
+import { Pencil } from "lucide-react";
 import DataTable, { type Column, type FilterDef } from "@/components/DataTable";
-import { Badge, BoolBadge, ProgressBar } from "@/components/ui";
+import { Badge, BoolBadge, PendingBadge, ProgressBar } from "@/components/ui";
 import type { FacultyRosterRow } from "@/lib/rows";
 
 export default function FacultyRosterTable({
@@ -10,19 +12,30 @@ export default function FacultyRosterTable({
   deptNames,
   showDept = false,
   showMilestone = true,
+  pendingIds,
+  editHrefBase,
 }: {
   rows: FacultyRosterRow[];
   hrefBase: string;
   deptNames?: Record<string, string>;
   showDept?: boolean;
   showMilestone?: boolean;
+  /** Faculty ids with a pending edit awaiting approval — shows a "Pending approval" badge. */
+  pendingIds?: Set<string>;
+  /** When set, adds an Edit column linking to `${editHrefBase}/${id}/edit`. */
+  editHrefBase?: string;
 }) {
   const columns: Column<FacultyRosterRow>[] = [
     {
       key: "name",
       header: "Name of Faculty Member",
       value: (r) => r.name,
-      render: (r) => <span className="font-medium text-brand-pink-dark">{r.name}</span>,
+      render: (r) => (
+        <span className="flex flex-wrap items-center gap-1.5">
+          <span className="font-medium text-brand-pink-dark">{r.name}</span>
+          {pendingIds?.has(r.id) ? <PendingBadge /> : null}
+        </span>
+      ),
       className: "min-w-[14rem]",
     },
   ];
@@ -95,6 +108,26 @@ export default function FacultyRosterTable({
         align: "center",
       }
     );
+  }
+
+  if (editHrefBase) {
+    columns.push({
+      key: "edit",
+      header: "Edit",
+      value: () => "",
+      sortable: false,
+      align: "center",
+      render: (r) => (
+        <Link
+          href={`${editHrefBase}/${r.id}/edit`}
+          onClick={(e) => e.stopPropagation()}
+          className="btn-quiet"
+        >
+          <Pencil aria-hidden className="h-3.5 w-3.5" />
+          Edit
+        </Link>
+      ),
+    });
   }
 
   const filters: FilterDef<FacultyRosterRow>[] = [];
