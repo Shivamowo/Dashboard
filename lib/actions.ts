@@ -11,6 +11,7 @@ import {
   setFacultyProjects,
   setFacultyResearch,
   setFacultyTarget,
+  submitOnboarding,
   targetOf,
   updateDepartmentHod,
   updateFacultyRecord,
@@ -151,6 +152,37 @@ function readInfra(form: FormData) {
     digitalSmartBoard: bool(form, "digitalSmartBoard"),
     projector: bool(form, "projector"),
   };
+}
+
+/* ------------------------------------------------------------- Onboarding */
+
+export async function submitFacultyOnboarding(form: FormData) {
+  const user = await requireUser(["faculty"]);
+  submitOnboarding({
+    userId: user.id,
+    targetEntity: "Faculty",
+    deptId: user.deptId!,
+    payload: {
+      profile: readFacultyProfile(form),
+      research: readFacultyResearch(form),
+      projects: readFacultyProjects(form),
+    },
+  });
+  redirect("/faculty?submitted=1");
+}
+
+export async function submitHodOnboarding(form: FormData) {
+  const user = await requireUser(["hod"]);
+  submitOnboarding({
+    userId: user.id,
+    targetEntity: "HoD",
+    deptId: user.deptId!,
+    payload: {
+      name: str(form, "name"),
+      mobileContact: str(form, "mobileContact"),
+    },
+  });
+  redirect("/hod?submitted=1");
 }
 
 /* ------------------------------------------------------------ Faculty role */

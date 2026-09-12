@@ -3,14 +3,16 @@ import { Pencil } from "lucide-react";
 import { departmentById, hodSubmissionOf, latestOnboardingForUser } from "@/data";
 import { getSessionUser } from "@/lib/session";
 import DeptDetailSections from "@/components/DeptDetailSections";
-import { PendingRequestNotice, RejectedRequestNotice } from "@/components/PendingNotice";
+import { PendingRequestNotice } from "@/components/PendingNotice";
 import { PageHeading, StatusBadge } from "@/components/ui";
 
 export default async function HodDashboard() {
   const user = (await getSessionUser())!;
   const dept = departmentById(user.deptId!)!;
   const submission = hodSubmissionOf(dept.id);
-  const onboarding = user.status !== "active" ? latestOnboardingForUser(user.id) : undefined;
+  // Middleware sends "onboarding_incomplete" accounts to /hod/onboarding —
+  // reaching here while "pending_approval" means it's awaiting Admin review.
+  const onboarding = user.status === "pending_approval" ? latestOnboardingForUser(user.id) : undefined;
 
   return (
     <div>
@@ -29,14 +31,9 @@ export default async function HodDashboard() {
         }
       />
 
-      {user.status === "pending" && onboarding ? (
+      {onboarding ? (
         <div className="mb-6">
           <PendingRequestNotice cr={onboarding} title="Your onboarding as HoD" />
-        </div>
-      ) : null}
-      {user.status === "rejected" && onboarding ? (
-        <div className="mb-6">
-          <RejectedRequestNotice cr={onboarding} title="Your onboarding as HoD" />
         </div>
       ) : null}
 

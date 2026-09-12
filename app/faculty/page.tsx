@@ -3,22 +3,21 @@ import { Pencil } from "lucide-react";
 import { departmentById, facultyById, latestOnboardingForUser } from "@/data";
 import { getSessionUser } from "@/lib/session";
 import FacultyProfileSections from "@/components/FacultyProfileSections";
-import { PendingRequestNotice, RejectedRequestNotice } from "@/components/PendingNotice";
+import { PendingRequestNotice } from "@/components/PendingNotice";
 import { Badge, PageHeading } from "@/components/ui";
 
 export default async function FacultySelfView() {
   const user = (await getSessionUser())!;
-  const onboarding = user.status !== "active" ? latestOnboardingForUser(user.id) : undefined;
 
+  // Middleware sends "onboarding_incomplete" accounts to /faculty/onboarding —
+  // reaching here with no facultyId means onboarding was submitted and is
+  // awaiting Admin approval.
   if (!user.facultyId) {
+    const onboarding = latestOnboardingForUser(user.id);
     return (
       <div>
         <PageHeading crumbs={[{ label: "My record" }]} title={user.displayName} />
-        {onboarding && user.status === "rejected" ? (
-          <RejectedRequestNotice cr={onboarding} title="Your onboarding" />
-        ) : onboarding ? (
-          <PendingRequestNotice cr={onboarding} title="Your onboarding" />
-        ) : null}
+        {onboarding ? <PendingRequestNotice cr={onboarding} title="Your onboarding" /> : null}
       </div>
     );
   }

@@ -1,12 +1,13 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { ROLE_HOME, SESSION_COOKIE } from "@/lib/demo-accounts";
-import { createChangeRequest, createUserAccount, departmentById } from "@/data";
+import { createUserAccount, departmentById } from "@/data";
 
 /**
- * Self-service Faculty/HoD signup — see SYSTEM_DESIGN.md and DEMO-ONLY notes in
- * app/api/login/route.ts. Creates the user account immediately (so they can
- * sign in right away) plus a pending 'onboarding' ChangeRequest; the actual
- * Faculty/HoD record is only created once Admin approves it.
+ * Self-service Faculty/HoD signup — account creation only. See DEMO-ONLY notes
+ * in app/api/login/route.ts. The detailed onboarding form (identity, research,
+ * etc.) is a separate step the user completes after first login — middleware
+ * routes accounts with status "onboarding_incomplete" to
+ * /faculty/onboarding or /hod/onboarding until that's done.
  */
 export async function POST(request: NextRequest) {
   const form = await request.formData();
@@ -25,41 +26,6 @@ export async function POST(request: NextRequest) {
     user = createUserAccount({ username, password, role, displayName: name, deptId });
   } catch {
     return NextResponse.redirect(new URL("/signup?error=taken", request.url), { status: 303 });
-  }
-
-  if (role === "faculty") {
-    createChangeRequest({
-      type: "onboarding",
-      targetEntity: "Faculty",
-      targetId: null,
-      submittedByUserId: user.id,
-      submittedByRole: "faculty",
-      deptId,
-      section: "profile",
-      payload: {
-        name,
-        designation: String(form.get("designation") ?? "Assistant Professor"),
-        appointmentType: String(form.get("appointmentType") ?? "Regular"),
-        dateOfJoining: String(form.get("dateOfJoining") ?? ""),
-        hasPhd: form.get("hasPhd") === "on",
-        programmesAppointedFor: String(form.get("programmesAppointedFor") ?? ""),
-        teachingLoadHrsPerWeek: Number(form.get("teachingLoadHrsPerWeek") ?? 0),
-        additionalResponsibility: String(form.get("additionalResponsibility") ?? "NA"),
-      },
-    });
-  } else {
-    createChangeRequest({
-      type: "onboarding",
-      targetEntity: "HoD",
-      targetId: null,
-      submittedByUserId: user.id,
-      submittedByRole: "hod",
-      deptId,
-      payload: {
-        name,
-        mobileContact: String(form.get("mobileContact") ?? ""),
-      },
-    });
   }
 
   const response = NextResponse.redirect(new URL(ROLE_HOME[user.role], request.url), {

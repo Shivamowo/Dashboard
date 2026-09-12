@@ -58,8 +58,12 @@ export function findUserByUsername(username: string) {
   return users.find((u) => u.username === username.trim().toLowerCase());
 }
 
-/** Faculty/HoD self-service signup. Account is created immediately; the record it
- * represents is created only once the paired onboarding ChangeRequest is approved. */
+/**
+ * Faculty/HoD self-service signup — account creation only (username, password,
+ * department, display name). No record and no ChangeRequest exist yet: the
+ * account starts "onboarding_incomplete" until the separate onboarding step
+ * (submitOnboarding below) is completed. See app/api/signup/route.ts.
+ */
 export function createUserAccount(input: {
   username: string;
   password: string;
@@ -77,11 +81,38 @@ export function createUserAccount(input: {
     role: input.role,
     displayName: input.displayName,
     deptId: input.deptId,
-    status: "pending",
+    status: "onboarding_incomplete",
     createdAt: new Date().toISOString(),
   };
   users.push(user);
   return user;
+}
+
+/**
+ * Submits the detailed onboarding form (post-signup, pre-dashboard-access) as
+ * a pending 'onboarding' ChangeRequest and moves the account to
+ * "pending_approval". Also used to resubmit after a rejection.
+ */
+export function submitOnboarding(input: {
+  userId: string;
+  targetEntity: "Faculty" | "HoD";
+  deptId: string;
+  payload: Record<string, unknown>;
+}): ChangeRequest {
+  const user = findUserById(input.userId);
+  if (!user) throw new Error("Unknown user.");
+  const cr = createChangeRequest({
+    type: "onboarding",
+    targetEntity: input.targetEntity,
+    targetId: null,
+    submittedByUserId: input.userId,
+    submittedByRole: user.role,
+    deptId: input.deptId,
+    payload: input.payload,
+  });
+  user.status = "pending_approval";
+  user.rejectionReason = undefined;
+  return cr;
 }
 
 /* ---------------------------------------------------------- change requests */
@@ -174,7 +205,14 @@ function applyChangeRequest(cr: ChangeRequest) {
     if (cr.type === "onboarding") {
       const dept = departmentById(cr.deptId);
       if (!dept) return;
-      const fid = addFacultyRecord(cr.deptId, cr.payload as FacultyProfileEdit);
+      const payload = cr.payload as {
+        profile: FacultyProfileEdit;
+        research: FacultyResearchEdit;
+        projects: FacultyProjectEdit[];
+      };
+      const fid = addFacultyRecord(cr.deptId, payload.profile);
+      setFacultyResearch(fid, payload.research);
+      setFacultyProjects(fid, payload.projects ?? []);
       const user = findUserById(cr.submittedByUserId);
       if (user) user.facultyId = fid;
     } else if (cr.targetId) {
@@ -225,6 +263,9 @@ export function approveChangeRequest(id: string, reviewerId: string, reviewNotes
   }
 }
 
+/** On rejection an onboarding submission sends the account back to
+ * "onboarding_incomplete" (not a separate 'rejected' status) so the user is
+ * routed back to the onboarding form to correct and resubmit. */
 export function rejectChangeRequest(id: string, reviewerId: string, reviewNotes: string) {
   const cr = changeRequestById(id);
   if (!cr || cr.status !== "pending") return;
@@ -235,7 +276,7 @@ export function rejectChangeRequest(id: string, reviewerId: string, reviewNotes:
   if (cr.type === "onboarding") {
     const user = findUserById(cr.submittedByUserId);
     if (user) {
-      user.status = "rejected";
+      user.status = "onboarding_incomplete";
       user.rejectionReason = reviewNotes;
     }
   }

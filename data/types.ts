@@ -180,7 +180,14 @@ export interface FacultyTarget {
 
 export type Role = "vc" | "registrar" | "hod" | "faculty" | "et" | "admin";
 
-export type UserStatus = "active" | "pending" | "rejected";
+/**
+ * "onboarding_incomplete" — account exists, no detailed onboarding submitted yet (or a
+ * prior submission was rejected and needs correcting).
+ * "pending_approval" — onboarding submitted, awaiting Admin review.
+ * "active" — approved; normal dashboard access.
+ * VC/Registrar/ET/Admin accounts are always "active" — onboarding only applies to Faculty/HoD.
+ */
+export type UserStatus = "onboarding_incomplete" | "pending_approval" | "active";
 
 /** Mock user record — see lib/demo-accounts.ts and data/store.ts. */
 export interface UserAccount {
