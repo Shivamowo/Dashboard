@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { Pencil } from "lucide-react";
 import { departmentById, hodSubmissionOf, latestOnboardingForUser } from "@/data";
-import { getSessionUser } from "@/lib/session";
+import { requireSessionUser } from "@/lib/session";
 import DeptDetailSections from "@/components/DeptDetailSections";
 import { PendingRequestNotice } from "@/components/PendingNotice";
 import { PageHeading, StatusBadge } from "@/components/ui";
 
 export default async function HodDashboard() {
-  const user = (await getSessionUser())!;
+  const user = await requireSessionUser();
   const dept = departmentById(user.deptId!)!;
   const submission = hodSubmissionOf(dept.id);
   // Middleware sends "onboarding_incomplete" accounts to /hod/onboarding —

@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { Pencil } from "lucide-react";
 import { departmentById, facultyById, latestOnboardingForUser } from "@/data";
-import { getSessionUser } from "@/lib/session";
+import { requireSessionUser } from "@/lib/session";
 import FacultyProfileSections from "@/components/FacultyProfileSections";
 import { PendingRequestNotice } from "@/components/PendingNotice";
 import { Badge, PageHeading } from "@/components/ui";
 
 export default async function FacultySelfView() {
-  const user = (await getSessionUser())!;
+  const user = await requireSessionUser();
 
   // Middleware sends "onboarding_incomplete" accounts to /faculty/onboarding —
   // reaching here with no facultyId means onboarding was submitted and is

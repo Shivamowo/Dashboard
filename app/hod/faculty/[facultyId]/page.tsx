@@ -2,13 +2,13 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Lock, Pencil } from "lucide-react";
 import { departmentById, facultyById, pendingFacultyEditIds } from "@/data";
-import { getSessionUser } from "@/lib/session";
+import { requireSessionUser } from "@/lib/session";
 import FacultyProfileSections from "@/components/FacultyProfileSections";
 import { Badge, EmptyState, PageHeading, PendingBadge } from "@/components/ui";
 
 export default async function HodFacultyProfile({ params }: { params: Promise<{ facultyId: string }> }) {
   const { facultyId } = await params;
-  const user = (await getSessionUser())!;
+  const user = await requireSessionUser();
   const f = facultyById(facultyId);
   if (!f) notFound();
 

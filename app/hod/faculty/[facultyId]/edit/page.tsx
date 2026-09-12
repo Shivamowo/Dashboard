@@ -7,7 +7,7 @@ import {
   researchOf,
   targetOf,
 } from "@/data";
-import { getSessionUser } from "@/lib/session";
+import { requireSessionUser } from "@/lib/session";
 import {
   submitHodFacultyProfile,
   submitHodFacultyProjects,
@@ -35,7 +35,7 @@ export default async function HodFacultyEditPage({
 }) {
   const { facultyId } = await params;
   const { submitted } = await searchParams;
-  const user = (await getSessionUser())!;
+  const user = await requireSessionUser();
   const f = facultyById(facultyId);
   if (!f) notFound();
 

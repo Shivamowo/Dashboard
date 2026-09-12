@@ -12,7 +12,10 @@ export default async function LoginPage({
 }: {
   searchParams: Promise<{ error?: string }>;
 }) {
-  const failed = (await searchParams).error === "1";
+  const error = (await searchParams).error;
+  const failed = error === "1";
+  // Set when a session cookie outlived the account it named — see lib/session.ts.
+  const expired = error === "expired";
   return (
     <div className="mx-auto grid min-h-[calc(100vh-3rem)] max-w-5xl items-center gap-12 py-8 lg:grid-cols-[1.1fr_1fr]">
       <div>
@@ -85,14 +88,15 @@ export default async function LoginPage({
             />
           </div>
 
-          {failed ? (
+          {failed || expired ? (
             <p
               role="alert"
               className="flex items-start gap-2 rounded-control border border-alert-100 bg-alert-50 px-3 py-2.5 text-meta text-alert-700"
             >
               <TriangleAlert aria-hidden className="mt-0.5 h-4 w-4 shrink-0" />
-              That username and password combination is not recognised. Pick an account from the
-              list and use the password demo123.
+              {expired
+                ? "Your session has ended because the server restarted. Accounts created by signing up do not survive a restart in this demo build — sign in with one of the accounts listed here."
+                : "That username and password combination is not recognised. Pick an account from the list and use the password demo123."}
             </p>
           ) : null}
 

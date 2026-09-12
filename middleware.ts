@@ -16,15 +16,31 @@ const SECTIONS = ["vc", "registrar", "hod", "faculty", "et", "admin"] as const;
 /** Roles that go through a post-signup onboarding step before their dashboard is usable. */
 const ONBOARDING_ROLES = ["faculty", "hod"] as const;
 
+/** Sends the browser to `path` and drops the session cookie on the way out. */
+function clearSessionAndRedirect(request: NextRequest, path: string) {
+  const response = NextResponse.redirect(new URL(path, request.url));
+  response.cookies.delete(SESSION_COOKIE);
+  return response;
+}
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const raw = request.cookies.get(SESSION_COOKIE)?.value;
   const [userId, role] = raw?.split("|") ?? [];
-  const valid = isRole(role) ? role : null;
+
+  // Resolve the cookie to a real account before anything routes on it. The
+  // demo store is per-server-process, so a signup-created account vanishes on
+  // redeploy, cold start, or a second instance — while the browser keeps
+  // sending its cookie. Treating that stale cookie as a live session used to
+  // let requests through to pages that then dereferenced a null user and
+  // returned a 500; an unresolvable cookie is instead no session at all.
+  const user = isRole(role) && userId ? findUserById(userId) : undefined;
+  const stale = Boolean(raw) && !user;
 
   // Already signed in? Login, signup and root send you to your own home.
   if (pathname === "/login" || pathname === "/signup" || pathname === "/") {
-    if (valid) return NextResponse.redirect(new URL(ROLE_HOME[valid], request.url));
+    if (user) return NextResponse.redirect(new URL(ROLE_HOME[user.role], request.url));
+    if (stale) return clearSessionAndRedirect(request, "/login");
     if (pathname === "/") return NextResponse.redirect(new URL("/login", request.url));
     return NextResponse.next();
   }
@@ -34,23 +50,23 @@ export function middleware(request: NextRequest) {
   );
   if (!section) return NextResponse.next();
 
-  // No session at all — sign in first.
-  if (!valid) return NextResponse.redirect(new URL("/login", request.url));
+  // No session at all — sign in first. A stale cookie is dropped on the way
+  // so the login page does not bounce straight back here.
+  if (!user) return clearSessionAndRedirect(request, "/login");
 
   // Valid session in the wrong section — send them to their own home, not login.
-  if (valid !== section) {
-    return NextResponse.redirect(new URL(ROLE_HOME[valid], request.url));
+  if (user.role !== section) {
+    return NextResponse.redirect(new URL(ROLE_HOME[user.role], request.url));
   }
 
   // Faculty/HoD accounts must complete onboarding before using their real dashboard.
-  if ((ONBOARDING_ROLES as readonly string[]).includes(valid) && userId) {
-    const user = findUserById(userId);
-    const onboardingPath = `/${valid}/onboarding`;
-    if (user?.status === "onboarding_incomplete" && pathname !== onboardingPath) {
+  if ((ONBOARDING_ROLES as readonly string[]).includes(user.role)) {
+    const onboardingPath = `/${user.role}/onboarding`;
+    if (user.status === "onboarding_incomplete" && pathname !== onboardingPath) {
       return NextResponse.redirect(new URL(onboardingPath, request.url));
     }
-    if (user && user.status !== "onboarding_incomplete" && pathname === onboardingPath) {
-      return NextResponse.redirect(new URL(ROLE_HOME[valid], request.url));
+    if (user.status !== "onboarding_incomplete" && pathname === onboardingPath) {
+      return NextResponse.redirect(new URL(ROLE_HOME[user.role], request.url));
     }
   }
 

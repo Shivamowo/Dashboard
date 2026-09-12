@@ -1,5 +1,5 @@
 import { departmentById, hodSubmissionOf, requestsSubmittedByUser } from "@/data";
-import { getSessionUser } from "@/lib/session";
+import { requireSessionUser } from "@/lib/session";
 import { submitHodOwnSubmission } from "@/lib/actions";
 import { FormActions, FormGrid, TextField } from "@/components/forms";
 import { PendingRequestNotice, RejectedRequestNotice } from "@/components/PendingNotice";
@@ -7,7 +7,7 @@ import { PageHeading, Section } from "@/components/ui";
 
 export default async function HodEditPage({ searchParams }: { searchParams: Promise<{ submitted?: string }> }) {
   const { submitted } = await searchParams;
-  const user = (await getSessionUser())!;
+  const user = await requireSessionUser();
   const dept = departmentById(user.deptId!)!;
   const submission = hodSubmissionOf(dept.id);
   const mine = requestsSubmittedByUser(user.id).filter((c) => c.targetEntity === "HoD" && c.type === "edit");

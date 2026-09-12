@@ -1,12 +1,12 @@
 import { TriangleAlert } from "lucide-react";
 import { departmentById, latestOnboardingForUser } from "@/data";
-import { getSessionUser } from "@/lib/session";
+import { requireSessionUser } from "@/lib/session";
 import { submitHodOnboarding } from "@/lib/actions";
 import { FormActions, FormGrid, TextField } from "@/components/forms";
 import { Field, PageHeading, Section } from "@/components/ui";
 
 export default async function HodOnboardingPage() {
-  const user = (await getSessionUser())!;
+  const user = await requireSessionUser();
 
   if (user.status !== "onboarding_incomplete") {
     return (

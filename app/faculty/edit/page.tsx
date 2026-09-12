@@ -5,7 +5,7 @@ import {
   researchOf,
   targetOf,
 } from "@/data";
-import { getSessionUser } from "@/lib/session";
+import { requireSessionUser } from "@/lib/session";
 import {
   submitOwnFacultyProfile,
   submitOwnFacultyProjects,
@@ -25,7 +25,7 @@ const PROJECT_SLOTS = 4;
 
 export default async function FacultyEditPage({ searchParams }: { searchParams: Promise<{ submitted?: string }> }) {
   const { submitted } = await searchParams;
-  const user = (await getSessionUser())!;
+  const user = await requireSessionUser();
   if (!user.facultyId) {
     return (
       <div>

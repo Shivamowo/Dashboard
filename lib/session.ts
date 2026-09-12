@@ -1,4 +1,5 @@
 import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 import { findUserById, type Role, type UserAccount } from "@/data";
 import { SESSION_COOKIE, isRole } from "./demo-accounts";
 
@@ -22,4 +23,22 @@ export async function getSessionUser(): Promise<UserAccount | null> {
   const parsed = await parseSessionCookie();
   if (!parsed) return null;
   return findUserById(parsed.userId) ?? null;
+}
+
+/**
+ * Session user for pages that cannot render without one, redirecting to
+ * /login instead of throwing when the session is missing or stale.
+ *
+ * A cookie can outlive the account it names: the demo store (data/store.ts)
+ * is per-server-process, so a signup-created user disappears whenever the
+ * process restarts — a redeploy, a cold start, or a second instance on
+ * Vercel. The browser still sends the old cookie, findUserById returns
+ * undefined, and the page would dereference null and 500. Middleware clears
+ * such cookies, but Server Components must not depend on that: middleware
+ * and the render can run in separate instances with separate stores.
+ */
+export async function requireSessionUser(): Promise<UserAccount> {
+  const user = await getSessionUser();
+  if (!user) redirect("/login?error=expired");
+  return user;
 }

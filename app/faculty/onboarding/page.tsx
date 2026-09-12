@@ -1,5 +1,5 @@
 import { latestOnboardingForUser, type FacultyProfileEdit, type FacultyProjectEdit, type FacultyResearchEdit } from "@/data";
-import { getSessionUser } from "@/lib/session";
+import { requireSessionUser } from "@/lib/session";
 import { submitFacultyOnboarding } from "@/lib/actions";
 import { CheckboxField, FormActions, FormGrid, NumberField, SelectField, TextField } from "@/components/forms";
 import { PageHeading, Section } from "@/components/ui";
@@ -11,7 +11,7 @@ const PROJECT_STATUSES = ["Ongoing", "Completed", "Submitted", "Sanctioned", "Cl
 const PROJECT_SLOTS = 4;
 
 export default async function FacultyOnboardingPage() {
-  const user = (await getSessionUser())!;
+  const user = await requireSessionUser();
 
   if (user.status !== "onboarding_incomplete") {
     return (

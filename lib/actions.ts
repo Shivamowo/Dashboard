@@ -27,7 +27,11 @@ import { getSessionUser } from "./session";
 
 async function requireUser(roles: Role[]) {
   const user = await getSessionUser();
-  if (!user || !roles.includes(user.role)) throw new Error("Not authorized for this action.");
+  // A cookie whose account no longer exists is an ended session, not an
+  // authorization failure — bounce to login rather than throwing at the user.
+  // See requireSessionUser in ./session for why that happens.
+  if (!user) redirect("/login?error=expired");
+  if (!roles.includes(user.role)) throw new Error("Not authorized for this action.");
   return user;
 }
 
