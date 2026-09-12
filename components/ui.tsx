@@ -9,7 +9,7 @@ type Tone = "neutral" | "seal" | "positive" | "caution" | "alert";
 
 const valueTone: Record<Tone, string> = {
   neutral: "text-ink-900",
-  seal: "text-seal-700",
+  seal: "text-brand-pink-dark",
   positive: "text-success-700",
   caution: "text-caution-700",
   alert: "text-alert-700",
@@ -71,7 +71,7 @@ export function ProgressBar({
     pct >= 75
       ? "bg-success-600"
       : pct >= 50
-      ? "bg-seal-500"
+      ? "bg-brand-pink"
       : pct >= 30
       ? "bg-caution-600"
       : "bg-alert-600";
@@ -102,14 +102,27 @@ export function ProgressBar({
 
 /* -------------------------------------------------------------- StatusBadge */
 
-type BadgeTone = "positive" | "seal" | "caution" | "alert" | "neutral" | "brass";
+type BadgeTone =
+  | "positive"
+  | "seal"
+  | "caution"
+  | "alert"
+  | "neutral"
+  | "gold"
+  /**
+   * Brand priority tone (brand-maroon). Deliberately kept distinct from the
+   * system "alert" red used by the Delayed status — see design.md §6. Both
+   * always carry their text label, never colour alone.
+   */
+  | "priority";
 
 const badgeTone: Record<BadgeTone, string> = {
   positive: "bg-success-50 text-success-700 ring-success-600/25",
-  seal: "bg-seal-50 text-seal-700 ring-seal-600/25",
+  seal: "bg-brand-pink-50 text-brand-pink-dark ring-brand-pink/30",
   caution: "bg-caution-50 text-caution-700 ring-caution-600/25",
   alert: "bg-alert-50 text-alert-700 ring-alert-600/25",
-  brass: "bg-brass-50 text-brass-700 ring-brass-600/25",
+  gold: "bg-brand-gold-50 text-ink-800 ring-brand-gold/50",
+  priority: "bg-brand-maroon-50 text-brand-maroon ring-brand-maroon/30",
   neutral: "bg-ink-100 text-ink-700 ring-ink-300",
 };
 
@@ -137,9 +150,11 @@ const statusTone: Record<string, BadgeTone> = {
   Ongoing: "seal",
   Sanctioned: "positive",
   Closed: "neutral",
-  High: "positive",
+  // HoD priority — brand-maroon for High, so it never reads as the system
+  // "Delayed" red sitting beside it in the targets tracker.
+  High: "priority",
   Medium: "seal",
-  Low: "caution",
+  Low: "gold",
   "Under-utilised": "caution",
   Optimal: "positive",
   "Over-utilised": "alert",
@@ -153,10 +168,11 @@ export function StatusBadge({ status }: { status: QuarterStatus | string }) {
   const tone = statusTone[status] ?? "neutral";
   const dot: Record<BadgeTone, string> = {
     positive: "bg-success-600",
-    seal: "bg-seal-500",
+    seal: "bg-brand-pink",
     caution: "bg-caution-600",
     alert: "bg-alert-600",
-    brass: "bg-brass-500",
+    gold: "bg-brand-gold",
+    priority: "bg-brand-maroon",
     neutral: "bg-ink-400",
   };
   return (
@@ -193,7 +209,7 @@ export function Breadcrumb({ items }: { items: Crumb[] }) {
               {item.href && !last ? (
                 <Link
                   href={item.href}
-                  className="rounded-control px-1 py-0.5 transition-colors hover:bg-ink-100 hover:text-seal-700"
+                  className="rounded-control px-1 py-0.5 transition-colors hover:bg-ink-100 hover:text-brand-pink-dark"
                 >
                   {item.label}
                 </Link>
@@ -259,6 +275,7 @@ export function Section({
   actions,
   children,
   icon: Icon,
+  accent = "pink",
 }: {
   id?: string;
   title: string;
@@ -266,13 +283,23 @@ export function Section({
   actions?: ReactNode;
   children: ReactNode;
   icon?: LucideIcon;
+  /** "teal" ties the infrastructure/ET sections to the seal water motif. */
+  accent?: "pink" | "teal";
 }) {
   return (
     <section id={id} className="panel scroll-mt-6">
       <div className="panel-head">
         <div className="min-w-0">
           <h2 className="panel-title flex items-center gap-2">
-            {Icon ? <Icon aria-hidden className="h-4 w-4 shrink-0 text-seal-600" /> : null}
+            {Icon ? (
+              <Icon
+                aria-hidden
+                className={
+                  "h-4 w-4 shrink-0 " +
+                  (accent === "teal" ? "text-brand-teal-dark" : "text-brand-pink-dark")
+                }
+              />
+            ) : null}
             {title}
           </h2>
           {description ? <p className="panel-note">{description}</p> : null}
@@ -338,7 +365,7 @@ export function ProfileCard({
       <div className="flex flex-col gap-5 border-b border-ink-200 bg-paper-sunken px-5 py-5 sm:flex-row sm:items-center">
         <span
           aria-hidden
-          className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-seal-200 bg-seal-50 font-display text-h3 font-semibold text-seal-700"
+          className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-brand-pink-200 bg-brand-pink-50 font-display text-h3 font-semibold text-brand-pink-dark"
         >
           {initials}
         </span>

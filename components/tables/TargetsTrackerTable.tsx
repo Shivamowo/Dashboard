@@ -20,8 +20,8 @@ export default function TargetsTrackerTable({
       value: (r) => r.name,
       render: (r) => (
         <span className="flex items-center gap-2">
-          <span className="font-medium text-seal-700">{r.name}</span>
-          {r.milestonePct < AT_RISK_THRESHOLD ? <Badge tone="alert">At risk</Badge> : null}
+          <span className="font-medium text-brand-pink-dark">{r.name}</span>
+          {r.milestonePct < AT_RISK_THRESHOLD ? <Badge tone="priority">Behind plan</Badge> : null}
         </span>
       ),
       className: "min-w-[16rem]",

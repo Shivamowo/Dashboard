@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, type ReactNode } from "react";
 import { Menu, X } from "lucide-react";
 import RoleNav from "./RoleNav";
@@ -20,12 +21,16 @@ export default function AppShell({
 
   const brand = (
     <div className="flex items-start gap-3 px-1 py-1">
-      <span
+      {/* University seal — never recoloured, min 32px, 8px clear space (design.md §3). */}
+      <Image
+        src="/vbspu-logo.png"
+        alt=""
         aria-hidden
-        className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-control border border-brass-500/40 bg-ink-900 font-display text-meta font-semibold text-brass-200"
-      >
-        VB
-      </span>
+        width={40}
+        height={40}
+        className="mt-0.5 h-10 w-10 shrink-0"
+        priority
+      />
       <span className="min-w-0">
         <span className="block font-display text-lead font-semibold leading-tight text-paper">
           Department Records
@@ -53,7 +58,7 @@ export default function AppShell({
   return (
     <div className="lg:flex">
       {/* Tablet and below: a bar that opens the same navigation as a drawer. */}
-      <div className="sticky top-0 z-40 flex items-center justify-between gap-3 border-b border-ink-800 bg-ink-950 px-4 py-3 lg:hidden">
+      <div className="sticky top-0 z-40 flex items-center justify-between gap-3 border-b border-brand-ink-lighter bg-brand-ink px-4 py-3 lg:hidden">
         {brand}
         <button
           type="button"
@@ -61,7 +66,7 @@ export default function AppShell({
           aria-expanded={open}
           aria-controls="section-drawer"
           aria-label={open ? "Close navigation" : "Open navigation"}
-          className="rounded-control border border-ink-700 p-2 text-ink-300 transition-colors hover:bg-ink-900 hover:text-paper active:bg-ink-800"
+          className="rounded-control border border-brand-ink-lighter p-2 text-ink-300 transition-colors hover:bg-brand-ink-light hover:text-paper active:bg-brand-ink-lighter"
         >
           {open ? <X aria-hidden className="h-5 w-5" /> : <Menu aria-hidden className="h-5 w-5" />}
         </button>
@@ -70,21 +75,21 @@ export default function AppShell({
       {open ? (
         <div
           id="section-drawer"
-          className="sticky top-[3.75rem] z-30 space-y-5 border-b border-ink-800 bg-ink-950 px-4 py-4 lg:hidden"
+          className="sticky top-[3.75rem] z-30 space-y-5 border-b border-brand-ink-lighter bg-brand-ink px-4 py-4 lg:hidden"
         >
           <RoleNav role={role} onNavigate={() => setOpen(false)} />
-          <div className="border-t border-ink-800 pt-4">{footer}</div>
+          <div className="border-t border-brand-ink-lighter pt-4">{footer}</div>
         </div>
       ) : null}
 
       {/* Desktop rail */}
-      <aside className="sticky top-0 hidden h-screen w-[17.5rem] shrink-0 flex-col justify-between overflow-y-auto border-r border-ink-800 bg-ink-950 px-4 py-5 lg:flex">
+      <aside className="sticky top-0 hidden h-screen w-[17.5rem] shrink-0 flex-col justify-between overflow-y-auto border-r border-brand-ink-lighter bg-brand-ink px-4 py-5 lg:flex">
         <div>
           {brand}
           <p className="mb-3 mt-6 px-1 text-micro font-semibold text-ink-500">Your view</p>
           <RoleNav role={role} />
         </div>
-        <div className="mt-6 border-t border-ink-800 px-1 pt-4">{footer}</div>
+        <div className="mt-6 border-t border-brand-ink-lighter px-1 pt-4">{footer}</div>
       </aside>
 
       <div className="min-w-0 flex-1">

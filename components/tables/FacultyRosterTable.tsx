@@ -22,7 +22,7 @@ export default function FacultyRosterTable({
       key: "name",
       header: "Name of Faculty Member",
       value: (r) => r.name,
-      render: (r) => <span className="font-medium text-seal-700">{r.name}</span>,
+      render: (r) => <span className="font-medium text-brand-pink-dark">{r.name}</span>,
       className: "min-w-[14rem]",
     },
   ];

@@ -38,7 +38,7 @@ export default function DeptComparisonTable({
       header: "Department",
       value: (r) => r.name,
       render: (r) => (
-        <span className="font-medium text-seal-700">{r.name}</span>
+        <span className="font-medium text-brand-pink-dark">{r.name}</span>
       ),
       className: "min-w-[16rem]",
     },

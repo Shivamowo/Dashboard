@@ -249,15 +249,15 @@ export default function DataTable<T>({
                           onClick={() => toggleSort(c)}
                           title={`Sort by ${c.header}`}
                           className={
-                            "inline-flex items-center gap-1.5 rounded-control px-1 py-0.5 -mx-1 transition-colors hover:text-seal-700 " +
-                            (isSorted ? "text-seal-700" : "")
+                            "inline-flex items-center gap-1.5 rounded-control px-1 py-0.5 -mx-1 transition-colors hover:text-brand-pink-dark " +
+                            (isSorted ? "text-brand-pink-dark" : "")
                           }
                         >
                           {c.header}
                           <SortIcon
                             aria-hidden
                             className={
-                              "h-3 w-3 shrink-0 " + (isSorted ? "text-seal-600" : "text-ink-400")
+                              "h-3 w-3 shrink-0 " + (isSorted ? "text-brand-pink-dark" : "text-ink-400")
                             }
                           />
                         </button>
@@ -290,7 +290,7 @@ export default function DataTable<T>({
                     className={
                       "group bg-paper-raised " +
                       (href
-                        ? "cursor-pointer transition-colors hover:bg-seal-50 focus:bg-seal-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-seal-500 active:bg-seal-100"
+                        ? "cursor-pointer transition-colors hover:bg-brand-pink-50 focus:bg-brand-pink-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand-pink active:bg-brand-pink-100"
                         : "transition-colors hover:bg-paper-sunken/60")
                     }
                   >
@@ -301,7 +301,7 @@ export default function DataTable<T>({
                         stickyFirstColumn && ci === 0
                           ? "sticky left-0 z-10 bg-paper-raised shadow-[1px_0_0_0_theme(colors.ink.100)] " +
                             (href
-                              ? "group-hover:bg-seal-50 group-focus:bg-seal-50"
+                              ? "group-hover:bg-brand-pink-50 group-focus:bg-brand-pink-50"
                               : "group-hover:bg-paper-sunken/60")
                           : "";
                       return (

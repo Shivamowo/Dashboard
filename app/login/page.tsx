@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { DEMO_ACCOUNTS } from "@/lib/demo-accounts";
 import { TriangleAlert } from "lucide-react";
 
@@ -15,12 +16,6 @@ export default function LoginPage({
   return (
     <div className="mx-auto grid min-h-[calc(100vh-3rem)] max-w-5xl items-center gap-12 py-8 lg:grid-cols-[1.1fr_1fr]">
       <div>
-        <span
-          aria-hidden
-          className="mb-6 flex h-11 w-11 items-center justify-center rounded-control border border-brass-500/40 bg-ink-950 font-display text-body font-semibold text-brass-200"
-        >
-          VB
-        </span>
         <h1 className="font-display text-h1 font-semibold leading-tight text-ink-900">
           Department Records
         </h1>
@@ -47,8 +42,17 @@ export default function LoginPage({
       </div>
 
       <div className="rounded-panel border border-ink-200 bg-paper-raised px-6 py-7">
-        <h2 className="font-display text-h3 font-semibold text-ink-900">Sign in</h2>
-        <p className="mb-6 mt-1 text-meta text-ink-500">
+        {/* University seal, ~96px, centred above the form (design.md §3). */}
+        <Image
+          src="/vbspu-logo.png"
+          alt="Veer Bahadur Singh Purvanchal University seal"
+          width={96}
+          height={96}
+          priority
+          className="mx-auto mb-5 h-24 w-24"
+        />
+        <h2 className="text-center font-display text-h3 font-semibold text-ink-900">Sign in</h2>
+        <p className="mb-6 mt-1 text-center text-meta text-ink-500">
           Your role decides which records open, and it cannot be changed after signing in.
         </p>
         <form action="/api/login" method="post" className="space-y-4">
@@ -94,7 +98,7 @@ export default function LoginPage({
 
           <button
             type="submit"
-            className="w-full rounded-control bg-seal-700 px-4 py-2.5 text-body font-semibold text-paper transition-colors hover:bg-seal-600 active:bg-seal-800"
+            className="btn-primary w-full"
           >
             Sign in
           </button>

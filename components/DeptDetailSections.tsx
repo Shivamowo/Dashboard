@@ -198,6 +198,7 @@ export default function DeptDetailSections({
         title="Infrastructure"
         description="Laboratories and classrooms with their weekly allocation and utilisation."
         icon={BarChart3}
+        accent="teal"
       >
         <InfrastructureTable rows={infra} />
       </Section>

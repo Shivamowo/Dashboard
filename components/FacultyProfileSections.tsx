@@ -234,7 +234,7 @@ export default function FacultyProfileSections({ facultyId }: { facultyId: strin
                 <div>
                   <p className="field-label">Review flag</p>
                   <div className="mt-1.5">
-                    <StatusBadge status="At risk" />
+                    <Badge tone="priority">Behind plan</Badge>
                   </div>
                 </div>
               ) : null}

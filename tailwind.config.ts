@@ -15,7 +15,7 @@ const config: Config = {
     extend: {
       colors: {
         paper: {
-          DEFAULT: "#F6F5F2",
+          DEFAULT: "#FBF8F3", // brand-cream
           raised: "#FFFFFF",
           sunken: "#EFEDE8",
         },
@@ -52,6 +52,44 @@ const config: Config = {
           600: "#A67A28",
           700: "#8A6420",
         },
+        /**
+         * VBSPU brand palette, sampled from the university seal (see design.md).
+         * These layer on top of the neutral scale as accents — they do not
+         * replace it.
+         */
+        "brand-pink": {
+          DEFAULT: "#E31C79",
+          50: "#FDF0F6",
+          100: "#FBDCEB",
+          200: "#F5B4D2",
+          dark: "#96294D",
+        },
+        "brand-gold": {
+          DEFAULT: "#F2C230",
+          50: "#FEF9EA",
+          100: "#FCEFC6",
+          200: "#F8E09A",
+        },
+        "brand-teal": {
+          DEFAULT: "#2F8F82",
+          50: "#EDF6F4",
+          100: "#D3E9E5",
+          200: "#A6D3CC",
+          dark: "#257268",
+        },
+        "brand-maroon": {
+          DEFAULT: "#8B1E3F",
+          50: "#FBEFF3",
+          100: "#F4D8E0",
+          200: "#E5AFBF",
+        },
+        "brand-cream": "#FBF8F3",
+        "brand-ink": {
+          DEFAULT: "#1A1210",
+          light: "#2A201D",
+          lighter: "#3B2E2A",
+        },
+
         success: { 50: "#EDF7F0", 100: "#D6EDDD", 600: "#1F7A45", 700: "#186137" },
         caution: { 50: "#FDF4E6", 100: "#F9E6C6", 600: "#9A6408", 700: "#7C5006" },
         alert: { 50: "#FDF1F1", 100: "#F9DCDC", 600: "#A82B2B", 700: "#8A2222" },

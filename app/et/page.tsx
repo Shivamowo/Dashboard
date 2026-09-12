@@ -91,6 +91,7 @@ export default function EtDashboard() {
           title="Utilisation by department"
           description="Weekly hours used against hours allotted, averaged across each department's rooms."
           icon={BarChart3}
+          accent="teal"
         >
           <TrendChart
             data={byDept.map((d) => ({ dept: d.dept, utilisation: d.utilisation }))}
@@ -105,6 +106,7 @@ export default function EtDashboard() {
           title="Departmental summary"
           description="Room counts, capacity and where the estate is stretched or idle."
           icon={DoorOpen}
+          accent="teal"
         >
           <div className="table-scroll rounded-panel border border-ink-200">
             <table className="w-full min-w-[40rem] border-collapse">
@@ -160,6 +162,7 @@ export default function EtDashboard() {
           title="Room register"
           description="Every reported field for each room. Filter by department or utilisation flag."
           icon={DoorOpen}
+          accent="teal"
         >
           <InfrastructureTable rows={rooms} deptNames={deptNames} showDept />
         </Section>

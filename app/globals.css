@@ -26,7 +26,7 @@
   }
 
   :focus-visible {
-    @apply outline-none ring-2 ring-seal-500 ring-offset-2 ring-offset-paper-raised;
+    @apply outline-none ring-2 ring-brand-pink ring-offset-2 ring-offset-paper-raised;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -64,7 +64,7 @@
   }
   .rule-label::after {
     content: "";
-    @apply h-px flex-1 bg-ink-200;
+    @apply h-px flex-1 bg-brand-gold-200;
   }
 
   .field-label {
@@ -77,7 +77,12 @@
   /* -------------------------------------------------------------- controls */
   .input {
     @apply w-full rounded-control border border-ink-300 bg-paper-raised px-3 py-2 text-body text-ink-900 transition-colors;
-    @apply hover:border-ink-400 focus:border-seal-500 focus:outline-none focus:ring-2 focus:ring-seal-200;
+    @apply hover:border-ink-400 focus:border-brand-pink focus:outline-none focus:ring-2 focus:ring-brand-pink-100;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-control bg-brand-pink px-4 py-2.5 text-body font-semibold text-white transition-colors;
+    @apply hover:bg-brand-pink-dark active:bg-brand-pink-dark disabled:cursor-not-allowed disabled:opacity-70;
   }
 
   .btn-quiet {
@@ -86,7 +91,7 @@
   }
 
   .btn-link {
-    @apply inline-flex items-center gap-1.5 rounded-control text-meta font-semibold text-seal-700 transition-colors hover:text-seal-500;
+    @apply inline-flex items-center gap-1.5 rounded-control text-meta font-semibold text-brand-pink-dark transition-colors hover:text-brand-pink;
   }
 
   /* ---------------------------------------------------------------- tables */
@@ -94,7 +99,7 @@
     @apply w-full overflow-x-auto overscroll-x-contain;
   }
   .th {
-    @apply whitespace-nowrap border-b border-ink-200 bg-paper-sunken px-3 py-2.5 text-left align-bottom text-micro font-semibold text-ink-700;
+    @apply whitespace-nowrap border-b-2 border-brand-gold-200 bg-paper-sunken px-3 py-2.5 text-left align-bottom text-micro font-semibold text-ink-700;
   }
   .td {
     @apply border-b border-ink-100 px-3 py-2.5 align-top text-body text-ink-800;
