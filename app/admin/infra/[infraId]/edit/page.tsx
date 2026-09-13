@@ -17,9 +17,9 @@ export default async function AdminInfraEditPage({ params }: { params: Promise<{
         crumbs={[
           { label: "Administrator", href: "/admin" },
           { label: "Infrastructure", href: "/admin/infrastructure" },
-          { label: infra.labClassroomName },
+          { label: infra.labClassroomName ?? infra.id },
         ]}
-        title={`Edit ${infra.labClassroomName}`}
+        title={`Edit ${infra.labClassroomName ?? infra.id}`}
         subtitle={`${dept?.name ?? infra.deptId}. Admin edits apply immediately — no approval step.`}
       />
 

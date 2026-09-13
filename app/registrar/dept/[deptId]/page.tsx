@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { joinMeta } from "@/components/cells";
 import { departmentById, departments, hodSubmissionOf } from "@/data";
 import DeptDetailSections from "@/components/DeptDetailSections";
 import { PageHeading, StatusBadge } from "@/components/ui";
@@ -21,7 +22,10 @@ export default async function RegistrarDeptDetail({ params }: { params: Promise<
           { label: dept.shortName },
         ]}
         title={dept.name}
-        subtitle={`${dept.facultyOfEngineering} · Head of Department ${dept.hodName}`}
+        subtitle={joinMeta([
+          dept.facultyOfEngineering,
+          dept.hodName ? `Head of Department ${dept.hodName}` : null,
+        ])}
         meta={submission ? <StatusBadge status={submission.status} /> : null}
       />
       <DeptDetailSections deptId={dept.id} facultyHrefBase="/registrar/faculty" />

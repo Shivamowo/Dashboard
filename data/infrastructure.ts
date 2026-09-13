@@ -3,6 +3,7 @@ import { makeRng, hashString, int, pick, chance } from "./rng";
 import { facultyByDept } from "./faculty";
 import { programsByDept } from "./programs";
 import { globalSingleton } from "./globalStore";
+import { chooseData, imported } from "./source";
 
 type RoomSeed = { room: string; floor: string; capacity: number; equipment: string };
 
@@ -111,7 +112,9 @@ function buildInfrastructure(): Infrastructure[] {
   return rows;
 }
 
-export const infrastructure: Infrastructure[] = globalSingleton("infrastructure", buildInfrastructure);
+export const infrastructure: Infrastructure[] = globalSingleton("infrastructure", () =>
+  chooseData(imported.infrastructure, buildInfrastructure)
+);
 
 export const infrastructureByDept = (deptId: string) =>
   infrastructure.filter((x) => x.deptId === deptId);
@@ -128,7 +131,13 @@ export function updateInfrastructureRecord(id: string, data: InfrastructureEdit)
 
 export type UtilisationFlag = "Under-utilised" | "Optimal" | "Over-utilised";
 
-export function utilisationFlag(pct: number): UtilisationFlag {
+/**
+ * A room that never reported a utilisation figure has no flag — null, not
+ * "Under-utilised". Treating a blank as 0% would brand every unreported room
+ * as under-used and inflate the under-utilisation counts on the ET dashboard.
+ */
+export function utilisationFlag(pct: number | null | undefined): UtilisationFlag | null {
+  if (pct == null || !Number.isFinite(pct)) return null;
   if (pct < 60) return "Under-utilised";
   if (pct > 95) return "Over-utilised";
   return "Optimal";

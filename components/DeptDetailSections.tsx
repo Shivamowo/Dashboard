@@ -10,6 +10,7 @@ import {
   Users,
 } from "lucide-react";
 import { Pencil } from "lucide-react";
+import { pairHint, pairValue } from "@/components/cells";
 import Link from "next/link";
 import {
   departmentById,
@@ -90,20 +91,28 @@ export default function DeptDetailSections({
             label="Faculty with PhD"
             value={roll.phdPct}
             unit="%"
-            hint={`${roll.phdCount} of ${roll.facultyCount}`}
+            hint={pairHint(roll.phdCount, roll.facultyCount, (a, b) => `${a} of ${b}`)}
             tone="seal"
             icon={GraduationCap}
           />
           <KpiCard
             label="Admitted against intake"
-            value={`${roll.admitted2026} / ${roll.sanctionedIntake2026}`}
-            hint={`${roll.fillRatePct}% of 2026 seats filled`}
+            value={pairValue(roll.admitted2026, roll.sanctionedIntake2026)}
+            hint={
+              roll.fillRatePct == null
+                ? "2026 intake or admissions not reported"
+                : `${roll.fillRatePct}% of 2026 seats filled`
+            }
             icon={TrendingUp}
           />
           <KpiCard
             label="Publications reported"
             value={roll.totalPublications}
-            hint={`${roll.journalPublications} journal, ${roll.conferencePublications} conference`}
+            hint={pairHint(
+              roll.journalPublications,
+              roll.conferencePublications,
+              (j, c) => `${j} journal, ${c} conference`
+            )}
             icon={FlaskConical}
           />
           <KpiCard
@@ -111,7 +120,7 @@ export default function DeptDetailSections({
             value={roll.avgUtilisation}
             unit="%"
             hint={`Average across ${roll.infraRooms} rooms`}
-            tone={roll.avgUtilisation < 60 ? "caution" : "positive"}
+            tone={roll.avgUtilisation != null && roll.avgUtilisation < 60 ? "caution" : "positive"}
             icon={BarChart3}
           />
         </KpiRow>
@@ -207,7 +216,12 @@ export default function DeptDetailSections({
                 label="Avg milestone"
                 value={targetSummary.avgMilestoneAchievement}
                 unit="%"
-                tone={targetSummary.avgMilestoneAchievement < 50 ? "caution" : "positive"}
+                tone={
+                  targetSummary.avgMilestoneAchievement != null &&
+                  targetSummary.avgMilestoneAchievement < 50
+                    ? "caution"
+                    : "positive"
+                }
               />
             </div>
           ) : null}

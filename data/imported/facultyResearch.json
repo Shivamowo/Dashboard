@@ -1,0 +1,3876 @@
+[
+  {
+    "id": "applied-psychology-f1-res",
+    "facultyId": "applied-psychology-f1",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 40,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": 11,
+    "i10Index": 13,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=Qrwqm2IAAAAJ&hl=en",
+    "patents": {
+      "filed": null,
+      "published": 1,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": 3,
+      "awarded": 4
+    },
+    "yearly": []
+  },
+  {
+    "id": "applied-psychology-f2-res",
+    "facultyId": "applied-psychology-f2",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 20,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?hl=en&user=HCBrxC8AAAAJ",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": 1,
+      "awarded": 1
+    },
+    "yearly": []
+  },
+  {
+    "id": "applied-psychology-f3-res",
+    "facultyId": "applied-psychology-f3",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 27,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": 2,
+    "i10Index": null,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?hl=en&user=0kiCe1QAAAAJ",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": 3,
+      "awarded": 3
+    },
+    "yearly": []
+  },
+  {
+    "id": "applied-psychology-f4-res",
+    "facultyId": "applied-psychology-f4",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 7,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": 1,
+    "i10Index": null,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?hl=en&user=Z_2LP61V_yYC",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": 4,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "computer-applications-f1-res",
+    "facultyId": "computer-applications-f1",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "computer-applications-f2-res",
+    "facultyId": "computer-applications-f2",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "computer-applications-f3-res",
+    "facultyId": "computer-applications-f3",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": 20,
+    "i10Index": 65,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=u2ogX5wAAAAJ&hl=en",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "computer-applications-f4-res",
+    "facultyId": "computer-applications-f4",
+    "journalPublications": {
+      "sciScieSsci": 1,
+      "scopusUgcCare": 12,
+      "other": 0
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": 0
+    },
+    "hIndex": 7,
+    "i10Index": 6,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=oj_dN-kAAAAJ&hl=en",
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 5,
+      "awarded": 2
+    },
+    "yearly": []
+  },
+  {
+    "id": "computer-applications-f5-res",
+    "facultyId": "computer-applications-f5",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 2,
+      "other": 2
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 5,
+    "i10Index": 4,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?hl=en&authuser=1&user=xm-fJhAAAAAJ",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "computer-applications-f6-res",
+    "facultyId": "computer-applications-f6",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 1,
+      "other": 0
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "computer-applications-f7-res",
+    "facultyId": "computer-applications-f7",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "computer-applications-f8-res",
+    "facultyId": "computer-applications-f8",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "computer-applications-f9-res",
+    "facultyId": "computer-applications-f9",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "computer-applications-f10-res",
+    "facultyId": "computer-applications-f10",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "computer-applications-f11-res",
+    "facultyId": "computer-applications-f11",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-business-economics-and-department-f1-res",
+    "facultyId": "department-of-business-economics-and-department-f1",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 6,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": 8,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": 4,
+      "awarded": 6
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-business-economics-and-department-f2-res",
+    "facultyId": "department-of-business-economics-and-department-f2",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 7,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": 3
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": 1,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": 4,
+      "awarded": 4
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-business-economics-and-department-f3-res",
+    "facultyId": "department-of-business-economics-and-department-f3",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 2,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": 2
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-business-economics-and-department-f4-res",
+    "facultyId": "department-of-business-economics-and-department-f4",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 2,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-business-economics-and-department-f5-res",
+    "facultyId": "department-of-business-economics-and-department-f5",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": 6
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-business-economics-and-department-f6-res",
+    "facultyId": "department-of-business-economics-and-department-f6",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 1,
+      "other": 2
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-business-economics-and-department-f7-res",
+    "facultyId": "department-of-business-economics-and-department-f7",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 1,
+      "other": 5
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-business-economics-and-department-f8-res",
+    "facultyId": "department-of-business-economics-and-department-f8",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": 2
+    },
+    "conferencePublications": {
+      "international": 1,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-business-economics-and-department-f9-res",
+    "facultyId": "department-of-business-economics-and-department-f9",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": 6
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-business-economics-and-department-f10-res",
+    "facultyId": "department-of-business-economics-and-department-f10",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 5,
+      "other": 2
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-business-economics-and-department-f11-res",
+    "facultyId": "department-of-business-economics-and-department-f11",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 1,
+      "other": 6
+    },
+    "conferencePublications": {
+      "international": 3,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-business-economics-and-department-f12-res",
+    "facultyId": "department-of-business-economics-and-department-f12",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-business-economics-and-department-f13-res",
+    "facultyId": "department-of-business-economics-and-department-f13",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": 2
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-business-economics-and-department-f14-res",
+    "facultyId": "department-of-business-economics-and-department-f14",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": 5
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": 1
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-business-economics-and-department-f15-res",
+    "facultyId": "department-of-business-economics-and-department-f15",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-business-economics-and-department-f16-res",
+    "facultyId": "department-of-business-economics-and-department-f16",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-business-economics-and-department-f17-res",
+    "facultyId": "department-of-business-economics-and-department-f17",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-business-economics-and-department-f18-res",
+    "facultyId": "department-of-business-economics-and-department-f18",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 1,
+      "other": 1
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": 1
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-business-economics-and-department-f19-res",
+    "facultyId": "department-of-business-economics-and-department-f19",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": 4
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-business-economics-and-department-f20-res",
+    "facultyId": "department-of-business-economics-and-department-f20",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 1,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "cse-and-it-f1-res",
+    "facultyId": "cse-and-it-f1",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 3,
+      "other": 2
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": 2,
+    "i10Index": 0,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?hl=en&user=jR7-ZNIAAAAJ&scilu=&scisig=AOcXxEUAAAAAaqKPP7lfswbA475Q0Ra183pz_3k&gmla=AKCpqFwvGnfjnYjW8FLxtALqQSh2oj1Li6PHn3kT1DDUxK80YR3VJ0yXs4et9krSfsCA2KeG4s1qCh8isDTn2-momwark-KEYxsTFH4&sciund=10000897414467917049",
+    "patents": {
+      "filed": 0,
+      "published": 1,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "cse-and-it-f2-res",
+    "facultyId": "cse-and-it-f2",
+    "journalPublications": {
+      "sciScieSsci": 2,
+      "scopusUgcCare": 6,
+      "other": 4
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": 2
+    },
+    "hIndex": 5,
+    "i10Index": 0,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=6JFiW6QAAAAJ&hl=hi",
+    "patents": {
+      "filed": null,
+      "published": 1,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "cse-and-it-f3-res",
+    "facultyId": "cse-and-it-f3",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 2,
+      "other": 3
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=QmmcMwcAAAAJ&hl=en",
+    "patents": {
+      "filed": 0,
+      "published": 1,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "cse-and-it-f4-res",
+    "facultyId": "cse-and-it-f4",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 2,
+      "other": 0
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 1,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "cse-and-it-f5-res",
+    "facultyId": "cse-and-it-f5",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "cse-and-it-f6-res",
+    "facultyId": "cse-and-it-f6",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 2,
+      "other": 3
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": 0
+    },
+    "hIndex": 2,
+    "i10Index": 2,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=JO-5T4QAAAAJ&hl=en",
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "cse-and-it-f7-res",
+    "facultyId": "cse-and-it-f7",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "cse-and-it-f8-res",
+    "facultyId": "cse-and-it-f8",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 1,
+      "other": 0
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 1,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "cse-and-it-f9-res",
+    "facultyId": "cse-and-it-f9",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 2,
+      "other": 0
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 1,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "cse-and-it-f10-res",
+    "facultyId": "cse-and-it-f10",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 2,
+      "other": 0
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 1,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "cse-and-it-f11-res",
+    "facultyId": "cse-and-it-f11",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 1,
+      "other": 0
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 1,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "cse-and-it-f12-res",
+    "facultyId": "cse-and-it-f12",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 1,
+      "other": 1
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 1,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "cse-and-it-f13-res",
+    "facultyId": "cse-and-it-f13",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 2,
+      "other": 0
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "cse-and-it-f14-res",
+    "facultyId": "cse-and-it-f14",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "chemistry-f1-res",
+    "facultyId": "chemistry-f1",
+    "journalPublications": {
+      "sciScieSsci": 35,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": 11,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": 1,
+      "granted": 1
+    },
+    "phdSupervision": {
+      "registered": 3,
+      "awarded": 2
+    },
+    "yearly": []
+  },
+  {
+    "id": "chemistry-f2-res",
+    "facultyId": "chemistry-f2",
+    "journalPublications": {
+      "sciScieSsci": 38,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": 40,
+      "national": null
+    },
+    "hIndex": 2,
+    "i10Index": 1,
+    "googleScholarOrcidLink": "https://orcid.org/0000-0002-5408-6300",
+    "patents": {
+      "filed": null,
+      "published": 1,
+      "granted": 1
+    },
+    "phdSupervision": {
+      "registered": 3,
+      "awarded": 1
+    },
+    "yearly": []
+  },
+  {
+    "id": "chemistry-f3-res",
+    "facultyId": "chemistry-f3",
+    "journalPublications": {
+      "sciScieSsci": 50,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 14,
+    "i10Index": 23,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=-HfP7jYAAAAJ&hl=en",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "electrical-engineering-f1-res",
+    "facultyId": "electrical-engineering-f1",
+    "journalPublications": {
+      "sciScieSsci": 1,
+      "scopusUgcCare": 13,
+      "other": 20
+    },
+    "conferencePublications": {
+      "international": 13,
+      "national": 0
+    },
+    "hIndex": 3,
+    "i10Index": 2,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=L5217uwAAAAJ&hl=en",
+    "patents": {
+      "filed": null,
+      "published": 2,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": 3,
+      "awarded": 4
+    },
+    "yearly": []
+  },
+  {
+    "id": "electrical-engineering-f2-res",
+    "facultyId": "electrical-engineering-f2",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 3,
+      "other": 20
+    },
+    "conferencePublications": {
+      "international": 6,
+      "national": 0
+    },
+    "hIndex": 2,
+    "i10Index": 1,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=CaSJix8AAAAJ&hl=en",
+    "patents": {
+      "filed": null,
+      "published": 2,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "electrical-engineering-f3-res",
+    "facultyId": "electrical-engineering-f3",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 3,
+      "other": 3
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": "https://orcid.org/0000-0002-5247-7851",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "electrical-engineering-f4-res",
+    "facultyId": "electrical-engineering-f4",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 7,
+      "other": 7
+    },
+    "conferencePublications": {
+      "international": 5,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": 2,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "electrical-engineering-f5-res",
+    "facultyId": "electrical-engineering-f5",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 2,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": 0
+    },
+    "hIndex": 4,
+    "i10Index": 2,
+    "googleScholarOrcidLink": "https://orcid.org/0000-0002-8859-6392",
+    "patents": {
+      "filed": null,
+      "published": 0,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "electrical-engineering-f6-res",
+    "facultyId": "electrical-engineering-f6",
+    "journalPublications": {
+      "sciScieSsci": 1,
+      "scopusUgcCare": 4,
+      "other": 2
+    },
+    "conferencePublications": {
+      "international": 3,
+      "national": 0
+    },
+    "hIndex": 2,
+    "i10Index": 0,
+    "googleScholarOrcidLink": "https://orcid.org/0000-0001-9334-3640",
+    "patents": {
+      "filed": null,
+      "published": 1,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "electrical-engineering-f7-res",
+    "facultyId": "electrical-engineering-f7",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 5,
+      "other": 0
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": 0
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 1,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "electrical-engineering-f8-res",
+    "facultyId": "electrical-engineering-f8",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 1,
+      "other": 1
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "electrical-engineering-f9-res",
+    "facultyId": "electrical-engineering-f9",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 2,
+      "other": 1
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-electronics-engineering-f1-res",
+    "facultyId": "department-of-electronics-engineering-f1",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 13,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=8qMeXRoAAAAJ&hl=en",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-electronics-engineering-f2-res",
+    "facultyId": "department-of-electronics-engineering-f2",
+    "journalPublications": {
+      "sciScieSsci": 3,
+      "scopusUgcCare": 3,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": 7,
+      "national": null
+    },
+    "hIndex": 38,
+    "i10Index": 154,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=u_Mp2HwAAAAJ&hl=en",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": 1
+    },
+    "phdSupervision": {
+      "registered": 3,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-electronics-engineering-f3-res",
+    "facultyId": "department-of-electronics-engineering-f3",
+    "journalPublications": {
+      "sciScieSsci": 2,
+      "scopusUgcCare": 1,
+      "other": 1
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": null
+    },
+    "hIndex": 3,
+    "i10Index": 0,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?hl=en&user=XlZYO-cAAAAJ&view_op=list_works&sortby=pubdate",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-electronics-engineering-f4-res",
+    "facultyId": "department-of-electronics-engineering-f4",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 2,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": 5,
+      "national": 1
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?view_op=list_works&hl=en&user=2HPJ90vqo98C&gmla=AKCpqFyZZuRzyNJR80IhJjYM9IDecWDEo1mQlefwsm7tmyeZgSj71FHUw1zGhhKHB6nUN5Qs9UEEQ5SgsA2OOHAG8BQRd3GDqXMbTEald6c&sciund=12226520667357651088",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-electronics-engineering-f5-res",
+    "facultyId": "department-of-electronics-engineering-f5",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 2,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": null
+    },
+    "hIndex": 2,
+    "i10Index": 0,
+    "googleScholarOrcidLink": "https://share.google/pzPv51h3gTMZ2SGTQ",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-electronics-engineering-f6-res",
+    "facultyId": "department-of-electronics-engineering-f6",
+    "journalPublications": {
+      "sciScieSsci": 2,
+      "scopusUgcCare": 3,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": null
+    },
+    "hIndex": 2,
+    "i10Index": 1,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=8L7aY60AAAAJ&hl=en&oi=ao",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-electronics-engineering-f7-res",
+    "facultyId": "department-of-electronics-engineering-f7",
+    "journalPublications": {
+      "sciScieSsci": 2,
+      "scopusUgcCare": 4,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": null
+    },
+    "hIndex": 15,
+    "i10Index": 17,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?hl=en&user=-ujPDE0AAAAJ&view_op=list_works&sortby=pubdate",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-electronics-engineering-f8-res",
+    "facultyId": "department-of-electronics-engineering-f8",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 2,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": "https://share.google/LHFlj1McknnGgy0YJ",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-electronics-engineering-f9-res",
+    "facultyId": "department-of-electronics-engineering-f9",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 1,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": 2
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-electronics-engineering-f10-res",
+    "facultyId": "department-of-electronics-engineering-f10",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 4,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": "https://orcid.org/0009-0007-3607-5003",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-electronics-engineering-f11-res",
+    "facultyId": "department-of-electronics-engineering-f11",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 3,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": null
+    },
+    "hIndex": 1,
+    "i10Index": null,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=SOGogwwAAAAJ&hl=en",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-electronics-engineering-f12-res",
+    "facultyId": "department-of-electronics-engineering-f12",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 1,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": 1,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-electronics-engineering-f13-res",
+    "facultyId": "department-of-electronics-engineering-f13",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-electronics-engineering-f14-res",
+    "facultyId": "department-of-electronics-engineering-f14",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 4,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?view_op=new_profile&hl=en",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": 1
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-electronics-engineering-f15-res",
+    "facultyId": "department-of-electronics-engineering-f15",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 2,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": 8,
+      "national": 1
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-electronics-engineering-f16-res",
+    "facultyId": "department-of-electronics-engineering-f16",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 12,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=FQoIhJMAAAAJ&hl=hi",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "h-r-d-f1-res",
+    "facultyId": "h-r-d-f1",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": "https://orcid.org/0009-0006-2922-9994",
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 6,
+      "awarded": 3
+    },
+    "yearly": []
+  },
+  {
+    "id": "h-r-d-f2-res",
+    "facultyId": "h-r-d-f2",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": 11,
+    "i10Index": 12,
+    "googleScholarOrcidLink": "https://orcid.org/0000-0002-1690-6443",
+    "patents": {
+      "filed": 1,
+      "published": 1,
+      "granted": 1
+    },
+    "phdSupervision": {
+      "registered": 7,
+      "awarded": 3
+    },
+    "yearly": []
+  },
+  {
+    "id": "h-r-d-f3-res",
+    "facultyId": "h-r-d-f3",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": 1,
+    "i10Index": 1,
+    "googleScholarOrcidLink": "https://orcid.org/0009-0008-8707-6919",
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "h-r-d-f4-res",
+    "facultyId": "h-r-d-f4",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": 3,
+    "i10Index": 3,
+    "googleScholarOrcidLink": "https://orcid.org/0000-0002-2503-2346",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-humanities-and-social-sciences-f1-res",
+    "facultyId": "department-of-humanities-and-social-sciences-f1",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 10,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": 4
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-humanities-and-social-sciences-f2-res",
+    "facultyId": "department-of-humanities-and-social-sciences-f2",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 3,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-humanities-and-social-sciences-f3-res",
+    "facultyId": "department-of-humanities-and-social-sciences-f3",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 2,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-law-f1-res",
+    "facultyId": "department-of-law-f1",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 0,
+      "other": 5
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 1,
+      "awarded": 4
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-law-f2-res",
+    "facultyId": "department-of-law-f2",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 0,
+      "other": 7
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 0,
+      "awarded": 0
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-law-f3-res",
+    "facultyId": "department-of-law-f3",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 0,
+      "other": 3
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 0,
+      "awarded": 2
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-law-f4-res",
+    "facultyId": "department-of-law-f4",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 0,
+      "other": 3
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 0,
+      "awarded": 0
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-law-f5-res",
+    "facultyId": "department-of-law-f5",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 0,
+      "other": 6
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 0,
+      "awarded": 0
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-law-f6-res",
+    "facultyId": "department-of-law-f6",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 0,
+      "other": 2
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 0,
+      "awarded": 0
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-law-f7-res",
+    "facultyId": "department-of-law-f7",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 0,
+      "other": 3
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 2
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 1,
+      "published": 1,
+      "granted": 1
+    },
+    "phdSupervision": {
+      "registered": 0,
+      "awarded": 0
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-law-f8-res",
+    "facultyId": "department-of-law-f8",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 0,
+      "other": 2
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 0,
+      "awarded": 0
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-law-f9-res",
+    "facultyId": "department-of-law-f9",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 0,
+      "other": 3
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 0,
+      "awarded": 0
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-law-f10-res",
+    "facultyId": "department-of-law-f10",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 0,
+      "other": 2
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 0,
+      "awarded": 0
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-law-f11-res",
+    "facultyId": "department-of-law-f11",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 0,
+      "other": 3
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 2
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 0,
+      "awarded": 0
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-law-f12-res",
+    "facultyId": "department-of-law-f12",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 0,
+      "other": 1
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 0,
+      "awarded": 0
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-law-f13-res",
+    "facultyId": "department-of-law-f13",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 0,
+      "other": 4
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 1
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 0,
+      "awarded": 0
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-law-f14-res",
+    "facultyId": "department-of-law-f14",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 0,
+      "other": 0
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 0,
+      "awarded": 0
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-law-f15-res",
+    "facultyId": "department-of-law-f15",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 0,
+      "other": 6
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 0,
+      "awarded": 0
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-law-f16-res",
+    "facultyId": "department-of-law-f16",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 0,
+      "other": 5
+    },
+    "conferencePublications": {
+      "international": 1,
+      "national": 1
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 0,
+      "awarded": 0
+    },
+    "yearly": []
+  },
+  {
+    "id": "department-of-law-f17-res",
+    "facultyId": "department-of-law-f17",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 0,
+      "other": 1
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 0,
+      "awarded": 0
+    },
+    "yearly": []
+  },
+  {
+    "id": "institute-department-of-pharmacy-f1-res",
+    "facultyId": "institute-department-of-pharmacy-f1",
+    "journalPublications": {
+      "sciScieSsci": 5,
+      "scopusUgcCare": 10,
+      "other": 18
+    },
+    "conferencePublications": {
+      "international": 7,
+      "national": 28
+    },
+    "hIndex": 8,
+    "i10Index": 7,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=-XaGMg0AAAAJ&hl=en",
+    "patents": {
+      "filed": null,
+      "published": 2,
+      "granted": 1
+    },
+    "phdSupervision": {
+      "registered": 2,
+      "awarded": 0
+    },
+    "yearly": []
+  },
+  {
+    "id": "institute-department-of-pharmacy-f2-res",
+    "facultyId": "institute-department-of-pharmacy-f2",
+    "journalPublications": {
+      "sciScieSsci": 12,
+      "scopusUgcCare": 11,
+      "other": 18
+    },
+    "conferencePublications": {
+      "international": 6,
+      "national": 8
+    },
+    "hIndex": 12,
+    "i10Index": 17,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=S08tu_AAAAAJ&pagesize=80",
+    "patents": {
+      "filed": null,
+      "published": 1,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": 2,
+      "awarded": 4
+    },
+    "yearly": []
+  },
+  {
+    "id": "institute-department-of-pharmacy-f3-res",
+    "facultyId": "institute-department-of-pharmacy-f3",
+    "journalPublications": {
+      "sciScieSsci": 5,
+      "scopusUgcCare": 18,
+      "other": 10
+    },
+    "conferencePublications": {
+      "international": 10,
+      "national": 12
+    },
+    "hIndex": 3,
+    "i10Index": 1,
+    "googleScholarOrcidLink": "https://share.google/UgPEzDGRe3beBn3iJ",
+    "patents": {
+      "filed": 1,
+      "published": 5,
+      "granted": 1
+    },
+    "phdSupervision": {
+      "registered": 1,
+      "awarded": 0
+    },
+    "yearly": []
+  },
+  {
+    "id": "institute-department-of-pharmacy-f4-res",
+    "facultyId": "institute-department-of-pharmacy-f4",
+    "journalPublications": {
+      "sciScieSsci": 2,
+      "scopusUgcCare": 4,
+      "other": 4
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "institute-department-of-pharmacy-f5-res",
+    "facultyId": "institute-department-of-pharmacy-f5",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 3,
+      "other": 9
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": 3,
+    "i10Index": 2,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=KCoKc2EAAAAJ&hl=en",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": 1
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "institute-department-of-pharmacy-f6-res",
+    "facultyId": "institute-department-of-pharmacy-f6",
+    "journalPublications": {
+      "sciScieSsci": 6,
+      "scopusUgcCare": 5,
+      "other": 10
+    },
+    "conferencePublications": {
+      "international": 1,
+      "national": 2
+    },
+    "hIndex": 9,
+    "i10Index": 8,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=anNznl8AAAAJ&hl=en",
+    "patents": {
+      "filed": null,
+      "published": 6,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": 0,
+      "awarded": 2
+    },
+    "yearly": []
+  },
+  {
+    "id": "institute-department-of-pharmacy-f7-res",
+    "facultyId": "institute-department-of-pharmacy-f7",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 5,
+      "other": 4
+    },
+    "conferencePublications": {
+      "international": 1,
+      "national": 1
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": 1,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "institute-department-of-pharmacy-f8-res",
+    "facultyId": "institute-department-of-pharmacy-f8",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": 3
+    },
+    "conferencePublications": {
+      "international": 3,
+      "national": 2
+    },
+    "hIndex": 1,
+    "i10Index": 1,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?view_op=list_works&hl=id&user=7981KQQAAAAJ",
+    "patents": {
+      "filed": null,
+      "published": 2,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "institute-department-of-pharmacy-f9-res",
+    "facultyId": "institute-department-of-pharmacy-f9",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 5,
+      "other": 5
+    },
+    "conferencePublications": {
+      "international": 1,
+      "national": 1
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "institute-department-of-pharmacy-f10-res",
+    "facultyId": "institute-department-of-pharmacy-f10",
+    "journalPublications": {
+      "sciScieSsci": 4,
+      "scopusUgcCare": 2,
+      "other": 0
+    },
+    "conferencePublications": {
+      "international": 3,
+      "national": 3
+    },
+    "hIndex": 3,
+    "i10Index": 0,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=MYdXHpAAAAAJ&hl=en&oi=ao",
+    "patents": {
+      "filed": null,
+      "published": 1,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "institute-department-of-pharmacy-f11-res",
+    "facultyId": "institute-department-of-pharmacy-f11",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 1,
+      "other": 5
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": "https://www.researchgate.net/profile/Mithilesh-Chaurasiya-4",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "mathematics-engg-f1-res",
+    "facultyId": "mathematics-engg-f1",
+    "journalPublications": {
+      "sciScieSsci": 27,
+      "scopusUgcCare": 8,
+      "other": 0
+    },
+    "conferencePublications": {
+      "international": 1,
+      "national": 0
+    },
+    "hIndex": 17,
+    "i10Index": 23,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=gGdmjSMAAAAJ/ 0000-0002-9650-5606",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": 5,
+      "awarded": 3
+    },
+    "yearly": []
+  },
+  {
+    "id": "mathematics-engg-f2-res",
+    "facultyId": "mathematics-engg-f2",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": 1,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "mathematics-engg-f3-res",
+    "facultyId": "mathematics-engg-f3",
+    "journalPublications": {
+      "sciScieSsci": 3,
+      "scopusUgcCare": 10,
+      "other": 25
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": 1
+    },
+    "hIndex": 3,
+    "i10Index": null,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=Bqe7j1cAAAAJ&hl=hi",
+    "patents": {
+      "filed": null,
+      "published": 5,
+      "granted": 5
+    },
+    "phdSupervision": {
+      "registered": 2,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "mathematics-engg-f4-res",
+    "facultyId": "mathematics-engg-f4",
+    "journalPublications": {
+      "sciScieSsci": 5,
+      "scopusUgcCare": 7,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": 5,
+      "national": 7
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "mechanical-engineering-f1-res",
+    "facultyId": "mechanical-engineering-f1",
+    "journalPublications": {
+      "sciScieSsci": 5,
+      "scopusUgcCare": 15,
+      "other": 5
+    },
+    "conferencePublications": {
+      "international": 10,
+      "national": 5
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": "https://orcid.org/0009-0007-1201-3342",
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 4,
+      "awarded": 2
+    },
+    "yearly": []
+  },
+  {
+    "id": "mechanical-engineering-f2-res",
+    "facultyId": "mechanical-engineering-f2",
+    "journalPublications": {
+      "sciScieSsci": 10,
+      "scopusUgcCare": 11,
+      "other": 7
+    },
+    "conferencePublications": {
+      "international": 8,
+      "national": 7
+    },
+    "hIndex": 6,
+    "i10Index": 5,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?hl=en&user=xqyRzM4AAAAJ",
+    "patents": {
+      "filed": 0,
+      "published": 2,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "mechanical-engineering-f3-res",
+    "facultyId": "mechanical-engineering-f3",
+    "journalPublications": {
+      "sciScieSsci": 1,
+      "scopusUgcCare": 7,
+      "other": 4
+    },
+    "conferencePublications": {
+      "international": 6,
+      "national": 1
+    },
+    "hIndex": 2,
+    "i10Index": 1,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?hl=en&user=lgHxGuUAAAAJ",
+    "patents": {
+      "filed": 0,
+      "published": 2,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "mechanical-engineering-f4-res",
+    "facultyId": "mechanical-engineering-f4",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 2,
+      "other": 3
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 2
+    },
+    "hIndex": 1,
+    "i10Index": 1,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=ckYg4SgAAAAJ&hl=en",
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "mechanical-engineering-f5-res",
+    "facultyId": "mechanical-engineering-f5",
+    "journalPublications": {
+      "sciScieSsci": 2,
+      "scopusUgcCare": 0,
+      "other": 4
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 2
+    },
+    "hIndex": 2,
+    "i10Index": 1,
+    "googleScholarOrcidLink": "https://share.google/26455IYycecvn33m2",
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "mechanical-engineering-f6-res",
+    "facultyId": "mechanical-engineering-f6",
+    "journalPublications": {
+      "sciScieSsci": 1,
+      "scopusUgcCare": 4,
+      "other": 4
+    },
+    "conferencePublications": {
+      "international": 4,
+      "national": 0
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": "ORCID : 0009-0006-0729-4760",
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "mechanical-engineering-f7-res",
+    "facultyId": "mechanical-engineering-f7",
+    "journalPublications": {
+      "sciScieSsci": 1,
+      "scopusUgcCare": 5,
+      "other": 5
+    },
+    "conferencePublications": {
+      "international": 3,
+      "national": 1
+    },
+    "hIndex": 4,
+    "i10Index": 1,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?hl=en&user=w8LtkP4AAAAJ",
+    "patents": {
+      "filed": 0,
+      "published": 2,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "mechanical-engineering-f8-res",
+    "facultyId": "mechanical-engineering-f8",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 1,
+      "other": 4
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": 0
+    },
+    "hIndex": 2,
+    "i10Index": 0,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?hl=en&user=KTKf4d0AAAAJ",
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "mechanical-engineering-f9-res",
+    "facultyId": "mechanical-engineering-f9",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 0,
+      "other": 0
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 0,
+    "i10Index": 0,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "physics-f1-res",
+    "facultyId": "physics-f1",
+    "journalPublications": {
+      "sciScieSsci": 13,
+      "scopusUgcCare": 0,
+      "other": 2
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 7,
+    "i10Index": null,
+    "googleScholarOrcidLink": "https://orcid.org/my-orcid?orcid=0000-0002-7720-1404",
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 6,
+      "awarded": 4
+    },
+    "yearly": []
+  },
+  {
+    "id": "physics-f2-res",
+    "facultyId": "physics-f2",
+    "journalPublications": {
+      "sciScieSsci": 12,
+      "scopusUgcCare": 0,
+      "other": 0
+    },
+    "conferencePublications": {
+      "international": 4,
+      "national": 2
+    },
+    "hIndex": 18,
+    "i10Index": 21,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=vX4zxO0AAAAJ&hl=en",
+    "patents": {
+      "filed": 8,
+      "published": 3,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 2,
+      "awarded": 0
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-centre-for-nanoscience-and-technology-f1-res",
+    "facultyId": "rb-centre-for-nanoscience-and-technology-f1",
+    "journalPublications": {
+      "sciScieSsci": 13,
+      "scopusUgcCare": 0,
+      "other": 3
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": 0
+    },
+    "hIndex": 21,
+    "i10Index": 28,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=Fo_tsI8AAAAJ&hl=en",
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 2,
+      "awarded": 1
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-centre-for-nanoscience-and-technology-f2-res",
+    "facultyId": "rb-centre-for-nanoscience-and-technology-f2",
+    "journalPublications": {
+      "sciScieSsci": 15,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": 22,
+    "i10Index": 28,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=rKnnHqAAAAAJ&hl=en",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": 1
+    },
+    "phdSupervision": {
+      "registered": 2,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-chemistry-f1-res",
+    "facultyId": "rb-chemistry-f1",
+    "journalPublications": {
+      "sciScieSsci": 9,
+      "scopusUgcCare": null,
+      "other": 1
+    },
+    "conferencePublications": {
+      "international": 1,
+      "national": 2
+    },
+    "hIndex": 5,
+    "i10Index": 4,
+    "googleScholarOrcidLink": "https://orcid.org/0009-0007-6173-1973",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": 3,
+      "awarded": 2
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-chemistry-f2-res",
+    "facultyId": "rb-chemistry-f2",
+    "journalPublications": {
+      "sciScieSsci": 10,
+      "scopusUgcCare": 10,
+      "other": 1
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": 2
+    },
+    "hIndex": 12,
+    "i10Index": 17,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=GdnWDeoAAAAJ&hl=en&oi=sra",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": 3,
+      "awarded": 1
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-chemistry-f3-res",
+    "facultyId": "rb-chemistry-f3",
+    "journalPublications": {
+      "sciScieSsci": 3,
+      "scopusUgcCare": 3,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": 5,
+      "national": null
+    },
+    "hIndex": 7,
+    "i10Index": 6,
+    "googleScholarOrcidLink": "https://scholar.google.co.in/citations?hl=en&user=xt4cMo0AAAAJ",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": 1,
+      "awarded": 1
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-chemistry-f4-res",
+    "facultyId": "rb-chemistry-f4",
+    "journalPublications": {
+      "sciScieSsci": 13,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": 22,
+    "i10Index": 34,
+    "googleScholarOrcidLink": "http://scholar.google.co.in/citations?user=KDGOcbAAAAAJ",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": 2,
+      "awarded": 3
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-chemistry-f5-res",
+    "facultyId": "rb-chemistry-f5",
+    "journalPublications": {
+      "sciScieSsci": 14,
+      "scopusUgcCare": 14,
+      "other": 2
+    },
+    "conferencePublications": {
+      "international": 2,
+      "national": 5
+    },
+    "hIndex": 32,
+    "i10Index": 55,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=uq6IXs0AAAAJ&hl=en",
+    "patents": {
+      "filed": null,
+      "published": 2,
+      "granted": 1
+    },
+    "phdSupervision": {
+      "registered": 2,
+      "awarded": 1
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-chemistry-f6-res",
+    "facultyId": "rb-chemistry-f6",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-mathematics-f1-res",
+    "facultyId": "rb-mathematics-f1",
+    "journalPublications": {
+      "sciScieSsci": 13,
+      "scopusUgcCare": 7,
+      "other": 10
+    },
+    "conferencePublications": {
+      "international": 1,
+      "national": 1
+    },
+    "hIndex": 9,
+    "i10Index": 8,
+    "googleScholarOrcidLink": "‪Prof. Mithilesh Singh‬ - ‪Google Scholar‬",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": 2,
+      "awarded": 2
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-mathematics-f2-res",
+    "facultyId": "rb-mathematics-f2",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-mathematics-f3-res",
+    "facultyId": "rb-mathematics-f3",
+    "journalPublications": {
+      "sciScieSsci": 12,
+      "scopusUgcCare": 6,
+      "other": 1
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": 11,
+    "i10Index": 11,
+    "googleScholarOrcidLink": "Google Scholar: https://scholar.google.com/citations?user=XBbJlogAAAAJ&hl=en&oi=ao ORCID: https://orcid.org/0000-0003-2228-3606",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": 2,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-mathematics-f4-res",
+    "facultyId": "rb-mathematics-f4",
+    "journalPublications": {
+      "sciScieSsci": 6,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": 10,
+    "i10Index": 10,
+    "googleScholarOrcidLink": "Google Scholar: https://scholar.google.com/citations?hl=en&user=4k6zGIMAAAAJ ORCID: https://orcid.org/0000-0002-0776-5730",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": 4,
+      "awarded": 2
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-earth-and-planetary-sciences-f1-res",
+    "facultyId": "rb-earth-and-planetary-sciences-f1",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 18,
+      "other": 2
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 14,
+    "i10Index": 14,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=lYp70dAAAAAJ&hl=en",
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 3,
+      "awarded": 0
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-earth-and-planetary-sciences-f2-res",
+    "facultyId": "rb-earth-and-planetary-sciences-f2",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 34,
+      "other": 0
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 13,
+    "i10Index": 19,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=BnWI3bgAAAAJ&hl=en",
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 3,
+      "awarded": 1
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-earth-and-planetary-sciences-f3-res",
+    "facultyId": "rb-earth-and-planetary-sciences-f3",
+    "journalPublications": {
+      "sciScieSsci": 5,
+      "scopusUgcCare": 1,
+      "other": 1
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 0
+    },
+    "hIndex": 3,
+    "i10Index": 1,
+    "googleScholarOrcidLink": "https://orcid.org/0009-0008-8972-7850",
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 1,
+      "awarded": 0
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-earth-and-planetary-sciences-f4-res",
+    "facultyId": "rb-earth-and-planetary-sciences-f4",
+    "journalPublications": {
+      "sciScieSsci": 0,
+      "scopusUgcCare": 22,
+      "other": 0
+    },
+    "conferencePublications": {
+      "international": 0,
+      "national": 5
+    },
+    "hIndex": 14,
+    "i10Index": 14,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=olhYkNEAAAAJ&hl=en",
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 1,
+      "awarded": 1
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-physics-f1-res",
+    "facultyId": "rb-physics-f1",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-physics-f2-res",
+    "facultyId": "rb-physics-f2",
+    "journalPublications": {
+      "sciScieSsci": 45,
+      "scopusUgcCare": 22,
+      "other": 14
+    },
+    "conferencePublications": {
+      "international": 12,
+      "national": 20
+    },
+    "hIndex": 21,
+    "i10Index": 30,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?hl=en&user=euU9iHAAAAAJ&view_op=list_works&sortby=pubdate",
+    "patents": {
+      "filed": 1,
+      "published": 5,
+      "granted": 2
+    },
+    "phdSupervision": {
+      "registered": 4,
+      "awarded": 6
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-physics-f3-res",
+    "facultyId": "rb-physics-f3",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-physics-f4-res",
+    "facultyId": "rb-physics-f4",
+    "journalPublications": {
+      "sciScieSsci": 1,
+      "scopusUgcCare": 2,
+      "other": 2
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": 2,
+    "i10Index": null,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=4thfwZoAAAAJ&hl=en",
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-physics-f5-res",
+    "facultyId": "rb-physics-f5",
+    "journalPublications": {
+      "sciScieSsci": null,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": null,
+    "i10Index": null,
+    "googleScholarOrcidLink": null,
+    "patents": {
+      "filed": null,
+      "published": null,
+      "granted": null
+    },
+    "phdSupervision": {
+      "registered": null,
+      "awarded": null
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-centre-for-renewable-energy-f1-res",
+    "facultyId": "rb-centre-for-renewable-energy-f1",
+    "journalPublications": {
+      "sciScieSsci": 30,
+      "scopusUgcCare": null,
+      "other": null
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": 14,
+    "i10Index": 21,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=Lh7ECNcAAAAJ&hl=en / https://orcid.org/0000-0003-1293-0195",
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 1
+    },
+    "phdSupervision": {
+      "registered": 4,
+      "awarded": 0
+    },
+    "yearly": []
+  }
+]

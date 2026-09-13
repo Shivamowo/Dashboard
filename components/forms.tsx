@@ -1,5 +1,16 @@
 import type { ReactNode } from "react";
 
+/**
+ * Every field accepts null as well as undefined for its default.
+ *
+ * Imported records use null for "not reported" (see data/types.ts), and an
+ * edit form must show that field as empty and ready to fill, not refuse to
+ * render it. React treats null as "no value" on defaultValue/defaultChecked,
+ * which is exactly the behaviour wanted, so null is passed straight through
+ * rather than being coerced to "" or false — coercing would make an unreported
+ * number look like a reported zero the moment the form was saved.
+ */
+
 export function TextField({
   name,
   label,
@@ -10,7 +21,7 @@ export function TextField({
 }: {
   name: string;
   label: string;
-  defaultValue?: string | number;
+  defaultValue?: string | number | null;
   required?: boolean;
   type?: string;
   placeholder?: string;
@@ -24,7 +35,7 @@ export function TextField({
         id={name}
         name={name}
         type={type}
-        defaultValue={defaultValue}
+        defaultValue={defaultValue ?? undefined}
         required={required}
         placeholder={placeholder}
         className="input mt-1.5"
@@ -43,7 +54,7 @@ export function NumberField({
 }: {
   name: string;
   label: string;
-  defaultValue?: number;
+  defaultValue?: number | null;
   required?: boolean;
   min?: number;
   step?: number;
@@ -57,7 +68,7 @@ export function NumberField({
         id={name}
         name={name}
         type="number"
-        defaultValue={defaultValue}
+        defaultValue={defaultValue ?? undefined}
         required={required}
         min={min}
         step={step}
@@ -77,7 +88,7 @@ export function TextAreaField({
 }: {
   name: string;
   label: string;
-  defaultValue?: string;
+  defaultValue?: string | null;
   required?: boolean;
   rows?: number;
   span?: boolean;
@@ -90,7 +101,7 @@ export function TextAreaField({
       <textarea
         id={name}
         name={name}
-        defaultValue={defaultValue}
+        defaultValue={defaultValue ?? undefined}
         required={required}
         rows={rows}
         className="input mt-1.5"
@@ -108,7 +119,7 @@ export function SelectField({
 }: {
   name: string;
   label: string;
-  defaultValue?: string;
+  defaultValue?: string | null;
   options: readonly string[];
   required?: boolean;
 }) {
@@ -117,7 +128,7 @@ export function SelectField({
       <label htmlFor={name} className="field-label">
         {label}
       </label>
-      <select id={name} name={name} defaultValue={defaultValue} required={required} className="input mt-1.5">
+      <select id={name} name={name} defaultValue={defaultValue ?? undefined} required={required} className="input mt-1.5">
         {options.map((o) => (
           <option key={o} value={o}>
             {o}
@@ -135,14 +146,14 @@ export function CheckboxField({
 }: {
   name: string;
   label: string;
-  defaultChecked?: boolean;
+  defaultChecked?: boolean | null;
 }) {
   return (
     <label className="flex items-center gap-2 pt-6 text-body text-ink-800">
       <input
         type="checkbox"
         name={name}
-        defaultChecked={defaultChecked}
+        defaultChecked={defaultChecked ?? false}
         className="h-4 w-4 rounded border-ink-300 text-brand-pink focus:ring-brand-pink"
       />
       {label}

@@ -1,0 +1,1652 @@
+[
+  {
+    "id": "applied-psychology-p1",
+    "deptId": "applied-psychology",
+    "sNo": 1,
+    "name": "MA/MSc Applied Psychology",
+    "yearOfCommencement": 1998,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": 1,
+      "associateProfessor": 2,
+      "assistantProfessor": 4
+    },
+    "semesterFeeByYear": {
+      "y2024": 12750,
+      "y2025": 12750,
+      "y2026": 12750
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 44,
+      "y2025": 44,
+      "y2026": 44
+    },
+    "admittedByYear": {
+      "y2024": 18,
+      "y2025": 19,
+      "y2026": 15
+    },
+    "nepAligned": true,
+    "multipleEntryExit": false,
+    "internshipEndOfYear": true,
+    "minorSpecialisationAvailable": true,
+    "remarks": null
+  },
+  {
+    "id": "computer-applications-p1",
+    "deptId": "computer-applications",
+    "sNo": 1,
+    "name": "MCA",
+    "yearOfCommencement": 1997,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": 1,
+      "associateProfessor": 1,
+      "assistantProfessor": 4
+    },
+    "semesterFeeByYear": {
+      "y2024": 25500,
+      "y2025": 25500,
+      "y2026": 25500
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 66,
+      "y2025": 99,
+      "y2026": 99
+    },
+    "admittedByYear": {
+      "y2024": 66,
+      "y2025": 83,
+      "y2026": 85
+    },
+    "nepAligned": true,
+    "multipleEntryExit": false,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": false,
+    "remarks": null
+  },
+  {
+    "id": "computer-applications-p2",
+    "deptId": "computer-applications",
+    "sNo": 2,
+    "name": "BCA",
+    "yearOfCommencement": 2019,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": 0,
+      "associateProfessor": 0,
+      "assistantProfessor": 8
+    },
+    "semesterFeeByYear": {
+      "y2024": 17500,
+      "y2025": 17500,
+      "y2026": 17500
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 110,
+      "y2025": 132,
+      "y2026": 132
+    },
+    "admittedByYear": {
+      "y2024": 110,
+      "y2025": 132,
+      "y2026": 132
+    },
+    "nepAligned": true,
+    "multipleEntryExit": false,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": false,
+    "remarks": null
+  },
+  {
+    "id": "computer-applications-p3",
+    "deptId": "computer-applications",
+    "sNo": 3,
+    "name": "Integrated MCA",
+    "yearOfCommencement": 2025,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": 0,
+      "associateProfessor": 0,
+      "assistantProfessor": 0
+    },
+    "semesterFeeByYear": {
+      "y2024": null,
+      "y2025": 17500,
+      "y2026": 17500
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": null,
+      "y2025": 66,
+      "y2026": 66
+    },
+    "admittedByYear": {
+      "y2024": null,
+      "y2025": 42,
+      "y2026": 65
+    },
+    "nepAligned": true,
+    "multipleEntryExit": true,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": true,
+    "remarks": null
+  },
+  {
+    "id": "department-of-business-economics-and-department-p1",
+    "deptId": "department-of-business-economics-and-department",
+    "sNo": 1,
+    "name": "MBA(Business Economics)",
+    "yearOfCommencement": 1999,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": 1,
+      "associateProfessor": 2,
+      "assistantProfessor": 4
+    },
+    "semesterFeeByYear": {
+      "y2024": 27750,
+      "y2025": 27750,
+      "y2026": 27750
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 66,
+      "y2025": 66,
+      "y2026": 66
+    },
+    "admittedByYear": {
+      "y2024": 66,
+      "y2025": 63,
+      "y2026": 65
+    },
+    "nepAligned": true,
+    "multipleEntryExit": true,
+    "internshipEndOfYear": true,
+    "minorSpecialisationAvailable": true,
+    "remarks": "Summer Internship after 2nd Sem"
+  },
+  {
+    "id": "department-of-business-economics-and-department-p2",
+    "deptId": "department-of-business-economics-and-department",
+    "sNo": 2,
+    "name": "B.COM(Hons)",
+    "yearOfCommencement": 2019,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": null,
+      "associateProfessor": null,
+      "assistantProfessor": 9
+    },
+    "semesterFeeByYear": {
+      "y2024": 13874,
+      "y2025": 13874,
+      "y2026": 15874
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 99,
+      "y2025": 120,
+      "y2026": 120
+    },
+    "admittedByYear": {
+      "y2024": 96,
+      "y2025": 115,
+      "y2026": 120
+    },
+    "nepAligned": true,
+    "multipleEntryExit": true,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": true,
+    "remarks": "Internship after 2nd Year"
+  },
+  {
+    "id": "department-of-business-economics-and-department-p3",
+    "deptId": "department-of-business-economics-and-department",
+    "sNo": 3,
+    "name": "MBA",
+    "yearOfCommencement": 1990,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": 0,
+      "associateProfessor": 1,
+      "assistantProfessor": 3
+    },
+    "semesterFeeByYear": {
+      "y2024": 55450,
+      "y2025": 55450,
+      "y2026": 55450
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 66,
+      "y2025": 66,
+      "y2026": 66
+    },
+    "admittedByYear": {
+      "y2024": 66,
+      "y2025": 66,
+      "y2026": 66
+    },
+    "nepAligned": true,
+    "multipleEntryExit": true,
+    "internshipEndOfYear": true,
+    "minorSpecialisationAvailable": true,
+    "remarks": "Summer Internship after 2nd Sem"
+  },
+  {
+    "id": "department-of-business-economics-and-department-p4",
+    "deptId": "department-of-business-economics-and-department",
+    "sNo": 4,
+    "name": "MBA(Agri-Business)",
+    "yearOfCommencement": 2003,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": 0,
+      "associateProfessor": null,
+      "assistantProfessor": null
+    },
+    "semesterFeeByYear": {
+      "y2024": 55450,
+      "y2025": 55450,
+      "y2026": 55459
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 33,
+      "y2025": 33,
+      "y2026": 33
+    },
+    "admittedByYear": {
+      "y2024": 33,
+      "y2025": 32,
+      "y2026": 30
+    },
+    "nepAligned": true,
+    "multipleEntryExit": true,
+    "internshipEndOfYear": true,
+    "minorSpecialisationAvailable": true,
+    "remarks": "Summer Internship after 2nd Sem"
+  },
+  {
+    "id": "department-of-business-economics-and-department-p5",
+    "deptId": "department-of-business-economics-and-department",
+    "sNo": 5,
+    "name": "MBA(E-Commerce)",
+    "yearOfCommencement": 2003,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": 0,
+      "associateProfessor": null,
+      "assistantProfessor": null
+    },
+    "semesterFeeByYear": {
+      "y2024": 55450,
+      "y2025": 55450,
+      "y2026": 55450
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 33,
+      "y2025": 33,
+      "y2026": 33
+    },
+    "admittedByYear": {
+      "y2024": 20,
+      "y2025": 24,
+      "y2026": 28
+    },
+    "nepAligned": true,
+    "multipleEntryExit": true,
+    "internshipEndOfYear": true,
+    "minorSpecialisationAvailable": true,
+    "remarks": "Summer Internship after 2nd Sem"
+  },
+  {
+    "id": "department-of-business-economics-and-department-p6",
+    "deptId": "department-of-business-economics-and-department",
+    "sNo": 6,
+    "name": "BBA",
+    "yearOfCommencement": 2023,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": null,
+      "associateProfessor": null,
+      "assistantProfessor": null
+    },
+    "semesterFeeByYear": {
+      "y2024": 23474,
+      "y2025": 23474,
+      "y2026": 23474
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 66,
+      "y2025": 66,
+      "y2026": 66
+    },
+    "admittedByYear": {
+      "y2024": 66,
+      "y2025": 65,
+      "y2026": 66
+    },
+    "nepAligned": true,
+    "multipleEntryExit": true,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": false,
+    "remarks": null
+  },
+  {
+    "id": "cse-and-it-p1",
+    "deptId": "cse-and-it",
+    "sNo": 1,
+    "name": "B.TECH(CSE)",
+    "yearOfCommencement": 1997,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": 1,
+      "associateProfessor": 1,
+      "assistantProfessor": 1
+    },
+    "semesterFeeByYear": {
+      "y2024": 61000,
+      "y2025": 61000,
+      "y2026": 61000
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 66,
+      "y2025": 66,
+      "y2026": 66
+    },
+    "admittedByYear": {
+      "y2024": 66,
+      "y2025": 134,
+      "y2026": 131
+    },
+    "nepAligned": false,
+    "multipleEntryExit": false,
+    "internshipEndOfYear": true,
+    "minorSpecialisationAvailable": false,
+    "remarks": null
+  },
+  {
+    "id": "cse-and-it-p2",
+    "deptId": "cse-and-it",
+    "sNo": 2,
+    "name": "B.TECH(IT)",
+    "yearOfCommencement": 2001,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": null,
+      "associateProfessor": null,
+      "assistantProfessor": null
+    },
+    "semesterFeeByYear": {
+      "y2024": 61000,
+      "y2025": 61000,
+      "y2026": 61000
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 66,
+      "y2025": 66,
+      "y2026": 66
+    },
+    "admittedByYear": {
+      "y2024": 66,
+      "y2025": 69,
+      "y2026": 58
+    },
+    "nepAligned": false,
+    "multipleEntryExit": false,
+    "internshipEndOfYear": true,
+    "minorSpecialisationAvailable": false,
+    "remarks": null
+  },
+  {
+    "id": "cse-and-it-p3",
+    "deptId": "cse-and-it",
+    "sNo": 3,
+    "name": "B.TECH(AI/ML)",
+    "yearOfCommencement": 2025,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": null,
+      "associateProfessor": null,
+      "assistantProfessor": null
+    },
+    "semesterFeeByYear": {
+      "y2024": null,
+      "y2025": 61000,
+      "y2026": 61000
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": null,
+      "y2025": 33,
+      "y2026": 66
+    },
+    "admittedByYear": {
+      "y2024": null,
+      "y2025": 34,
+      "y2026": 60
+    },
+    "nepAligned": false,
+    "multipleEntryExit": false,
+    "internshipEndOfYear": true,
+    "minorSpecialisationAvailable": false,
+    "remarks": null
+  },
+  {
+    "id": "cse-and-it-p4",
+    "deptId": "cse-and-it",
+    "sNo": 4,
+    "name": "B.TECH(DATA SCIENCE)",
+    "yearOfCommencement": 2025,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": null,
+      "associateProfessor": null,
+      "assistantProfessor": null
+    },
+    "semesterFeeByYear": {
+      "y2024": null,
+      "y2025": 61000,
+      "y2026": 61000
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": null,
+      "y2025": 33,
+      "y2026": 33
+    },
+    "admittedByYear": {
+      "y2024": null,
+      "y2025": 33,
+      "y2026": 19
+    },
+    "nepAligned": false,
+    "multipleEntryExit": false,
+    "internshipEndOfYear": true,
+    "minorSpecialisationAvailable": false,
+    "remarks": null
+  },
+  {
+    "id": "cse-and-it-p5",
+    "deptId": "cse-and-it",
+    "sNo": 5,
+    "name": "M.TECH(CSE)",
+    "yearOfCommencement": 2019,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": null,
+      "associateProfessor": null,
+      "assistantProfessor": null
+    },
+    "semesterFeeByYear": {
+      "y2024": 40000,
+      "y2025": 40000,
+      "y2026": 40000
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 25,
+      "y2025": 25,
+      "y2026": 30
+    },
+    "admittedByYear": {
+      "y2024": 12,
+      "y2025": 14,
+      "y2026": 7
+    },
+    "nepAligned": false,
+    "multipleEntryExit": false,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": false,
+    "remarks": null
+  },
+  {
+    "id": "cse-and-it-p6",
+    "deptId": "cse-and-it",
+    "sNo": 6,
+    "name": "PHD(CSE)",
+    "yearOfCommencement": 2018,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": null,
+      "associateProfessor": null,
+      "assistantProfessor": null
+    },
+    "semesterFeeByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": null
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": null
+    },
+    "admittedByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": null
+    },
+    "nepAligned": null,
+    "multipleEntryExit": null,
+    "internshipEndOfYear": null,
+    "minorSpecialisationAvailable": null,
+    "remarks": null
+  },
+  {
+    "id": "chemistry-p1",
+    "deptId": "chemistry",
+    "sNo": 1,
+    "name": "Engineering Chemistry",
+    "yearOfCommencement": 1997,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": 0,
+      "associateProfessor": 1,
+      "assistantProfessor": 1
+    },
+    "semesterFeeByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": null
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": null
+    },
+    "admittedByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": null
+    },
+    "nepAligned": true,
+    "multipleEntryExit": null,
+    "internshipEndOfYear": null,
+    "minorSpecialisationAvailable": null,
+    "remarks": null
+  },
+  {
+    "id": "electrical-engineering-p1",
+    "deptId": "electrical-engineering",
+    "sNo": 1,
+    "name": "Electrical Engineering",
+    "yearOfCommencement": 1997,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": 1,
+      "associateProfessor": 2,
+      "assistantProfessor": 7
+    },
+    "semesterFeeByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": null
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 60,
+      "y2025": 60,
+      "y2026": 60
+    },
+    "admittedByYear": {
+      "y2024": 44,
+      "y2025": 25,
+      "y2026": 28
+    },
+    "nepAligned": false,
+    "multipleEntryExit": false,
+    "internshipEndOfYear": true,
+    "minorSpecialisationAvailable": true,
+    "remarks": null
+  },
+  {
+    "id": "electrical-engineering-p2",
+    "deptId": "electrical-engineering",
+    "sNo": 2,
+    "name": "Electrical & Computer Eng",
+    "yearOfCommencement": 2025,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": 0,
+      "associateProfessor": 0,
+      "assistantProfessor": 0
+    },
+    "semesterFeeByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": null
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": null,
+      "y2025": 30,
+      "y2026": 30
+    },
+    "admittedByYear": {
+      "y2024": null,
+      "y2025": 17,
+      "y2026": 22
+    },
+    "nepAligned": false,
+    "multipleEntryExit": false,
+    "internshipEndOfYear": true,
+    "minorSpecialisationAvailable": true,
+    "remarks": null
+  },
+  {
+    "id": "electrical-engineering-p3",
+    "deptId": "electrical-engineering",
+    "sNo": 3,
+    "name": "M.Tech (Power System)",
+    "yearOfCommencement": 2019,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": 0,
+      "associateProfessor": 0,
+      "assistantProfessor": 0
+    },
+    "semesterFeeByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": null
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 25,
+      "y2025": 25,
+      "y2026": 30
+    },
+    "admittedByYear": {
+      "y2024": 3,
+      "y2025": 5,
+      "y2026": 3
+    },
+    "nepAligned": false,
+    "multipleEntryExit": false,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": false,
+    "remarks": null
+  },
+  {
+    "id": "department-of-electronics-engineering-p1",
+    "deptId": "department-of-electronics-engineering",
+    "sNo": 1,
+    "name": "B.Tech Electronics Engineering",
+    "yearOfCommencement": 1997,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": 1,
+      "associateProfessor": 1,
+      "assistantProfessor": 1
+    },
+    "semesterFeeByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": null
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": null
+    },
+    "admittedByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": null
+    },
+    "nepAligned": null,
+    "multipleEntryExit": null,
+    "internshipEndOfYear": null,
+    "minorSpecialisationAvailable": null,
+    "remarks": null
+  },
+  {
+    "id": "department-of-electronics-engineering-p2",
+    "deptId": "department-of-electronics-engineering",
+    "sNo": 2,
+    "name": "B.Tech. Electronics and Communication Engineering",
+    "yearOfCommencement": 2002,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": 1,
+      "associateProfessor": 3,
+      "assistantProfessor": 7
+    },
+    "semesterFeeByYear": {
+      "y2024": 32174,
+      "y2025": 32174,
+      "y2026": 32174
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 66,
+      "y2025": 66,
+      "y2026": 66
+    },
+    "admittedByYear": {
+      "y2024": 33,
+      "y2025": 29,
+      "y2026": 34
+    },
+    "nepAligned": true,
+    "multipleEntryExit": null,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": null,
+    "remarks": null
+  },
+  {
+    "id": "department-of-electronics-engineering-p3",
+    "deptId": "department-of-electronics-engineering",
+    "sNo": 3,
+    "name": "B.Tech. Electronics and Instrumentation Engineering",
+    "yearOfCommencement": 2002,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": 1,
+      "associateProfessor": 1,
+      "assistantProfessor": 4
+    },
+    "semesterFeeByYear": {
+      "y2024": 32174,
+      "y2025": null,
+      "y2026": null
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 33,
+      "y2025": null,
+      "y2026": null
+    },
+    "admittedByYear": {
+      "y2024": 6,
+      "y2025": null,
+      "y2026": null
+    },
+    "nepAligned": true,
+    "multipleEntryExit": null,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": null,
+    "remarks": null
+  },
+  {
+    "id": "department-of-electronics-engineering-p4",
+    "deptId": "department-of-electronics-engineering",
+    "sNo": 4,
+    "name": "M.Tech. Communication Engineering",
+    "yearOfCommencement": 2019,
+    "modeOfProgramme": null,
+    "sanctionedFacultyPositions": {
+      "professor": null,
+      "associateProfessor": null,
+      "assistantProfessor": null
+    },
+    "semesterFeeByYear": {
+      "y2024": 22174,
+      "y2025": 22174,
+      "y2026": null
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 25,
+      "y2025": 25,
+      "y2026": 25
+    },
+    "admittedByYear": {
+      "y2024": 3,
+      "y2025": 3,
+      "y2026": null
+    },
+    "nepAligned": true,
+    "multipleEntryExit": null,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": null,
+    "remarks": null
+  },
+  {
+    "id": "department-of-electronics-engineering-p5",
+    "deptId": "department-of-electronics-engineering",
+    "sNo": 5,
+    "name": "Ph.D. Electronics Engineering",
+    "yearOfCommencement": 2019,
+    "modeOfProgramme": null,
+    "sanctionedFacultyPositions": {
+      "professor": null,
+      "associateProfessor": null,
+      "assistantProfessor": null
+    },
+    "semesterFeeByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": 30000
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": 10
+    },
+    "admittedByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": 7
+    },
+    "nepAligned": true,
+    "multipleEntryExit": null,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": null,
+    "remarks": null
+  },
+  {
+    "id": "department-of-electronics-engineering-p6",
+    "deptId": "department-of-electronics-engineering",
+    "sNo": 6,
+    "name": "B.Tech Electronics Engineering with specialization in AI/ML",
+    "yearOfCommencement": 2025,
+    "modeOfProgramme": null,
+    "sanctionedFacultyPositions": {
+      "professor": null,
+      "associateProfessor": null,
+      "assistantProfessor": null
+    },
+    "semesterFeeByYear": {
+      "y2024": null,
+      "y2025": 32174,
+      "y2026": 32174
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": null,
+      "y2025": 33,
+      "y2026": 33
+    },
+    "admittedByYear": {
+      "y2024": null,
+      "y2025": 22,
+      "y2026": 29
+    },
+    "nepAligned": true,
+    "multipleEntryExit": null,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": true,
+    "remarks": null
+  },
+  {
+    "id": "h-r-d-p1",
+    "deptId": "h-r-d",
+    "sNo": 1,
+    "name": "MBA (HRD)",
+    "yearOfCommencement": 1999,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": 1,
+      "associateProfessor": 2,
+      "assistantProfessor": 4
+    },
+    "semesterFeeByYear": {
+      "y2024": 27750,
+      "y2025": 27750,
+      "y2026": 27750
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 66,
+      "y2025": 66,
+      "y2026": 66
+    },
+    "admittedByYear": {
+      "y2024": 60,
+      "y2025": 63,
+      "y2026": 65
+    },
+    "nepAligned": true,
+    "multipleEntryExit": null,
+    "internshipEndOfYear": true,
+    "minorSpecialisationAvailable": true,
+    "remarks": null
+  },
+  {
+    "id": "institute-department-of-pharmacy-p1",
+    "deptId": "institute-department-of-pharmacy",
+    "sNo": 1,
+    "name": "Bachelor of Pharmacy (B. Pharm.)",
+    "yearOfCommencement": 2004,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": 4,
+      "associateProfessor": 4,
+      "assistantProfessor": 8
+    },
+    "semesterFeeByYear": {
+      "y2024": 40474,
+      "y2025": 40474,
+      "y2026": 40474
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 66,
+      "y2025": 66,
+      "y2026": 66
+    },
+    "admittedByYear": {
+      "y2024": 60,
+      "y2025": 66,
+      "y2026": null
+    },
+    "nepAligned": false,
+    "multipleEntryExit": false,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": false,
+    "remarks": "Internship at end of third Year"
+  },
+  {
+    "id": "institute-department-of-pharmacy-p2",
+    "deptId": "institute-department-of-pharmacy",
+    "sNo": 2,
+    "name": "Diploma in Pharmacy (D. Pharm.)",
+    "yearOfCommencement": 2020,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": null,
+      "associateProfessor": null,
+      "assistantProfessor": 5
+    },
+    "semesterFeeByYear": {
+      "y2024": 23024,
+      "y2025": 23024,
+      "y2026": 23024
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 66,
+      "y2025": 66,
+      "y2026": 66
+    },
+    "admittedByYear": {
+      "y2024": 66,
+      "y2025": 66,
+      "y2026": 66
+    },
+    "nepAligned": false,
+    "multipleEntryExit": false,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": false,
+    "remarks": "Internship at end of second Year"
+  },
+  {
+    "id": "mathematics-engg-p1",
+    "deptId": "mathematics-engg",
+    "sNo": 1,
+    "name": "Ph.D.",
+    "yearOfCommencement": 2019,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": 0,
+      "associateProfessor": 0,
+      "assistantProfessor": 0
+    },
+    "semesterFeeByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": null
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 7,
+      "y2025": 0,
+      "y2026": 8
+    },
+    "admittedByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": null
+    },
+    "nepAligned": true,
+    "multipleEntryExit": true,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": null,
+    "remarks": "Fee is paid once and Ph.D programme is introduced in 2019"
+  },
+  {
+    "id": "mathematics-engg-p2",
+    "deptId": "mathematics-engg",
+    "sNo": 2,
+    "name": "B.Tech in all branch (for assisting these courses)",
+    "yearOfCommencement": 2001,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": 0,
+      "associateProfessor": 1,
+      "assistantProfessor": 4
+    },
+    "semesterFeeByYear": {
+      "y2024": 32174,
+      "y2025": 32174,
+      "y2026": 32174
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 360,
+      "y2025": 480,
+      "y2026": 540
+    },
+    "admittedByYear": {
+      "y2024": 226,
+      "y2025": 370,
+      "y2026": null
+    },
+    "nepAligned": false,
+    "multipleEntryExit": true,
+    "internshipEndOfYear": null,
+    "minorSpecialisationAvailable": null,
+    "remarks": "In dfferent semester fee has some variation. Lateral entry in second yr is also included there in BTech. Among sanctioned positions, 2 posts of assistant professor are created by the Executive council and 1 by UP state government. For 2026, about the actual number of the admitted students and fee, core Engg. departments can provide."
+  },
+  {
+    "id": "mathematics-engg-p3",
+    "deptId": "mathematics-engg",
+    "sNo": 3,
+    "name": "Diploma in Mech Engg",
+    "yearOfCommencement": 2024,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": null,
+      "associateProfessor": null,
+      "assistantProfessor": null
+    },
+    "semesterFeeByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": null
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 60,
+      "y2025": 60,
+      "y2026": 60
+    },
+    "admittedByYear": {
+      "y2024": 20,
+      "y2025": 26,
+      "y2026": null
+    },
+    "nepAligned": false,
+    "multipleEntryExit": null,
+    "internshipEndOfYear": null,
+    "minorSpecialisationAvailable": null,
+    "remarks": "For 2026, about the actual number of the admitted students and fee, Mech Engg department can provide."
+  },
+  {
+    "id": "mechanical-engineering-p1",
+    "deptId": "mechanical-engineering",
+    "sNo": 1,
+    "name": "B.Tech in Mechanical Engineering",
+    "yearOfCommencement": 2002,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": 2,
+      "associateProfessor": 4,
+      "assistantProfessor": 10
+    },
+    "semesterFeeByYear": {
+      "y2024": 63874,
+      "y2025": 63874,
+      "y2026": 63874
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 60,
+      "y2025": 60,
+      "y2026": 60
+    },
+    "admittedByYear": {
+      "y2024": 23,
+      "y2025": 19,
+      "y2026": 22
+    },
+    "nepAligned": true,
+    "multipleEntryExit": false,
+    "internshipEndOfYear": true,
+    "minorSpecialisationAvailable": true,
+    "remarks": null
+  },
+  {
+    "id": "mechanical-engineering-p2",
+    "deptId": "mechanical-engineering",
+    "sNo": 2,
+    "name": "M.Tech (Thermal Engineering)",
+    "yearOfCommencement": 2019,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": 0,
+      "associateProfessor": 0,
+      "assistantProfessor": 0
+    },
+    "semesterFeeByYear": {
+      "y2024": 44450,
+      "y2025": 44450,
+      "y2026": 44450
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 25,
+      "y2025": 25,
+      "y2026": 25
+    },
+    "admittedByYear": {
+      "y2024": 2,
+      "y2025": 0,
+      "y2026": 0
+    },
+    "nepAligned": true,
+    "multipleEntryExit": false,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": false,
+    "remarks": null
+  },
+  {
+    "id": "mechanical-engineering-p3",
+    "deptId": "mechanical-engineering",
+    "sNo": 3,
+    "name": "Ph.D",
+    "yearOfCommencement": 2019,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": 0,
+      "associateProfessor": 0,
+      "assistantProfessor": 0
+    },
+    "semesterFeeByYear": {
+      "y2024": 30000,
+      "y2025": 30000,
+      "y2026": 30000
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 8,
+      "y2025": 8,
+      "y2026": 8
+    },
+    "admittedByYear": {
+      "y2024": 0,
+      "y2025": 0,
+      "y2026": 0
+    },
+    "nepAligned": false,
+    "multipleEntryExit": false,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": false,
+    "remarks": null
+  },
+  {
+    "id": "mechanical-engineering-p4",
+    "deptId": "mechanical-engineering",
+    "sNo": 4,
+    "name": "Diploma in Mechanical Engineering (Production)",
+    "yearOfCommencement": 2024,
+    "modeOfProgramme": "Self-Financing",
+    "sanctionedFacultyPositions": {
+      "professor": 0,
+      "associateProfessor": 0,
+      "assistantProfessor": 0
+    },
+    "semesterFeeByYear": {
+      "y2024": 23874,
+      "y2025": 23874,
+      "y2026": 23874
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 60,
+      "y2025": 60,
+      "y2026": 60
+    },
+    "admittedByYear": {
+      "y2024": 23,
+      "y2025": 38,
+      "y2026": 17
+    },
+    "nepAligned": false,
+    "multipleEntryExit": false,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": false,
+    "remarks": null
+  },
+  {
+    "id": "physics-p1",
+    "deptId": "physics",
+    "sNo": 1,
+    "name": "B.Tech.",
+    "yearOfCommencement": 1997,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": 0,
+      "associateProfessor": 1,
+      "assistantProfessor": 1
+    },
+    "semesterFeeByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": null
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": null
+    },
+    "admittedByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": null
+    },
+    "nepAligned": null,
+    "multipleEntryExit": null,
+    "internshipEndOfYear": null,
+    "minorSpecialisationAvailable": null,
+    "remarks": null
+  },
+  {
+    "id": "physics-p2",
+    "deptId": "physics",
+    "sNo": 2,
+    "name": "Ph.D.",
+    "yearOfCommencement": 2017,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": null,
+      "associateProfessor": null,
+      "assistantProfessor": null
+    },
+    "semesterFeeByYear": {
+      "y2024": 30000,
+      "y2025": null,
+      "y2026": null
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 12,
+      "y2025": 12,
+      "y2026": 12
+    },
+    "admittedByYear": {
+      "y2024": 0,
+      "y2025": 0,
+      "y2026": 0
+    },
+    "nepAligned": null,
+    "multipleEntryExit": false,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": false,
+    "remarks": null
+  },
+  {
+    "id": "rb-centre-for-nanoscience-and-technology-p1",
+    "deptId": "rb-centre-for-nanoscience-and-technology",
+    "sNo": 1,
+    "name": "Ph.D",
+    "yearOfCommencement": 2021,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": 0,
+      "associateProfessor": 0,
+      "assistantProfessor": 2
+    },
+    "semesterFeeByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": null
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 6,
+      "y2025": null,
+      "y2026": 5
+    },
+    "admittedByYear": {
+      "y2024": 2,
+      "y2025": null,
+      "y2026": 1
+    },
+    "nepAligned": true,
+    "multipleEntryExit": null,
+    "internshipEndOfYear": null,
+    "minorSpecialisationAvailable": false,
+    "remarks": "Research Centre"
+  },
+  {
+    "id": "rb-chemistry-p1",
+    "deptId": "rb-chemistry",
+    "sNo": 1,
+    "name": "Master of Science",
+    "yearOfCommencement": 2018,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": 1,
+      "associateProfessor": 2,
+      "assistantProfessor": 4
+    },
+    "semesterFeeByYear": {
+      "y2024": 10625,
+      "y2025": 10625,
+      "y2026": 10625
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 60,
+      "y2025": 60,
+      "y2026": 60
+    },
+    "admittedByYear": {
+      "y2024": 58,
+      "y2025": 64,
+      "y2026": 61
+    },
+    "nepAligned": true,
+    "multipleEntryExit": true,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": true,
+    "remarks": null
+  },
+  {
+    "id": "rb-chemistry-p2",
+    "deptId": "rb-chemistry",
+    "sNo": 2,
+    "name": "Bachelor of Science",
+    "yearOfCommencement": 2019,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": null,
+      "associateProfessor": null,
+      "assistantProfessor": null
+    },
+    "semesterFeeByYear": {
+      "y2024": 6474,
+      "y2025": 6474,
+      "y2026": 6474
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 120,
+      "y2025": 120,
+      "y2026": 120
+    },
+    "admittedByYear": {
+      "y2024": 46,
+      "y2025": 85,
+      "y2026": 100
+    },
+    "nepAligned": true,
+    "multipleEntryExit": true,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": true,
+    "remarks": null
+  },
+  {
+    "id": "rb-chemistry-p3",
+    "deptId": "rb-chemistry",
+    "sNo": 3,
+    "name": "Doctor of Philosphy (Ph.D)",
+    "yearOfCommencement": 2018,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": null,
+      "associateProfessor": null,
+      "assistantProfessor": null
+    },
+    "semesterFeeByYear": {
+      "y2024": 30000,
+      "y2025": 30000,
+      "y2026": 30000
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 22,
+      "y2025": 22,
+      "y2026": 24
+    },
+    "admittedByYear": {
+      "y2024": 0,
+      "y2025": 0,
+      "y2026": 5
+    },
+    "nepAligned": true,
+    "multipleEntryExit": true,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": false,
+    "remarks": null
+  },
+  {
+    "id": "rb-mathematics-p1",
+    "deptId": "rb-mathematics",
+    "sNo": 1,
+    "name": "M.Sc.(Mathematics)",
+    "yearOfCommencement": 2018,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": 1,
+      "associateProfessor": 2,
+      "assistantProfessor": 4
+    },
+    "semesterFeeByYear": {
+      "y2024": 10625,
+      "y2025": 10625,
+      "y2026": 10625
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 60,
+      "y2025": 60,
+      "y2026": 60
+    },
+    "admittedByYear": {
+      "y2024": 7,
+      "y2025": 8,
+      "y2026": 10
+    },
+    "nepAligned": true,
+    "multipleEntryExit": true,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": true,
+    "remarks": "No"
+  },
+  {
+    "id": "rb-mathematics-p2",
+    "deptId": "rb-mathematics",
+    "sNo": 2,
+    "name": "B.Sc.(Mathematics)",
+    "yearOfCommencement": 2019,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": 0,
+      "associateProfessor": 0,
+      "assistantProfessor": 0
+    },
+    "semesterFeeByYear": {
+      "y2024": 6474,
+      "y2025": 6474,
+      "y2026": 6474
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 60,
+      "y2025": 60,
+      "y2026": 60
+    },
+    "admittedByYear": {
+      "y2024": 38,
+      "y2025": 30,
+      "y2026": 40
+    },
+    "nepAligned": true,
+    "multipleEntryExit": true,
+    "internshipEndOfYear": true,
+    "minorSpecialisationAvailable": true,
+    "remarks": "No"
+  },
+  {
+    "id": "rb-earth-and-planetary-sciences-p1",
+    "deptId": "rb-earth-and-planetary-sciences",
+    "sNo": 1,
+    "name": "MSc. Geology",
+    "yearOfCommencement": 2018,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": 1,
+      "associateProfessor": 2,
+      "assistantProfessor": 4
+    },
+    "semesterFeeByYear": {
+      "y2024": 10625,
+      "y2025": 10625,
+      "y2026": 10625
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 60,
+      "y2025": 60,
+      "y2026": 60
+    },
+    "admittedByYear": {
+      "y2024": 3,
+      "y2025": 10,
+      "y2026": 2
+    },
+    "nepAligned": true,
+    "multipleEntryExit": true,
+    "internshipEndOfYear": true,
+    "minorSpecialisationAvailable": true,
+    "remarks": null
+  },
+  {
+    "id": "rb-earth-and-planetary-sciences-p2",
+    "deptId": "rb-earth-and-planetary-sciences",
+    "sNo": 2,
+    "name": "B.Sc. Geology",
+    "yearOfCommencement": 2019,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": 0,
+      "associateProfessor": 0,
+      "assistantProfessor": 0
+    },
+    "semesterFeeByYear": {
+      "y2024": 6474,
+      "y2025": 6474,
+      "y2026": 6474
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 60,
+      "y2025": 60,
+      "y2026": 60
+    },
+    "admittedByYear": {
+      "y2024": 9,
+      "y2025": 38,
+      "y2026": 45
+    },
+    "nepAligned": true,
+    "multipleEntryExit": true,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": true,
+    "remarks": null
+  },
+  {
+    "id": "rb-physics-p1",
+    "deptId": "rb-physics",
+    "sNo": 1,
+    "name": "M.Sc. Physics",
+    "yearOfCommencement": 2018,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": 1,
+      "associateProfessor": 2,
+      "assistantProfessor": 4
+    },
+    "semesterFeeByYear": {
+      "y2024": 10625,
+      "y2025": 10625,
+      "y2026": 10625
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 60,
+      "y2025": 60,
+      "y2026": 60
+    },
+    "admittedByYear": {
+      "y2024": 16,
+      "y2025": 12,
+      "y2026": 10
+    },
+    "nepAligned": true,
+    "multipleEntryExit": true,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": true,
+    "remarks": null
+  },
+  {
+    "id": "rb-physics-p2",
+    "deptId": "rb-physics",
+    "sNo": 2,
+    "name": "B.Sc. Physics",
+    "yearOfCommencement": 2019,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": 0,
+      "associateProfessor": 0,
+      "assistantProfessor": 0
+    },
+    "semesterFeeByYear": {
+      "y2024": 6474,
+      "y2025": 6474,
+      "y2026": 6474
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 60,
+      "y2025": 60,
+      "y2026": 60
+    },
+    "admittedByYear": {
+      "y2024": 32,
+      "y2025": 46,
+      "y2026": 42
+    },
+    "nepAligned": true,
+    "multipleEntryExit": true,
+    "internshipEndOfYear": false,
+    "minorSpecialisationAvailable": true,
+    "remarks": null
+  },
+  {
+    "id": "rb-centre-for-renewable-energy-p1",
+    "deptId": "rb-centre-for-renewable-energy",
+    "sNo": 1,
+    "name": "PhD",
+    "yearOfCommencement": 2019,
+    "modeOfProgramme": "Regular",
+    "sanctionedFacultyPositions": {
+      "professor": 0,
+      "associateProfessor": 0,
+      "assistantProfessor": 2
+    },
+    "semesterFeeByYear": {
+      "y2024": null,
+      "y2025": null,
+      "y2026": null
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": 0,
+      "y2025": null,
+      "y2026": null
+    },
+    "admittedByYear": {
+      "y2024": 0,
+      "y2025": null,
+      "y2026": null
+    },
+    "nepAligned": true,
+    "multipleEntryExit": null,
+    "internshipEndOfYear": null,
+    "minorSpecialisationAvailable": null,
+    "remarks": null
+  },
+  {
+    "id": "rb-centre-for-renewable-energy-p2",
+    "deptId": "rb-centre-for-renewable-energy",
+    "sNo": 2,
+    "name": "Short Term Skill Development Certificate Course on Advanced Material Characterization and Instrumentation Techniques",
+    "yearOfCommencement": 2025,
+    "modeOfProgramme": null,
+    "sanctionedFacultyPositions": {
+      "professor": 0,
+      "associateProfessor": 0,
+      "assistantProfessor": 0
+    },
+    "semesterFeeByYear": {
+      "y2024": null,
+      "y2025": 9650,
+      "y2026": 9650
+    },
+    "sanctionedIntakeByYear": {
+      "y2024": null,
+      "y2025": 30,
+      "y2026": 30
+    },
+    "admittedByYear": {
+      "y2024": null,
+      "y2025": 0,
+      "y2026": 0
+    },
+    "nepAligned": true,
+    "multipleEntryExit": null,
+    "internshipEndOfYear": null,
+    "minorSpecialisationAvailable": null,
+    "remarks": null
+  }
+]

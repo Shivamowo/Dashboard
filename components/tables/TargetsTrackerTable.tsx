@@ -1,6 +1,7 @@
 "use client";
 
 import DataTable, { type Column, type FilterDef } from "@/components/DataTable";
+import { pctBar } from "@/components/cells";
 import { Badge, ProgressBar, StatusBadge } from "@/components/ui";
 import type { TargetTrackerRow } from "@/lib/rows";
 
@@ -21,7 +22,9 @@ export default function TargetsTrackerTable({
       render: (r) => (
         <span className="flex items-center gap-2">
           <span className="font-medium text-brand-pink-dark">{r.name}</span>
-          {r.milestonePct < AT_RISK_THRESHOLD ? <Badge tone="priority">Behind plan</Badge> : null}
+          {r.milestonePct != null && r.milestonePct < AT_RISK_THRESHOLD ? (
+            <Badge tone="priority">Behind plan</Badge>
+          ) : null}
         </span>
       ),
       className: "min-w-[16rem]",
@@ -54,7 +57,7 @@ export default function TargetsTrackerTable({
       key: "milestone",
       header: "Milestone Achievement %",
       value: (r) => r.milestonePct,
-      render: (r) => <ProgressBar value={r.milestonePct} />,
+      render: (r) => pctBar(r.milestonePct),
       className: "min-w-[10rem]",
     },
     {
@@ -80,9 +83,16 @@ export default function TargetsTrackerTable({
       options: [
         { value: "risk", label: "At risk (< 50%)" },
         { value: "ok", label: "On plan (≥ 50%)" },
+        { value: "unknown", label: "Not provided" },
       ],
+      // A faculty member who reported no milestone figure is neither at risk
+      // nor on plan — they get their own option rather than being assumed safe.
       match: (r, v) =>
-        v === "risk" ? r.milestonePct < AT_RISK_THRESHOLD : r.milestonePct >= AT_RISK_THRESHOLD,
+        v === "risk"
+          ? r.milestonePct != null && r.milestonePct < AT_RISK_THRESHOLD
+          : v === "ok"
+          ? r.milestonePct != null && r.milestonePct >= AT_RISK_THRESHOLD
+          : r.milestonePct == null,
     },
     {
       key: "priority",

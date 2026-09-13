@@ -1,0 +1,2393 @@
+{
+  "generatedAt": "2026-09-13T09:21:07.118Z",
+  "sourceDir": "excel-data",
+  "workbooks": 23,
+  "totals": {
+    "departments": 23,
+    "programs": 50,
+    "faculty": 149,
+    "facultyResearch": 149,
+    "facultyProjects": 54,
+    "infrastructure": 154,
+    "hodSubmissions": 23,
+    "facultyTargetSummaries": 23,
+    "facultyTargets": 121
+  },
+  "anomalies": [
+    {
+      "dept": "Department of Electronics Engineering",
+      "entity": "faculty",
+      "field": "hasPhd",
+      "value": "Persuing",
+      "note": "not a yes/no value; imported as null"
+    },
+    {
+      "dept": "Department of Electronics Engineering",
+      "entity": "faculty",
+      "field": "hasPhd",
+      "value": "Persuing",
+      "note": "not a yes/no value; imported as null"
+    },
+    {
+      "dept": "Department of Electronics Engineering",
+      "entity": "faculty",
+      "field": "hasPhd",
+      "value": "Persuing",
+      "note": "not a yes/no value; imported as null"
+    },
+    {
+      "dept": "Department of Electronics Engineering",
+      "entity": "faculty",
+      "field": "hasPhd",
+      "value": "Persuing",
+      "note": "not a yes/no value; imported as null"
+    },
+    {
+      "dept": "Department of Humanities and Social Sciences",
+      "entity": "program",
+      "field": "name",
+      "value": "sheet row 5",
+      "note": "row carries data but no programme name; not imported"
+    },
+    {
+      "dept": "Department of Law",
+      "entity": "program",
+      "field": "name",
+      "value": "sheet row 5",
+      "note": "row carries data but no programme name; not imported"
+    },
+    {
+      "dept": "Department of Law",
+      "entity": "program",
+      "field": "name",
+      "value": "sheet row 6",
+      "note": "row carries data but no programme name; not imported"
+    },
+    {
+      "dept": "Department of Law",
+      "entity": "program",
+      "field": "name",
+      "value": "sheet row 27",
+      "note": "row carries data but no programme name; not imported"
+    },
+    {
+      "dept": "Department of Law",
+      "entity": "infrastructure",
+      "field": "labClassroomName",
+      "value": "sheet row 14",
+      "note": "row carries data but no lab/classroom name; not imported"
+    },
+    {
+      "dept": "Department of Law",
+      "entity": "facultyTarget",
+      "field": "facultyId",
+      "value": "Sri Magala Prasad Yadav",
+      "note": "target row has no matching faculty member; imported unlinked"
+    },
+    {
+      "dept": "Department of Law",
+      "entity": "facultyTarget",
+      "field": "facultyId",
+      "value": "Mr. Shri Prakash Yadav",
+      "note": "target row has no matching faculty member; imported unlinked"
+    },
+    {
+      "dept": "Mathematics (Engg.)",
+      "entity": "facultyTarget",
+      "field": "facultyId",
+      "value": "Dr. Raj Kumar",
+      "note": "target row has no matching faculty member; imported unlinked"
+    },
+    {
+      "dept": "Mathematics (Engg.)",
+      "entity": "facultyTarget",
+      "field": "facultyId",
+      "value": "Dr.Uday Raj Prajapati",
+      "note": "target row has no matching faculty member; imported unlinked"
+    },
+    {
+      "dept": "Physics",
+      "entity": "infrastructure",
+      "field": "digitalSmartBoard",
+      "value": "2 out of 5",
+      "note": "not a yes/no value; imported as null"
+    },
+    {
+      "dept": "Physics",
+      "entity": "infrastructure",
+      "field": "projector",
+      "value": "2 out of 5",
+      "note": "not a yes/no value; imported as null"
+    },
+    {
+      "dept": "Chemistry (Rajju Bhaiya Institute)",
+      "entity": "facultyTarget",
+      "field": "facultyId",
+      "value": "Nitesh Jaiswal",
+      "note": "target row has no matching faculty member; imported unlinked"
+    },
+    {
+      "dept": "Chemistry (Rajju Bhaiya Institute)",
+      "entity": "facultyTarget",
+      "field": "facultyId",
+      "value": "Mithilesh Yadav",
+      "note": "target row has no matching faculty member; imported unlinked"
+    }
+  ],
+  "departments": [
+    {
+      "deptId": "applied-psychology",
+      "department": "Applied Psychology",
+      "sourceFile": "Applied Psychology-Deptt Data.xlsx",
+      "nameFromFilename": false,
+      "counts": {
+        "programs": 1,
+        "faculty": 4,
+        "facultyResearch": 4,
+        "facultyProjects": 2,
+        "infrastructure": 4,
+        "facultyTargets": 4
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 0,
+            "name": 0,
+            "deanName": 0,
+            "hodName": 0,
+            "hodContact": 0,
+            "dateOfSubmission": 0
+          }
+        },
+        "program": {
+          "total": 1,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 0
+          }
+        },
+        "faculty": {
+          "total": 4,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 4,
+          "blankByField": {
+            "hIndex": 1,
+            "i10Index": 3,
+            "googleScholarOrcidLink": 0
+          }
+        },
+        "facultyProject": {
+          "total": 2,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 2,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 4,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 0,
+            "studentCapacity": 0,
+            "utilisationPct": 0
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 0,
+            "dateOfSubmission": 0,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 4,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 4,
+            "hodPriority": 4,
+            "q1Status": 4
+          }
+        }
+      }
+    },
+    {
+      "deptId": "computer-applications",
+      "department": "Computer Applications",
+      "sourceFile": "BCA and MCA.xlsx",
+      "nameFromFilename": false,
+      "counts": {
+        "programs": 3,
+        "faculty": 11,
+        "facultyResearch": 11,
+        "facultyProjects": 0,
+        "infrastructure": 9,
+        "facultyTargets": 11
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 0,
+            "name": 0,
+            "deanName": 0,
+            "hodName": 0,
+            "hodContact": 0,
+            "dateOfSubmission": 1
+          }
+        },
+        "program": {
+          "total": 3,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 0
+          }
+        },
+        "faculty": {
+          "total": 11,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 11,
+          "blankByField": {
+            "hIndex": 8,
+            "i10Index": 8,
+            "googleScholarOrcidLink": 8
+          }
+        },
+        "facultyProject": {
+          "total": 0,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 0,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 9,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 3,
+            "studentCapacity": 0,
+            "utilisationPct": 9
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 0,
+            "dateOfSubmission": 1,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 11,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 11,
+            "hodPriority": 11,
+            "q1Status": 11
+          }
+        }
+      }
+    },
+    {
+      "deptId": "biotechnology-microbiology-biochemistry",
+      "department": "Biotechnology Microbiology Biochemistry Department of Environmental Studies",
+      "sourceFile": "Biotechnology Microbiology Biochemistry Department of Environmental Studies.xlsx",
+      "nameFromFilename": true,
+      "counts": {
+        "programs": 0,
+        "faculty": 0,
+        "facultyResearch": 0,
+        "facultyProjects": 0,
+        "infrastructure": 0,
+        "facultyTargets": 0
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 1,
+            "name": 0,
+            "deanName": 1,
+            "hodName": 1,
+            "hodContact": 1,
+            "dateOfSubmission": 1
+          }
+        },
+        "program": {
+          "total": 0,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 0
+          }
+        },
+        "faculty": {
+          "total": 0,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 0,
+          "blankByField": {
+            "hIndex": 0,
+            "i10Index": 0,
+            "googleScholarOrcidLink": 0
+          }
+        },
+        "facultyProject": {
+          "total": 0,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 0,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 0,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 0,
+            "studentCapacity": 0,
+            "utilisationPct": 0
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 1,
+            "dateOfSubmission": 1,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 0,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 0,
+            "hodPriority": 0,
+            "q1Status": 0
+          }
+        }
+      }
+    },
+    {
+      "deptId": "department-of-business-economics-and-department",
+      "department": "Department of Business Economics and Department of Business Management",
+      "sourceFile": "Business Management and Business Economics and B Com Hons-Deptt Data.xlsx",
+      "nameFromFilename": false,
+      "counts": {
+        "programs": 6,
+        "faculty": 20,
+        "facultyResearch": 20,
+        "facultyProjects": 0,
+        "infrastructure": 15,
+        "facultyTargets": 20
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 0,
+            "name": 0,
+            "deanName": 0,
+            "hodName": 0,
+            "hodContact": 0,
+            "dateOfSubmission": 0
+          }
+        },
+        "program": {
+          "total": 6,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 0
+          }
+        },
+        "faculty": {
+          "total": 20,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 20,
+          "blankByField": {
+            "hIndex": 20,
+            "i10Index": 20,
+            "googleScholarOrcidLink": 20
+          }
+        },
+        "facultyProject": {
+          "total": 0,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 0,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 15,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 0,
+            "studentCapacity": 0,
+            "utilisationPct": 0
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 0,
+            "dateOfSubmission": 0,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 20,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 20,
+            "hodPriority": 20,
+            "q1Status": 20
+          }
+        }
+      }
+    },
+    {
+      "deptId": "cse-and-it",
+      "department": "CSE & IT",
+      "sourceFile": "CSE&IT-Deptt Data.xlsx",
+      "nameFromFilename": false,
+      "counts": {
+        "programs": 6,
+        "faculty": 14,
+        "facultyResearch": 14,
+        "facultyProjects": 0,
+        "infrastructure": 12,
+        "facultyTargets": 14
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 0,
+            "name": 0,
+            "deanName": 0,
+            "hodName": 0,
+            "hodContact": 0,
+            "dateOfSubmission": 1
+          }
+        },
+        "program": {
+          "total": 6,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 1
+          }
+        },
+        "faculty": {
+          "total": 14,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 14,
+          "blankByField": {
+            "hIndex": 4,
+            "i10Index": 6,
+            "googleScholarOrcidLink": 10
+          }
+        },
+        "facultyProject": {
+          "total": 0,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 0,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 12,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 0,
+            "studentCapacity": 0,
+            "utilisationPct": 0
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 0,
+            "dateOfSubmission": 1,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 14,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 14,
+            "hodPriority": 14,
+            "q1Status": 14
+          }
+        }
+      }
+    },
+    {
+      "deptId": "chemistry",
+      "department": "Chemistry",
+      "sourceFile": "Chemistry-Deptt Data.xlsx",
+      "nameFromFilename": false,
+      "counts": {
+        "programs": 1,
+        "faculty": 3,
+        "facultyResearch": 3,
+        "facultyProjects": 1,
+        "infrastructure": 1,
+        "facultyTargets": 0
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 0,
+            "name": 0,
+            "deanName": 0,
+            "hodName": 0,
+            "hodContact": 0,
+            "dateOfSubmission": 0
+          }
+        },
+        "program": {
+          "total": 1,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 0
+          }
+        },
+        "faculty": {
+          "total": 3,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 3,
+          "blankByField": {
+            "hIndex": 1,
+            "i10Index": 1,
+            "googleScholarOrcidLink": 1
+          }
+        },
+        "facultyProject": {
+          "total": 1,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 1,
+            "sanctionedAmount": 1,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 1,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 0,
+            "studentCapacity": 0,
+            "utilisationPct": 0
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 0,
+            "dateOfSubmission": 0,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 0,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 0,
+            "hodPriority": 0,
+            "q1Status": 0
+          }
+        }
+      }
+    },
+    {
+      "deptId": "electrical-engineering",
+      "department": "Electrical Engineering",
+      "sourceFile": "Electrical Engg-Deptt Data.xlsx",
+      "nameFromFilename": false,
+      "counts": {
+        "programs": 3,
+        "faculty": 9,
+        "facultyResearch": 9,
+        "facultyProjects": 0,
+        "infrastructure": 0,
+        "facultyTargets": 0
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 0,
+            "name": 0,
+            "deanName": 0,
+            "hodName": 0,
+            "hodContact": 1,
+            "dateOfSubmission": 1
+          }
+        },
+        "program": {
+          "total": 3,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 0
+          }
+        },
+        "faculty": {
+          "total": 9,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 9,
+          "blankByField": {
+            "hIndex": 3,
+            "i10Index": 3,
+            "googleScholarOrcidLink": 4
+          }
+        },
+        "facultyProject": {
+          "total": 0,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 0,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 0,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 0,
+            "studentCapacity": 0,
+            "utilisationPct": 0
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 1,
+            "dateOfSubmission": 1,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 0,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 0,
+            "hodPriority": 0,
+            "q1Status": 0
+          }
+        }
+      }
+    },
+    {
+      "deptId": "department-of-electronics-engineering",
+      "department": "Department of Electronics Engineering",
+      "sourceFile": "Electronics and Electronics and Instrumentation-Deptt Data.xlsx",
+      "nameFromFilename": false,
+      "counts": {
+        "programs": 6,
+        "faculty": 16,
+        "facultyResearch": 16,
+        "facultyProjects": 0,
+        "infrastructure": 14,
+        "facultyTargets": 16
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 0,
+            "name": 0,
+            "deanName": 0,
+            "hodName": 0,
+            "hodContact": 0,
+            "dateOfSubmission": 0
+          }
+        },
+        "program": {
+          "total": 6,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 3,
+            "nepAligned": 1
+          }
+        },
+        "faculty": {
+          "total": 16,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 4,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 16,
+          "blankByField": {
+            "hIndex": 10,
+            "i10Index": 11,
+            "googleScholarOrcidLink": 4
+          }
+        },
+        "facultyProject": {
+          "total": 0,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 0,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 14,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 0,
+            "studentCapacity": 0,
+            "utilisationPct": 0
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 0,
+            "dateOfSubmission": 0,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 16,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 16,
+            "hodPriority": 16,
+            "q1Status": 16
+          }
+        }
+      }
+    },
+    {
+      "deptId": "finance-and-control",
+      "department": "Finance and Control",
+      "sourceFile": "Finance and Control-Deptt Data.xlsx",
+      "nameFromFilename": true,
+      "counts": {
+        "programs": 0,
+        "faculty": 0,
+        "facultyResearch": 0,
+        "facultyProjects": 0,
+        "infrastructure": 0,
+        "facultyTargets": 0
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 1,
+            "name": 0,
+            "deanName": 1,
+            "hodName": 1,
+            "hodContact": 1,
+            "dateOfSubmission": 1
+          }
+        },
+        "program": {
+          "total": 0,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 0
+          }
+        },
+        "faculty": {
+          "total": 0,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 0,
+          "blankByField": {
+            "hIndex": 0,
+            "i10Index": 0,
+            "googleScholarOrcidLink": 0
+          }
+        },
+        "facultyProject": {
+          "total": 0,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 0,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 0,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 0,
+            "studentCapacity": 0,
+            "utilisationPct": 0
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 1,
+            "dateOfSubmission": 1,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 0,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 0,
+            "hodPriority": 0,
+            "q1Status": 0
+          }
+        }
+      }
+    },
+    {
+      "deptId": "h-r-d",
+      "department": "H.R.D.",
+      "sourceFile": "Human Resource & Development-Deptt Data.xlsx",
+      "nameFromFilename": false,
+      "counts": {
+        "programs": 1,
+        "faculty": 4,
+        "facultyResearch": 4,
+        "facultyProjects": 0,
+        "infrastructure": 2,
+        "facultyTargets": 4
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 0,
+            "name": 0,
+            "deanName": 0,
+            "hodName": 0,
+            "hodContact": 0,
+            "dateOfSubmission": 0
+          }
+        },
+        "program": {
+          "total": 1,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 0
+          }
+        },
+        "faculty": {
+          "total": 4,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 4,
+          "blankByField": {
+            "hIndex": 1,
+            "i10Index": 1,
+            "googleScholarOrcidLink": 0
+          }
+        },
+        "facultyProject": {
+          "total": 0,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 0,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 2,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 0,
+            "studentCapacity": 0,
+            "utilisationPct": 0
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 0,
+            "dateOfSubmission": 0,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 4,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 4,
+            "hodPriority": 3,
+            "q1Status": 4
+          }
+        }
+      }
+    },
+    {
+      "deptId": "department-of-humanities-and-social-sciences",
+      "department": "Department of Humanities and Social Sciences",
+      "sourceFile": "Humanities & Social Sciences-Deptt Data.xlsx",
+      "nameFromFilename": false,
+      "counts": {
+        "programs": 0,
+        "faculty": 3,
+        "facultyResearch": 3,
+        "facultyProjects": 0,
+        "infrastructure": 1,
+        "facultyTargets": 3
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 0,
+            "name": 0,
+            "deanName": 0,
+            "hodName": 0,
+            "hodContact": 0,
+            "dateOfSubmission": 0
+          }
+        },
+        "program": {
+          "total": 0,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 0
+          }
+        },
+        "faculty": {
+          "total": 3,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 3,
+          "blankByField": {
+            "hIndex": 3,
+            "i10Index": 3,
+            "googleScholarOrcidLink": 3
+          }
+        },
+        "facultyProject": {
+          "total": 0,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 0,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 1,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 0,
+            "studentCapacity": 0,
+            "utilisationPct": 0
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 0,
+            "dateOfSubmission": 0,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 3,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 0,
+            "hodPriority": 0,
+            "q1Status": 1
+          }
+        }
+      }
+    },
+    {
+      "deptId": "department-of-law",
+      "department": "Department of Law",
+      "sourceFile": "Institute of Law.xlsx",
+      "nameFromFilename": false,
+      "counts": {
+        "programs": 0,
+        "faculty": 17,
+        "facultyResearch": 17,
+        "facultyProjects": 0,
+        "infrastructure": 9,
+        "facultyTargets": 17
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 0,
+            "name": 0,
+            "deanName": 0,
+            "hodName": 0,
+            "hodContact": 0,
+            "dateOfSubmission": 0
+          }
+        },
+        "program": {
+          "total": 0,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 0
+          }
+        },
+        "faculty": {
+          "total": 17,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 17,
+          "blankByField": {
+            "hIndex": 0,
+            "i10Index": 0,
+            "googleScholarOrcidLink": 17
+          }
+        },
+        "facultyProject": {
+          "total": 0,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 0,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 9,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 9,
+            "studentCapacity": 2,
+            "utilisationPct": 9
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 0,
+            "dateOfSubmission": 0,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 17,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 17,
+            "hodPriority": 17,
+            "q1Status": 17
+          }
+        }
+      }
+    },
+    {
+      "deptId": "institute-department-of-pharmacy",
+      "department": "Institute Department of Pharmacy",
+      "sourceFile": "Institute of Pharmacy-Deptt Data.xlsx",
+      "nameFromFilename": false,
+      "counts": {
+        "programs": 2,
+        "faculty": 11,
+        "facultyResearch": 11,
+        "facultyProjects": 3,
+        "infrastructure": 20,
+        "facultyTargets": 11
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 0,
+            "name": 0,
+            "deanName": 1,
+            "hodName": 0,
+            "hodContact": 0,
+            "dateOfSubmission": 0
+          }
+        },
+        "program": {
+          "total": 2,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 0
+          }
+        },
+        "faculty": {
+          "total": 11,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 11,
+          "blankByField": {
+            "hIndex": 4,
+            "i10Index": 4,
+            "googleScholarOrcidLink": 3
+          }
+        },
+        "facultyProject": {
+          "total": 3,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 0,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 20,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 0,
+            "studentCapacity": 1,
+            "utilisationPct": 1
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 0,
+            "dateOfSubmission": 0,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 11,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 11,
+            "hodPriority": 11,
+            "q1Status": 11
+          }
+        }
+      }
+    },
+    {
+      "deptId": "mass-comm-and-journalism",
+      "department": "Mass Comm and Journalism",
+      "sourceFile": "Mass Comm and Journalism-Deptt Data.xlsx",
+      "nameFromFilename": true,
+      "counts": {
+        "programs": 0,
+        "faculty": 0,
+        "facultyResearch": 0,
+        "facultyProjects": 0,
+        "infrastructure": 0,
+        "facultyTargets": 0
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 1,
+            "name": 0,
+            "deanName": 1,
+            "hodName": 1,
+            "hodContact": 1,
+            "dateOfSubmission": 1
+          }
+        },
+        "program": {
+          "total": 0,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 0
+          }
+        },
+        "faculty": {
+          "total": 0,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 0,
+          "blankByField": {
+            "hIndex": 0,
+            "i10Index": 0,
+            "googleScholarOrcidLink": 0
+          }
+        },
+        "facultyProject": {
+          "total": 0,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 0,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 0,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 0,
+            "studentCapacity": 0,
+            "utilisationPct": 0
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 1,
+            "dateOfSubmission": 1,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 0,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 0,
+            "hodPriority": 0,
+            "q1Status": 0
+          }
+        }
+      }
+    },
+    {
+      "deptId": "mathematics-engg",
+      "department": "Mathematics (Engg.)",
+      "sourceFile": "Maths-Deptt Data.xlsx",
+      "nameFromFilename": false,
+      "counts": {
+        "programs": 3,
+        "faculty": 4,
+        "facultyResearch": 4,
+        "facultyProjects": 2,
+        "infrastructure": 5,
+        "facultyTargets": 3
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 0,
+            "name": 0,
+            "deanName": 0,
+            "hodName": 0,
+            "hodContact": 0,
+            "dateOfSubmission": 0
+          }
+        },
+        "program": {
+          "total": 3,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 0
+          }
+        },
+        "faculty": {
+          "total": 4,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 4,
+          "blankByField": {
+            "hIndex": 2,
+            "i10Index": 3,
+            "googleScholarOrcidLink": 2
+          }
+        },
+        "facultyProject": {
+          "total": 2,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 0,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 5,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 0,
+            "studentCapacity": 0,
+            "utilisationPct": 0
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 0,
+            "dateOfSubmission": 0,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 3,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 2,
+            "hodPriority": 3,
+            "q1Status": 3
+          }
+        }
+      }
+    },
+    {
+      "deptId": "mechanical-engineering",
+      "department": "Mechanical Engineering",
+      "sourceFile": "Mechanical Engineering-Deptt Data.xlsx",
+      "nameFromFilename": false,
+      "counts": {
+        "programs": 4,
+        "faculty": 9,
+        "facultyResearch": 9,
+        "facultyProjects": 0,
+        "infrastructure": 20,
+        "facultyTargets": 0
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 0,
+            "name": 0,
+            "deanName": 0,
+            "hodName": 0,
+            "hodContact": 0,
+            "dateOfSubmission": 0
+          }
+        },
+        "program": {
+          "total": 4,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 0
+          }
+        },
+        "faculty": {
+          "total": 9,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 9,
+          "blankByField": {
+            "hIndex": 2,
+            "i10Index": 2,
+            "googleScholarOrcidLink": 1
+          }
+        },
+        "facultyProject": {
+          "total": 0,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 0,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 20,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 0,
+            "studentCapacity": 2,
+            "utilisationPct": 0
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 0,
+            "dateOfSubmission": 0,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 0,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 0,
+            "hodPriority": 0,
+            "q1Status": 0
+          }
+        }
+      }
+    },
+    {
+      "deptId": "physics",
+      "department": "Physics",
+      "sourceFile": "Physics-Deptt Data.xlsx",
+      "nameFromFilename": false,
+      "counts": {
+        "programs": 2,
+        "faculty": 2,
+        "facultyResearch": 2,
+        "facultyProjects": 1,
+        "infrastructure": 3,
+        "facultyTargets": 2
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 0,
+            "name": 0,
+            "deanName": 0,
+            "hodName": 0,
+            "hodContact": 0,
+            "dateOfSubmission": 0
+          }
+        },
+        "program": {
+          "total": 2,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 2
+          }
+        },
+        "faculty": {
+          "total": 2,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 2,
+          "blankByField": {
+            "hIndex": 0,
+            "i10Index": 1,
+            "googleScholarOrcidLink": 0
+          }
+        },
+        "facultyProject": {
+          "total": 1,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 1,
+            "sanctionedAmount": 1,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 3,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 1,
+            "studentCapacity": 1,
+            "utilisationPct": 0
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 0,
+            "dateOfSubmission": 0,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 2,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 0,
+            "hodPriority": 0,
+            "q1Status": 2
+          }
+        }
+      }
+    },
+    {
+      "deptId": "rb-centre-for-nanoscience-and-technology",
+      "department": "Centre for Nanoscience and Technology (Rajju Bhaiya Institute)",
+      "sourceFile": "Rajju Bhaiya -NanoScience.xlsx",
+      "nameFromFilename": false,
+      "counts": {
+        "programs": 1,
+        "faculty": 2,
+        "facultyResearch": 2,
+        "facultyProjects": 11,
+        "infrastructure": 3,
+        "facultyTargets": 2
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 0,
+            "name": 0,
+            "deanName": 1,
+            "hodName": 0,
+            "hodContact": 0,
+            "dateOfSubmission": 0
+          }
+        },
+        "program": {
+          "total": 1,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 0
+          }
+        },
+        "faculty": {
+          "total": 2,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 2,
+          "blankByField": {
+            "hIndex": 0,
+            "i10Index": 0,
+            "googleScholarOrcidLink": 0
+          }
+        },
+        "facultyProject": {
+          "total": 11,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 0,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 3,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 0,
+            "studentCapacity": 3,
+            "utilisationPct": 0
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 0,
+            "dateOfSubmission": 0,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 2,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 2,
+            "hodPriority": 1,
+            "q1Status": 2
+          }
+        }
+      }
+    },
+    {
+      "deptId": "rb-chemistry",
+      "department": "Chemistry (Rajju Bhaiya Institute)",
+      "sourceFile": "Rajju Bhaiya Chemistry.xlsx",
+      "nameFromFilename": false,
+      "counts": {
+        "programs": 3,
+        "faculty": 6,
+        "facultyResearch": 6,
+        "facultyProjects": 11,
+        "infrastructure": 7,
+        "facultyTargets": 5
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 0,
+            "name": 0,
+            "deanName": 1,
+            "hodName": 0,
+            "hodContact": 0,
+            "dateOfSubmission": 1
+          }
+        },
+        "program": {
+          "total": 3,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 0
+          }
+        },
+        "faculty": {
+          "total": 6,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 6,
+          "blankByField": {
+            "hIndex": 1,
+            "i10Index": 1,
+            "googleScholarOrcidLink": 1
+          }
+        },
+        "facultyProject": {
+          "total": 11,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 0,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 7,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 0,
+            "studentCapacity": 0,
+            "utilisationPct": 0
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 0,
+            "dateOfSubmission": 1,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 5,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 5,
+            "hodPriority": 4,
+            "q1Status": 0
+          }
+        }
+      }
+    },
+    {
+      "deptId": "rb-mathematics",
+      "department": "Mathematics (Rajju Bhaiya Institute)",
+      "sourceFile": "Rajju Bhaiya- Maths.xlsx",
+      "nameFromFilename": false,
+      "counts": {
+        "programs": 2,
+        "faculty": 4,
+        "facultyResearch": 4,
+        "facultyProjects": 4,
+        "infrastructure": 6,
+        "facultyTargets": 4
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 0,
+            "name": 0,
+            "deanName": 1,
+            "hodName": 0,
+            "hodContact": 0,
+            "dateOfSubmission": 1
+          }
+        },
+        "program": {
+          "total": 2,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 0
+          }
+        },
+        "faculty": {
+          "total": 4,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 4,
+          "blankByField": {
+            "hIndex": 1,
+            "i10Index": 1,
+            "googleScholarOrcidLink": 1
+          }
+        },
+        "facultyProject": {
+          "total": 4,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 0,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 6,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 0,
+            "studentCapacity": 0,
+            "utilisationPct": 0
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 0,
+            "dateOfSubmission": 1,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 4,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 0,
+            "hodPriority": 3,
+            "q1Status": 0
+          }
+        }
+      }
+    },
+    {
+      "deptId": "rb-earth-and-planetary-sciences",
+      "department": "Earth and Planetary Sciences (Rajju Bhaiya Institute)",
+      "sourceFile": "Rajju Bhaiya-Earth & Planetary Sciences.xlsx",
+      "nameFromFilename": false,
+      "counts": {
+        "programs": 2,
+        "faculty": 4,
+        "facultyResearch": 4,
+        "facultyProjects": 5,
+        "infrastructure": 3,
+        "facultyTargets": 4
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 0,
+            "name": 0,
+            "deanName": 0,
+            "hodName": 0,
+            "hodContact": 0,
+            "dateOfSubmission": 0
+          }
+        },
+        "program": {
+          "total": 2,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 0
+          }
+        },
+        "faculty": {
+          "total": 4,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 4,
+          "blankByField": {
+            "hIndex": 0,
+            "i10Index": 0,
+            "googleScholarOrcidLink": 0
+          }
+        },
+        "facultyProject": {
+          "total": 5,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 0,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 3,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 0,
+            "studentCapacity": 0,
+            "utilisationPct": 0
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 0,
+            "dateOfSubmission": 0,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 4,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 0,
+            "hodPriority": 4,
+            "q1Status": 0
+          }
+        }
+      }
+    },
+    {
+      "deptId": "rb-physics",
+      "department": "Physics (Rajju Bhaiya Institute)",
+      "sourceFile": "Rajju Bhaiya-Physics.xlsx",
+      "nameFromFilename": false,
+      "counts": {
+        "programs": 2,
+        "faculty": 5,
+        "facultyResearch": 5,
+        "facultyProjects": 3,
+        "infrastructure": 12,
+        "facultyTargets": 0
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 0,
+            "name": 0,
+            "deanName": 0,
+            "hodName": 0,
+            "hodContact": 1,
+            "dateOfSubmission": 1
+          }
+        },
+        "program": {
+          "total": 2,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 0,
+            "nepAligned": 0
+          }
+        },
+        "faculty": {
+          "total": 5,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 3,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 5
+          }
+        },
+        "facultyResearch": {
+          "total": 5,
+          "blankByField": {
+            "hIndex": 3,
+            "i10Index": 4,
+            "googleScholarOrcidLink": 3
+          }
+        },
+        "facultyProject": {
+          "total": 3,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 0,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 12,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 0,
+            "studentCapacity": 0,
+            "utilisationPct": 0
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 1,
+            "dateOfSubmission": 1,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 0,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 0,
+            "hodPriority": 0,
+            "q1Status": 0
+          }
+        }
+      }
+    },
+    {
+      "deptId": "rb-centre-for-renewable-energy",
+      "department": "Centre for Renewable Energy (Rajju Bhaiya Institute)",
+      "sourceFile": "Rajju Bhaiya-Renewable Energy.xlsx",
+      "nameFromFilename": false,
+      "counts": {
+        "programs": 2,
+        "faculty": 1,
+        "facultyResearch": 1,
+        "facultyProjects": 11,
+        "infrastructure": 8,
+        "facultyTargets": 1
+      },
+      "missingEntities": [],
+      "entities": {
+        "department": {
+          "total": 1,
+          "blankByField": {
+            "facultyOfEngineering": 0,
+            "name": 0,
+            "deanName": 0,
+            "hodName": 0,
+            "hodContact": 0,
+            "dateOfSubmission": 0
+          }
+        },
+        "program": {
+          "total": 2,
+          "blankByField": {
+            "name": 0,
+            "yearOfCommencement": 0,
+            "modeOfProgramme": 1,
+            "nepAligned": 0
+          }
+        },
+        "faculty": {
+          "total": 1,
+          "blankByField": {
+            "name": 0,
+            "designation": 0,
+            "appointmentType": 0,
+            "dateOfJoining": 0,
+            "hasPhd": 0,
+            "teachingLoadHrsPerWeek": 0
+          }
+        },
+        "facultyResearch": {
+          "total": 1,
+          "blankByField": {
+            "hIndex": 0,
+            "i10Index": 0,
+            "googleScholarOrcidLink": 0
+          }
+        },
+        "facultyProject": {
+          "total": 11,
+          "blankByField": {
+            "sponsoringAgency": 0,
+            "yearOfGrant": 0,
+            "sanctionedAmount": 1,
+            "currentStatus": 0
+          }
+        },
+        "infrastructure": {
+          "total": 8,
+          "blankByField": {
+            "labClassroomName": 0,
+            "floorRoomNo": 0,
+            "studentCapacity": 8,
+            "utilisationPct": 3
+          }
+        },
+        "hodSubmission": {
+          "total": 1,
+          "blankByField": {
+            "mobileContact": 0,
+            "dateOfSubmission": 0,
+            "certificationSignedBy": 1
+          }
+        },
+        "facultyTargetSummary": {
+          "total": 1,
+          "blankByField": {
+            "reviewPeriod": 0,
+            "totalFacultyPlanned": 0
+          }
+        },
+        "facultyTarget": {
+          "total": 1,
+          "blankByField": {
+            "designation": 0,
+            "milestoneAchievementPct": 0,
+            "hodPriority": 1,
+            "q1Status": 0
+          }
+        }
+      }
+    }
+  ]
+}

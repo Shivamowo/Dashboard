@@ -9,6 +9,7 @@ import type {
 import { makeRng, hashString, int, pick, chance } from "./rng";
 import { programsByDept } from "./programs";
 import { globalSingleton } from "./globalStore";
+import { imported, usingImportedData } from "./source";
 
 type NameSeed = {
   name: string;
@@ -390,7 +391,16 @@ function buildAll() {
   return { facultyRows, researchRows, projectRows, targetRows };
 }
 
-const built = globalSingleton("faculty:built", buildAll);
+const built = globalSingleton("faculty:built", () =>
+  usingImportedData
+    ? {
+        facultyRows: imported.faculty,
+        researchRows: imported.facultyResearch,
+        projectRows: imported.facultyProjects,
+        targetRows: imported.facultyTargets,
+      }
+    : buildAll()
+);
 
 export const faculty: Faculty[] = built.facultyRows;
 export const facultyResearch: FacultyResearch[] = built.researchRows;

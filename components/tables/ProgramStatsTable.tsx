@@ -1,13 +1,15 @@
 "use client";
 
 import DataTable, { type Column, type FilterDef } from "@/components/DataTable";
-import { BoolBadge, ProgressBar } from "@/components/ui";
-import type { Program } from "@/data";
+import { BoolBadge } from "@/components/ui";
+import { addNullable, type Program } from "@/data";
+import { delta, inr, ratioBar, slashed, text } from "@/components/cells";
 
 export type ProgramStatsRow = Program & { deptName: string };
 
-const inr = (n: number) => "₹" + new Intl.NumberFormat("en-IN").format(n);
-const pct = (a: number, b: number) => (b ? Math.round((a / b) * 100) : 0);
+/** Sorting keeps nulls as null so DataTable pushes unreported rows to the end. */
+const fillPct = (a: number | null, b: number | null) =>
+  a == null || b == null || !b ? null : Math.round((a / b) * 100);
 
 export default function ProgramStatsTable({
   rows,
@@ -26,14 +28,14 @@ export default function ProgramStatsTable({
     },
     { key: "dept", header: "Department", value: (r) => r.deptName, className: "min-w-[14rem]" },
     { key: "year", header: "Year of Commencement", value: (r) => r.yearOfCommencement, align: "right" },
-    { key: "mode", header: "Mode of Programme", value: (r) => r.modeOfProgramme },
+    { key: "mode", header: "Mode of Programme", value: (r) => r.modeOfProgramme, render: (r) => text(r.modeOfProgramme) },
     { key: "int24", header: "Intake 2024", value: (r) => r.sanctionedIntakeByYear.y2024, align: "right" },
     { key: "adm24", header: "Admitted 2024", value: (r) => r.admittedByYear.y2024, align: "right" },
     {
       key: "fill24",
       header: "Fill 2024",
-      value: (r) => pct(r.admittedByYear.y2024, r.sanctionedIntakeByYear.y2024),
-      render: (r) => <ProgressBar value={pct(r.admittedByYear.y2024, r.sanctionedIntakeByYear.y2024)} />,
+      value: (r) => fillPct(r.admittedByYear.y2024, r.sanctionedIntakeByYear.y2024),
+      render: (r) => ratioBar(r.admittedByYear.y2024, r.sanctionedIntakeByYear.y2024),
       className: "min-w-[9rem]",
     },
     { key: "int25", header: "Intake 2025", value: (r) => r.sanctionedIntakeByYear.y2025, align: "right" },
@@ -41,8 +43,8 @@ export default function ProgramStatsTable({
     {
       key: "fill25",
       header: "Fill 2025",
-      value: (r) => pct(r.admittedByYear.y2025, r.sanctionedIntakeByYear.y2025),
-      render: (r) => <ProgressBar value={pct(r.admittedByYear.y2025, r.sanctionedIntakeByYear.y2025)} />,
+      value: (r) => fillPct(r.admittedByYear.y2025, r.sanctionedIntakeByYear.y2025),
+      render: (r) => ratioBar(r.admittedByYear.y2025, r.sanctionedIntakeByYear.y2025),
       className: "min-w-[9rem]",
     },
     { key: "int26", header: "Intake 2026", value: (r) => r.sanctionedIntakeByYear.y2026, align: "right" },
@@ -50,24 +52,18 @@ export default function ProgramStatsTable({
     {
       key: "fill26",
       header: "Fill 2026",
-      value: (r) => pct(r.admittedByYear.y2026, r.sanctionedIntakeByYear.y2026),
-      render: (r) => <ProgressBar value={pct(r.admittedByYear.y2026, r.sanctionedIntakeByYear.y2026)} />,
+      value: (r) => fillPct(r.admittedByYear.y2026, r.sanctionedIntakeByYear.y2026),
+      render: (r) => ratioBar(r.admittedByYear.y2026, r.sanctionedIntakeByYear.y2026),
       className: "min-w-[9rem]",
     },
     {
       key: "trend",
       header: "Admission Trend 2024→2026",
-      value: (r) => r.admittedByYear.y2026 - r.admittedByYear.y2024,
-      render: (r) => {
-        const delta = r.admittedByYear.y2026 - r.admittedByYear.y2024;
-        const tone = delta > 0 ? "text-success-700" : delta < 0 ? "text-alert-700" : "text-ink-500";
-        return (
-          <span className={"font-medium tnum " + tone}>
-            {delta > 0 ? "+" : ""}
-            {delta}
-          </span>
-        );
-      },
+      value: (r) =>
+        r.admittedByYear.y2026 == null || r.admittedByYear.y2024 == null
+          ? null
+          : r.admittedByYear.y2026 - r.admittedByYear.y2024,
+      render: (r) => delta(r.admittedByYear.y2024, r.admittedByYear.y2026),
       align: "right",
     },
     { key: "fee26", header: "Semester Fee 2026", value: (r) => r.semesterFeeByYear.y2026, render: (r) => inr(r.semesterFeeByYear.y2026), align: "right" },
@@ -75,18 +71,24 @@ export default function ProgramStatsTable({
       key: "sanctionedFac",
       header: "Sanctioned Faculty (P/AP/AsP)",
       value: (r) =>
-        r.sanctionedFacultyPositions.professor +
-        r.sanctionedFacultyPositions.associateProfessor +
-        r.sanctionedFacultyPositions.assistantProfessor,
+        addNullable(
+          r.sanctionedFacultyPositions.professor,
+          r.sanctionedFacultyPositions.associateProfessor,
+          r.sanctionedFacultyPositions.assistantProfessor
+        ),
       render: (r) =>
-        `${r.sanctionedFacultyPositions.professor} / ${r.sanctionedFacultyPositions.associateProfessor} / ${r.sanctionedFacultyPositions.assistantProfessor}`,
+        slashed(
+          r.sanctionedFacultyPositions.professor,
+          r.sanctionedFacultyPositions.associateProfessor,
+          r.sanctionedFacultyPositions.assistantProfessor
+        ),
       align: "center",
     },
     { key: "nep", header: "NEP Aligned", value: (r) => r.nepAligned, render: (r) => <BoolBadge value={r.nepAligned} />, align: "center" },
     { key: "mee", header: "Multiple Entry/Exit", value: (r) => r.multipleEntryExit, render: (r) => <BoolBadge value={r.multipleEntryExit} />, align: "center" },
     { key: "intern", header: "Internship at End of Every Year", value: (r) => r.internshipEndOfYear, render: (r) => <BoolBadge value={r.internshipEndOfYear} />, align: "center" },
     { key: "minor", header: "Minor / Specialisation Available", value: (r) => r.minorSpecialisationAvailable, render: (r) => <BoolBadge value={r.minorSpecialisationAvailable} />, align: "center" },
-    { key: "remarks", header: "Remarks", value: (r) => r.remarks, className: "min-w-[20rem] text-ink-600", wrap: true },
+    { key: "remarks", header: "Remarks", value: (r) => r.remarks, render: (r) => text(r.remarks), className: "min-w-[20rem] text-ink-600", wrap: true },
   ];
 
   const filters: FilterDef<ProgramStatsRow>[] = [
@@ -112,8 +114,12 @@ export default function ProgramStatsTable({
       options: [
         { value: "yes", label: "NEP aligned" },
         { value: "no", label: "Not aligned" },
+        { value: "unknown", label: "Not provided" },
       ],
-      match: (r, v) => (v === "yes" ? r.nepAligned : !r.nepAligned),
+      // "Not aligned" means the department answered No — a programme that never
+      // answered belongs under its own option, not lumped in with the No's.
+      match: (r, v) =>
+        v === "yes" ? r.nepAligned === true : v === "no" ? r.nepAligned === false : r.nepAligned == null,
     },
   ];
 

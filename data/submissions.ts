@@ -4,6 +4,8 @@ import { programsByDept } from "./programs";
 import { facultyByDept, targetOf } from "./faculty";
 import { infrastructureByDept } from "./infrastructure";
 import { globalSingleton } from "./globalStore";
+import { imported, usingImportedData } from "./source";
+import { addNullable, avgOf, countTrue, sumOf } from "./nullable";
 
 const submissionMeta: Record<
   string,
@@ -27,10 +29,18 @@ export function updateHodSubmission(deptId: string, patch: SubmissionOverride) {
   overrides[deptId] = { ...overrides[deptId], ...patch };
 }
 
+const importedSubmission = (deptId: string) =>
+  usingImportedData ? imported.hodSubmissions.find((h) => h.deptId === deptId) : undefined;
+
 /**
  * Snapshot values are recomputed from the underlying rows rather than stored,
  * per the aggregation rules in SYSTEM_DESIGN.md section 4 — this also means an
  * approved edit or onboarding is reflected immediately, with nothing to re-seed.
+ *
+ * With imported data the department's own reported figure wins where it has
+ * one, since that is what the HoD certified; the recomputed count fills in only
+ * where the sheet's snapshot block was left blank. Counts of rows the app holds
+ * (programmes, faculty, rooms) are always exact, so they need no such fallback.
  */
 export function hodSubmissionOf(deptId: string): HodSubmission | undefined {
   const d = departmentById(deptId);
@@ -40,30 +50,50 @@ export function hodSubmissionOf(deptId: string): HodSubmission | undefined {
   const infra = infrastructureByDept(d.id);
   const meta = submissionMeta[d.id] ?? { status: "Pending" as const, certificationDate: "-" };
   const o = overrides[deptId];
+  const src = importedSubmission(deptId);
+
+  /** Reported figure first, computed fallback second. */
+  const reported = (
+    value: number | null | undefined,
+    computed: number | null
+  ): number | null => (value == null ? computed : value);
+
   return {
     deptId: d.id,
-    mobileContact: o?.mobileContact ?? d.hodContact,
-    dateOfSubmission: d.dateOfSubmission,
+    mobileContact: o?.mobileContact ?? src?.mobileContact ?? d.hodContact,
+    dateOfSubmission: src?.dateOfSubmission ?? d.dateOfSubmission,
     snapshot: {
       noOfProgrammes: progs.length,
       totalFacultyReported: facs.length,
-      totalSanctionedIntake2026: progs.reduce((a, p) => a + p.sanctionedIntakeByYear.y2026, 0),
-      facultyWithPhd: facs.filter((f) => f.hasPhd).length,
-      totalStudentsAdmitted2026: progs.reduce((a, p) => a + p.admittedByYear.y2026, 0),
+      totalSanctionedIntake2026: reported(
+        src?.snapshot.totalSanctionedIntake2026,
+        sumOf(progs, (p) => p.sanctionedIntakeByYear.y2026)
+      ),
+      facultyWithPhd: countTrue(facs, (f) => f.hasPhd),
+      totalStudentsAdmitted2026: reported(
+        src?.snapshot.totalStudentsAdmitted2026,
+        sumOf(progs, (p) => p.admittedByYear.y2026)
+      ),
       labsClassroomsReported: infra.length,
-      programmesWithNepAlignment: progs.filter((p) => p.nepAligned).length,
-      digitalSmartBoardAvailable: infra.filter((x) => x.digitalSmartBoard).length,
-      projectorAvailable: infra.filter((x) => x.projector).length,
+      programmesWithNepAlignment: countTrue(progs, (p) => p.nepAligned),
+      digitalSmartBoardAvailable: countTrue(infra, (x) => x.digitalSmartBoard),
+      projectorAvailable: countTrue(infra, (x) => x.projector),
     },
-    certificationSignedBy: o?.certificationSignedBy ?? d.hodName,
-    certificationDate: o?.certificationDate ?? meta.certificationDate,
-    status: o?.status ?? meta.status,
+    certificationSignedBy: o?.certificationSignedBy ?? src?.certificationSignedBy ?? d.hodName,
+    certificationDate: o?.certificationDate ?? src?.certificationDate ?? (src ? null : meta.certificationDate),
+    status: o?.status ?? src?.status ?? meta.status,
   };
 }
 
 export const hodSubmissions = (): HodSubmission[] =>
   departments.map((d) => hodSubmissionOf(d.id)!);
 
+/**
+ * Department target summary. The workbooks carry their own summary row, which
+ * is used where present; otherwise the figures are rolled up from the
+ * individual faculty target rows, skipping unreported cells rather than
+ * counting them as zero.
+ */
 export function deptTargetSummaryOf(deptId: string): DeptFacultyTargetSummary | undefined {
   const d = departmentById(deptId);
   if (!d) return undefined;
@@ -71,29 +101,41 @@ export function deptTargetSummaryOf(deptId: string): DeptFacultyTargetSummary | 
   const tgts = facs.map((f) => targetOf(f.id)).filter(Boolean) as NonNullable<
     ReturnType<typeof targetOf>
   >[];
+
+  const src = usingImportedData
+    ? imported.facultyTargetSummaries.find((s) => s.deptId === deptId)
+    : undefined;
+  const reported = (value: number | null | undefined, computed: number | null) =>
+    value == null ? computed : value;
+
   return {
     deptId: d.id,
-    reviewPeriod: "July 2026 - June 2027",
-    totalFacultyPlanned: tgts.length,
-    journalPublicationTarget: tgts.reduce(
-      (a, t) => a + t.sciSciESsciJournalPapers + t.scopusUgcCareJournalPapers,
-      0
+    reviewPeriod: src?.reviewPeriod ?? "July 2026 - June 2027",
+    totalFacultyPlanned: reported(src?.totalFacultyPlanned, tgts.length || null),
+    journalPublicationTarget: reported(
+      src?.journalPublicationTarget,
+      sumOf(tgts, (t) => addNullable(t.sciSciESsciJournalPapers, t.scopusUgcCareJournalPapers))
     ),
-    conferencePaperTarget: tgts.reduce(
-      (a, t) => a + t.internationalConferencePapers + t.nationalConferencePapers,
-      0
+    conferencePaperTarget: reported(
+      src?.conferencePaperTarget,
+      sumOf(tgts, (t) => addNullable(t.internationalConferencePapers, t.nationalConferencePapers))
     ),
-    sponsoredIndustryProposalsTarget: tgts.reduce(
-      (a, t) => a + t.govtSponsoredProjectProposals + t.industryProjectProposals,
-      0
+    sponsoredIndustryProposalsTarget: reported(
+      src?.sponsoredIndustryProposalsTarget,
+      sumOf(tgts, (t) => addNullable(t.govtSponsoredProjectProposals, t.industryProjectProposals))
     ),
-    targetFundingLakh: tgts.reduce((a, t) => a + t.targetFundingLakh, 0),
-    patentFilingTarget: tgts.reduce((a, t) => a + t.patentsToBeFiled, 0),
-    avgMilestoneAchievement: tgts.length
-      ? Math.round(
-          (tgts.reduce((a, t) => a + t.milestoneAchievementPct, 0) / tgts.length) * 10
-        ) / 10
-      : 0,
+    targetFundingLakh: reported(
+      src?.targetFundingLakh,
+      sumOf(tgts, (t) => t.targetFundingLakh)
+    ),
+    patentFilingTarget: reported(
+      src?.patentFilingTarget,
+      sumOf(tgts, (t) => t.patentsToBeFiled)
+    ),
+    avgMilestoneAchievement: reported(
+      src?.avgMilestoneAchievement,
+      avgOf(tgts, (t) => t.milestoneAchievementPct)
+    ),
   };
 }
 

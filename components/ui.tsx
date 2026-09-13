@@ -3,6 +3,46 @@ import { ChevronRight, Inbox, type LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
 import type { QuarterStatus } from "@/data";
 
+/* -------------------------------------------------------------- NotProvided */
+
+/**
+ * The department left this field blank in its return.
+ *
+ * Deliberately a muted neutral gray, with no ring and no brand colour: it is
+ * the absence of a fact, not a workflow state and not a performance flag. That
+ * keeps it clearly apart from the brand-gold "Pending approval" badge and the
+ * brand-maroon "At risk"/priority indicators, which readers are meant to act
+ * on (design.md section 6). It reads as quiet background texture so a screen
+ * with many gaps still scans, while each gap stays individually visible.
+ *
+ * Rendered rather than substituting 0 or "—" because a blank cell and a real
+ * zero are different facts — see the nullability contract in data/types.ts.
+ */
+export function NotProvided({ label = "Not provided" }: { label?: string }) {
+  return (
+    <span className="text-ink-400 italic" title="Not reported by the department">
+      {label}
+    </span>
+  );
+}
+
+/**
+ * Renders a value, or the muted "Not provided" marker when it is null. Empty
+ * strings count as absent too; a real 0 or false does not.
+ */
+export function Value({
+  value,
+  format,
+  label,
+}: {
+  value: string | number | boolean | null | undefined;
+  format?: (v: never) => ReactNode;
+  label?: string;
+}) {
+  if (value === null || value === undefined || value === "") return <NotProvided label={label} />;
+  return <>{format ? format(value as never) : String(value)}</>;
+}
+
 /* ------------------------------------------------------------------ KpiCard */
 
 type Tone = "neutral" | "seal" | "positive" | "caution" | "alert";
@@ -24,12 +64,16 @@ export function KpiCard({
   icon: Icon,
 }: {
   label: string;
-  value: string | number;
+  /** null means the figure was never reported — shown as "Not provided". */
+  value: string | number | null | undefined;
   unit?: string;
   hint?: string;
   tone?: Tone;
   icon?: LucideIcon;
 }) {
+  // A KPI with nothing behind it must not show "0" — that reads as a measured
+  // result. The label drops to the muted gap marker and the unit is suppressed.
+  const missing = value === null || value === undefined || value === "";
   return (
     <div className="panel flex flex-col justify-between gap-3 px-4 py-4 transition-colors hover:border-ink-300">
       <div className="flex items-start justify-between gap-2">
@@ -37,9 +81,21 @@ export function KpiCard({
         {Icon ? <Icon aria-hidden className="h-4 w-4 shrink-0 text-ink-300" /> : null}
       </div>
       <div>
-        <p className={"font-display text-h2 font-semibold leading-none tnum " + valueTone[tone]}>
-          {value}
-          {unit ? <span className="ml-1 text-lead font-medium text-ink-500">{unit}</span> : null}
+        <p
+          className={
+            missing
+              ? "font-display text-lead font-medium leading-none"
+              : "font-display text-h2 font-semibold leading-none tnum " + valueTone[tone]
+          }
+        >
+          {missing ? (
+            <NotProvided />
+          ) : (
+            <>
+              {value}
+              {unit ? <span className="ml-1 text-lead font-medium text-ink-500">{unit}</span> : null}
+            </>
+          )}
         </p>
         {hint ? <p className="mt-2 text-micro leading-snug text-ink-500">{hint}</p> : null}
       </div>
@@ -164,7 +220,8 @@ const statusTone: Record<string, BadgeTone> = {
  * Status is never carried by colour alone — the badge always shows its label,
  * and a leading dot gives a second, non-colour cue at a glance.
  */
-export function StatusBadge({ status }: { status: QuarterStatus | string }) {
+export function StatusBadge({ status }: { status: QuarterStatus | string | null | undefined }) {
+  if (status == null || status === "") return <NotProvided />;
   const tone = statusTone[status] ?? "neutral";
   const dot: Record<BadgeTone, string> = {
     positive: "bg-success-600",
@@ -192,12 +249,18 @@ export function PendingBadge() {
   return <Badge tone="gold">Pending approval</Badge>;
 }
 
-export function BoolBadge({ value, yes = "Yes", no = "No" }: { value: boolean; yes?: string; no?: string }) {
-  return value ? (
-    <Badge tone="positive">{yes}</Badge>
-  ) : (
-    <span className="text-ink-400">{no}</span>
-  );
+export function BoolBadge({
+  value,
+  yes = "Yes",
+  no = "No",
+}: {
+  value: boolean | null | undefined;
+  yes?: string;
+  no?: string;
+}) {
+  // null is "not reported", which is not the same answer as No.
+  if (value == null) return <NotProvided />;
+  return value ? <Badge tone="positive">{yes}</Badge> : <span className="text-ink-400">{no}</span>;
 }
 
 /* --------------------------------------------------------------- Breadcrumb */
@@ -327,7 +390,7 @@ export function Field({ label, value }: { label: string; value: ReactNode }) {
     <div className="min-w-0">
       <p className="field-label">{label}</p>
       <div className="field-value break-words">
-        {value === "" || value == null ? <span className="text-ink-400">Not reported</span> : value}
+        {value === "" || value == null ? <NotProvided /> : value}
       </div>
     </div>
   );

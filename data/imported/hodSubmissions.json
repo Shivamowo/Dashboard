@@ -1,0 +1,439 @@
+[
+  {
+    "deptId": "applied-psychology",
+    "mobileContact": "8009933051",
+    "dateOfSubmission": "2026-09-11",
+    "snapshot": {
+      "noOfProgrammes": 1,
+      "totalFacultyReported": 4,
+      "totalSanctionedIntake2026": 44,
+      "facultyWithPhd": 4,
+      "totalStudentsAdmitted2026": 15,
+      "labsClassroomsReported": 4,
+      "programmesWithNepAlignment": null,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 1
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Submitted"
+  },
+  {
+    "deptId": "computer-applications",
+    "mobileContact": "8318003644",
+    "dateOfSubmission": null,
+    "snapshot": {
+      "noOfProgrammes": 3,
+      "totalFacultyReported": 11,
+      "totalSanctionedIntake2026": 297,
+      "facultyWithPhd": 6,
+      "totalStudentsAdmitted2026": 282,
+      "labsClassroomsReported": 9,
+      "programmesWithNepAlignment": 1,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 1
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Partial"
+  },
+  {
+    "deptId": "biotechnology-microbiology-biochemistry",
+    "mobileContact": null,
+    "dateOfSubmission": null,
+    "snapshot": {
+      "noOfProgrammes": 0,
+      "totalFacultyReported": 0,
+      "totalSanctionedIntake2026": 0,
+      "facultyWithPhd": 0,
+      "totalStudentsAdmitted2026": 0,
+      "labsClassroomsReported": 0,
+      "programmesWithNepAlignment": 0,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 0
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Partial"
+  },
+  {
+    "deptId": "department-of-business-economics-and-department",
+    "mobileContact": "9451465844",
+    "dateOfSubmission": "09.09.2026",
+    "snapshot": {
+      "noOfProgrammes": 6,
+      "totalFacultyReported": 20,
+      "totalSanctionedIntake2026": 384,
+      "facultyWithPhd": 16,
+      "totalStudentsAdmitted2026": 375,
+      "labsClassroomsReported": 15,
+      "programmesWithNepAlignment": 6,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 1
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Submitted"
+  },
+  {
+    "deptId": "cse-and-it",
+    "mobileContact": "9935483537",
+    "dateOfSubmission": null,
+    "snapshot": {
+      "noOfProgrammes": 6,
+      "totalFacultyReported": 14,
+      "totalSanctionedIntake2026": 30,
+      "facultyWithPhd": 5,
+      "totalStudentsAdmitted2026": 275,
+      "labsClassroomsReported": 12,
+      "programmesWithNepAlignment": 0,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 1
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Partial"
+  },
+  {
+    "deptId": "chemistry",
+    "mobileContact": "9026489005",
+    "dateOfSubmission": "09.09.2026",
+    "snapshot": {
+      "noOfProgrammes": 1,
+      "totalFacultyReported": 3,
+      "totalSanctionedIntake2026": 0,
+      "facultyWithPhd": 3,
+      "totalStudentsAdmitted2026": 0,
+      "labsClassroomsReported": 1,
+      "programmesWithNepAlignment": 0,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 0
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Submitted"
+  },
+  {
+    "deptId": "electrical-engineering",
+    "mobileContact": null,
+    "dateOfSubmission": null,
+    "snapshot": {
+      "noOfProgrammes": 3,
+      "totalFacultyReported": 9,
+      "totalSanctionedIntake2026": 120,
+      "facultyWithPhd": 5,
+      "totalStudentsAdmitted2026": 53,
+      "labsClassroomsReported": 0,
+      "programmesWithNepAlignment": 0,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 0
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Partial"
+  },
+  {
+    "deptId": "department-of-electronics-engineering",
+    "mobileContact": "9839370065",
+    "dateOfSubmission": "11.09.2026",
+    "snapshot": {
+      "noOfProgrammes": 6,
+      "totalFacultyReported": 16,
+      "totalSanctionedIntake2026": 134,
+      "facultyWithPhd": 11,
+      "totalStudentsAdmitted2026": 70,
+      "labsClassroomsReported": 14,
+      "programmesWithNepAlignment": 0,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 0
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Submitted"
+  },
+  {
+    "deptId": "finance-and-control",
+    "mobileContact": null,
+    "dateOfSubmission": null,
+    "snapshot": {
+      "noOfProgrammes": 0,
+      "totalFacultyReported": 0,
+      "totalSanctionedIntake2026": 0,
+      "facultyWithPhd": 0,
+      "totalStudentsAdmitted2026": 0,
+      "labsClassroomsReported": 0,
+      "programmesWithNepAlignment": 0,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 0
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Partial"
+  },
+  {
+    "deptId": "h-r-d",
+    "mobileContact": "9889115462",
+    "dateOfSubmission": "07.09.2026",
+    "snapshot": {
+      "noOfProgrammes": 1,
+      "totalFacultyReported": 4,
+      "totalSanctionedIntake2026": 0,
+      "facultyWithPhd": 3,
+      "totalStudentsAdmitted2026": 65,
+      "labsClassroomsReported": 2,
+      "programmesWithNepAlignment": 0,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 1
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Submitted"
+  },
+  {
+    "deptId": "department-of-humanities-and-social-sciences",
+    "mobileContact": "7974816970",
+    "dateOfSubmission": "2026-09-09",
+    "snapshot": {
+      "noOfProgrammes": 1,
+      "totalFacultyReported": 3,
+      "totalSanctionedIntake2026": 0,
+      "facultyWithPhd": 3,
+      "totalStudentsAdmitted2026": 0,
+      "labsClassroomsReported": 1,
+      "programmesWithNepAlignment": 0,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 0
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Submitted"
+  },
+  {
+    "deptId": "department-of-law",
+    "mobileContact": "8318563994",
+    "dateOfSubmission": "2026-09-10",
+    "snapshot": {
+      "noOfProgrammes": 2,
+      "totalFacultyReported": 17,
+      "totalSanctionedIntake2026": 0,
+      "facultyWithPhd": 13,
+      "totalStudentsAdmitted2026": 196,
+      "labsClassroomsReported": 9,
+      "programmesWithNepAlignment": 0,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 0
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Submitted"
+  },
+  {
+    "deptId": "institute-department-of-pharmacy",
+    "mobileContact": "9918538449",
+    "dateOfSubmission": "09.09.2026",
+    "snapshot": {
+      "noOfProgrammes": 2,
+      "totalFacultyReported": 11,
+      "totalSanctionedIntake2026": 132,
+      "facultyWithPhd": 7,
+      "totalStudentsAdmitted2026": 66,
+      "labsClassroomsReported": 20,
+      "programmesWithNepAlignment": 0,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 0
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Submitted"
+  },
+  {
+    "deptId": "mass-comm-and-journalism",
+    "mobileContact": null,
+    "dateOfSubmission": null,
+    "snapshot": {
+      "noOfProgrammes": 0,
+      "totalFacultyReported": 0,
+      "totalSanctionedIntake2026": 0,
+      "facultyWithPhd": 0,
+      "totalStudentsAdmitted2026": 0,
+      "labsClassroomsReported": 0,
+      "programmesWithNepAlignment": 0,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 0
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Partial"
+  },
+  {
+    "deptId": "mathematics-engg",
+    "mobileContact": "9451160911",
+    "dateOfSubmission": "2026-09-10",
+    "snapshot": {
+      "noOfProgrammes": 3,
+      "totalFacultyReported": 4,
+      "totalSanctionedIntake2026": 608,
+      "facultyWithPhd": 4,
+      "totalStudentsAdmitted2026": 0,
+      "labsClassroomsReported": 5,
+      "programmesWithNepAlignment": 2,
+      "digitalSmartBoardAvailable": 2,
+      "projectorAvailable": 1
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Submitted"
+  },
+  {
+    "deptId": "mechanical-engineering",
+    "mobileContact": "9044487708",
+    "dateOfSubmission": "2026-09-09",
+    "snapshot": {
+      "noOfProgrammes": 4,
+      "totalFacultyReported": 9,
+      "totalSanctionedIntake2026": 153,
+      "facultyWithPhd": 5,
+      "totalStudentsAdmitted2026": 39,
+      "labsClassroomsReported": 20,
+      "programmesWithNepAlignment": 0,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 1
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Submitted"
+  },
+  {
+    "deptId": "physics",
+    "mobileContact": "6386602701",
+    "dateOfSubmission": "2026-09-09",
+    "snapshot": {
+      "noOfProgrammes": 2,
+      "totalFacultyReported": 2,
+      "totalSanctionedIntake2026": 12,
+      "facultyWithPhd": 2,
+      "totalStudentsAdmitted2026": 0,
+      "labsClassroomsReported": 3,
+      "programmesWithNepAlignment": 0,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 0
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Submitted"
+  },
+  {
+    "deptId": "rb-centre-for-nanoscience-and-technology",
+    "mobileContact": "9971240406",
+    "dateOfSubmission": "2026-09-11",
+    "snapshot": {
+      "noOfProgrammes": 1,
+      "totalFacultyReported": 2,
+      "totalSanctionedIntake2026": 5,
+      "facultyWithPhd": 2,
+      "totalStudentsAdmitted2026": 1,
+      "labsClassroomsReported": 3,
+      "programmesWithNepAlignment": 0,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 0
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Submitted"
+  },
+  {
+    "deptId": "rb-chemistry",
+    "mobileContact": "9564783670",
+    "dateOfSubmission": null,
+    "snapshot": {
+      "noOfProgrammes": 3,
+      "totalFacultyReported": 6,
+      "totalSanctionedIntake2026": 204,
+      "facultyWithPhd": 6,
+      "totalStudentsAdmitted2026": 166,
+      "labsClassroomsReported": 7,
+      "programmesWithNepAlignment": 3,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 3
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Partial"
+  },
+  {
+    "deptId": "rb-mathematics",
+    "mobileContact": "9870653889",
+    "dateOfSubmission": null,
+    "snapshot": {
+      "noOfProgrammes": 2,
+      "totalFacultyReported": 4,
+      "totalSanctionedIntake2026": 120,
+      "facultyWithPhd": 3,
+      "totalStudentsAdmitted2026": 50,
+      "labsClassroomsReported": 6,
+      "programmesWithNepAlignment": 2,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 3
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Partial"
+  },
+  {
+    "deptId": "rb-earth-and-planetary-sciences",
+    "mobileContact": "9889295392",
+    "dateOfSubmission": "2026-09-11",
+    "snapshot": {
+      "noOfProgrammes": 2,
+      "totalFacultyReported": 4,
+      "totalSanctionedIntake2026": 120,
+      "facultyWithPhd": 4,
+      "totalStudentsAdmitted2026": 47,
+      "labsClassroomsReported": 3,
+      "programmesWithNepAlignment": 2,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 1
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Submitted"
+  },
+  {
+    "deptId": "rb-physics",
+    "mobileContact": null,
+    "dateOfSubmission": null,
+    "snapshot": {
+      "noOfProgrammes": 2,
+      "totalFacultyReported": 5,
+      "totalSanctionedIntake2026": 120,
+      "facultyWithPhd": 6,
+      "totalStudentsAdmitted2026": 52,
+      "labsClassroomsReported": 12,
+      "programmesWithNepAlignment": 2,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 5
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Partial"
+  },
+  {
+    "deptId": "rb-centre-for-renewable-energy",
+    "mobileContact": "9452438247",
+    "dateOfSubmission": "2026-09-11",
+    "snapshot": {
+      "noOfProgrammes": 1,
+      "totalFacultyReported": 1,
+      "totalSanctionedIntake2026": 30,
+      "facultyWithPhd": 1,
+      "totalStudentsAdmitted2026": 0,
+      "labsClassroomsReported": 8,
+      "programmesWithNepAlignment": 0,
+      "digitalSmartBoardAvailable": 0,
+      "projectorAvailable": 1
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Submitted"
+  }
+]

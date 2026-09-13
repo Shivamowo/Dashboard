@@ -1,13 +1,22 @@
 import {
+  addNullable,
   departments,
   faculty,
   facultyByDept,
   researchOf,
   targetOf,
   type Faculty,
-  type QuarterStatus,
-  type HodPriority,
 } from "@/data";
+
+/**
+ * Flattened rows for the roster and target tables.
+ *
+ * Every figure stays nullable end to end. An unreported h-index must not sort
+ * or total as a zero, and the cell must render "Not provided" rather than a
+ * number the department never gave — so nothing here fills a gap with a
+ * fallback. Totals use addNullable, which returns null only when every part
+ * was blank.
+ */
 
 export interface FacultyRosterRow {
   id: string;
@@ -15,27 +24,27 @@ export interface FacultyRosterRow {
   deptName: string;
   sNo: number;
   name: string;
-  designation: string;
-  appointmentType: string;
-  dateOfJoining: string;
-  hasPhd: boolean;
-  programmesAppointedFor: string;
-  teachingLoadHrsPerWeek: number;
-  additionalResponsibility: string;
-  journalTotal: number;
-  sci: number;
-  scopus: number;
-  otherJournal: number;
-  conferenceTotal: number;
-  intlConference: number;
-  nationalConference: number;
-  hIndex: number;
-  i10Index: number;
-  patentsFiled: number;
-  phdRegistered: number;
-  phdAwarded: number;
-  milestonePct: number;
-  hodPriority: HodPriority | "—";
+  designation: string | null;
+  appointmentType: string | null;
+  dateOfJoining: string | null;
+  hasPhd: boolean | null;
+  programmesAppointedFor: string | null;
+  teachingLoadHrsPerWeek: number | null;
+  additionalResponsibility: string | null;
+  journalTotal: number | null;
+  sci: number | null;
+  scopus: number | null;
+  otherJournal: number | null;
+  conferenceTotal: number | null;
+  intlConference: number | null;
+  nationalConference: number | null;
+  hIndex: number | null;
+  i10Index: number | null;
+  patentsFiled: number | null;
+  phdRegistered: number | null;
+  phdAwarded: number | null;
+  milestonePct: number | null;
+  hodPriority: string | null;
 }
 
 const deptName = (id: string) => departments.find((d) => d.id === id)?.name ?? id;
@@ -57,23 +66,27 @@ export function toRosterRow(f: Faculty): FacultyRosterRow {
     teachingLoadHrsPerWeek: f.teachingLoadHrsPerWeek,
     additionalResponsibility: f.additionalResponsibility,
     journalTotal: r
-      ? r.journalPublications.sciScieSsci + r.journalPublications.scopusUgcCare + r.journalPublications.other
-      : 0,
-    sci: r?.journalPublications.sciScieSsci ?? 0,
-    scopus: r?.journalPublications.scopusUgcCare ?? 0,
-    otherJournal: r?.journalPublications.other ?? 0,
+      ? addNullable(
+          r.journalPublications.sciScieSsci,
+          r.journalPublications.scopusUgcCare,
+          r.journalPublications.other
+        )
+      : null,
+    sci: r?.journalPublications.sciScieSsci ?? null,
+    scopus: r?.journalPublications.scopusUgcCare ?? null,
+    otherJournal: r?.journalPublications.other ?? null,
     conferenceTotal: r
-      ? r.conferencePublications.international + r.conferencePublications.national
-      : 0,
-    intlConference: r?.conferencePublications.international ?? 0,
-    nationalConference: r?.conferencePublications.national ?? 0,
-    hIndex: r?.hIndex ?? 0,
-    i10Index: r?.i10Index ?? 0,
-    patentsFiled: r?.patents.filed ?? 0,
-    phdRegistered: r?.phdSupervision.registered ?? 0,
-    phdAwarded: r?.phdSupervision.awarded ?? 0,
-    milestonePct: t?.milestoneAchievementPct ?? 0,
-    hodPriority: t?.hodPriority ?? "—",
+      ? addNullable(r.conferencePublications.international, r.conferencePublications.national)
+      : null,
+    intlConference: r?.conferencePublications.international ?? null,
+    nationalConference: r?.conferencePublications.national ?? null,
+    hIndex: r?.hIndex ?? null,
+    i10Index: r?.i10Index ?? null,
+    patentsFiled: r?.patents.filed ?? null,
+    phdRegistered: r?.phdSupervision.registered ?? null,
+    phdAwarded: r?.phdSupervision.awarded ?? null,
+    milestonePct: t?.milestoneAchievementPct ?? null,
+    hodPriority: t?.hodPriority ?? null,
   };
 }
 
@@ -84,22 +97,22 @@ export interface TargetTrackerRow {
   id: string;
   facultyId: string;
   name: string;
-  designation: string;
-  natureOfAppointment: string;
-  journalTarget: number;
-  conferenceTarget: number;
-  proposalTarget: number;
-  fundingTargetLakh: number;
-  patentTarget: number;
-  q1Status: QuarterStatus;
-  q2Status: QuarterStatus;
-  q3Status: QuarterStatus;
-  q4Status: QuarterStatus;
-  milestonePct: number;
-  hodPriority: HodPriority;
-  hodRemarks: string;
-  targetSubmissionMonth: string;
-  theme: string;
+  designation: string | null;
+  natureOfAppointment: string | null;
+  journalTarget: number | null;
+  conferenceTarget: number | null;
+  proposalTarget: number | null;
+  fundingTargetLakh: number | null;
+  patentTarget: number | null;
+  q1Status: string | null;
+  q2Status: string | null;
+  q3Status: string | null;
+  q4Status: string | null;
+  milestonePct: number | null;
+  hodPriority: string | null;
+  hodRemarks: string | null;
+  targetSubmissionMonth: string | null;
+  theme: string | null;
 }
 
 export function targetTrackerRows(deptId: string): TargetTrackerRow[] {
@@ -113,9 +126,9 @@ export function targetTrackerRows(deptId: string): TargetTrackerRow[] {
         name: f.name,
         designation: t.designation,
         natureOfAppointment: t.natureOfAppointment,
-        journalTarget: t.sciSciESsciJournalPapers + t.scopusUgcCareJournalPapers,
-        conferenceTarget: t.internationalConferencePapers + t.nationalConferencePapers,
-        proposalTarget: t.govtSponsoredProjectProposals + t.industryProjectProposals,
+        journalTarget: addNullable(t.sciSciESsciJournalPapers, t.scopusUgcCareJournalPapers),
+        conferenceTarget: addNullable(t.internationalConferencePapers, t.nationalConferencePapers),
+        proposalTarget: addNullable(t.govtSponsoredProjectProposals, t.industryProjectProposals),
         fundingTargetLakh: t.targetFundingLakh,
         patentTarget: t.patentsToBeFiled,
         q1Status: t.q1Status,

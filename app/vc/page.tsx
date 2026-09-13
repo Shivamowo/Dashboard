@@ -9,7 +9,7 @@ import {
   Users,
 } from "lucide-react";
 import { deptRollups, intakeTrend, rollupUniversity } from "@/lib/aggregate";
-import { departments, hodSubmissions } from "@/data";
+import { departments, hodSubmissions, orZero } from "@/data";
 import DeptComparisonTable from "@/components/tables/DeptComparisonTable";
 import ComplianceTable from "@/components/tables/ComplianceTable";
 import TrendChart from "@/components/TrendChart";
@@ -58,10 +58,13 @@ export default function VcDashboard() {
     };
   });
 
+  // Recharts needs concrete numbers; a department that reported no publications
+  // contributes 0 to the bar. The chart shows its own empty state when every
+  // department is blank, so an all-null dataset never renders as a flat axis.
   const publicationsByDept = rolls.map((r) => ({
     dept: r.dept.shortName,
-    journal: r.journalPublications,
-    conference: r.conferencePublications,
+    journal: orZero(r.journalPublications),
+    conference: orZero(r.conferencePublications),
   }));
 
   const pending = submissions.filter((s) => s.status !== "Submitted").length;
@@ -106,7 +109,7 @@ export default function VcDashboard() {
             value={uni.avgUtilisation}
             unit="%"
             hint={`Average across ${uni.infraRooms} rooms`}
-            tone={uni.avgUtilisation < 60 ? "caution" : "positive"}
+            tone={uni.avgUtilisation != null && uni.avgUtilisation < 60 ? "caution" : "positive"}
             icon={BarChart3}
           />
         </KpiRow>

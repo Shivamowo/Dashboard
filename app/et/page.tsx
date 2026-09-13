@@ -1,41 +1,58 @@
 import { BarChart3, DoorOpen, MonitorSmartphone, TriangleAlert, Users } from "lucide-react";
-import { departments, infrastructure, infrastructureByDept, pendingInfraIds, utilisationFlag } from "@/data";
+import {
+  avgOf,
+  countTrue,
+  departments,
+  infrastructure,
+  infrastructureByDept,
+  orZero,
+  pendingInfraIds,
+  sumOf,
+  utilisationFlag,
+} from "@/data";
 import { deptNameMap } from "@/lib/rows";
 import InfrastructureTable from "@/components/tables/InfrastructureTable";
 import TrendChart from "@/components/TrendChart";
 import {
   KpiCard,
   KpiRow,
+  NotProvided,
   PageHeading,
   ProgressBar,
   Section,
   StatusBadge,
 } from "@/components/ui";
+import { num } from "@/components/cells";
 
 export default function EtDashboard() {
   const deptNames = deptNameMap();
   const rooms = infrastructure;
 
-  const avgUtil =
-    Math.round((rooms.reduce((a, r) => a + r.utilisationPct, 0) / (rooms.length || 1)) * 10) / 10;
+  // Rooms that never reported a utilisation figure are left out of the average
+  // rather than counted as 0%, which would drag every department's figure down.
+  const avgUtil = avgOf(rooms, (r) => r.utilisationPct);
   const under = rooms.filter((r) => utilisationFlag(r.utilisationPct) === "Under-utilised").length;
   const over = rooms.filter((r) => utilisationFlag(r.utilisationPct) === "Over-utilised").length;
-  const capacity = rooms.reduce((a, r) => a + r.studentCapacity, 0);
-  const smartBoards = rooms.filter((r) => r.digitalSmartBoard).length;
+  const capacity = sumOf(rooms, (r) => r.studentCapacity);
+  const smartBoards = countTrue(rooms, (r) => r.digitalSmartBoard);
 
   const byDept = departments.map((d) => {
     const rows = infrastructureByDept(d.id);
     return {
       dept: d.shortName,
       name: d.name,
-      utilisation:
-        Math.round((rows.reduce((a, r) => a + r.utilisationPct, 0) / (rows.length || 1)) * 10) / 10,
+      // Nullable throughout: a department whose rooms reported no utilisation
+      // must not show a measured-looking 0%, and one with no rooms at all is
+      // not "optimally utilised" — both are gaps, not findings.
+      utilisation: avgOf(rows, (r) => r.utilisationPct),
       rooms: rows.length,
-      capacity: rows.reduce((a, r) => a + r.studentCapacity, 0),
-      allotted: rows.reduce((a, r) => a + r.hoursAllottedPerWeek, 0),
-      used: rows.reduce((a, r) => a + r.currentWeeklyWorkingHours, 0),
+      capacity: sumOf(rows, (r) => r.studentCapacity),
+      allotted: sumOf(rows, (r) => r.hoursAllottedPerWeek),
+      used: sumOf(rows, (r) => r.currentWeeklyWorkingHours),
       under: rows.filter((r) => utilisationFlag(r.utilisationPct) === "Under-utilised").length,
       over: rows.filter((r) => utilisationFlag(r.utilisationPct) === "Over-utilised").length,
+      /** Rooms that actually carry a utilisation figure. */
+      flagged: rows.filter((r) => utilisationFlag(r.utilisationPct) !== null).length,
     };
   });
 
@@ -59,7 +76,7 @@ export default function EtDashboard() {
             label="Average utilisation"
             value={avgUtil}
             unit="%"
-            tone={avgUtil < 60 ? "caution" : "positive"}
+            tone={avgUtil != null && avgUtil < 60 ? "caution" : "positive"}
             icon={BarChart3}
           />
           <KpiCard
@@ -94,7 +111,9 @@ export default function EtDashboard() {
           accent="teal"
         >
           <TrendChart
-            data={byDept.map((d) => ({ dept: d.dept, utilisation: d.utilisation }))}
+            // Recharts needs a number per bar; the chart falls back to its own
+            // empty state when no department has reported a figure at all.
+            data={byDept.map((d) => ({ dept: d.dept, utilisation: orZero(d.utilisation) }))}
             xKey="dept"
             variant="bar"
             yLabel="Utilisation %"
@@ -135,17 +154,30 @@ export default function EtDashboard() {
                       <span title={d.name}>{d.dept}</span>
                     </th>
                     <td className="td text-right">{d.rooms}</td>
-                    <td className="td text-right">{d.capacity}</td>
-                    <td className="td text-right">{d.allotted}</td>
-                    <td className="td text-right">{d.used}</td>
+                    <td className="td text-right">{num(d.capacity)}</td>
+                    <td className="td text-right">{num(d.allotted)}</td>
+                    <td className="td text-right">{num(d.used)}</td>
                     <td className="td min-w-[9rem]">
-                      <ProgressBar value={d.utilisation} srLabel={`${d.name} utilisation`} />
+                      {d.utilisation == null ? (
+                        <NotProvided />
+                      ) : (
+                        <ProgressBar value={d.utilisation} srLabel={`${d.name} utilisation`} />
+                      )}
                     </td>
                     <td className="td">
                       <span className="flex flex-wrap gap-1">
-                        {d.under > 0 ? <StatusBadge status="Under-utilised" /> : null}
-                        {d.over > 0 ? <StatusBadge status="Over-utilised" /> : null}
-                        {d.under === 0 && d.over === 0 ? <StatusBadge status="Optimal" /> : null}
+                        {/* "Optimal" is only meaningful once at least one room
+                            has reported a figure; otherwise there is nothing to
+                            judge and the cell says so. */}
+                        {d.flagged === 0 ? (
+                          <NotProvided />
+                        ) : (
+                          <>
+                            {d.under > 0 ? <StatusBadge status="Under-utilised" /> : null}
+                            {d.over > 0 ? <StatusBadge status="Over-utilised" /> : null}
+                            {d.under === 0 && d.over === 0 ? <StatusBadge status="Optimal" /> : null}
+                          </>
+                        )}
                       </span>
                     </td>
                   </tr>

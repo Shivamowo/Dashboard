@@ -21,6 +21,32 @@ import {
 import { updateInfrastructureRecord, type InfrastructureEdit } from "./infrastructure";
 import { updateHodSubmission } from "./submissions";
 import { globalSingleton } from "./globalStore";
+import { departments } from "./departments";
+import { faculty as facultyRecords } from "./faculty";
+
+/**
+ * Demo accounts are scoped to whichever dataset is loaded.
+ *
+ * The HoD and Faculty logins need a department (and a faculty record) that
+ * actually exists. Hard-coding "cse" worked against the mock generator but
+ * points at nothing once the real imported departments are in play, and a
+ * session scoped to a missing department crashes the page it lands on. These
+ * resolve at seed time instead: a named department when the dataset has one,
+ * otherwise simply the first available.
+ */
+const deptIdFor = (...preferred: string[]): string | undefined => {
+  for (const id of preferred) {
+    if (departments.some((d) => d.id === id)) return id;
+  }
+  return departments[0]?.id;
+};
+
+/** A department that actually has faculty, so the Faculty demo view is populated. */
+const populatedDeptId = (): string | undefined =>
+  departments.find((d) => facultyRecords.some((f) => f.deptId === d.id))?.id ?? departments[0]?.id;
+
+const firstFacultyIdIn = (deptId: string | undefined): string | undefined =>
+  deptId ? facultyRecords.find((f) => f.deptId === deptId)?.id : undefined;
 
 /**
  * IN-MEMORY DEMO STORE for users and the edit/approval workflow. Mutates the
@@ -30,14 +56,19 @@ import { globalSingleton } from "./globalStore";
  * real persistence layer. State resets whenever the server restarts.
  */
 
-const seedUsers = (): UserAccount[] => [
-  { id: "u-vc", username: "vc-demo", password: "demo123", role: "vc", displayName: "Vice Chancellor", status: "active", createdAt: "2026-01-01T00:00:00.000Z" },
-  { id: "u-registrar", username: "registrar-demo", password: "demo123", role: "registrar", displayName: "Registrar", status: "active", createdAt: "2026-01-01T00:00:00.000Z" },
-  { id: "u-hod", username: "hod-demo", password: "demo123", role: "hod", displayName: "Head of Department", deptId: "cse", status: "active", createdAt: "2026-01-01T00:00:00.000Z" },
-  { id: "u-faculty", username: "faculty-demo", password: "demo123", role: "faculty", displayName: "Faculty Member", deptId: "cse", facultyId: "cse-f2", status: "active", createdAt: "2026-01-01T00:00:00.000Z" },
-  { id: "u-et", username: "et-demo", password: "demo123", role: "et", displayName: "Engineering & Technical", status: "active", createdAt: "2026-01-01T00:00:00.000Z" },
-  { id: "u-admin", username: "admin-demo", password: "demo123", role: "admin", displayName: "Administrator", status: "active", createdAt: "2026-01-01T00:00:00.000Z" },
-];
+const seedUsers = (): UserAccount[] => {
+  const hodDept = deptIdFor("cse-and-it", "cse");
+  const facDept = populatedDeptId();
+  const facId = firstFacultyIdIn(facDept);
+  return [
+    { id: "u-vc", username: "vc-demo", password: "demo123", role: "vc", displayName: "Vice Chancellor", status: "active", createdAt: "2026-01-01T00:00:00.000Z" },
+    { id: "u-registrar", username: "registrar-demo", password: "demo123", role: "registrar", displayName: "Registrar", status: "active", createdAt: "2026-01-01T00:00:00.000Z" },
+    { id: "u-hod", username: "hod-demo", password: "demo123", role: "hod", displayName: "Head of Department", deptId: hodDept, status: "active", createdAt: "2026-01-01T00:00:00.000Z" },
+    { id: "u-faculty", username: "faculty-demo", password: "demo123", role: "faculty", displayName: "Faculty Member", deptId: facDept, facultyId: facId, status: "active", createdAt: "2026-01-01T00:00:00.000Z" },
+    { id: "u-et", username: "et-demo", password: "demo123", role: "et", displayName: "Engineering & Technical", status: "active", createdAt: "2026-01-01T00:00:00.000Z" },
+    { id: "u-admin", username: "admin-demo", password: "demo123", role: "admin", displayName: "Administrator", status: "active", createdAt: "2026-01-01T00:00:00.000Z" },
+  ];
+};
 
 /**
  * Accounts that sit mid-onboarding so those screens stay demonstrable.
@@ -49,12 +80,17 @@ const seedUsers = (): UserAccount[] => [
  * letting the server restart. Seeding them keeps the demo reproducible from
  * a cold start. Same password as the rest: demo123.
  */
-const seedOnboardingUsers = (): UserAccount[] => [
-  { id: "u-seed-faculty-new", username: "faculty-new", password: "demo123", role: "faculty", displayName: "Aarti Verma", deptId: "cse", status: "onboarding_incomplete", createdAt: "2026-01-01T00:00:00.000Z" },
-  { id: "u-seed-hod-new", username: "hod-new", password: "demo123", role: "hod", displayName: "Sanjay Mishra", deptId: "it", status: "onboarding_incomplete", createdAt: "2026-01-01T00:00:00.000Z" },
-  { id: "u-seed-faculty-pending", username: "faculty-pending", password: "demo123", role: "faculty", displayName: "Rohit Yadav", deptId: "cse", status: "pending_approval", createdAt: "2026-01-01T00:00:00.000Z" },
-  { id: "u-seed-hod-pending", username: "hod-pending", password: "demo123", role: "hod", displayName: "Neha Gupta", deptId: "ece", status: "pending_approval", createdAt: "2026-01-01T00:00:00.000Z" },
-];
+const seedOnboardingUsers = (): UserAccount[] => {
+  const a = deptIdFor("cse-and-it", "cse");
+  const b = deptIdFor("computer-applications", "it");
+  const c = deptIdFor("mechanical-engineering", "ece");
+  return [
+    { id: "u-seed-faculty-new", username: "faculty-new", password: "demo123", role: "faculty", displayName: "Aarti Verma", deptId: a, status: "onboarding_incomplete", createdAt: "2026-01-01T00:00:00.000Z" },
+    { id: "u-seed-hod-new", username: "hod-new", password: "demo123", role: "hod", displayName: "Sanjay Mishra", deptId: b, status: "onboarding_incomplete", createdAt: "2026-01-01T00:00:00.000Z" },
+    { id: "u-seed-faculty-pending", username: "faculty-pending", password: "demo123", role: "faculty", displayName: "Rohit Yadav", deptId: a, status: "pending_approval", createdAt: "2026-01-01T00:00:00.000Z" },
+    { id: "u-seed-hod-pending", username: "hod-pending", password: "demo123", role: "hod", displayName: "Neha Gupta", deptId: c, status: "pending_approval", createdAt: "2026-01-01T00:00:00.000Z" },
+  ];
+};
 
 /**
  * Typed exactly as applyChangeRequest below casts it, so a drift between this
@@ -89,7 +125,10 @@ const seedFacultyOnboardingPayload: {
 };
 
 /** The submissions the two "pending_approval" accounts above are waiting on. */
-const seedChangeRequests = (): ChangeRequest[] => [
+const seedChangeRequests = (): ChangeRequest[] => {
+  const byUser = new Map(seedOnboardingUsers().map((u) => [u.id, u.deptId]));
+  const deptOf = (userId: string) => byUser.get(userId) ?? departments[0]?.id ?? "";
+  return [
   {
     id: "cr-seed-1",
     type: "onboarding",
@@ -97,7 +136,7 @@ const seedChangeRequests = (): ChangeRequest[] => [
     targetId: null,
     submittedByUserId: "u-seed-faculty-pending",
     submittedByRole: "faculty",
-    deptId: "cse",
+    deptId: deptOf("u-seed-faculty-pending"),
     status: "pending",
     submittedAt: "2026-01-02T09:00:00.000Z",
     payload: seedFacultyOnboardingPayload,
@@ -109,12 +148,13 @@ const seedChangeRequests = (): ChangeRequest[] => [
     targetId: null,
     submittedByUserId: "u-seed-hod-pending",
     submittedByRole: "hod",
-    deptId: "ece",
+    deptId: deptOf("u-seed-hod-pending"),
     status: "pending",
     submittedAt: "2026-01-02T10:30:00.000Z",
     payload: { name: "Neha Gupta", mobileContact: "9450011223" },
   },
-];
+  ];
+};
 
 export const users: UserAccount[] = globalSingleton("users", () => [
   ...seedUsers(),

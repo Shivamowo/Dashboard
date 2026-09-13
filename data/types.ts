@@ -1,22 +1,42 @@
+/**
+ * NULLABILITY CONTRACT
+ *
+ * Every field sourced from the department Excel workbooks is nullable: a blank
+ * cell imports as null and renders as "Not provided" (components/ui.tsx),
+ * never as 0 or an empty string. A blank cell and a real 0 are different
+ * facts — the workbooks contain both — so collapsing them would invent
+ * figures the departments never reported. Identity fields the app generates
+ * itself (id, deptId, facultyId, sNo) stay non-null.
+ *
+ * Several columns also carry free text where a tidy enum was expected
+ * ("Achive" in a quarterly status cell, "As per BCI" in a yes/no cell). Those
+ * widen to string so the real answer survives import; the display layer tones
+ * anything it does not recognise as neutral.
+ */
+
+/** Canonical quarterly statuses. Source cells often hold free text instead. */
 export type QuarterStatus = "On track" | "At risk" | "Delayed" | "Completed";
 export type HodPriority = "High" | "Medium" | "Low";
 
 export interface Department {
   id: string;
-  facultyOfEngineering: string;
+  /** Faculty/School or constituent institute this department sits under. */
+  facultyOfEngineering: string | null;
   name: string;
   shortName: string;
-  deanName: string;
-  hodName: string;
-  hodContact: string;
-  reportingPeriod: string;
-  dateOfSubmission: string;
+  deanName: string | null;
+  hodName: string | null;
+  hodContact: string | null;
+  reportingPeriod: string | null;
+  dateOfSubmission: string | null;
+  /** Set when the workbook named no department and the name came from its filename. */
+  nameFromFilename?: boolean;
 }
 
 export interface ThreeYear {
-  y2024: number;
-  y2025: number;
-  y2026: number;
+  y2024: number | null;
+  y2025: number | null;
+  y2026: number | null;
 }
 
 export interface Program {
@@ -24,21 +44,22 @@ export interface Program {
   deptId: string;
   sNo: number;
   name: string;
-  yearOfCommencement: number;
-  modeOfProgramme: "Regular" | "Self-Financing" | "Regular (Aided)";
+  yearOfCommencement: number | null;
+  /** Free text — some workbooks put a programme name in this column. */
+  modeOfProgramme: string | null;
   sanctionedFacultyPositions: {
-    professor: number;
-    associateProfessor: number;
-    assistantProfessor: number;
+    professor: number | null;
+    associateProfessor: number | null;
+    assistantProfessor: number | null;
   };
   semesterFeeByYear: ThreeYear;
   sanctionedIntakeByYear: ThreeYear;
   admittedByYear: ThreeYear;
-  nepAligned: boolean;
-  multipleEntryExit: boolean;
-  internshipEndOfYear: boolean;
-  minorSpecialisationAvailable: boolean;
-  remarks: string;
+  nepAligned: boolean | null;
+  multipleEntryExit: boolean | null;
+  internshipEndOfYear: boolean | null;
+  minorSpecialisationAvailable: boolean | null;
+  remarks: string | null;
 }
 
 export interface Faculty {
@@ -46,29 +67,31 @@ export interface Faculty {
   deptId: string;
   sNo: number;
   name: string;
-  designation:
-    | "Professor"
-    | "Associate Professor"
-    | "Assistant Professor"
-    | "Guest Faculty";
-  appointmentType: "Regular" | "Contractual" | "Self-Financing" | "Guest";
-  dateOfJoining: string;
-  hasPhd: boolean;
-  programmesAppointedFor: string;
-  teachingLoadHrsPerWeek: number;
-  additionalResponsibility: string;
+  designation: string | null;
+  appointmentType: string | null;
+  /** ISO yyyy-mm-dd when the cell parsed as a date, else the original text. */
+  dateOfJoining: string | null;
+  /** null where the cell said something other than Yes/No (e.g. "Persuing"). */
+  hasPhd: boolean | null;
+  programmesAppointedFor: string | null;
+  teachingLoadHrsPerWeek: number | null;
+  additionalResponsibility: string | null;
 }
 
 export interface FacultyResearch {
   id: string;
   facultyId: string;
-  journalPublications: { sciScieSsci: number; scopusUgcCare: number; other: number };
-  conferencePublications: { international: number; national: number };
-  hIndex: number;
-  i10Index: number;
-  googleScholarOrcidLink: string;
-  patents: { filed: number; published: number; granted: number };
-  phdSupervision: { registered: number; awarded: number };
+  journalPublications: {
+    sciScieSsci: number | null;
+    scopusUgcCare: number | null;
+    other: number | null;
+  };
+  conferencePublications: { international: number | null; national: number | null };
+  hIndex: number | null;
+  i10Index: number | null;
+  googleScholarOrcidLink: string | null;
+  patents: { filed: number | null; published: number | null; granted: number | null };
+  phdSupervision: { registered: number | null; awarded: number | null };
   /** Year-wise publication series used by the research output trend chart. */
   yearly: { year: number; journal: number; conference: number }[];
 }
@@ -76,106 +99,116 @@ export interface FacultyResearch {
 export interface FacultyProject {
   id: string;
   facultyId: string;
-  sponsoringAgency: string;
-  yearOfGrant: number;
-  duration: string;
-  sanctionedAmount: number;
-  amountReleased: number;
-  currentStatus: "Ongoing" | "Completed" | "Submitted" | "Sanctioned" | "Closed";
+  sponsoringAgency: string | null;
+  yearOfGrant: number | null;
+  /** Free text — "3 Year", "Upto March 2028", "Co-PI with …" all occur. */
+  duration: string | null;
+  /** Rupees. null where the cell held something unquantifiable ("Beam Time"). */
+  sanctionedAmount: number | null;
+  amountReleased: number | null;
+  currentStatus: string | null;
 }
 
 export interface Infrastructure {
   id: string;
   deptId: string;
   sNo: number;
-  labClassroomName: string;
-  floorRoomNo: string;
-  hoursAllottedPerWeek: number;
-  currentWeeklyWorkingHours: number;
-  labRoomInCharge: string;
-  labAssistantSupportStaff: string;
-  studentCapacity: number;
-  majorEquipmentAvailable: string;
-  programmesUsingFacility: string;
-  utilisationPct: number;
-  digitalSmartBoard: boolean;
-  projector: boolean;
+  labClassroomName: string | null;
+  floorRoomNo: string | null;
+  hoursAllottedPerWeek: number | null;
+  /** Department-level figure from the sheet header, not a per-room column. */
+  currentWeeklyWorkingHours: number | null;
+  labRoomInCharge: string | null;
+  labAssistantSupportStaff: string | null;
+  studentCapacity: number | null;
+  majorEquipmentAvailable: string | null;
+  programmesUsingFacility: string | null;
+  utilisationPct: number | null;
+  digitalSmartBoard: boolean | null;
+  projector: boolean | null;
 }
 
 export interface HodSubmission {
   deptId: string;
-  mobileContact: string;
-  dateOfSubmission: string;
+  mobileContact: string | null;
+  dateOfSubmission: string | null;
+  /** As reported on the sheet's own snapshot block — not recomputed from rows. */
   snapshot: {
-    noOfProgrammes: number;
-    totalFacultyReported: number;
-    totalSanctionedIntake2026: number;
-    facultyWithPhd: number;
-    totalStudentsAdmitted2026: number;
-    labsClassroomsReported: number;
-    programmesWithNepAlignment: number;
-    digitalSmartBoardAvailable: number;
-    projectorAvailable: number;
+    noOfProgrammes: number | null;
+    totalFacultyReported: number | null;
+    totalSanctionedIntake2026: number | null;
+    facultyWithPhd: number | null;
+    totalStudentsAdmitted2026: number | null;
+    labsClassroomsReported: number | null;
+    programmesWithNepAlignment: number | null;
+    digitalSmartBoardAvailable: number | null;
+    projectorAvailable: number | null;
   };
-  certificationSignedBy: string;
-  certificationDate: string;
+  certificationSignedBy: string | null;
+  certificationDate: string | null;
   status: "Submitted" | "Pending" | "Partial";
 }
 
 export interface DeptFacultyTargetSummary {
   deptId: string;
-  reviewPeriod: string;
-  totalFacultyPlanned: number;
-  journalPublicationTarget: number;
-  conferencePaperTarget: number;
-  sponsoredIndustryProposalsTarget: number;
-  targetFundingLakh: number;
-  patentFilingTarget: number;
-  avgMilestoneAchievement: number;
+  reviewPeriod: string | null;
+  totalFacultyPlanned: number | null;
+  journalPublicationTarget: number | null;
+  conferencePaperTarget: number | null;
+  sponsoredIndustryProposalsTarget: number | null;
+  targetFundingLakh: number | null;
+  patentFilingTarget: number | null;
+  avgMilestoneAchievement: number | null;
 }
 
+/**
+ * Quarterly statuses and hodPriority are typed as free strings, not the
+ * QuarterStatus/HodPriority unions: the real workbooks hold values like "--",
+ * "Achive" and whole sentences in those cells. StatusBadge tones known labels
+ * and falls back to neutral for the rest.
+ */
 export interface FacultyTarget {
   id: string;
   facultyId: string;
   sNo: number;
-  designation: string;
-  natureOfAppointment: string;
-  dateOfJoining: string;
-  reviewPeriod: string;
-  sciSciESsciJournalPapers: number;
-  scopusUgcCareJournalPapers: number;
-  q1q2JournalPapersSubset: number;
-  internationalConferencePapers: number;
-  nationalConferencePapers: number;
-  govtSponsoredProjectProposals: number;
-  industryProjectProposals: number;
-  targetFundingLakh: number;
-  fundingAgenciesTargeted: string;
-  tentativeProjectThemeTitle: string;
-  targetSubmissionMonth: string;
-  consultancyIndustryAssignmentProposals: number;
-  patentsToBeFiled: number;
-  patentsExpectedPublished: number;
-  patentsExpectedGranted: number;
-  prototypeProductTechnologyProposed: string;
-  newRevisedCourseSyllabusOrLab: string;
-  eContentMoocInnovativeTeaching: string;
-  studentMentoringHackathonInternshipPlacement: string;
-  contributionToDeptDevelopment: string;
-  contributionToUniversityDevelopment: string;
-  expectedMeasurableOutcomeByJune2027: string;
-  q1Plan: string;
-  q2Plan: string;
-  q3Plan: string;
-  q4Plan: string;
-  q1Status: QuarterStatus;
-  q2Status: QuarterStatus;
-  q3Status: QuarterStatus;
-  q4Status: QuarterStatus;
-  milestoneAchievementPct: number;
-  hodPriority: HodPriority;
-  hodRemarksSupportRequired: string;
-  yearEndAchievementSummary: string;
+  designation: string | null;
+  natureOfAppointment: string | null;
+  dateOfJoining: string | null;
+  reviewPeriod: string | null;
+  sciSciESsciJournalPapers: number | null;
+  scopusUgcCareJournalPapers: number | null;
+  q1q2JournalPapersSubset: number | null;
+  internationalConferencePapers: number | null;
+  nationalConferencePapers: number | null;
+  govtSponsoredProjectProposals: number | null;
+  industryProjectProposals: number | null;
+  targetFundingLakh: number | null;
+  fundingAgenciesTargeted: string | null;
+  tentativeProjectThemeTitle: string | null;
+  targetSubmissionMonth: string | null;
+  consultancyIndustryAssignmentProposals: number | null;
+  patentsToBeFiled: number | null;
+  patentsExpectedPublished: number | null;
+  patentsExpectedGranted: number | null;
+  prototypeProductTechnologyProposed: string | null;
+  newRevisedCourseSyllabusOrLab: string | null;
+  eContentMoocInnovativeTeaching: string | null;
+  studentMentoringHackathonInternshipPlacement: string | null;
+  contributionToDeptDevelopment: string | null;
+  contributionToUniversityDevelopment: string | null;
+  expectedMeasurableOutcomeByJune2027: string | null;
+  q1Plan: string | null;
+  q2Plan: string | null;
+  q3Plan: string | null;
+  q4Plan: string | null;
+  q1Status: string | null;
+  q2Status: string | null;
+  q3Status: string | null;
+  q4Status: string | null;
+  milestoneAchievementPct: number | null;
+  hodPriority: string | null;
+  hodRemarksSupportRequired: string | null;
+  yearEndAchievementSummary: string | null;
 }
 
 export type Role = "vc" | "registrar" | "hod" | "faculty" | "et" | "admin";

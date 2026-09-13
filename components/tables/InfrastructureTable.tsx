@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { pctBar } from "@/components/cells";
 import { Pencil } from "lucide-react";
 import DataTable, { type Column, type FilterDef } from "@/components/DataTable";
 import { BoolBadge, PendingBadge, ProgressBar, StatusBadge } from "@/components/ui";
@@ -81,7 +82,7 @@ export default function InfrastructureTable({
       key: "util",
       header: "Utilisation (%)",
       value: (r) => r.utilisationPct,
-      render: (r) => <ProgressBar value={r.utilisationPct} />,
+      render: (r) => pctBar(r.utilisationPct),
       className: "min-w-[9rem]",
     },
     {
@@ -148,8 +149,15 @@ export default function InfrastructureTable({
     options: [
       { value: "yes", label: "Available" },
       { value: "no", label: "Not available" },
+      { value: "unknown", label: "Not provided" },
     ],
-    match: (r, v) => (v === "yes" ? r.digitalSmartBoard : !r.digitalSmartBoard),
+    // "Not available" is a reported No; a blank cell is not an answer.
+    match: (r, v) =>
+      v === "yes"
+        ? r.digitalSmartBoard === true
+        : v === "no"
+        ? r.digitalSmartBoard === false
+        : r.digitalSmartBoard == null,
   });
 
   return (

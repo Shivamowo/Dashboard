@@ -1,5 +1,6 @@
 import type { Program } from "./types";
 import { makeRng, hashString, int, chance } from "./rng";
+import { chooseData, imported } from "./source";
 
 type ProgramSeed = {
   name: string;
@@ -92,7 +93,7 @@ function buildPrograms(): Program[] {
   return out;
 }
 
-export const programs: Program[] = buildPrograms();
+export const programs: Program[] = chooseData(imported.programs, buildPrograms);
 
 export const programsByDept = (deptId: string) =>
   programs.filter((p) => p.deptId === deptId);

@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "import:excel": "tsx scripts/import-excel-data.ts",
+    "dev:mock": "VBSPU_DATA_SOURCE=mock next dev",
+    "start:mock": "VBSPU_DATA_SOURCE=mock next start"
   },
   "dependencies": {
     "lucide-react": "^1.45.0",
@@ -22,6 +25,8 @@
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.6",
-    "typescript": "^5.5.3"
+    "tsx": "^4.23.13",
+    "typescript": "^5.5.3",
+    "xlsx": "^0.18.5"
   }
 }

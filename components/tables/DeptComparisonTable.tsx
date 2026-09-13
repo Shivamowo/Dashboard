@@ -1,27 +1,29 @@
 "use client";
 
 import DataTable, { type Column } from "@/components/DataTable";
-import { Badge, ProgressBar } from "@/components/ui";
+import { Badge } from "@/components/ui";
+import { num, pctBar, pctText, text } from "@/components/cells";
 
+/** Figures are nullable: a department that reported nothing shows a gap, not a 0. */
 export interface DeptComparisonRow {
   id: string;
   name: string;
-  hodName: string;
+  hodName: string | null;
   facultyCount: number;
   phdCount: number;
-  phdPct: number;
+  phdPct: number | null;
   programCount: number;
-  sanctionedIntake2026: number;
-  admitted2026: number;
-  fillRatePct: number;
-  journalPublications: number;
-  conferencePublications: number;
-  totalPublications: number;
-  patentsFiled: number;
-  avgTeachingLoad: number;
+  sanctionedIntake2026: number | null;
+  admitted2026: number | null;
+  fillRatePct: number | null;
+  journalPublications: number | null;
+  conferencePublications: number | null;
+  totalPublications: number | null;
+  patentsFiled: number | null;
+  avgTeachingLoad: number | null;
   infraRooms: number;
-  avgUtilisation: number;
-  avgMilestonePct: number;
+  avgUtilisation: number | null;
+  avgMilestonePct: number | null;
   atRiskFaculty: number;
 }
 
@@ -50,36 +52,36 @@ export default function DeptComparisonTable({
       key: "phdPct",
       header: "PhD %",
       value: (r) => r.phdPct,
-      render: (r) => r.phdPct + "%",
+      render: (r) => pctText(r.phdPct),
       align: "right",
     },
-    { key: "intake", header: "Sanctioned Intake 2026", value: (r) => r.sanctionedIntake2026, align: "right" },
-    { key: "admitted", header: "Admitted 2026", value: (r) => r.admitted2026, align: "right" },
+    { key: "intake", header: "Sanctioned Intake 2026", value: (r) => r.sanctionedIntake2026, render: (r) => num(r.sanctionedIntake2026), align: "right" },
+    { key: "admitted", header: "Admitted 2026", value: (r) => r.admitted2026, render: (r) => num(r.admitted2026), align: "right" },
     {
       key: "fill",
       header: "Intake Fill Rate",
       value: (r) => r.fillRatePct,
-      render: (r) => <ProgressBar value={r.fillRatePct} />,
+      render: (r) => pctBar(r.fillRatePct),
       className: "min-w-[10rem]",
     },
-    { key: "journal", header: "Journal Publications", value: (r) => r.journalPublications, align: "right" },
-    { key: "conf", header: "Conference Publications", value: (r) => r.conferencePublications, align: "right" },
-    { key: "pubs", header: "Total Publications", value: (r) => r.totalPublications, align: "right" },
-    { key: "patents", header: "Patents Filed", value: (r) => r.patentsFiled, align: "right" },
-    { key: "load", header: "Avg Teaching Load (hrs)", value: (r) => r.avgTeachingLoad, align: "right" },
+    { key: "journal", header: "Journal Publications", value: (r) => r.journalPublications, render: (r) => num(r.journalPublications), align: "right" },
+    { key: "conf", header: "Conference Publications", value: (r) => r.conferencePublications, render: (r) => num(r.conferencePublications), align: "right" },
+    { key: "pubs", header: "Total Publications", value: (r) => r.totalPublications, render: (r) => num(r.totalPublications), align: "right" },
+    { key: "patents", header: "Patents Filed", value: (r) => r.patentsFiled, render: (r) => num(r.patentsFiled), align: "right" },
+    { key: "load", header: "Avg Teaching Load (hrs)", value: (r) => r.avgTeachingLoad, render: (r) => num(r.avgTeachingLoad, 1), align: "right" },
     { key: "rooms", header: "Labs / Classrooms", value: (r) => r.infraRooms, align: "right" },
     {
       key: "util",
       header: "Avg Infra Utilisation",
       value: (r) => r.avgUtilisation,
-      render: (r) => <ProgressBar value={Math.round(r.avgUtilisation)} />,
+      render: (r) => pctBar(r.avgUtilisation),
       className: "min-w-[10rem]",
     },
     {
       key: "milestone",
       header: "Avg Milestone Achievement",
       value: (r) => r.avgMilestonePct,
-      render: (r) => <ProgressBar value={Math.round(r.avgMilestonePct)} />,
+      render: (r) => pctBar(r.avgMilestonePct),
       className: "min-w-[10rem]",
     },
     {

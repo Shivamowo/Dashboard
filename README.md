@@ -1,8 +1,9 @@
 # VBSPU Department Data Dashboard
 
 Role-based department performance dashboard for Veer Bahadur Singh Purvanchal University, Jaunpur.
-Next.js 14 (App Router) + TypeScript + Tailwind + recharts. **Frontend only — all data is mock
-fixtures under `/data`. No backend, no database, no authentication, no persistence.**
+Next.js (App Router) + TypeScript + Tailwind + recharts. **Frontend only — the real department
+returns are imported from Excel into static JSON under `/data/imported`. No backend, no database,
+no real authentication, no persistence.**
 
 ## Run
 
@@ -53,20 +54,65 @@ Every drill-down page carries a breadcrumb back up its own role chain.
 
 ## Data
 
-`/data` holds the TypeScript interfaces (`types.ts`) and the seed fixtures:
+The dashboard reads the **real department returns**, imported from the workbooks in
+`/excel-data` (23 departments, including the six Rajju Bhaiya Institute departments, which are
+separate entities from their same-named main-campus counterparts).
 
-- `departments.ts` — 4 departments (CSE, IT, ECE, ME)
-- `programs.ts` — 5–6 programmes per department, 3 years of fee / intake / admitted figures
-- `faculty.ts` — 10–12 faculty per department, each with one research record, 0–2 sponsored
-  projects and one annual target sheet
-- `infrastructure.ts` — 10–12 labs / classrooms per department
-- `submissions.ts` — HoD submission + departmental target summary per department
+```bash
+npm run import:excel     # re-reads /excel-data, rewrites /data/imported + /supabase
+```
 
-Values are produced by a seeded deterministic PRNG (`rng.ts`) so figures vary realistically
-between faculty and departments while staying stable between server and client renders.
+`scripts/import-excel-data.ts` parses all five sheets per workbook and writes one JSON file per
+entity to `/data/imported`, plus `completeness-report.json`. It is idempotent — each run
+rebuilds every output from scratch, and ids are derived from the source (department slug + row
+number) rather than a counter, so they stay stable across runs.
 
-`CURRENT_HOD_DEPT_ID` and `CURRENT_FACULTY_ID` in `data/index.ts` stand in for the session layer —
-change them to view the dashboard as a different HoD or faculty member.
+Department identity comes from each workbook's own "Name of Department" / "Name of HoD" cells,
+checked across every sheet that carries them. Three workbooks name the department nowhere at all;
+those fall back to the filename and are flagged with `nameFromFilename` in both the data and the
+report.
+
+### Blank means blank
+
+**A blank cell imports as `null`, never as `0` or `""`.** The workbooks contain real zeros
+sitting next to genuinely unreported figures, and collapsing the two would invent data the
+departments never submitted. `"NA"`, `"Nil"` and `"--"` are used the way a blank is, so they
+import as null too.
+
+Every nullable field renders as a muted gray **"Not provided"** (`components/ui.tsx#NotProvided`)
+— deliberately neutral, so it never reads as the brand-gold "Pending approval" badge or the
+brand-maroon "At risk" flag, which are states to act on. `components/cells.tsx` holds the shared
+cell renderers; `data/nullable.ts` holds null-aware arithmetic, so an average is taken over the
+values that were actually reported instead of being dragged toward zero by the blanks.
+
+`data/imported/completeness-report.json` lists, per department and per entity, which required
+fields came back blank — plus an `anomalies` array recording cells whose text could not be mapped
+onto the field's type (a PhD column reading "Persuing", a smart-board column reading "2 out of 5",
+target rows naming a faculty member who is absent from the roster sheet).
+
+### Switching back to the mock generator
+
+The synthetic generator is still in `data/*.ts` and is not loaded at all by default:
+
+```bash
+npm run dev:mock         # VBSPU_DATA_SOURCE=mock — 4 invented departments, fully populated
+```
+
+Useful for a clean demo reset, or to exercise screens the real returns leave largely blank.
+See `data/source.ts`.
+
+### Supabase groundwork (schema only, nothing connected)
+
+`npm run import:excel` also writes:
+
+- `supabase/schema.sql` — one table per entity, columns 1:1 with `data/types.ts`, foreign keys
+  for Department 1—many Program/Faculty/Infrastructure and Faculty 1—many FacultyProject /
+  1—1 FacultyResearch/FacultyTarget. Every column fed by a spreadsheet cell is nullable, and none
+  carries a `DEFAULT` that would turn a blank into a zero.
+- `supabase/seed.sql` — the same parsed rows as `INSERT`s, so this dataset can seed a real
+  project without reshaping.
+
+There is no Supabase client, no env vars and no live connection yet — this is groundwork only.
 
 ## Aggregation
 

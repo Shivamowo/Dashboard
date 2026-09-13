@@ -23,8 +23,8 @@ export default async function EtInfraEditPage({
   return (
     <div>
       <PageHeading
-        crumbs={[{ label: "Engineering & Technical", href: "/et" }, { label: infra.labClassroomName }]}
-        title={`Edit ${infra.labClassroomName}`}
+        crumbs={[{ label: "Engineering & Technical", href: "/et" }, { label: infra.labClassroomName ?? infra.id }]}
+        title={`Edit ${infra.labClassroomName ?? infra.id}`}
         subtitle={`${dept?.name ?? infra.deptId}. Changes are submitted for Admin approval and only apply once approved.`}
       />
 

@@ -104,11 +104,20 @@ export default function DataTable<T>({
         out.sort((a, b) => {
           const av = col.value(a);
           const bv = col.value(b);
+          // Unreported values sink to the bottom in BOTH directions. Sorting
+          // them as 0 or "" would park every department that left a column
+          // blank at the top of an ascending sort and read as a real low score.
+          const aEmpty = av === null || av === undefined || av === "";
+          const bEmpty = bv === null || bv === undefined || bv === "";
+          if (aEmpty || bEmpty) {
+            if (aEmpty && bEmpty) return 0;
+            return aEmpty ? 1 : -1;
+          }
           let cmp: number;
           if (typeof av === "number" && typeof bv === "number") cmp = av - bv;
           else if (typeof av === "boolean" && typeof bv === "boolean")
             cmp = Number(av) - Number(bv);
-          else cmp = String(av ?? "").localeCompare(String(bv ?? ""), undefined, { numeric: true });
+          else cmp = String(av).localeCompare(String(bv), undefined, { numeric: true });
           return sortDir === "asc" ? cmp : -cmp;
         });
       }

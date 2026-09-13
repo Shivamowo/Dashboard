@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { joinMeta } from "@/components/cells";
 import Link from "next/link";
 import { Pencil } from "lucide-react";
 import { departmentById, hodSubmissionOf } from "@/data";
@@ -16,7 +17,10 @@ export default async function AdminDeptDetail({ params }: { params: Promise<{ de
       <PageHeading
         crumbs={[{ label: "Administrator", href: "/admin" }, { label: dept.shortName }]}
         title={dept.name}
-        subtitle={`${dept.facultyOfEngineering} · Head of Department ${dept.hodName}`}
+        subtitle={joinMeta([
+          dept.facultyOfEngineering,
+          dept.hodName ? `Head of Department ${dept.hodName}` : null,
+        ])}
         meta={
           <span className="flex items-center gap-2">
             {submission ? <StatusBadge status={submission.status} /> : null}

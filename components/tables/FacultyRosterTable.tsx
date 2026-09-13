@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { pctBar } from "@/components/cells";
 import { Pencil } from "lucide-react";
 import DataTable, { type Column, type FilterDef } from "@/components/DataTable";
 import { Badge, BoolBadge, PendingBadge, ProgressBar } from "@/components/ui";
@@ -97,7 +98,7 @@ export default function FacultyRosterTable({
         key: "milestone",
         header: "Milestone Achievement",
         value: (r) => r.milestonePct,
-        render: (r) => <ProgressBar value={r.milestonePct} />,
+        render: (r) => pctBar(r.milestonePct),
         className: "min-w-[10rem]",
       },
       {
@@ -157,8 +158,12 @@ export default function FacultyRosterTable({
       options: [
         { value: "yes", label: "With PhD" },
         { value: "no", label: "Without PhD" },
+        { value: "unknown", label: "Not provided" },
       ],
-      match: (r, v) => (v === "yes" ? r.hasPhd : !r.hasPhd),
+      // "Without PhD" means the department answered No. Members whose PhD cell
+      // was blank (or said something like "Persuing") get their own option.
+      match: (r, v) =>
+        v === "yes" ? r.hasPhd === true : v === "no" ? r.hasPhd === false : r.hasPhd == null,
     },
     {
       key: "appointment",

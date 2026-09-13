@@ -3,24 +3,25 @@
 import DataTable, { type Column } from "@/components/DataTable";
 import { StatusBadge } from "@/components/ui";
 
+/** Figures are nullable: an unreported snapshot value shows a gap, not a 0. */
 export interface ComplianceRow {
   deptId: string;
   deptName: string;
-  hodName: string;
-  mobileContact: string;
-  dateOfSubmission: string;
+  hodName: string | null;
+  mobileContact: string | null;
+  dateOfSubmission: string | null;
   status: string;
-  certificationSignedBy: string;
-  certificationDate: string;
-  noOfProgrammes: number;
-  totalFacultyReported: number;
-  facultyWithPhd: number;
-  totalSanctionedIntake2026: number;
-  totalStudentsAdmitted2026: number;
-  labsClassroomsReported: number;
-  programmesWithNepAlignment: number;
-  digitalSmartBoardAvailable: number;
-  projectorAvailable: number;
+  certificationSignedBy: string | null;
+  certificationDate: string | null;
+  noOfProgrammes: number | null;
+  totalFacultyReported: number | null;
+  facultyWithPhd: number | null;
+  totalSanctionedIntake2026: number | null;
+  totalStudentsAdmitted2026: number | null;
+  labsClassroomsReported: number | null;
+  programmesWithNepAlignment: number | null;
+  digitalSmartBoardAvailable: number | null;
+  projectorAvailable: number | null;
 }
 
 export default function ComplianceTable({

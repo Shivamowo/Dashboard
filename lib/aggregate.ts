@@ -1,4 +1,7 @@
 import {
+  addNullable,
+  avgOf,
+  countTrue,
   departments,
   faculty,
   facultyByDept,
@@ -6,36 +9,47 @@ import {
   facultyTargets,
   infrastructure,
   infrastructureByDept,
+  orZero,
   programs,
   programsByDept,
+  pctOf,
   researchOf,
+  sumOf,
   targetOf,
   type Department,
 } from "@/data";
+
+/**
+ * Department and university rollups.
+ *
+ * Unreported figures are skipped, never counted as zero: an average utilisation
+ * taken over rooms that never reported one would be dragged toward zero and
+ * understate every department that left the column blank. Where nothing at all
+ * was reported the rollup is null and the KPI renders "Not provided" rather
+ * than a confident 0. Counts of rows the app holds (faculty, programmes, rooms)
+ * are always exact and stay plain numbers.
+ */
 
 export interface DeptRollup {
   dept: Department;
   facultyCount: number;
   phdCount: number;
-  phdPct: number;
+  phdPct: number | null;
   programCount: number;
-  sanctionedIntake2026: number;
-  admitted2026: number;
-  fillRatePct: number;
-  totalPublications: number;
-  journalPublications: number;
-  conferencePublications: number;
-  patentsFiled: number;
-  avgTeachingLoad: number;
+  sanctionedIntake2026: number | null;
+  admitted2026: number | null;
+  fillRatePct: number | null;
+  totalPublications: number | null;
+  journalPublications: number | null;
+  conferencePublications: number | null;
+  patentsFiled: number | null;
+  avgTeachingLoad: number | null;
   infraRooms: number;
-  avgUtilisation: number;
-  avgMilestonePct: number;
+  avgUtilisation: number | null;
+  avgMilestonePct: number | null;
   atRiskFaculty: number;
-  totalStudentCapacity: number;
+  totalStudentCapacity: number | null;
 }
-
-const avg = (xs: number[]) =>
-  xs.length ? Math.round((xs.reduce((a, b) => a + b, 0) / xs.length) * 10) / 10 : 0;
 
 export function rollupDept(dept: Department): DeptRollup {
   const facs = facultyByDept(dept.id);
@@ -48,38 +62,39 @@ export function rollupDept(dept: Department): DeptRollup {
     ReturnType<typeof targetOf>
   >[];
 
-  const journal = res.reduce(
-    (a, r) =>
-      a + r.journalPublications.sciScieSsci + r.journalPublications.scopusUgcCare + r.journalPublications.other,
-    0
+  const journal = sumOf(res, (r) =>
+    addNullable(
+      r.journalPublications.sciScieSsci,
+      r.journalPublications.scopusUgcCare,
+      r.journalPublications.other
+    )
   );
-  const conference = res.reduce(
-    (a, r) => a + r.conferencePublications.international + r.conferencePublications.national,
-    0
+  const conference = sumOf(res, (r) =>
+    addNullable(r.conferencePublications.international, r.conferencePublications.national)
   );
-  const sanctioned = progs.reduce((a, p) => a + p.sanctionedIntakeByYear.y2026, 0);
-  const admitted = progs.reduce((a, p) => a + p.admittedByYear.y2026, 0);
-  const phd = facs.filter((f) => f.hasPhd).length;
+  const sanctioned = sumOf(progs, (p) => p.sanctionedIntakeByYear.y2026);
+  const admitted = sumOf(progs, (p) => p.admittedByYear.y2026);
+  const phd = countTrue(facs, (f) => f.hasPhd);
 
   return {
     dept,
     facultyCount: facs.length,
     phdCount: phd,
-    phdPct: facs.length ? Math.round((phd / facs.length) * 1000) / 10 : 0,
+    phdPct: facs.length ? pctOf(phd, facs.length) : null,
     programCount: progs.length,
     sanctionedIntake2026: sanctioned,
     admitted2026: admitted,
-    fillRatePct: sanctioned ? Math.round((admitted / sanctioned) * 1000) / 10 : 0,
-    totalPublications: journal + conference,
+    fillRatePct: pctOf(admitted, sanctioned),
+    totalPublications: addNullable(journal, conference),
     journalPublications: journal,
     conferencePublications: conference,
-    patentsFiled: res.reduce((a, r) => a + r.patents.filed, 0),
-    avgTeachingLoad: avg(facs.map((f) => f.teachingLoadHrsPerWeek)),
+    patentsFiled: sumOf(res, (r) => r.patents.filed),
+    avgTeachingLoad: avgOf(facs, (f) => f.teachingLoadHrsPerWeek),
     infraRooms: infra.length,
-    avgUtilisation: avg(infra.map((x) => x.utilisationPct)),
-    avgMilestonePct: avg(tgts.map((t) => t.milestoneAchievementPct)),
+    avgUtilisation: avgOf(infra, (x) => x.utilisationPct),
+    avgMilestonePct: avgOf(tgts, (t) => t.milestoneAchievementPct),
     atRiskFaculty: tgts.filter((t) => isAtRisk(t.milestoneAchievementPct)).length,
-    totalStudentCapacity: infra.reduce((a, x) => a + x.studentCapacity, 0),
+    totalStudentCapacity: sumOf(infra, (x) => x.studentCapacity),
   };
 }
 
@@ -89,57 +104,63 @@ export interface UniversityRollup {
   deptCount: number;
   facultyCount: number;
   phdCount: number;
-  phdPct: number;
+  phdPct: number | null;
   programCount: number;
-  sanctionedIntake2026: number;
-  admitted2026: number;
-  fillRatePct: number;
-  totalPublications: number;
-  journalPublications: number;
-  conferencePublications: number;
-  patentsFiled: number;
-  avgUtilisation: number;
+  sanctionedIntake2026: number | null;
+  admitted2026: number | null;
+  fillRatePct: number | null;
+  totalPublications: number | null;
+  journalPublications: number | null;
+  conferencePublications: number | null;
+  patentsFiled: number | null;
+  avgUtilisation: number | null;
   infraRooms: number;
-  avgMilestonePct: number;
+  avgMilestonePct: number | null;
   atRiskFaculty: number;
 }
 
 export function rollupUniversity(): UniversityRollup {
-  const journal = facultyResearch.reduce(
-    (a, r) =>
-      a + r.journalPublications.sciScieSsci + r.journalPublications.scopusUgcCare + r.journalPublications.other,
-    0
+  const journal = sumOf(facultyResearch, (r) =>
+    addNullable(
+      r.journalPublications.sciScieSsci,
+      r.journalPublications.scopusUgcCare,
+      r.journalPublications.other
+    )
   );
-  const conference = facultyResearch.reduce(
-    (a, r) => a + r.conferencePublications.international + r.conferencePublications.national,
-    0
+  const conference = sumOf(facultyResearch, (r) =>
+    addNullable(r.conferencePublications.international, r.conferencePublications.national)
   );
-  const sanctioned = programs.reduce((a, p) => a + p.sanctionedIntakeByYear.y2026, 0);
-  const admitted = programs.reduce((a, p) => a + p.admittedByYear.y2026, 0);
-  const phd = faculty.filter((f) => f.hasPhd).length;
+  const sanctioned = sumOf(programs, (p) => p.sanctionedIntakeByYear.y2026);
+  const admitted = sumOf(programs, (p) => p.admittedByYear.y2026);
+  const phd = countTrue(faculty, (f) => f.hasPhd);
 
   return {
     deptCount: departments.length,
     facultyCount: faculty.length,
     phdCount: phd,
-    phdPct: faculty.length ? Math.round((phd / faculty.length) * 1000) / 10 : 0,
+    phdPct: faculty.length ? pctOf(phd, faculty.length) : null,
     programCount: programs.length,
     sanctionedIntake2026: sanctioned,
     admitted2026: admitted,
-    fillRatePct: sanctioned ? Math.round((admitted / sanctioned) * 1000) / 10 : 0,
-    totalPublications: journal + conference,
+    fillRatePct: pctOf(admitted, sanctioned),
+    totalPublications: addNullable(journal, conference),
     journalPublications: journal,
     conferencePublications: conference,
-    patentsFiled: facultyResearch.reduce((a, r) => a + r.patents.filed, 0),
-    avgUtilisation: avg(infrastructure.map((x) => x.utilisationPct)),
+    patentsFiled: sumOf(facultyResearch, (r) => r.patents.filed),
+    avgUtilisation: avgOf(infrastructure, (x) => x.utilisationPct),
     infraRooms: infrastructure.length,
-    avgMilestonePct: avg(facultyTargets.map((t) => t.milestoneAchievementPct)),
+    avgMilestonePct: avgOf(facultyTargets, (t) => t.milestoneAchievementPct),
     atRiskFaculty: facultyTargets.filter((t) => isAtRisk(t.milestoneAchievementPct)).length,
   };
 }
 
-/** A faculty target is flagged at-risk when milestone achievement falls below 50%. */
-export const isAtRisk = (milestonePct: number) => milestonePct < 50;
+/**
+ * A faculty target is flagged at-risk when milestone achievement falls below
+ * 50%. A target that never reported one is not at risk — it is unknown, and
+ * flagging it would accuse a department of underperforming on missing data.
+ */
+export const isAtRisk = (milestonePct: number | null | undefined) =>
+  milestonePct != null && milestonePct < 50;
 
 export interface IntakeTrendPoint {
   [key: string]: string | number;
@@ -148,14 +169,19 @@ export interface IntakeTrendPoint {
   admitted: number;
 }
 
+/**
+ * Recharts needs concrete numbers per point, so unreported years contribute 0
+ * to the series. The chart's own empty state covers the case where no year has
+ * any figure at all, so an all-blank department shows a message, not a flat line.
+ */
 export function intakeTrend(deptId?: string): IntakeTrendPoint[] {
   const rows = deptId ? programsByDept(deptId) : programs;
   const keys = ["y2024", "y2025", "y2026"] as const;
   const labels = ["2024", "2025", "2026"];
   return keys.map((k, i) => ({
     year: labels[i],
-    sanctioned: rows.reduce((a, p) => a + p.sanctionedIntakeByYear[k], 0),
-    admitted: rows.reduce((a, p) => a + p.admittedByYear[k], 0),
+    sanctioned: orZero(sumOf(rows, (p) => p.sanctionedIntakeByYear[k])),
+    admitted: orZero(sumOf(rows, (p) => p.admittedByYear[k])),
   }));
 }
 
@@ -178,14 +204,15 @@ export function deptPublicationTrend(deptId: string) {
     for (const f of facs) {
       const r = researchOf(f.id);
       const row = r?.yearly.find((x) => x.year === y);
-      journal += row?.journal ?? 0;
-      conference += row?.conference ?? 0;
+      journal += orZero(row?.journal);
+      conference += orZero(row?.conference);
     }
     return { year: String(y), journal, conference };
   });
 }
 
-export const formatInr = (n: number) =>
-  "₹" + new Intl.NumberFormat("en-IN").format(Math.round(n));
+export const formatInr = (n: number | null | undefined): string | null =>
+  n == null ? null : "₹" + new Intl.NumberFormat("en-IN").format(Math.round(n));
 
-export const yesNo = (b: boolean) => (b ? "Yes" : "No");
+export const yesNo = (b: boolean | null | undefined): string | null =>
+  b == null ? null : b ? "Yes" : "No";

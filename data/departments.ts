@@ -1,5 +1,6 @@
 import type { Department } from "./types";
 import { globalSingleton } from "./globalStore";
+import { chooseData, imported } from "./source";
 
 const seedDepartments = (): Department[] => [
   {
@@ -48,7 +49,9 @@ const seedDepartments = (): Department[] => [
   },
 ];
 
-export const departments: Department[] = globalSingleton("departments", seedDepartments);
+export const departments: Department[] = globalSingleton("departments", () =>
+  chooseData(imported.departments, seedDepartments)
+);
 
 export const departmentById = (id: string) => departments.find((d) => d.id === id);
 

@@ -3,8 +3,7 @@
 import DataTable, { type Column } from "@/components/DataTable";
 import { BoolBadge } from "@/components/ui";
 import type { Program } from "@/data";
-
-const inr = (n: number) => "₹" + new Intl.NumberFormat("en-IN").format(n);
+import { inr, num, pctText, ratioBar, text } from "@/components/cells";
 
 export default function ProgramsTable({ programs }: { programs: Program[] }) {
   const columns: Column<Program>[] = [
@@ -16,8 +15,8 @@ export default function ProgramsTable({ programs }: { programs: Program[] }) {
       className: "min-w-[18rem] font-medium text-ink-900",
       wrap: true,
     },
-    { key: "year", header: "Year of Commencement", value: (p) => p.yearOfCommencement, align: "right" },
-    { key: "mode", header: "Mode of Programme", value: (p) => p.modeOfProgramme },
+    { key: "year", header: "Year of Commencement", value: (p) => p.yearOfCommencement, render: (p) => num(p.yearOfCommencement), align: "right" },
+    { key: "mode", header: "Mode of Programme", value: (p) => p.modeOfProgramme, render: (p) => text(p.modeOfProgramme) },
     {
       key: "prof",
       header: "Sanctioned — Professor",
@@ -28,34 +27,35 @@ export default function ProgramsTable({ programs }: { programs: Program[] }) {
       key: "assoc",
       header: "Sanctioned — Associate Professor",
       value: (p) => p.sanctionedFacultyPositions.associateProfessor,
+      render: (p) => num(p.sanctionedFacultyPositions.associateProfessor),
       align: "right",
     },
     {
       key: "asst",
       header: "Sanctioned — Assistant Professor",
       value: (p) => p.sanctionedFacultyPositions.assistantProfessor,
+      render: (p) => num(p.sanctionedFacultyPositions.assistantProfessor),
       align: "right",
     },
     { key: "fee24", header: "Semester Fee 2024", value: (p) => p.semesterFeeByYear.y2024, render: (p) => inr(p.semesterFeeByYear.y2024), align: "right" },
     { key: "fee25", header: "Semester Fee 2025", value: (p) => p.semesterFeeByYear.y2025, render: (p) => inr(p.semesterFeeByYear.y2025), align: "right" },
     { key: "fee26", header: "Semester Fee 2026", value: (p) => p.semesterFeeByYear.y2026, render: (p) => inr(p.semesterFeeByYear.y2026), align: "right" },
-    { key: "int24", header: "Sanctioned Intake 2024", value: (p) => p.sanctionedIntakeByYear.y2024, align: "right" },
-    { key: "int25", header: "Sanctioned Intake 2025", value: (p) => p.sanctionedIntakeByYear.y2025, align: "right" },
-    { key: "int26", header: "Sanctioned Intake 2026", value: (p) => p.sanctionedIntakeByYear.y2026, align: "right" },
-    { key: "adm24", header: "Admitted 2024", value: (p) => p.admittedByYear.y2024, align: "right" },
-    { key: "adm25", header: "Admitted 2025", value: (p) => p.admittedByYear.y2025, align: "right" },
-    { key: "adm26", header: "Admitted 2026", value: (p) => p.admittedByYear.y2026, align: "right" },
+    { key: "int24", header: "Sanctioned Intake 2024", value: (p) => p.sanctionedIntakeByYear.y2024, render: (p) => num(p.sanctionedIntakeByYear.y2024), align: "right" },
+    { key: "int25", header: "Sanctioned Intake 2025", value: (p) => p.sanctionedIntakeByYear.y2025, render: (p) => num(p.sanctionedIntakeByYear.y2025), align: "right" },
+    { key: "int26", header: "Sanctioned Intake 2026", value: (p) => p.sanctionedIntakeByYear.y2026, render: (p) => num(p.sanctionedIntakeByYear.y2026), align: "right" },
+    { key: "adm24", header: "Admitted 2024", value: (p) => p.admittedByYear.y2024, render: (p) => num(p.admittedByYear.y2024), align: "right" },
+    { key: "adm25", header: "Admitted 2025", value: (p) => p.admittedByYear.y2025, render: (p) => num(p.admittedByYear.y2025), align: "right" },
+    { key: "adm26", header: "Admitted 2026", value: (p) => p.admittedByYear.y2026, render: (p) => num(p.admittedByYear.y2026), align: "right" },
     {
       key: "fill",
       header: "Fill Rate 2026",
+      // Needs both halves reported; otherwise the cell shows the gap rather
+      // than a rate computed against a number nobody supplied.
       value: (p) =>
-        p.sanctionedIntakeByYear.y2026
+        p.sanctionedIntakeByYear.y2026 && p.admittedByYear.y2026 != null
           ? Math.round((p.admittedByYear.y2026 / p.sanctionedIntakeByYear.y2026) * 100)
-          : 0,
-      render: (p) =>
-        p.sanctionedIntakeByYear.y2026
-          ? Math.round((p.admittedByYear.y2026 / p.sanctionedIntakeByYear.y2026) * 100) + "%"
-          : "—",
+          : null,
+      render: (p) => ratioBar(p.admittedByYear.y2026, p.sanctionedIntakeByYear.y2026),
       align: "right",
     },
     { key: "nep", header: "NEP Aligned", value: (p) => p.nepAligned, render: (p) => <BoolBadge value={p.nepAligned} />, align: "center" },

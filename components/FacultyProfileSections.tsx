@@ -1,4 +1,6 @@
 import { BadgeIndianRupee, ExternalLink, FlaskConical, Target, UserRound } from "lucide-react";
+import { addNullable } from "@/data";
+import { joinMeta, num, pctBar } from "@/components/cells";
 import { facultyById, departmentById, projectsOf, researchOf, targetOf } from "@/data";
 import { formatInr, publicationTrend } from "@/lib/aggregate";
 import TrendChart from "./TrendChart";
@@ -8,6 +10,7 @@ import {
   EmptyState,
   Field,
   FieldGrid,
+  NotProvided,
   ProfileCard,
   ProgressBar,
   Section,
@@ -38,14 +41,21 @@ export default function FacultyProfileSections({ facultyId }: { facultyId: strin
   const target = targetOf(f.id);
   const trend = publicationTrend(f.id);
 
+  // null when nothing was reported, so the KPI shows the gap instead of a 0
+  // that would read as "this member published nothing".
   const journalTotal = research
-    ? research.journalPublications.sciScieSsci +
-      research.journalPublications.scopusUgcCare +
-      research.journalPublications.other
-    : 0;
+    ? addNullable(
+        research.journalPublications.sciScieSsci,
+        research.journalPublications.scopusUgcCare,
+        research.journalPublications.other
+      )
+    : null;
   const conferenceTotal = research
-    ? research.conferencePublications.international + research.conferencePublications.national
-    : 0;
+    ? addNullable(
+        research.conferencePublications.international,
+        research.conferencePublications.national
+      )
+    : null;
 
   return (
     <div className="space-y-6">
@@ -53,10 +63,10 @@ export default function FacultyProfileSections({ facultyId }: { facultyId: strin
       <div id="identity" className="scroll-mt-6">
         <ProfileCard
           name={f.name}
-          subtitle={`${f.designation} · ${dept?.name ?? f.deptId}`}
+          subtitle={joinMeta([f.designation, dept?.name ?? f.deptId])}
           badges={
             <>
-              <Badge tone="seal">{f.appointmentType}</Badge>
+              {f.appointmentType ? <Badge tone="seal">{f.appointmentType}</Badge> : null}
               {f.hasPhd ? <Badge tone="positive">PhD</Badge> : null}
             </>
           }
@@ -68,10 +78,10 @@ export default function FacultyProfileSections({ facultyId }: { facultyId: strin
             { label: "Programme(s) for which Appointed", value: f.programmesAppointedFor },
             { label: "Additional Responsibility", value: f.additionalResponsibility },
             { label: "Department Dean", value: dept?.deanName },
-            { label: "Head of Department", value: `${dept?.hodName} · ${dept?.hodContact}` },
+            { label: "Head of Department", value: joinMeta([dept?.hodName, dept?.hodContact]) },
             { label: "Reporting Period", value: dept?.reportingPeriod },
           ]}
-          footer={`Faculty identifier ${f.id} · ${dept?.facultyOfEngineering}`}
+          footer={joinMeta([`Faculty identifier ${f.id}`, dept?.facultyOfEngineering])}
         />
       </div>
 
@@ -96,12 +106,12 @@ export default function FacultyProfileSections({ facultyId }: { facultyId: strin
                 { label: "Other journals", value: research.journalPublications.other },
                 { label: "International conf.", value: research.conferencePublications.international },
                 { label: "National conf.", value: research.conferencePublications.national },
-                { label: "All publications", value: journalTotal + conferenceTotal },
+                { label: "All publications", value: addNullable(journalTotal, conferenceTotal) },
               ].map((m) => (
                 <div key={m.label}>
                   <p className="field-label">{m.label}</p>
                   <p className="mt-1 font-display text-h3 font-semibold tnum text-ink-900">
-                    {m.value}
+                    {num(m.value)}
                   </p>
                 </div>
               ))}
@@ -133,15 +143,19 @@ export default function FacultyProfileSections({ facultyId }: { facultyId: strin
               <Field
                 label="Google Scholar / ORCID"
                 value={
-                  <a
-                    href={research.googleScholarOrcidLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn-link"
-                  >
-                    Open scholar profile
-                    <ExternalLink aria-hidden className="h-3.5 w-3.5" />
-                  </a>
+                  // null falls through to Field's own "Not provided" marker
+                  // rather than rendering a link with an empty href.
+                  research.googleScholarOrcidLink == null ? null : (
+                    <a
+                      href={research.googleScholarOrcidLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn-link"
+                    >
+                      Open scholar profile
+                      <ExternalLink aria-hidden className="h-3.5 w-3.5" />
+                    </a>
+                  )
                 }
               />
             </FieldGrid>
@@ -187,14 +201,19 @@ export default function FacultyProfileSections({ facultyId }: { facultyId: strin
                   </FieldGrid>
                 </div>
                 <div className="mt-4">
-                  <ProgressBar
-                    label="Released against sanction"
-                    value={
-                      p.sanctionedAmount
-                        ? Math.round((p.amountReleased / p.sanctionedAmount) * 100)
-                        : 0
-                    }
-                  />
+                  {/* Needs both figures; a release rate against an unreported
+                      sanction would be invented. */}
+                  {p.sanctionedAmount && p.amountReleased != null ? (
+                    <ProgressBar
+                      label="Released against sanction"
+                      value={Math.round((p.amountReleased / p.sanctionedAmount) * 100)}
+                    />
+                  ) : (
+                    <>
+                      <p className="field-label mb-1.5">Released against sanction</p>
+                      <NotProvided />
+                    </>
+                  )}
                 </div>
               </article>
             ))}
@@ -218,11 +237,18 @@ export default function FacultyProfileSections({ facultyId }: { facultyId: strin
           <div className="space-y-7">
             <div className="flex flex-wrap items-center gap-x-8 gap-y-4 rounded-panel border border-ink-200 bg-paper-sunken px-4 py-4">
               <div className="min-w-[15rem] flex-1">
-                <ProgressBar
-                  label="Milestone achievement"
-                  value={target.milestoneAchievementPct}
-                  srLabel="Milestone achievement percentage"
-                />
+                {target.milestoneAchievementPct == null ? (
+                  <>
+                    <p className="field-label mb-1.5">Milestone achievement</p>
+                    <NotProvided />
+                  </>
+                ) : (
+                  <ProgressBar
+                    label="Milestone achievement"
+                    value={target.milestoneAchievementPct}
+                    srLabel="Milestone achievement percentage"
+                  />
+                )}
               </div>
               <div>
                 <p className="field-label">HoD priority</p>
@@ -230,7 +256,7 @@ export default function FacultyProfileSections({ facultyId }: { facultyId: strin
                   <StatusBadge status={target.hodPriority} />
                 </div>
               </div>
-              {target.milestoneAchievementPct < 50 ? (
+              {target.milestoneAchievementPct != null && target.milestoneAchievementPct < 50 ? (
                 <div>
                   <p className="field-label">Review flag</p>
                   <div className="mt-1.5">
@@ -372,7 +398,7 @@ export default function FacultyProfileSections({ facultyId }: { facultyId: strin
               <FieldGrid cols={2}>
                 <Field
                   label="Milestone Achievement %"
-                  value={<ProgressBar value={target.milestoneAchievementPct} />}
+                  value={pctBar(target.milestoneAchievementPct)}
                 />
                 <Field label="HoD Priority" value={<StatusBadge status={target.hodPriority} />} />
                 <Field

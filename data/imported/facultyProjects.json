@@ -1,0 +1,542 @@
+[
+  {
+    "id": "applied-psychology-f1-pr1",
+    "facultyId": "applied-psychology-f1",
+    "sponsoringAgency": "UP State Higher Education Dept",
+    "yearOfGrant": 2021,
+    "duration": "3 years",
+    "sanctionedAmount": null,
+    "amountReleased": 154000,
+    "currentStatus": "Closed"
+  },
+  {
+    "id": "applied-psychology-f2-pr1",
+    "facultyId": "applied-psychology-f2",
+    "sponsoringAgency": "ICSSR,UP State Higher Education Dept",
+    "yearOfGrant": 20242024,
+    "duration": "2 YEARS",
+    "sanctionedAmount": null,
+    "amountReleased": null,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "chemistry-f2-pr1",
+    "facultyId": "chemistry-f2",
+    "sponsoringAgency": "1. R & D Uttar Pradesh Government 2. Center of Excellence",
+    "yearOfGrant": null,
+    "duration": "3 years 3 Years",
+    "sanctionedAmount": null,
+    "amountReleased": null,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "institute-department-of-pharmacy-f2-pr1",
+    "facultyId": "institute-department-of-pharmacy-f2",
+    "sponsoringAgency": "DBT",
+    "yearOfGrant": 2018,
+    "duration": "3 Years",
+    "sanctionedAmount": 1800000,
+    "amountReleased": 1800000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "institute-department-of-pharmacy-f3-pr1",
+    "facultyId": "institute-department-of-pharmacy-f3",
+    "sponsoringAgency": "Chhatrapati Shahu Ji Maharaj University Kanpur",
+    "yearOfGrant": 2025,
+    "duration": "02 Years",
+    "sanctionedAmount": 200000,
+    "amountReleased": 200000,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "institute-department-of-pharmacy-f6-pr1",
+    "facultyId": "institute-department-of-pharmacy-f6",
+    "sponsoringAgency": "VBSP University",
+    "yearOfGrant": 2021,
+    "duration": "02 Years",
+    "sanctionedAmount": 100000,
+    "amountReleased": 100000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "mathematics-engg-f1-pr1",
+    "facultyId": "mathematics-engg-f1",
+    "sponsoringAgency": "VBSPU",
+    "yearOfGrant": 2022,
+    "duration": "1 year",
+    "sanctionedAmount": 100000,
+    "amountReleased": 91177,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "mathematics-engg-f3-pr1",
+    "facultyId": "mathematics-engg-f3",
+    "sponsoringAgency": "VBSPU, UPSCHE",
+    "yearOfGrant": 2022,
+    "duration": "1 and 3 years",
+    "sanctionedAmount": 840500,
+    "amountReleased": 840500,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "physics-f2-pr1",
+    "facultyId": "physics-f2",
+    "sponsoringAgency": "UGC, ANRF, UPCST",
+    "yearOfGrant": null,
+    "duration": "2, 3, 3 Years",
+    "sanctionedAmount": null,
+    "amountReleased": null,
+    "currentStatus": "Completed, Completed, Ongoing"
+  },
+  {
+    "id": "rb-centre-for-nanoscience-and-technology-f1-pr1",
+    "facultyId": "rb-centre-for-nanoscience-and-technology-f1",
+    "sponsoringAgency": "UGC, New Delhi",
+    "yearOfGrant": 2022,
+    "duration": "3",
+    "sanctionedAmount": 1000000,
+    "amountReleased": 1000000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-centre-for-nanoscience-and-technology-f1-pr2",
+    "facultyId": "rb-centre-for-nanoscience-and-technology-f1",
+    "sponsoringAgency": "CST-UP, Lucknow",
+    "yearOfGrant": 2022,
+    "duration": "3",
+    "sanctionedAmount": 1144000,
+    "amountReleased": 1144000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-centre-for-nanoscience-and-technology-f1-pr3",
+    "facultyId": "rb-centre-for-nanoscience-and-technology-f1",
+    "sponsoringAgency": "UP Higher Education Department",
+    "yearOfGrant": 2024,
+    "duration": "1",
+    "sanctionedAmount": 760000,
+    "amountReleased": 760000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-centre-for-nanoscience-and-technology-f2-pr1",
+    "facultyId": "rb-centre-for-nanoscience-and-technology-f2",
+    "sponsoringAgency": "ANRF (previously SERB)",
+    "yearOfGrant": 2022,
+    "duration": "3",
+    "sanctionedAmount": 2632386,
+    "amountReleased": 2404945,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-centre-for-nanoscience-and-technology-f2-pr2",
+    "facultyId": "rb-centre-for-nanoscience-and-technology-f2",
+    "sponsoringAgency": "UP State Council of Higher Education (Center of Excellence Grant)",
+    "yearOfGrant": 2022,
+    "duration": "3",
+    "sanctionedAmount": 385000,
+    "amountReleased": 385000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-centre-for-nanoscience-and-technology-f2-pr3",
+    "facultyId": "rb-centre-for-nanoscience-and-technology-f2",
+    "sponsoringAgency": "Veer Bahadur Singh Purvanchal University",
+    "yearOfGrant": 2022,
+    "duration": "1",
+    "sanctionedAmount": 100000,
+    "amountReleased": 100000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-centre-for-nanoscience-and-technology-f2-pr4",
+    "facultyId": "rb-centre-for-nanoscience-and-technology-f2",
+    "sponsoringAgency": "CST-UP, Lucknow (as a Co-PI)",
+    "yearOfGrant": 2022,
+    "duration": "3",
+    "sanctionedAmount": 1144000,
+    "amountReleased": 1144000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-centre-for-nanoscience-and-technology-f2-pr5",
+    "facultyId": "rb-centre-for-nanoscience-and-technology-f2",
+    "sponsoringAgency": "UGC DAE",
+    "yearOfGrant": 2023,
+    "duration": "3",
+    "sanctionedAmount": 45000,
+    "amountReleased": 0,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-centre-for-nanoscience-and-technology-f2-pr6",
+    "facultyId": "rb-centre-for-nanoscience-and-technology-f2",
+    "sponsoringAgency": "UP State Council of Higher Education (R&D Grant)",
+    "yearOfGrant": 2024,
+    "duration": "3",
+    "sanctionedAmount": 500000,
+    "amountReleased": 330467,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-centre-for-nanoscience-and-technology-f2-pr7",
+    "facultyId": "rb-centre-for-nanoscience-and-technology-f2",
+    "sponsoringAgency": "CST-UP, Lucknow",
+    "yearOfGrant": 2024,
+    "duration": "3",
+    "sanctionedAmount": 1436000,
+    "amountReleased": 1000000,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-centre-for-nanoscience-and-technology-f2-pr8",
+    "facultyId": "rb-centre-for-nanoscience-and-technology-f2",
+    "sponsoringAgency": "DST (PURSE project as a deputy Coordinator)",
+    "yearOfGrant": 2025,
+    "duration": "4",
+    "sanctionedAmount": 71300000,
+    "amountReleased": null,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-chemistry-f1-pr1",
+    "facultyId": "rb-chemistry-f1",
+    "sponsoringAgency": "Centre of Excellence Higher Education Department Uttar Pradesh Govt.",
+    "yearOfGrant": 2024,
+    "duration": "3 Year",
+    "sanctionedAmount": 922741,
+    "amountReleased": 655000,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-chemistry-f1-pr2",
+    "facultyId": "rb-chemistry-f1",
+    "sponsoringAgency": "Research and Development",
+    "yearOfGrant": 2022,
+    "duration": "3 Year",
+    "sanctionedAmount": 497200,
+    "amountReleased": 497200,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-chemistry-f2-pr1",
+    "facultyId": "rb-chemistry-f2",
+    "sponsoringAgency": "VBSPU-Seed Grant",
+    "yearOfGrant": 2022,
+    "duration": "1 Year",
+    "sanctionedAmount": 100000,
+    "amountReleased": 100000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-chemistry-f2-pr2",
+    "facultyId": "rb-chemistry-f2",
+    "sponsoringAgency": "CST-UP, Lucknow",
+    "yearOfGrant": 2022,
+    "duration": "3 Year",
+    "sanctionedAmount": 1144000,
+    "amountReleased": 1144000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-chemistry-f2-pr3",
+    "facultyId": "rb-chemistry-f2",
+    "sponsoringAgency": "Centre of Excellence Higher Education Department Uttar Pradesh Govt.",
+    "yearOfGrant": 2024,
+    "duration": "3 Year",
+    "sanctionedAmount": 807000,
+    "amountReleased": 807000,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-chemistry-f3-pr1",
+    "facultyId": "rb-chemistry-f3",
+    "sponsoringAgency": "UGC",
+    "yearOfGrant": 2021,
+    "duration": "2 Year",
+    "sanctionedAmount": 1000000,
+    "amountReleased": 800000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-chemistry-f3-pr2",
+    "facultyId": "rb-chemistry-f3",
+    "sponsoringAgency": "UP Higher Education",
+    "yearOfGrant": 2025,
+    "duration": "2 Year",
+    "sanctionedAmount": 500000,
+    "amountReleased": 350000,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-chemistry-f4-pr1",
+    "facultyId": "rb-chemistry-f4",
+    "sponsoringAgency": "UGC New Delhi",
+    "yearOfGrant": 2022,
+    "duration": "2 Year",
+    "sanctionedAmount": 1000000,
+    "amountReleased": 800000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-chemistry-f5-pr1",
+    "facultyId": "rb-chemistry-f5",
+    "sponsoringAgency": "UGC",
+    "yearOfGrant": 2022,
+    "duration": "2 Year",
+    "sanctionedAmount": 1000000,
+    "amountReleased": 800000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-chemistry-f5-pr2",
+    "facultyId": "rb-chemistry-f5",
+    "sponsoringAgency": "CST-UP, Lucknow",
+    "yearOfGrant": 2022,
+    "duration": "3 Year",
+    "sanctionedAmount": 1194000,
+    "amountReleased": 1194000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-chemistry-f5-pr3",
+    "facultyId": "rb-chemistry-f5",
+    "sponsoringAgency": "Centre of Excellence Higher Education Department Uttar Pradesh Govt.",
+    "yearOfGrant": 2022,
+    "duration": "3 Year",
+    "sanctionedAmount": 196000,
+    "amountReleased": 196000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-mathematics-f1-pr1",
+    "facultyId": "rb-mathematics-f1",
+    "sponsoringAgency": "Higher education of U.P.",
+    "yearOfGrant": 2025,
+    "duration": "3",
+    "sanctionedAmount": 157300,
+    "amountReleased": 0,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-mathematics-f3-pr1",
+    "facultyId": "rb-mathematics-f3",
+    "sponsoringAgency": "Council of Science and Technology, Uttar Pradesh",
+    "yearOfGrant": 2023,
+    "duration": "03 Years",
+    "sanctionedAmount": 1136000,
+    "amountReleased": 1108000,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-mathematics-f4-pr1",
+    "facultyId": "rb-mathematics-f4",
+    "sponsoringAgency": "VBSPU",
+    "yearOfGrant": 2022,
+    "duration": "01 Year",
+    "sanctionedAmount": 100000,
+    "amountReleased": 100000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-mathematics-f4-pr2",
+    "facultyId": "rb-mathematics-f4",
+    "sponsoringAgency": "Department of Higher Education, Uttar Pradesh",
+    "yearOfGrant": 2026,
+    "duration": "03 Years",
+    "sanctionedAmount": 291500,
+    "amountReleased": 291500,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-earth-and-planetary-sciences-f1-pr1",
+    "facultyId": "rb-earth-and-planetary-sciences-f1",
+    "sponsoringAgency": "Department of Higher Education Govt. of UP",
+    "yearOfGrant": 2024,
+    "duration": "3 years",
+    "sanctionedAmount": 770000,
+    "amountReleased": 770000,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-earth-and-planetary-sciences-f2-pr1",
+    "facultyId": "rb-earth-and-planetary-sciences-f2",
+    "sponsoringAgency": "UPCST",
+    "yearOfGrant": 2025,
+    "duration": "3 years",
+    "sanctionedAmount": 1386000,
+    "amountReleased": 450000,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-earth-and-planetary-sciences-f2-pr2",
+    "facultyId": "rb-earth-and-planetary-sciences-f2",
+    "sponsoringAgency": "Department of Higher Education Govt. of UP",
+    "yearOfGrant": 2024,
+    "duration": "3 years",
+    "sanctionedAmount": 596000,
+    "amountReleased": 596000,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-earth-and-planetary-sciences-f2-pr3",
+    "facultyId": "rb-earth-and-planetary-sciences-f2",
+    "sponsoringAgency": "ANRF",
+    "yearOfGrant": 2023,
+    "duration": "3 years",
+    "sanctionedAmount": 2532000,
+    "amountReleased": 765000,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-earth-and-planetary-sciences-f3-pr1",
+    "facultyId": "rb-earth-and-planetary-sciences-f3",
+    "sponsoringAgency": "Department of Higher Education Govt. of UP",
+    "yearOfGrant": 2024,
+    "duration": "3 years",
+    "sanctionedAmount": 790000,
+    "amountReleased": 790000,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-physics-f2-pr1",
+    "facultyId": "rb-physics-f2",
+    "sponsoringAgency": "Centre of Excellence (CoE) Uttar Pradesh Higher Education Council,",
+    "yearOfGrant": 2024,
+    "duration": "3",
+    "sanctionedAmount": 940000,
+    "amountReleased": 940000,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-physics-f2-pr2",
+    "facultyId": "rb-physics-f2",
+    "sponsoringAgency": "R&D, Uttar Pradesh Higher Education Council,",
+    "yearOfGrant": 2022,
+    "duration": "1 year",
+    "sanctionedAmount": 165000,
+    "amountReleased": 165000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-physics-f2-pr3",
+    "facultyId": "rb-physics-f2",
+    "sponsoringAgency": "IQAC, VBSPU",
+    "yearOfGrant": 2022,
+    "duration": "1 Year",
+    "sanctionedAmount": 100000,
+    "amountReleased": 100000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-centre-for-renewable-energy-f1-pr1",
+    "facultyId": "rb-centre-for-renewable-energy-f1",
+    "sponsoringAgency": "Council of Science & Technology, U.P.",
+    "yearOfGrant": 2021,
+    "duration": "3 Year",
+    "sanctionedAmount": 1140000,
+    "amountReleased": 821999,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-centre-for-renewable-energy-f1-pr2",
+    "facultyId": "rb-centre-for-renewable-energy-f1",
+    "sponsoringAgency": "DAE- CSR, Indore Centre",
+    "yearOfGrant": 2021,
+    "duration": "3 Year",
+    "sanctionedAmount": 1327200,
+    "amountReleased": 1327200,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-centre-for-renewable-energy-f1-pr3",
+    "facultyId": "rb-centre-for-renewable-energy-f1",
+    "sponsoringAgency": "IUAC, New Delhi",
+    "yearOfGrant": 2022,
+    "duration": "1 Year",
+    "sanctionedAmount": null,
+    "amountReleased": null,
+    "currentStatus": "Closed"
+  },
+  {
+    "id": "rb-centre-for-renewable-energy-f1-pr4",
+    "facultyId": "rb-centre-for-renewable-energy-f1",
+    "sponsoringAgency": "UGC, New Delhi",
+    "yearOfGrant": 2022,
+    "duration": "3 Year",
+    "sanctionedAmount": 1000000,
+    "amountReleased": 800000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-centre-for-renewable-energy-f1-pr5",
+    "facultyId": "rb-centre-for-renewable-energy-f1",
+    "sponsoringAgency": "Department of Higher Education, Uttar Pradesh",
+    "yearOfGrant": 2022,
+    "duration": "1 Year",
+    "sanctionedAmount": 462500,
+    "amountReleased": 462500,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-centre-for-renewable-energy-f1-pr6",
+    "facultyId": "rb-centre-for-renewable-energy-f1",
+    "sponsoringAgency": "SERB, NEW Delhi",
+    "yearOfGrant": 2022,
+    "duration": "3 Months",
+    "sanctionedAmount": 906722,
+    "amountReleased": 798631,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-centre-for-renewable-energy-f1-pr7",
+    "facultyId": "rb-centre-for-renewable-energy-f1",
+    "sponsoringAgency": "DST-PURSE",
+    "yearOfGrant": 2024,
+    "duration": "4 Year",
+    "sanctionedAmount": 71300000,
+    "amountReleased": 1993576,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-centre-for-renewable-energy-f1-pr8",
+    "facultyId": "rb-centre-for-renewable-energy-f1",
+    "sponsoringAgency": "PM-USHA",
+    "yearOfGrant": 2023,
+    "duration": "Upto March 2028 Deputy Coordinator",
+    "sanctionedAmount": 199999000,
+    "amountReleased": 17660559,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-centre-for-renewable-energy-f1-pr9",
+    "facultyId": "rb-centre-for-renewable-energy-f1",
+    "sponsoringAgency": "Department of Higher Education, Uttar Pradesh",
+    "yearOfGrant": 2023,
+    "duration": "Co-PI with Prof. Giridhar Mishra",
+    "sanctionedAmount": 500000,
+    "amountReleased": null,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-centre-for-renewable-energy-f1-pr10",
+    "facultyId": "rb-centre-for-renewable-energy-f1",
+    "sponsoringAgency": "Department of Higher Education, Uttar Pradesh",
+    "yearOfGrant": 2024,
+    "duration": "Co-PI with Dr. Punit Dhawan",
+    "sanctionedAmount": 199500,
+    "amountReleased": 199500,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-centre-for-renewable-energy-f1-pr11",
+    "facultyId": "rb-centre-for-renewable-energy-f1",
+    "sponsoringAgency": "Council of Science & Technology, U.P.",
+    "yearOfGrant": 2024,
+    "duration": "Co-PI with Dr. Punit Dhawan, Department of Physics",
+    "sanctionedAmount": 1436000,
+    "amountReleased": 950000,
+    "currentStatus": "Ongoing"
+  }
+]
