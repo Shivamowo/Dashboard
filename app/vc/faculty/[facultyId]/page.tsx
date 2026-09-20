@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { departmentById, faculty, facultyById } from "@/data";
+import { deptNamesOf } from "@/lib/rows";
 import FacultyProfileSections from "@/components/FacultyProfileSections";
 import { Badge, PageHeading } from "@/components/ui";
 
@@ -11,18 +12,18 @@ export default async function VcFacultyProfile({ params }: { params: Promise<{ f
   const { facultyId } = await params;
   const f = facultyById(facultyId);
   if (!f) notFound();
-  const dept = departmentById(f.deptId);
+  const dept = departmentById(f.primaryDepartment);
 
   return (
     <div>
       <PageHeading
         crumbs={[
           { label: "Vice Chancellor", href: "/vc" },
-          { label: dept?.shortName ?? f.deptId, href: `/vc/dept/${f.deptId}` },
+          { label: dept?.shortName ?? f.primaryDepartment, href: `/vc/dept/${f.primaryDepartment}` },
           { label: f.name },
         ]}
         title={f.name}
-        subtitle={`${f.designation} · ${dept?.name ?? ""}`}
+        subtitle={`${f.designation} · ${deptNamesOf(f)}`}
         meta={<Badge tone="seal">{f.appointmentType}</Badge>}
       />
       <FacultyProfileSections facultyId={f.id} />

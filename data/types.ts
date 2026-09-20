@@ -64,9 +64,21 @@ export interface Program {
 
 export interface Faculty {
   id: string;
-  deptId: string;
+  /**
+   * Every department this person serves. A person listed in several
+   * departments is ONE record (deduped on employeeId, else normalised name —
+   * see scripts/split-departments.ts). Each department view lists them in full.
+   */
+  departments: string[];
+  /** Where the faculty-view breadcrumb routes. Always one of `departments`. */
+  primaryDepartment: string;
   sNo: number;
   name: string;
+  /** Not in the department workbooks; set through the admin Add Faculty form. */
+  employeeId?: string | null;
+  email?: string | null;
+  qualification?: string | null;
+  specialization?: string | null;
   designation: string | null;
   appointmentType: string | null;
   /** ISO yyyy-mm-dd when the cell parsed as a date, else the original text. */

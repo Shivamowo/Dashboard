@@ -3,7 +3,8 @@
 import DataTable, { type Column } from "@/components/DataTable";
 import { BoolBadge } from "@/components/ui";
 import type { Program } from "@/data";
-import { inr, num, pctText, ratioBar, text } from "@/components/cells";
+import { admittedOfIntake, inr, num, pctText, ratioBar, text } from "@/components/cells";
+import { programLevel } from "@/lib/labels";
 
 export default function ProgramsTable({ programs }: { programs: Program[] }) {
   const columns: Column<Program>[] = [
@@ -14,6 +15,22 @@ export default function ProgramsTable({ programs }: { programs: Program[] }) {
       value: (p) => p.name,
       className: "min-w-[18rem] font-medium text-ink-900",
       wrap: true,
+      primary: true,
+    },
+    {
+      key: "level",
+      header: "Level",
+      value: (p) => programLevel(p.name),
+      render: (p) => text(programLevel(p.name)),
+      primary: true,
+    },
+    {
+      key: "admInt26",
+      header: "Admitted / Intake 2026",
+      value: (p) => p.admittedByYear.y2026,
+      render: (p) => admittedOfIntake(p.admittedByYear.y2026, p.sanctionedIntakeByYear.y2026),
+      align: "right",
+      primary: true,
     },
     { key: "year", header: "Year of Commencement", value: (p) => p.yearOfCommencement, render: (p) => num(p.yearOfCommencement), align: "right" },
     { key: "mode", header: "Mode of Programme", value: (p) => p.modeOfProgramme, render: (p) => text(p.modeOfProgramme) },

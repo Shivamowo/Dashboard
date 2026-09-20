@@ -222,7 +222,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-i1",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-management",
     "sNo": 1,
     "labClassroomName": "Classroom",
     "floorRoomNo": "GF/104",
@@ -239,7 +239,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-i2",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-management",
     "sNo": 2,
     "labClassroomName": "Classroom",
     "floorRoomNo": "GF/106",
@@ -256,7 +256,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-i3",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-management",
     "sNo": 3,
     "labClassroomName": "Classroom",
     "floorRoomNo": "GF/108",
@@ -273,7 +273,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-i4",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-management",
     "sNo": 4,
     "labClassroomName": "Classroom",
     "floorRoomNo": "GF/112",
@@ -290,7 +290,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-i5",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-management",
     "sNo": 5,
     "labClassroomName": "Classroom",
     "floorRoomNo": "GF/113",
@@ -307,7 +307,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-i6",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-management",
     "sNo": 6,
     "labClassroomName": "Classroom",
     "floorRoomNo": "GF/114",
@@ -324,7 +324,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-i7",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-management",
     "sNo": 7,
     "labClassroomName": "Classroom",
     "floorRoomNo": "GF/118",
@@ -341,7 +341,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-i8",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-management",
     "sNo": 8,
     "labClassroomName": "Lab 01",
     "floorRoomNo": "FF/216",
@@ -358,7 +358,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-i9",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-management",
     "sNo": 9,
     "labClassroomName": "Computer Lab",
     "floorRoomNo": "FF/217",
@@ -375,7 +375,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-i10",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-management",
     "sNo": 10,
     "labClassroomName": "Classroom (Pharmacy Building)",
     "floorRoomNo": "SF/Hall 06",
@@ -392,7 +392,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-i11",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-economics",
     "sNo": 11,
     "labClassroomName": "Classroom",
     "floorRoomNo": "SF/301",
@@ -409,7 +409,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-i12",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-economics",
     "sNo": 12,
     "labClassroomName": "Classroom",
     "floorRoomNo": "SF/303",
@@ -426,7 +426,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-i13",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-economics",
     "sNo": 13,
     "labClassroomName": "Classroom",
     "floorRoomNo": "SF/306",
@@ -443,7 +443,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-i14",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-economics",
     "sNo": 14,
     "labClassroomName": "Classroom",
     "floorRoomNo": "SF/309",
@@ -460,7 +460,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-i15",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-economics",
     "sNo": 15,
     "labClassroomName": "Conference Hall",
     "floorRoomNo": "SF/CF",
@@ -477,7 +477,7 @@
   },
   {
     "id": "cse-and-it-i1",
-    "deptId": "cse-and-it",
+    "deptId": "cse",
     "sNo": 1,
     "labClassroomName": "Computer lab #1",
     "floorRoomNo": "FF,CS-205",
@@ -494,7 +494,7 @@
   },
   {
     "id": "cse-and-it-i2",
-    "deptId": "cse-and-it",
+    "deptId": "cse",
     "sNo": 2,
     "labClassroomName": "Computer lab #2",
     "floorRoomNo": "FF,CS-206",
@@ -511,7 +511,7 @@
   },
   {
     "id": "cse-and-it-i3",
-    "deptId": "cse-and-it",
+    "deptId": "it",
     "sNo": 3,
     "labClassroomName": "B.Tech. IT 2nd Year",
     "floorRoomNo": "GF, IT-107",
@@ -528,7 +528,7 @@
   },
   {
     "id": "cse-and-it-i4",
-    "deptId": "cse-and-it",
+    "deptId": "cse",
     "sNo": 4,
     "labClassroomName": "B.Tech. CSE-A 2nd Year",
     "floorRoomNo": "GF IT-108",
@@ -545,7 +545,7 @@
   },
   {
     "id": "cse-and-it-i5",
-    "deptId": "cse-and-it",
+    "deptId": "cse",
     "sNo": 5,
     "labClassroomName": "B.Tech. CSE-B 2nd Year",
     "floorRoomNo": "GF IT-109",
@@ -562,7 +562,7 @@
   },
   {
     "id": "cse-and-it-i6",
-    "deptId": "cse-and-it",
+    "deptId": "cse",
     "sNo": 6,
     "labClassroomName": "B.Tech. CSE 3rd Year",
     "floorRoomNo": "SF CSE-303",
@@ -579,7 +579,7 @@
   },
   {
     "id": "cse-and-it-i7",
-    "deptId": "cse-and-it",
+    "deptId": "it",
     "sNo": 7,
     "labClassroomName": "B.Tech. IT 3rd Year",
     "floorRoomNo": "SF CSE-304",
@@ -596,7 +596,7 @@
   },
   {
     "id": "cse-and-it-i8",
-    "deptId": "cse-and-it",
+    "deptId": "cse",
     "sNo": 8,
     "labClassroomName": "B.Tech. AIML&DS 2nd Year",
     "floorRoomNo": "SF CSE-305",
@@ -613,7 +613,7 @@
   },
   {
     "id": "cse-and-it-i9",
-    "deptId": "cse-and-it",
+    "deptId": "cse",
     "sNo": 9,
     "labClassroomName": "B.Tech. CSE 4th Year",
     "floorRoomNo": "SF CSE-306",
@@ -630,7 +630,7 @@
   },
   {
     "id": "cse-and-it-i10",
-    "deptId": "cse-and-it",
+    "deptId": "it",
     "sNo": 10,
     "labClassroomName": "B.Tech. IT 4th Year",
     "floorRoomNo": "SF CSE-306",
@@ -647,7 +647,7 @@
   },
   {
     "id": "cse-and-it-i11",
-    "deptId": "cse-and-it",
+    "deptId": "cse",
     "sNo": 11,
     "labClassroomName": "M.Tech. 1st Year",
     "floorRoomNo": "1st floor,CS-206",
@@ -664,7 +664,7 @@
   },
   {
     "id": "cse-and-it-i12",
-    "deptId": "cse-and-it",
+    "deptId": "cse",
     "sNo": 12,
     "labClassroomName": "M.Tech. 2nd Year",
     "floorRoomNo": "Seminar Room 204",
@@ -698,7 +698,7 @@
   },
   {
     "id": "department-of-electronics-engineering-i1",
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-engineering",
     "sNo": 1,
     "labClassroomName": "Fiber Optics and Photonics lab",
     "floorRoomNo": "GROUND Floor (Ashok Singhal bhavan) ELG-02",
@@ -715,7 +715,7 @@
   },
   {
     "id": "department-of-electronics-engineering-i2",
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-engineering",
     "sNo": 2,
     "labClassroomName": "Microwve Laboratory",
     "floorRoomNo": "First Floor(old building Electronics Engineering )",
@@ -732,7 +732,7 @@
   },
   {
     "id": "department-of-electronics-engineering-i3",
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-engineering",
     "sNo": 3,
     "labClassroomName": "Elctronic Circit Laboratory",
     "floorRoomNo": "First Floor(old building Electronics Engineering )",
@@ -749,7 +749,7 @@
   },
   {
     "id": "department-of-electronics-engineering-i4",
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-engineering",
     "sNo": 4,
     "labClassroomName": "Computer Laboratory",
     "floorRoomNo": "Second Floor(old building Electronics Engineering )",
@@ -766,7 +766,7 @@
   },
   {
     "id": "department-of-electronics-engineering-i5",
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-and-communication-engineering",
     "sNo": 5,
     "labClassroomName": "Communication Laboratory",
     "floorRoomNo": "First Floor(old building Electronics Engineering )",
@@ -783,7 +783,7 @@
   },
   {
     "id": "department-of-electronics-engineering-i6",
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-engineering",
     "sNo": 6,
     "labClassroomName": "M.Tech. Laboratory",
     "floorRoomNo": "First Floor (Ashok Singhal bhavan) ELF-01",
@@ -800,7 +800,7 @@
   },
   {
     "id": "department-of-electronics-engineering-i7",
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-and-communication-engineering",
     "sNo": 7,
     "labClassroomName": "Instrumentation Laboratory/Basic Electronics Laboratory",
     "floorRoomNo": "First Floor (Ashok Singhal bhavan) ELF-03",
@@ -817,7 +817,7 @@
   },
   {
     "id": "department-of-electronics-engineering-i8",
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-engineering",
     "sNo": 8,
     "labClassroomName": "Sensor Transducer Laboratory/ Control System Laoratory",
     "floorRoomNo": "First Floor (Ashok Singhal bhavan) ELF-02",
@@ -834,7 +834,7 @@
   },
   {
     "id": "department-of-electronics-engineering-i9",
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-engineering",
     "sNo": 9,
     "labClassroomName": "Lecture Hall",
     "floorRoomNo": "LH-7",
@@ -851,7 +851,7 @@
   },
   {
     "id": "department-of-electronics-engineering-i10",
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-and-communication-engineering",
     "sNo": 10,
     "labClassroomName": "Lecture Hall",
     "floorRoomNo": "LH-6",
@@ -868,7 +868,7 @@
   },
   {
     "id": "department-of-electronics-engineering-i11",
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-and-communication-engineering",
     "sNo": 11,
     "labClassroomName": "Lecture Hall",
     "floorRoomNo": "LH-5",
@@ -885,7 +885,7 @@
   },
   {
     "id": "department-of-electronics-engineering-i12",
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-and-communication-engineering",
     "sNo": 12,
     "labClassroomName": "Lecture Hall",
     "floorRoomNo": "LH-4",
@@ -902,7 +902,7 @@
   },
   {
     "id": "department-of-electronics-engineering-i13",
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-engineering",
     "sNo": 13,
     "labClassroomName": "Lecture Hall",
     "floorRoomNo": "LH-8",
@@ -919,7 +919,7 @@
   },
   {
     "id": "department-of-electronics-engineering-i14",
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-engineering",
     "sNo": 14,
     "labClassroomName": "Lecture Hall",
     "floorRoomNo": "LH-9",

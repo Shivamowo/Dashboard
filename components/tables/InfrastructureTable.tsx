@@ -6,6 +6,7 @@ import { Pencil } from "lucide-react";
 import DataTable, { type Column, type FilterDef } from "@/components/DataTable";
 import { BoolBadge, PendingBadge, ProgressBar, StatusBadge } from "@/components/ui";
 import { utilisationFlag, type Infrastructure } from "@/data";
+import { roomType } from "@/lib/labels";
 
 export default function InfrastructureTable({
   rows,
@@ -13,6 +14,8 @@ export default function InfrastructureTable({
   showDept = false,
   pendingIds,
   editHrefBase,
+  initialSortKey = "name",
+  initialSortDir = "asc",
 }: {
   rows: Infrastructure[];
   deptNames?: Record<string, string>;
@@ -21,6 +24,8 @@ export default function InfrastructureTable({
   pendingIds?: Set<string>;
   /** When set, adds an Edit column linking to `${editHrefBase}/${id}/edit`. */
   editHrefBase?: string;
+  initialSortKey?: string;
+  initialSortDir?: "asc" | "desc";
 }) {
   const columns: Column<Infrastructure>[] = [
     {
@@ -35,7 +40,9 @@ export default function InfrastructureTable({
       ),
       className: "min-w-[16rem] font-medium text-ink-900",
       wrap: true,
+      primary: true,
     },
+    { key: "type", header: "Type", value: (r) => roomType(r.labClassroomName), primary: true },
   ];
 
   if (showDept) {
@@ -84,6 +91,7 @@ export default function InfrastructureTable({
       value: (r) => r.utilisationPct,
       render: (r) => pctBar(r.utilisationPct),
       className: "min-w-[9rem]",
+      primary: true,
     },
     {
       key: "flag",
@@ -168,7 +176,8 @@ export default function InfrastructureTable({
       filters={filters}
       searchable
       searchPlaceholder="Room, in-charge, equipment…"
-      initialSortKey="name"
+      initialSortKey={initialSortKey}
+      initialSortDir={initialSortDir}
       caption="Laboratories and classrooms with weekly allocation and utilisation"
       emptyMessage="No rooms have been reported yet. They appear here once the department files its infrastructure sheet."
       stickyFirstColumn

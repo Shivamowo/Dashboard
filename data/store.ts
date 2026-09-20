@@ -43,10 +43,10 @@ const deptIdFor = (...preferred: string[]): string | undefined => {
 
 /** A department that actually has faculty, so the Faculty demo view is populated. */
 const populatedDeptId = (): string | undefined =>
-  departments.find((d) => facultyRecords.some((f) => f.deptId === d.id))?.id ?? departments[0]?.id;
+  departments.find((d) => facultyRecords.some((f) => f.departments.includes(d.id)))?.id ?? departments[0]?.id;
 
 const firstFacultyIdIn = (deptId: string | undefined): string | undefined =>
-  deptId ? facultyRecords.find((f) => f.deptId === deptId)?.id : undefined;
+  deptId ? facultyRecords.find((f) => f.departments.includes(deptId))?.id : undefined;
 
 /**
  * IN-MEMORY DEMO STORE for users and the edit/approval workflow. Mutates the

@@ -128,3 +128,13 @@ export function pairValue(
   if (a == null && b == null) return null;
   return `${asText(a, "—")} / ${asText(b, "—")}`;
 }
+
+/** "adm / intake" — each half falls back to the gap marker independently. */
+export function admittedOfIntake(admitted: number | null | undefined, intake: number | null | undefined): ReactNode {
+  if (absent(admitted) && absent(intake)) return <NotProvided />;
+  return (
+    <span className="tnum">
+      {absent(admitted) ? <NotProvided /> : admitted} / {absent(intake) ? <NotProvided /> : intake}
+    </span>
+  );
+}

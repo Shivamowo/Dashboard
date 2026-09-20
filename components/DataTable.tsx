@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState, type ReactNode } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ArrowDown, ArrowUp, ChevronsUpDown, Search, SlidersHorizontal } from "lucide-react";
 import { EmptyState } from "./ui";
@@ -22,6 +23,13 @@ export interface Column<T> {
   wrap?: boolean;
   /** Header group shown above related columns (e.g. "Sanctioned intake"). */
   group?: string;
+  /**
+   * Below `md` each row is a stacked card showing up to 3 primary fields; the
+   * rest sit behind a "Details" expander. Columns flagged `primary` are shown
+   * first (in column order); if fewer than 3 are flagged, the leading columns
+   * fill the remainder.
+   */
+  primary?: boolean;
 }
 
 export interface FilterDef<T> {
@@ -146,6 +154,12 @@ export default function DataTable<T>({
 
   const hasControls = searchable || filters.length > 0;
 
+  // Mobile card fields: up to 3 primary columns, the rest behind "Details".
+  const dataCols = columns.filter((c) => c.sortable !== false || c.key !== "edit");
+  const flagged = dataCols.filter((c) => c.primary);
+  const primaryCols = [...flagged, ...dataCols.filter((c) => !c.primary)].slice(0, 3);
+  const detailCols = columns.filter((c) => !primaryCols.includes(c));
+
   /* Source data is genuinely empty — no filter bar, just an invitation. */
   if (rows.length === 0) {
     return <EmptyState title={emptyTitle} message={emptyMessage} />;
@@ -154,9 +168,9 @@ export default function DataTable<T>({
   return (
     <div>
       {hasControls ? (
-        <div className="mb-4 flex flex-col gap-3 border-b border-ink-200 pb-4 sm:flex-row sm:flex-wrap sm:items-end">
+        <div className="mb-4 grid grid-cols-2 gap-3 border-b border-ink-200 pb-4 sm:flex sm:flex-row sm:flex-wrap sm:items-end">
           {searchable ? (
-            <div className="sm:w-64">
+            <div className="col-span-2 sm:w-64">
               <label className="field-label" htmlFor="dt-search">
                 Search
               </label>
@@ -198,7 +212,7 @@ export default function DataTable<T>({
             </div>
           ))}
 
-          <div className="flex items-center gap-3 sm:ml-auto sm:pb-2">
+          <div className="col-span-2 flex items-center gap-3 sm:ml-auto sm:pb-2">
             <p className="text-micro tnum text-ink-500" aria-live="polite">
               Showing {processed.length} of {rows.length}
             </p>
@@ -223,7 +237,94 @@ export default function DataTable<T>({
           }
         />
       ) : (
-        <div className="table-scroll rounded-panel border border-ink-200">
+        <>
+        {/* Below md: stacked cards instead of a horizontally scrolling table. */}
+        <div className="md:hidden">
+          <div className="mb-3 flex items-end gap-2">
+            <div className="min-w-0 flex-1">
+              <label className="field-label" htmlFor="dt-m-sort">
+                Sort by
+              </label>
+              <select
+                id="dt-m-sort"
+                className="input mt-1.5"
+                value={sortKey ?? ""}
+                onChange={(e) => {
+                  setSortKey(e.target.value || undefined);
+                  setSortDir("asc");
+                }}
+              >
+                <option value="">Default order</option>
+                {columns
+                  .filter((c) => c.sortable !== false)
+                  .map((c) => (
+                    <option key={c.key} value={c.key}>
+                      {c.header}
+                    </option>
+                  ))}
+              </select>
+            </div>
+            <button
+              type="button"
+              className="btn-quiet shrink-0"
+              onClick={() => setSortDir((d) => (d === "asc" ? "desc" : "asc"))}
+              aria-label={sortDir === "asc" ? "Ascending — switch to descending" : "Descending — switch to ascending"}
+            >
+              {sortDir === "asc" ? <ArrowUp aria-hidden className="h-3.5 w-3.5" /> : <ArrowDown aria-hidden className="h-3.5 w-3.5" />}
+              {sortDir === "asc" ? "Asc" : "Desc"}
+            </button>
+          </div>
+          <ul className="space-y-3">
+            {visible.map((row) => {
+              const href = rowHref?.(row);
+              const [title, ...rest] = primaryCols;
+              const cell = (c: Column<T>) => (c.render ? c.render(row) : String(c.value(row) ?? "—"));
+              return (
+                <li key={rowKey(row)} className="panel min-w-0 px-4 py-3">
+                  <div className="min-w-0 break-words font-medium text-ink-900">
+                    {href ? (
+                      <Link
+                        href={href}
+                        aria-label={rowActionLabel?.(row)}
+                        className="rounded-control focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-pink"
+                      >
+                        {cell(title)}
+                      </Link>
+                    ) : (
+                      cell(title)
+                    )}
+                  </div>
+                  <dl className="mt-2 grid grid-cols-1 gap-y-1.5 text-meta">
+                    {rest.map((c) => (
+                      <div key={c.key} className="flex items-baseline justify-between gap-3">
+                        <dt className="shrink-0 text-micro text-ink-500">{c.header}</dt>
+                        <dd className="min-w-0 break-words text-right text-ink-800">{cell(c)}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                  {detailCols.length > 0 ? (
+                    <details className="group mt-2 border-t border-ink-100 pt-2">
+                      <summary className="btn-link cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden">
+                        <span className="group-open:hidden">Details</span>
+                        <span className="hidden group-open:inline">Hide details</span>
+                      </summary>
+                      <dl className="mt-2 grid grid-cols-1 gap-y-2 text-meta">
+                        {detailCols.map((c) => (
+                          <div key={c.key} className="min-w-0">
+                            <dt className="text-micro text-ink-500">{c.header}</dt>
+                            <dd className="break-words text-ink-800">{cell(c)}</dd>
+                          </div>
+                        ))}
+                      </dl>
+                    </details>
+                  ) : null}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        <div className="table-scroll hidden rounded-panel border border-ink-200 md:block">
           <table className="w-full min-w-full border-collapse">
             {caption ? <caption className="sr-only">{caption}</caption> : null}
             <thead>
@@ -337,6 +438,7 @@ export default function DataTable<T>({
             </tbody>
           </table>
         </div>
+        </>
       )}
 
       {pageSize && processed.length > pageSize ? (

@@ -3,15 +3,15 @@
   "sourceDir": "excel-data",
   "workbooks": 23,
   "totals": {
-    "departments": 23,
+    "departments": 29,
     "programs": 50,
-    "faculty": 149,
-    "facultyResearch": 149,
+    "faculty": 148,
+    "facultyResearch": 148,
     "facultyProjects": 54,
     "infrastructure": 154,
-    "hodSubmissions": 23,
-    "facultyTargetSummaries": 23,
-    "facultyTargets": 121
+    "hodSubmissions": 29,
+    "facultyTargetSummaries": 29,
+    "facultyTargets": 120
   },
   "anomalies": [
     {
@@ -2389,5 +2389,6 @@
         }
       }
     }
-  ]
+  ],
+  "note": "Combined workbooks split into individual departments; faculty deduped (see dedupe-log.json)."
 }

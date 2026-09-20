@@ -41,22 +41,28 @@ export default function RegistrarDashboard() {
 
       <div id="kpis" className="scroll-mt-6">
         <KpiRow>
-          <KpiCard label="Departments" value={uni.deptCount} icon={Building2} />
-          <KpiCard label="Programmes" value={uni.programCount} icon={BookOpen} />
+          <KpiCard href="/registrar/departments" destination="the department list" label="Departments" value={uni.deptCount} icon={Building2} />
+          <KpiCard href="/registrar/programs" destination="the programme list" label="Programmes" value={uni.programCount} icon={BookOpen} />
           <KpiCard
+            href="/registrar/faculty"
+            destination="the faculty register"
             label="Faculty on record"
             value={uni.facultyCount}
             hint={`${uni.phdCount} hold a doctorate`}
             icon={Users}
           />
-          <KpiCard label="Faculty with PhD" value={uni.phdPct} unit="%" tone="seal" icon={GraduationCap} />
+          <KpiCard href="/registrar/faculty?qualification=phd" destination="faculty with a PhD" label="Faculty with PhD" value={uni.phdPct} unit="%" tone="seal" icon={GraduationCap} />
           <KpiCard
+            href="/registrar/programs?view=admissions"
+            destination="admissions against intake by programme"
             label="Admitted against intake"
             value={`${uni.admitted2026} / ${uni.sanctionedIntake2026}`}
             hint={`${uni.fillRatePct}% of 2026 seats filled`}
             icon={TrendingUp}
           />
           <KpiCard
+            href="#compliance"
+            destination="the HoD compliance table"
             label="Submissions certified"
             value={`${received} / ${submissions.length}`}
             tone={received === submissions.length ? "positive" : "caution"}

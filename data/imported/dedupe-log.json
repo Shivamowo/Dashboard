@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-09-20T15:32:30.939Z",
+  "rule": "employeeId, else normalised name",
+  "collisions": [
+    {
+      "key": "nm:pramod kumar",
+      "kept": "department-of-law-f10",
+      "merged": "rb-chemistry-f1",
+      "name": "Dr. Pramod Kumar",
+      "departments": [
+        "department-of-law",
+        "rb-chemistry"
+      ]
+    }
+  ]
+}

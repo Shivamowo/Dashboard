@@ -24,6 +24,8 @@ import {
   type Role,
 } from "@/data";
 import { getSessionUser } from "./session";
+import { createFaculty, FacultyValidationError } from "./data/faculty";
+import type { FacultyErrors, FacultyInput } from "./data/faculty-schema";
 
 async function requireUser(roles: Role[]) {
   const user = await getSessionUser();
@@ -283,7 +285,7 @@ export async function submitHodOwnSubmission(form: FormData) {
 
 function requireHodOwnsFaculty(user: { role: Role; deptId?: string }, facultyId: string) {
   const f = facultyById(facultyId);
-  if (!f || f.deptId !== user.deptId) throw new Error("That faculty member is outside your department.");
+  if (!f || !f.departments.includes(user.deptId ?? "")) throw new Error("That faculty member is outside your department.");
   return f;
 }
 
@@ -424,6 +426,22 @@ export async function adminUpdateInfra(infraId: string, form: FormData) {
   updateInfrastructureRecord(infraId, readInfra(form));
   revalidatePath("/admin/infrastructure");
   redirect("/admin/infrastructure");
+}
+
+export type AddFacultyResult = { ok: true; id: string } | { ok: false; errors: FacultyErrors };
+
+/** Admin "Add Faculty". All writes go through lib/data/faculty.ts. */
+export async function adminAddFaculty(input: FacultyInput): Promise<AddFacultyResult> {
+  await requireUser(["admin"]);
+  try {
+    const rec = await createFaculty(input);
+    revalidatePath("/admin");
+    revalidatePath("/admin/faculty");
+    return { ok: true, id: rec.id };
+  } catch (e) {
+    if (e instanceof FacultyValidationError) return { ok: false, errors: e.errors };
+    throw e;
+  }
 }
 
 export async function adminApprove(id: string, form: FormData) {

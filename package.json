@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "import:excel": "tsx scripts/import-excel-data.ts",
+    "import:excel": "tsx scripts/import-excel-data.ts && tsx scripts/split-departments.ts",
     "dev:mock": "VBSPU_DATA_SOURCE=mock next dev",
     "start:mock": "VBSPU_DATA_SOURCE=mock next start"
   },

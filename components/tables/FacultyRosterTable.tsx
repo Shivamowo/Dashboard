@@ -38,6 +38,7 @@ export default function FacultyRosterTable({
         </span>
       ),
       className: "min-w-[14rem]",
+      primary: true,
     },
   ];
 
@@ -47,11 +48,12 @@ export default function FacultyRosterTable({
       header: "Department",
       value: (r) => r.deptName,
       className: "min-w-[14rem]",
+      primary: true,
     });
   }
 
   columns.push(
-    { key: "designation", header: "Designation", value: (r) => r.designation },
+    { key: "designation", header: "Designation", value: (r) => r.designation, primary: true },
     { key: "appointment", header: "Appointment Type", value: (r) => r.appointmentType },
     { key: "doj", header: "Date of Joining", value: (r) => r.dateOfJoining },
     {
@@ -137,7 +139,7 @@ export default function FacultyRosterTable({
       key: "dept",
       label: "Department",
       options: Object.entries(deptNames).map(([value, label]) => ({ value, label })),
-      match: (r, v) => r.deptId === v,
+      match: (r, v) => r.deptIds.includes(v),
     });
   }
   filters.push(

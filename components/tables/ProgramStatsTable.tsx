@@ -3,7 +3,8 @@
 import DataTable, { type Column, type FilterDef } from "@/components/DataTable";
 import { BoolBadge } from "@/components/ui";
 import { addNullable, type Program } from "@/data";
-import { delta, inr, ratioBar, slashed, text } from "@/components/cells";
+import { admittedOfIntake, delta, inr, ratioBar, slashed, text } from "@/components/cells";
+import { programLevel } from "@/lib/labels";
 
 export type ProgramStatsRow = Program & { deptName: string };
 
@@ -25,6 +26,22 @@ export default function ProgramStatsTable({
       value: (r) => r.name,
       className: "min-w-[18rem] font-medium text-ink-900",
       wrap: true,
+      primary: true,
+    },
+    {
+      key: "level",
+      header: "Level",
+      value: (r) => programLevel(r.name),
+      render: (r) => text(programLevel(r.name)),
+      primary: true,
+    },
+    {
+      key: "admInt26",
+      header: "Admitted / Intake 2026",
+      value: (r) => r.admittedByYear.y2026,
+      render: (r) => admittedOfIntake(r.admittedByYear.y2026, r.sanctionedIntakeByYear.y2026),
+      align: "right",
+      primary: true,
     },
     { key: "dept", header: "Department", value: (r) => r.deptName, className: "min-w-[14rem]" },
     { key: "year", header: "Year of Commencement", value: (r) => r.yearOfCommencement, align: "right" },

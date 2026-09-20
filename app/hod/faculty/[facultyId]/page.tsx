@@ -18,7 +18,7 @@ export default async function HodFacultyProfile({ params }: { params: Promise<{ 
   ];
 
   // A head of department sees only their own department's records.
-  if (f.deptId !== user.deptId) {
+  if (!f.departments.includes(user.deptId!)) {
     return (
       <div>
         <PageHeading

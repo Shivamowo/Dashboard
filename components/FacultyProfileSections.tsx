@@ -1,4 +1,5 @@
 import { BadgeIndianRupee, ExternalLink, FlaskConical, Target, UserRound } from "lucide-react";
+import { deptNamesOf } from "@/lib/rows";
 import { addNullable } from "@/data";
 import { joinMeta, num, pctBar } from "@/components/cells";
 import { facultyById, departmentById, projectsOf, researchOf, targetOf } from "@/data";
@@ -35,7 +36,7 @@ export default function FacultyProfileSections({ facultyId }: { facultyId: strin
       />
     );
 
-  const dept = departmentById(f.deptId);
+    const dept = departmentById(f.primaryDepartment);
   const research = researchOf(f.id);
   const projects = projectsOf(f.id);
   const target = targetOf(f.id);
@@ -63,7 +64,7 @@ export default function FacultyProfileSections({ facultyId }: { facultyId: strin
       <div id="identity" className="scroll-mt-6">
         <ProfileCard
           name={f.name}
-          subtitle={joinMeta([f.designation, dept?.name ?? f.deptId])}
+          subtitle={joinMeta([f.designation, deptNamesOf(f)])}
           badges={
             <>
               {f.appointmentType ? <Badge tone="seal">{f.appointmentType}</Badge> : null}
@@ -77,6 +78,7 @@ export default function FacultyProfileSections({ facultyId }: { facultyId: strin
             { label: "PhD", value: <BoolBadge value={f.hasPhd} no="Not held" /> },
             { label: "Programme(s) for which Appointed", value: f.programmesAppointedFor },
             { label: "Additional Responsibility", value: f.additionalResponsibility },
+            { label: "Department(s)", value: deptNamesOf(f) },
             { label: "Department Dean", value: dept?.deanName },
             { label: "Head of Department", value: joinMeta([dept?.hodName, dept?.hodContact]) },
             { label: "Reporting Period", value: dept?.reportingPeriod },
@@ -423,7 +425,7 @@ export default function FacultyProfileSections({ facultyId }: { facultyId: strin
       >
         <FieldGrid cols={4}>
           <Field label="Faculty ID" value={f.id} />
-          <Field label="Department" value={dept?.name} />
+          <Field label="Department(s)" value={deptNamesOf(f)} />
           <Field label="Name of Faculty Member" value={f.name} />
           <Field label="Designation" value={f.designation} />
           <Field label="Appointment Type" value={f.appointmentType} />

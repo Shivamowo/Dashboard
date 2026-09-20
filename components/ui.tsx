@@ -62,7 +62,13 @@ export function KpiCard({
   hint,
   tone = "neutral",
   icon: Icon,
+  href,
+  destination,
 }: {
+  /** Makes the whole card a link to the data behind it. */
+  href?: string;
+  /** Plain-language destination for the link's aria-label, e.g. "the faculty register". */
+  destination?: string;
   label: string;
   /** null means the figure was never reported — shown as "Not provided". */
   value: string | number | null | undefined;
@@ -74,8 +80,8 @@ export function KpiCard({
   // A KPI with nothing behind it must not show "0" — that reads as a measured
   // result. The label drops to the muted gap marker and the unit is suppressed.
   const missing = value === null || value === undefined || value === "";
-  return (
-    <div className="panel flex flex-col justify-between gap-3 px-4 py-4 transition-colors hover:border-ink-300">
+  const body = (
+    <>
       <div className="flex items-start justify-between gap-2">
         <p className="text-micro font-medium text-ink-500">{label}</p>
         {Icon ? <Icon aria-hidden className="h-4 w-4 shrink-0 text-ink-300" /> : null}
@@ -99,13 +105,31 @@ export function KpiCard({
         </p>
         {hint ? <p className="mt-2 text-micro leading-snug text-ink-500">{hint}</p> : null}
       </div>
-    </div>
+    </>
+  );
+
+  if (!href)
+    return (
+      <div className="panel flex flex-col justify-between gap-3 px-4 py-4 transition-colors hover:border-ink-300">
+        {body}
+      </div>
+    );
+
+  const shown = missing ? "not provided" : `${value}${unit ? " " + unit : ""}`;
+  return (
+    <Link
+      href={href}
+      aria-label={`${label}: ${shown}. Open ${destination ?? "the data behind this figure"}.`}
+      className="panel group flex cursor-pointer flex-col justify-between gap-3 px-4 py-4 transition duration-150 hover:-translate-y-0.5 hover:border-brand-pink hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-pink focus-visible:ring-offset-2 motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+    >
+      {body}
+    </Link>
   );
 }
 
 export function KpiRow({ children }: { children: ReactNode }) {
   return (
-    <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-6">{children}</div>
+    <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">{children}</div>
   );
 }
 

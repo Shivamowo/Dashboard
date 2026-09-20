@@ -3354,32 +3354,6 @@
     "yearly": []
   },
   {
-    "id": "rb-chemistry-f1-res",
-    "facultyId": "rb-chemistry-f1",
-    "journalPublications": {
-      "sciScieSsci": 9,
-      "scopusUgcCare": null,
-      "other": 1
-    },
-    "conferencePublications": {
-      "international": 1,
-      "national": 2
-    },
-    "hIndex": 5,
-    "i10Index": 4,
-    "googleScholarOrcidLink": "https://orcid.org/0009-0007-6173-1973",
-    "patents": {
-      "filed": null,
-      "published": null,
-      "granted": null
-    },
-    "phdSupervision": {
-      "registered": 3,
-      "awarded": 2
-    },
-    "yearly": []
-  },
-  {
     "id": "rb-chemistry-f2-res",
     "facultyId": "rb-chemistry-f2",
     "journalPublications": {

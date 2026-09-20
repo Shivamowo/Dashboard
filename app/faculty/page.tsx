@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { deptNamesOf } from "@/lib/rows";
 import { Pencil } from "lucide-react";
 import { departmentById, facultyById, latestOnboardingForUser } from "@/data";
 import { requireSessionUser } from "@/lib/session";
@@ -23,14 +24,13 @@ export default async function FacultySelfView() {
   }
 
   const f = facultyById(user.facultyId)!;
-  const dept = departmentById(f.deptId);
-
+  
   return (
     <div>
       <PageHeading
         crumbs={[{ label: "My record" }]}
         title={f.name}
-        subtitle={`${f.designation} · ${dept?.name ?? ""}. This view shows your own record only.`}
+        subtitle={`${f.designation} · ${deptNamesOf(f)}. This view shows your own record only.`}
         meta={
           <span className="flex items-center gap-2">
             <Badge tone="seal">{f.appointmentType}</Badge>

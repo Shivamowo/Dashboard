@@ -165,7 +165,8 @@ function buildAll() {
 
       facultyRows.push({
         id: fid,
-        deptId,
+        departments: [deptId],
+        primaryDepartment: deptId,
         sNo: i + 1,
         name: s.name,
         designation: s.designation,
@@ -407,7 +408,13 @@ export const facultyResearch: FacultyResearch[] = built.researchRows;
 export const facultyProjects: FacultyProject[] = built.projectRows;
 export const facultyTargets: FacultyTarget[] = built.targetRows;
 
-export const facultyByDept = (deptId: string) => faculty.filter((f) => f.deptId === deptId);
+/**
+ * Faculty serving a department, INCLUDING people shared with other departments.
+ * A shared person appears in full in every department they serve, so summing
+ * per-department counts exceeds the distinct university total — intended.
+ */
+export const facultyByDept = (deptId: string) =>
+  faculty.filter((f) => f.departments.includes(deptId));
 export const facultyById = (id: string) => faculty.find((f) => f.id === id);
 export const researchOf = (facultyId: string) =>
   facultyResearch.find((x) => x.facultyId === facultyId);
@@ -422,17 +429,26 @@ export const targetOf = (facultyId: string) =>
  * see data/store.ts for why that is fine in the current phase.
  * ------------------------------------------------------------------------ */
 
-export type FacultyProfileEdit = Omit<Faculty, "id" | "deptId" | "sNo">;
+export type FacultyProfileEdit = Omit<Faculty, "id" | "departments" | "primaryDepartment" | "sNo">;
 export type FacultyResearchEdit = Omit<FacultyResearch, "id" | "facultyId" | "yearly">;
 export type FacultyTargetEdit = Omit<FacultyTarget, "id" | "facultyId" | "sNo">;
 export type FacultyProjectEdit = Omit<FacultyProject, "id" | "facultyId">;
 
 /** Onboarding: creates the Faculty record and returns its new id. */
-export function addFacultyRecord(deptId: string, data: FacultyProfileEdit): string {
-  const id = deptId + "-f" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
-  const sNo = facultyByDept(deptId).length + 1;
-  faculty.push({ id, deptId, sNo, ...data });
+export function addFacultyRecord(deptIds: string | string[], data: FacultyProfileEdit): string {
+  const departments = Array.isArray(deptIds) ? deptIds : [deptIds];
+  const primaryDepartment = departments[0];
+  const id = primaryDepartment + "-f" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+  const sNo = facultyByDept(primaryDepartment).length + 1;
+  faculty.push({ id, departments, primaryDepartment, sNo, ...data });
   return id;
+}
+
+export function removeFacultyRecord(id: string): boolean {
+  const i = faculty.findIndex((f) => f.id === id);
+  if (i < 0) return false;
+  faculty.splice(i, 1);
+  return true;
 }
 
 export function updateFacultyRecord(id: string, data: FacultyProfileEdit) {

@@ -80,31 +80,41 @@ export default function VcDashboard() {
       <div id="kpis" className="scroll-mt-6">
         <KpiRow>
           <KpiCard
+            href="/vc/departments"
+            destination="the department list"
             label="Departments"
             value={uni.deptCount}
             hint={`${uni.programCount} programmes running`}
             icon={Building2}
           />
           <KpiCard
+            href="/vc/faculty"
+            destination="the faculty register"
             label="Faculty on record"
             value={uni.facultyCount}
             hint={`${uni.phdCount} hold a doctorate`}
             icon={Users}
           />
-          <KpiCard label="Faculty with PhD" value={uni.phdPct} unit="%" tone="seal" icon={GraduationCap} />
+          <KpiCard href="/vc/faculty?qualification=phd" destination="faculty with a PhD" label="Faculty with PhD" value={uni.phdPct} unit="%" tone="seal" icon={GraduationCap} />
           <KpiCard
+            href="/vc/programs?view=admissions"
+            destination="admissions against intake by programme"
             label="Admitted against intake"
             value={`${uni.admitted2026} / ${uni.sanctionedIntake2026}`}
             hint={`${uni.fillRatePct}% of 2026 seats filled`}
             icon={TrendingUp}
           />
           <KpiCard
+            href="/vc/publications"
+            destination="publications by faculty"
             label="Publications reported"
             value={uni.totalPublications}
             hint={`${uni.journalPublications} journal, ${uni.conferencePublications} conference`}
             icon={FlaskConical}
           />
           <KpiCard
+            href="/vc/infrastructure?view=utilisation"
+            destination="room utilisation by room"
             label="Room utilisation"
             value={uni.avgUtilisation}
             unit="%"

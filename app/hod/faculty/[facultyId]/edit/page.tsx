@@ -42,7 +42,7 @@ export default async function HodFacultyEditPage({
   const dept = departmentById(user.deptId!)!;
   const crumbRoot = [{ label: `Head of Department · ${dept.shortName}`, href: "/hod" }];
 
-  if (f.deptId !== user.deptId) {
+  if (!f.departments.includes(user.deptId!)) {
     return (
       <div>
         <PageHeading crumbs={[...crumbRoot, { label: "Record unavailable" }]} title="Outside your department" />

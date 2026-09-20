@@ -548,7 +548,8 @@ function parseWorkbook(file: string): Parsed {
       currentFacultyId = id;
       faculty.push({
         id,
-        deptId,
+        departments: [deptId],
+        primaryDepartment: deptId,
         sNo: int(row[0]) ?? facultySeq,
         name,
         designation: normaliseDesignation(str(row[2])),
@@ -948,7 +949,8 @@ function retargetDept(p: Parsed, newId: string) {
     const next = swap(f.id);
     idMap.set(f.id, next);
     f.id = next;
-    f.deptId = newId;
+    f.departments = [newId];
+    f.primaryDepartment = newId;
   }
   for (const r of p.research) {
     r.id = swap(r.id);
@@ -1114,7 +1116,7 @@ TRUNCATE faculty_targets, faculty_target_summaries, hod_submissions, infrastruct
     ],
     all.faculty.map((f) => [
       f.id,
-      f.deptId,
+      f.primaryDepartment,
       f.sNo,
       f.name,
       f.designation,
@@ -1125,6 +1127,12 @@ TRUNCATE faculty_targets, faculty_target_summaries, hod_submissions, infrastruct
       f.teachingLoadHrsPerWeek,
       f.additionalResponsibility,
     ])
+  );
+
+  out += insertRows(
+    "faculty_departments",
+    ["faculty_id", "dept_id"],
+    all.faculty.flatMap((f) => f.departments.map((d) => [f.id, d]))
   );
 
   out += insertRows(

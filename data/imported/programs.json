@@ -133,7 +133,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-p1",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-economics",
     "sNo": 1,
     "name": "MBA(Business Economics)",
     "yearOfCommencement": 1999,
@@ -166,7 +166,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-p2",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-economics",
     "sNo": 2,
     "name": "B.COM(Hons)",
     "yearOfCommencement": 2019,
@@ -199,7 +199,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-p3",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-management",
     "sNo": 3,
     "name": "MBA",
     "yearOfCommencement": 1990,
@@ -232,7 +232,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-p4",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-management",
     "sNo": 4,
     "name": "MBA(Agri-Business)",
     "yearOfCommencement": 2003,
@@ -265,7 +265,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-p5",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-management",
     "sNo": 5,
     "name": "MBA(E-Commerce)",
     "yearOfCommencement": 2003,
@@ -298,7 +298,7 @@
   },
   {
     "id": "department-of-business-economics-and-department-p6",
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "business-management",
     "sNo": 6,
     "name": "BBA",
     "yearOfCommencement": 2023,
@@ -331,7 +331,7 @@
   },
   {
     "id": "cse-and-it-p1",
-    "deptId": "cse-and-it",
+    "deptId": "cse",
     "sNo": 1,
     "name": "B.TECH(CSE)",
     "yearOfCommencement": 1997,
@@ -364,7 +364,7 @@
   },
   {
     "id": "cse-and-it-p2",
-    "deptId": "cse-and-it",
+    "deptId": "it",
     "sNo": 2,
     "name": "B.TECH(IT)",
     "yearOfCommencement": 2001,
@@ -397,7 +397,7 @@
   },
   {
     "id": "cse-and-it-p3",
-    "deptId": "cse-and-it",
+    "deptId": "cse",
     "sNo": 3,
     "name": "B.TECH(AI/ML)",
     "yearOfCommencement": 2025,
@@ -430,7 +430,7 @@
   },
   {
     "id": "cse-and-it-p4",
-    "deptId": "cse-and-it",
+    "deptId": "cse",
     "sNo": 4,
     "name": "B.TECH(DATA SCIENCE)",
     "yearOfCommencement": 2025,
@@ -463,7 +463,7 @@
   },
   {
     "id": "cse-and-it-p5",
-    "deptId": "cse-and-it",
+    "deptId": "cse",
     "sNo": 5,
     "name": "M.TECH(CSE)",
     "yearOfCommencement": 2019,
@@ -496,7 +496,7 @@
   },
   {
     "id": "cse-and-it-p6",
-    "deptId": "cse-and-it",
+    "deptId": "cse",
     "sNo": 6,
     "name": "PHD(CSE)",
     "yearOfCommencement": 2018,
@@ -661,7 +661,7 @@
   },
   {
     "id": "department-of-electronics-engineering-p1",
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-engineering",
     "sNo": 1,
     "name": "B.Tech Electronics Engineering",
     "yearOfCommencement": 1997,
@@ -694,7 +694,7 @@
   },
   {
     "id": "department-of-electronics-engineering-p2",
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-and-communication-engineering",
     "sNo": 2,
     "name": "B.Tech. Electronics and Communication Engineering",
     "yearOfCommencement": 2002,
@@ -727,7 +727,7 @@
   },
   {
     "id": "department-of-electronics-engineering-p3",
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-engineering",
     "sNo": 3,
     "name": "B.Tech. Electronics and Instrumentation Engineering",
     "yearOfCommencement": 2002,
@@ -760,7 +760,7 @@
   },
   {
     "id": "department-of-electronics-engineering-p4",
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-and-communication-engineering",
     "sNo": 4,
     "name": "M.Tech. Communication Engineering",
     "yearOfCommencement": 2019,
@@ -793,7 +793,7 @@
   },
   {
     "id": "department-of-electronics-engineering-p5",
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-engineering",
     "sNo": 5,
     "name": "Ph.D. Electronics Engineering",
     "yearOfCommencement": 2019,
@@ -826,7 +826,7 @@
   },
   {
     "id": "department-of-electronics-engineering-p6",
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-engineering",
     "sNo": 6,
     "name": "B.Tech Electronics Engineering with specialization in AI/ML",
     "yearOfCommencement": 2025,

@@ -38,57 +38,152 @@
     "status": "Partial"
   },
   {
-    "deptId": "biotechnology-microbiology-biochemistry",
+    "deptId": "biotechnology",
     "mobileContact": null,
     "dateOfSubmission": null,
     "snapshot": {
-      "noOfProgrammes": 0,
-      "totalFacultyReported": 0,
-      "totalSanctionedIntake2026": 0,
-      "facultyWithPhd": 0,
-      "totalStudentsAdmitted2026": 0,
-      "labsClassroomsReported": 0,
-      "programmesWithNepAlignment": 0,
-      "digitalSmartBoardAvailable": 0,
-      "projectorAvailable": 0
+      "noOfProgrammes": null,
+      "totalFacultyReported": null,
+      "totalSanctionedIntake2026": null,
+      "facultyWithPhd": null,
+      "totalStudentsAdmitted2026": null,
+      "labsClassroomsReported": null,
+      "programmesWithNepAlignment": null,
+      "digitalSmartBoardAvailable": null,
+      "projectorAvailable": null
     },
     "certificationSignedBy": null,
     "certificationDate": null,
     "status": "Partial"
   },
   {
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "microbiology",
+    "mobileContact": null,
+    "dateOfSubmission": null,
+    "snapshot": {
+      "noOfProgrammes": null,
+      "totalFacultyReported": null,
+      "totalSanctionedIntake2026": null,
+      "facultyWithPhd": null,
+      "totalStudentsAdmitted2026": null,
+      "labsClassroomsReported": null,
+      "programmesWithNepAlignment": null,
+      "digitalSmartBoardAvailable": null,
+      "projectorAvailable": null
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Partial"
+  },
+  {
+    "deptId": "biochemistry",
+    "mobileContact": null,
+    "dateOfSubmission": null,
+    "snapshot": {
+      "noOfProgrammes": null,
+      "totalFacultyReported": null,
+      "totalSanctionedIntake2026": null,
+      "facultyWithPhd": null,
+      "totalStudentsAdmitted2026": null,
+      "labsClassroomsReported": null,
+      "programmesWithNepAlignment": null,
+      "digitalSmartBoardAvailable": null,
+      "projectorAvailable": null
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Partial"
+  },
+  {
+    "deptId": "environmental-studies",
+    "mobileContact": null,
+    "dateOfSubmission": null,
+    "snapshot": {
+      "noOfProgrammes": null,
+      "totalFacultyReported": null,
+      "totalSanctionedIntake2026": null,
+      "facultyWithPhd": null,
+      "totalStudentsAdmitted2026": null,
+      "labsClassroomsReported": null,
+      "programmesWithNepAlignment": null,
+      "digitalSmartBoardAvailable": null,
+      "projectorAvailable": null
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Partial"
+  },
+  {
+    "deptId": "business-economics",
     "mobileContact": "9451465844",
     "dateOfSubmission": "09.09.2026",
     "snapshot": {
-      "noOfProgrammes": 6,
-      "totalFacultyReported": 20,
-      "totalSanctionedIntake2026": 384,
-      "facultyWithPhd": 16,
-      "totalStudentsAdmitted2026": 375,
-      "labsClassroomsReported": 15,
-      "programmesWithNepAlignment": 6,
-      "digitalSmartBoardAvailable": 0,
-      "projectorAvailable": 1
+      "noOfProgrammes": null,
+      "totalFacultyReported": null,
+      "totalSanctionedIntake2026": null,
+      "facultyWithPhd": null,
+      "totalStudentsAdmitted2026": null,
+      "labsClassroomsReported": null,
+      "programmesWithNepAlignment": null,
+      "digitalSmartBoardAvailable": null,
+      "projectorAvailable": null
     },
     "certificationSignedBy": null,
     "certificationDate": null,
     "status": "Submitted"
   },
   {
-    "deptId": "cse-and-it",
+    "deptId": "business-management",
+    "mobileContact": "9451465844",
+    "dateOfSubmission": "09.09.2026",
+    "snapshot": {
+      "noOfProgrammes": null,
+      "totalFacultyReported": null,
+      "totalSanctionedIntake2026": null,
+      "facultyWithPhd": null,
+      "totalStudentsAdmitted2026": null,
+      "labsClassroomsReported": null,
+      "programmesWithNepAlignment": null,
+      "digitalSmartBoardAvailable": null,
+      "projectorAvailable": null
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Submitted"
+  },
+  {
+    "deptId": "cse",
     "mobileContact": "9935483537",
     "dateOfSubmission": null,
     "snapshot": {
-      "noOfProgrammes": 6,
-      "totalFacultyReported": 14,
-      "totalSanctionedIntake2026": 30,
-      "facultyWithPhd": 5,
-      "totalStudentsAdmitted2026": 275,
-      "labsClassroomsReported": 12,
-      "programmesWithNepAlignment": 0,
-      "digitalSmartBoardAvailable": 0,
-      "projectorAvailable": 1
+      "noOfProgrammes": null,
+      "totalFacultyReported": null,
+      "totalSanctionedIntake2026": null,
+      "facultyWithPhd": null,
+      "totalStudentsAdmitted2026": null,
+      "labsClassroomsReported": null,
+      "programmesWithNepAlignment": null,
+      "digitalSmartBoardAvailable": null,
+      "projectorAvailable": null
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Partial"
+  },
+  {
+    "deptId": "it",
+    "mobileContact": "9935483537",
+    "dateOfSubmission": null,
+    "snapshot": {
+      "noOfProgrammes": null,
+      "totalFacultyReported": null,
+      "totalSanctionedIntake2026": null,
+      "facultyWithPhd": null,
+      "totalStudentsAdmitted2026": null,
+      "labsClassroomsReported": null,
+      "programmesWithNepAlignment": null,
+      "digitalSmartBoardAvailable": null,
+      "projectorAvailable": null
     },
     "certificationSignedBy": null,
     "certificationDate": null,
@@ -133,19 +228,38 @@
     "status": "Partial"
   },
   {
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-engineering",
     "mobileContact": "9839370065",
     "dateOfSubmission": "11.09.2026",
     "snapshot": {
-      "noOfProgrammes": 6,
-      "totalFacultyReported": 16,
-      "totalSanctionedIntake2026": 134,
-      "facultyWithPhd": 11,
-      "totalStudentsAdmitted2026": 70,
-      "labsClassroomsReported": 14,
-      "programmesWithNepAlignment": 0,
-      "digitalSmartBoardAvailable": 0,
-      "projectorAvailable": 0
+      "noOfProgrammes": null,
+      "totalFacultyReported": null,
+      "totalSanctionedIntake2026": null,
+      "facultyWithPhd": null,
+      "totalStudentsAdmitted2026": null,
+      "labsClassroomsReported": null,
+      "programmesWithNepAlignment": null,
+      "digitalSmartBoardAvailable": null,
+      "projectorAvailable": null
+    },
+    "certificationSignedBy": null,
+    "certificationDate": null,
+    "status": "Submitted"
+  },
+  {
+    "deptId": "electronics-and-communication-engineering",
+    "mobileContact": "9839370065",
+    "dateOfSubmission": "11.09.2026",
+    "snapshot": {
+      "noOfProgrammes": null,
+      "totalFacultyReported": null,
+      "totalSanctionedIntake2026": null,
+      "facultyWithPhd": null,
+      "totalStudentsAdmitted2026": null,
+      "labsClassroomsReported": null,
+      "programmesWithNepAlignment": null,
+      "digitalSmartBoardAvailable": null,
+      "projectorAvailable": null
     },
     "certificationSignedBy": null,
     "certificationDate": null,

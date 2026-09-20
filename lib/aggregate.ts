@@ -22,6 +22,12 @@ import {
 /**
  * Department and university rollups.
  *
+ * COUNTING RULE: `faculty` is already DISTINCT (a person serving several
+ * departments is one record), so university totals count each person once.
+ * Department rollups use facultyByDept, which includes every person serving
+ * that department — so the sum of department counts exceeds the university
+ * total by design. Same for PhD %.
+ *
  * Unreported figures are skipped, never counted as zero: an average utilisation
  * taken over rooms that never reported one would be dragged toward zero and
  * understate every department that left the column blank. Where nothing at all

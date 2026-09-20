@@ -22,37 +22,92 @@
     "avgMilestoneAchievement": 0
   },
   {
-    "deptId": "biotechnology-microbiology-biochemistry",
+    "deptId": "biotechnology",
     "reviewPeriod": "July 2026 – June 2027",
-    "totalFacultyPlanned": 0,
-    "journalPublicationTarget": 0,
-    "conferencePaperTarget": 0,
-    "sponsoredIndustryProposalsTarget": 0,
-    "targetFundingLakh": 0,
-    "patentFilingTarget": 0,
-    "avgMilestoneAchievement": 0
+    "totalFacultyPlanned": null,
+    "journalPublicationTarget": null,
+    "conferencePaperTarget": null,
+    "sponsoredIndustryProposalsTarget": null,
+    "targetFundingLakh": null,
+    "patentFilingTarget": null,
+    "avgMilestoneAchievement": null
   },
   {
-    "deptId": "department-of-business-economics-and-department",
+    "deptId": "microbiology",
     "reviewPeriod": "July 2026 – June 2027",
-    "totalFacultyPlanned": 0,
-    "journalPublicationTarget": 0,
-    "conferencePaperTarget": 0,
-    "sponsoredIndustryProposalsTarget": 0,
-    "targetFundingLakh": 0,
-    "patentFilingTarget": 0,
-    "avgMilestoneAchievement": 0
+    "totalFacultyPlanned": null,
+    "journalPublicationTarget": null,
+    "conferencePaperTarget": null,
+    "sponsoredIndustryProposalsTarget": null,
+    "targetFundingLakh": null,
+    "patentFilingTarget": null,
+    "avgMilestoneAchievement": null
   },
   {
-    "deptId": "cse-and-it",
+    "deptId": "biochemistry",
     "reviewPeriod": "July 2026 – June 2027",
-    "totalFacultyPlanned": 0,
-    "journalPublicationTarget": 0,
-    "conferencePaperTarget": 0,
-    "sponsoredIndustryProposalsTarget": 0,
-    "targetFundingLakh": 0,
-    "patentFilingTarget": 0,
-    "avgMilestoneAchievement": 0
+    "totalFacultyPlanned": null,
+    "journalPublicationTarget": null,
+    "conferencePaperTarget": null,
+    "sponsoredIndustryProposalsTarget": null,
+    "targetFundingLakh": null,
+    "patentFilingTarget": null,
+    "avgMilestoneAchievement": null
+  },
+  {
+    "deptId": "environmental-studies",
+    "reviewPeriod": "July 2026 – June 2027",
+    "totalFacultyPlanned": null,
+    "journalPublicationTarget": null,
+    "conferencePaperTarget": null,
+    "sponsoredIndustryProposalsTarget": null,
+    "targetFundingLakh": null,
+    "patentFilingTarget": null,
+    "avgMilestoneAchievement": null
+  },
+  {
+    "deptId": "business-economics",
+    "reviewPeriod": "July 2026 – June 2027",
+    "totalFacultyPlanned": null,
+    "journalPublicationTarget": null,
+    "conferencePaperTarget": null,
+    "sponsoredIndustryProposalsTarget": null,
+    "targetFundingLakh": null,
+    "patentFilingTarget": null,
+    "avgMilestoneAchievement": null
+  },
+  {
+    "deptId": "business-management",
+    "reviewPeriod": "July 2026 – June 2027",
+    "totalFacultyPlanned": null,
+    "journalPublicationTarget": null,
+    "conferencePaperTarget": null,
+    "sponsoredIndustryProposalsTarget": null,
+    "targetFundingLakh": null,
+    "patentFilingTarget": null,
+    "avgMilestoneAchievement": null
+  },
+  {
+    "deptId": "cse",
+    "reviewPeriod": "July 2026 – June 2027",
+    "totalFacultyPlanned": null,
+    "journalPublicationTarget": null,
+    "conferencePaperTarget": null,
+    "sponsoredIndustryProposalsTarget": null,
+    "targetFundingLakh": null,
+    "patentFilingTarget": null,
+    "avgMilestoneAchievement": null
+  },
+  {
+    "deptId": "it",
+    "reviewPeriod": "July 2026 – June 2027",
+    "totalFacultyPlanned": null,
+    "journalPublicationTarget": null,
+    "conferencePaperTarget": null,
+    "sponsoredIndustryProposalsTarget": null,
+    "targetFundingLakh": null,
+    "patentFilingTarget": null,
+    "avgMilestoneAchievement": null
   },
   {
     "deptId": "chemistry",
@@ -77,15 +132,26 @@
     "avgMilestoneAchievement": 0
   },
   {
-    "deptId": "department-of-electronics-engineering",
+    "deptId": "electronics-engineering",
     "reviewPeriod": "July 2026 – June 2027",
-    "totalFacultyPlanned": 0,
-    "journalPublicationTarget": 0,
-    "conferencePaperTarget": 0,
-    "sponsoredIndustryProposalsTarget": 0,
-    "targetFundingLakh": 0,
-    "patentFilingTarget": 0,
-    "avgMilestoneAchievement": 0
+    "totalFacultyPlanned": null,
+    "journalPublicationTarget": null,
+    "conferencePaperTarget": null,
+    "sponsoredIndustryProposalsTarget": null,
+    "targetFundingLakh": null,
+    "patentFilingTarget": null,
+    "avgMilestoneAchievement": null
+  },
+  {
+    "deptId": "electronics-and-communication-engineering",
+    "reviewPeriod": "July 2026 – June 2027",
+    "totalFacultyPlanned": null,
+    "journalPublicationTarget": null,
+    "conferencePaperTarget": null,
+    "sponsoredIndustryProposalsTarget": null,
+    "targetFundingLakh": null,
+    "patentFilingTarget": null,
+    "avgMilestoneAchievement": null
   },
   {
     "deptId": "finance-and-control",

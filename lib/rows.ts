@@ -20,10 +20,14 @@ import {
 
 export interface FacultyRosterRow {
   id: string;
-  deptId: string;
+  /** Every department served — filters match ANY of these. */
+  deptIds: string[];
+  primaryDeptId: string;
+  /** All department names, joined for display. */
   deptName: string;
   sNo: number;
   name: string;
+  qualification: string | null;
   designation: string | null;
   appointmentType: string | null;
   dateOfJoining: string | null;
@@ -49,15 +53,20 @@ export interface FacultyRosterRow {
 
 const deptName = (id: string) => departments.find((d) => d.id === id)?.name ?? id;
 
+/** "Dept A · Dept B" for a faculty member serving several departments. */
+export const deptNamesOf = (f: Pick<Faculty, "departments">) => f.departments.map(deptName).join(" · ");
+
 export function toRosterRow(f: Faculty): FacultyRosterRow {
   const r = researchOf(f.id);
   const t = targetOf(f.id);
   return {
     id: f.id,
-    deptId: f.deptId,
-    deptName: deptName(f.deptId),
+    deptIds: f.departments,
+    primaryDeptId: f.primaryDepartment,
+    deptName: deptNamesOf(f),
     sNo: f.sNo,
     name: f.name,
+    qualification: f.qualification ?? null,
     designation: f.designation,
     appointmentType: f.appointmentType,
     dateOfJoining: f.dateOfJoining,
