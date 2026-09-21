@@ -1,3 +1,4 @@
+import { ExternalLink } from "lucide-react";
 import {
   BarChart3,
   BookOpen,
@@ -13,6 +14,7 @@ import { Pencil } from "lucide-react";
 import { pairHint, pairValue } from "@/components/cells";
 import Link from "next/link";
 import {
+  sourceSheetOf,
   departmentById,
   deptTargetSummaryOf,
   hodSubmissionOf,
@@ -82,6 +84,18 @@ export default function DeptDetailSections({
 
   return (
     <div className="space-y-6">
+      {sourceSheetOf(deptId) ? (
+        <a
+          href={sourceSheetOf(deptId)}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Open the source spreadsheet for ${dept.name} (opens in a new tab)`}
+          className="btn-quiet inline-flex max-w-full items-center gap-2 break-words"
+        >
+          <ExternalLink aria-hidden className="h-4 w-4 shrink-0" />
+          <span className="min-w-0">Source spreadsheet — {dept.name}</span>
+        </a>
+      ) : null}
       {/* ---------------------------------------------------- dept snapshot */}
       <div id="kpis" className="scroll-mt-6">
         <KpiRow>
