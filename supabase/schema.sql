@@ -74,16 +74,6 @@ CREATE TABLE IF NOT EXISTS faculty (
 );
 CREATE INDEX IF NOT EXISTS faculty_dept_id_idx ON faculty(dept_id);
 
--- A person can serve several departments. faculty.dept_id is the PRIMARY
--- department (breadcrumb routing); every department served, primary included,
--- is a row here. Dept-level counts join through this table; university-wide
--- totals count DISTINCT faculty.id.
-CREATE TABLE IF NOT EXISTS faculty_departments (
-  faculty_id  text NOT NULL REFERENCES faculty(id) ON DELETE CASCADE,
-  dept_id     text NOT NULL REFERENCES departments(id) ON DELETE CASCADE,
-  PRIMARY KEY (faculty_id, dept_id)
-);
-
 -- One research record per faculty member (1—1).
 CREATE TABLE IF NOT EXISTS faculty_research (
   id                         text PRIMARY KEY,

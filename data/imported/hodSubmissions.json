@@ -21,7 +21,7 @@
   {
     "deptId": "computer-applications",
     "mobileContact": "8318003644",
-    "dateOfSubmission": null,
+    "dateOfSubmission": "2026-09-14",
     "snapshot": {
       "noOfProgrammes": 3,
       "totalFacultyReported": 11,
@@ -35,7 +35,7 @@
     },
     "certificationSignedBy": null,
     "certificationDate": null,
-    "status": "Partial"
+    "status": "Submitted"
   },
   {
     "deptId": "biotechnology",
@@ -210,22 +210,22 @@
   },
   {
     "deptId": "electrical-engineering",
-    "mobileContact": null,
-    "dateOfSubmission": null,
+    "mobileContact": "8808809431",
+    "dateOfSubmission": "2026-09-14",
     "snapshot": {
       "noOfProgrammes": 3,
       "totalFacultyReported": 9,
       "totalSanctionedIntake2026": 120,
       "facultyWithPhd": 5,
       "totalStudentsAdmitted2026": 53,
-      "labsClassroomsReported": 0,
+      "labsClassroomsReported": 14,
       "programmesWithNepAlignment": 0,
-      "digitalSmartBoardAvailable": 0,
-      "projectorAvailable": 0
+      "digitalSmartBoardAvailable": 1,
+      "projectorAvailable": 4
     },
     "certificationSignedBy": null,
     "certificationDate": null,
-    "status": "Partial"
+    "status": "Submitted"
   },
   {
     "deptId": "electronics-engineering",
@@ -518,10 +518,10 @@
     "dateOfSubmission": null,
     "snapshot": {
       "noOfProgrammes": 2,
-      "totalFacultyReported": 5,
+      "totalFacultyReported": 7,
       "totalSanctionedIntake2026": 120,
-      "facultyWithPhd": 6,
-      "totalStudentsAdmitted2026": 52,
+      "facultyWithPhd": 7,
+      "totalStudentsAdmitted2026": 53,
       "labsClassroomsReported": 12,
       "programmesWithNepAlignment": 2,
       "digitalSmartBoardAvailable": 0,

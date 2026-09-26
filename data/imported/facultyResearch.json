@@ -107,21 +107,21 @@
     "id": "computer-applications-f1-res",
     "facultyId": "computer-applications-f1",
     "journalPublications": {
-      "sciScieSsci": null,
-      "scopusUgcCare": null,
-      "other": null
+      "sciScieSsci": 7,
+      "scopusUgcCare": 13,
+      "other": 0
     },
     "conferencePublications": {
-      "international": null,
-      "national": null
+      "international": 10,
+      "national": 35
     },
-    "hIndex": null,
-    "i10Index": null,
-    "googleScholarOrcidLink": null,
+    "hIndex": 38,
+    "i10Index": 66,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?hl=en&user=BdMXgHYAAAAJ&view_op=list_works&sortby=pubdate",
     "patents": {
-      "filed": null,
-      "published": null,
-      "granted": null
+      "filed": 0,
+      "published": 0,
+      "granted": 5
     },
     "phdSupervision": {
       "registered": null,
@@ -133,17 +133,17 @@
     "id": "computer-applications-f2-res",
     "facultyId": "computer-applications-f2",
     "journalPublications": {
-      "sciScieSsci": null,
-      "scopusUgcCare": null,
-      "other": null
+      "sciScieSsci": 0,
+      "scopusUgcCare": 3,
+      "other": 2
     },
     "conferencePublications": {
-      "international": null,
-      "national": null
+      "international": 0,
+      "national": 2
     },
-    "hIndex": null,
-    "i10Index": null,
-    "googleScholarOrcidLink": null,
+    "hIndex": 8,
+    "i10Index": 5,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=vPlbzg8AAAAJ&hl=en",
     "patents": {
       "filed": null,
       "published": null,
@@ -159,16 +159,16 @@
     "id": "computer-applications-f3-res",
     "facultyId": "computer-applications-f3",
     "journalPublications": {
-      "sciScieSsci": null,
-      "scopusUgcCare": null,
-      "other": null
+      "sciScieSsci": 0,
+      "scopusUgcCare": 0,
+      "other": 0
     },
     "conferencePublications": {
-      "international": null,
-      "national": null
+      "international": 0,
+      "national": 0
     },
-    "hIndex": 20,
-    "i10Index": 65,
+    "hIndex": 8,
+    "i10Index": 8,
     "googleScholarOrcidLink": "https://scholar.google.com/citations?user=u2ogX5wAAAAJ&hl=en",
     "patents": {
       "filed": null,
@@ -249,9 +249,9 @@
     "i10Index": null,
     "googleScholarOrcidLink": null,
     "patents": {
-      "filed": null,
-      "published": null,
-      "granted": null
+      "filed": 0,
+      "published": 1,
+      "granted": 0
     },
     "phdSupervision": {
       "registered": null,
@@ -1357,7 +1357,7 @@
     "journalPublications": {
       "sciScieSsci": 1,
       "scopusUgcCare": 13,
-      "other": 20
+      "other": 2
     },
     "conferencePublications": {
       "international": 13,
@@ -1368,7 +1368,7 @@
     "googleScholarOrcidLink": "https://scholar.google.com/citations?user=L5217uwAAAAJ&hl=en",
     "patents": {
       "filed": null,
-      "published": 2,
+      "published": null,
       "granted": null
     },
     "phdSupervision": {
@@ -1382,8 +1382,8 @@
     "facultyId": "electrical-engineering-f2",
     "journalPublications": {
       "sciScieSsci": 0,
-      "scopusUgcCare": 3,
-      "other": 20
+      "scopusUgcCare": 2,
+      "other": 2
     },
     "conferencePublications": {
       "international": 6,
@@ -1394,7 +1394,7 @@
     "googleScholarOrcidLink": "https://scholar.google.com/citations?user=CaSJix8AAAAJ&hl=en",
     "patents": {
       "filed": null,
-      "published": 2,
+      "published": null,
       "granted": null
     },
     "phdSupervision": {
@@ -3695,24 +3695,24 @@
     "id": "rb-physics-f1-res",
     "facultyId": "rb-physics-f1",
     "journalPublications": {
-      "sciScieSsci": null,
-      "scopusUgcCare": null,
-      "other": null
+      "sciScieSsci": 45,
+      "scopusUgcCare": 6,
+      "other": 2
     },
     "conferencePublications": {
       "international": null,
       "national": null
     },
-    "hIndex": null,
-    "i10Index": null,
-    "googleScholarOrcidLink": null,
+    "hIndex": 23,
+    "i10Index": 53,
+    "googleScholarOrcidLink": "https://scholar.google.co.in/citations?hl=en&user=b6sLGhkAAAAJ&view_op=list_works&sortby=pubdate; https://orcid.org/0000-0002-3011-2375",
     "patents": {
       "filed": null,
       "published": null,
       "granted": null
     },
     "phdSupervision": {
-      "registered": null,
+      "registered": 2,
       "awarded": null
     },
     "yearly": []
@@ -3720,6 +3720,32 @@
   {
     "id": "rb-physics-f2-res",
     "facultyId": "rb-physics-f2",
+    "journalPublications": {
+      "sciScieSsci": 5,
+      "scopusUgcCare": 0,
+      "other": 6
+    },
+    "conferencePublications": {
+      "international": null,
+      "national": null
+    },
+    "hIndex": 10,
+    "i10Index": 10,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=zLfGfpQAAAAJ&hl=en4",
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 4,
+      "awarded": 2
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-physics-f3-res",
+    "facultyId": "rb-physics-f3",
     "journalPublications": {
       "sciScieSsci": 45,
       "scopusUgcCare": 22,
@@ -3744,38 +3770,64 @@
     "yearly": []
   },
   {
-    "id": "rb-physics-f3-res",
-    "facultyId": "rb-physics-f3",
+    "id": "rb-physics-f4-res",
+    "facultyId": "rb-physics-f4",
     "journalPublications": {
-      "sciScieSsci": null,
+      "sciScieSsci": 16,
       "scopusUgcCare": null,
-      "other": null
+      "other": 4
     },
     "conferencePublications": {
-      "international": null,
+      "international": 2,
+      "national": 1
+    },
+    "hIndex": 8,
+    "i10Index": 6,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?hl=en&user=XJIFH8MAAAAJ&view_op=list_works&sortby=pubdate",
+    "patents": {
+      "filed": 0,
+      "published": 0,
+      "granted": 0
+    },
+    "phdSupervision": {
+      "registered": 2,
+      "awarded": 1
+    },
+    "yearly": []
+  },
+  {
+    "id": "rb-physics-f5-res",
+    "facultyId": "rb-physics-f5",
+    "journalPublications": {
+      "sciScieSsci": 9,
+      "scopusUgcCare": null,
+      "other": 4
+    },
+    "conferencePublications": {
+      "international": 1,
       "national": null
     },
-    "hIndex": null,
-    "i10Index": null,
-    "googleScholarOrcidLink": null,
+    "hIndex": 9,
+    "i10Index": 8,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=Sux-IwsAAAAJ&hl=en; https://orcid.org/my-orcid?orcid=0000-0001-5791-6376",
     "patents": {
       "filed": null,
       "published": null,
       "granted": null
     },
     "phdSupervision": {
-      "registered": null,
-      "awarded": null
+      "registered": 1,
+      "awarded": 0
     },
     "yearly": []
   },
   {
-    "id": "rb-physics-f4-res",
-    "facultyId": "rb-physics-f4",
+    "id": "rb-physics-f6-res",
+    "facultyId": "rb-physics-f6",
     "journalPublications": {
       "sciScieSsci": 1,
-      "scopusUgcCare": 2,
-      "other": 2
+      "scopusUgcCare": 0,
+      "other": 6
     },
     "conferencePublications": {
       "international": null,
@@ -3785,39 +3837,39 @@
     "i10Index": null,
     "googleScholarOrcidLink": "https://scholar.google.com/citations?user=4thfwZoAAAAJ&hl=en",
     "patents": {
-      "filed": null,
-      "published": null,
-      "granted": null
+      "filed": 0,
+      "published": 0,
+      "granted": 0
     },
     "phdSupervision": {
-      "registered": null,
-      "awarded": null
+      "registered": 0,
+      "awarded": 0
     },
     "yearly": []
   },
   {
-    "id": "rb-physics-f5-res",
-    "facultyId": "rb-physics-f5",
+    "id": "rb-physics-f7-res",
+    "facultyId": "rb-physics-f7",
     "journalPublications": {
-      "sciScieSsci": null,
+      "sciScieSsci": 9,
       "scopusUgcCare": null,
       "other": null
     },
     "conferencePublications": {
       "international": null,
-      "national": null
+      "national": 1
     },
-    "hIndex": null,
-    "i10Index": null,
-    "googleScholarOrcidLink": null,
+    "hIndex": 5,
+    "i10Index": 3,
+    "googleScholarOrcidLink": "https://scholar.google.com/citations?user=FLgVlWkAAAAJ&hl=en4",
     "patents": {
-      "filed": null,
-      "published": null,
-      "granted": null
+      "filed": 0,
+      "published": 0,
+      "granted": 0
     },
     "phdSupervision": {
-      "registered": null,
-      "awarded": null
+      "registered": 0,
+      "awarded": 0
     },
     "yearly": []
   },

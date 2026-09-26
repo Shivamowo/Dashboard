@@ -1,6 +1,10 @@
 [
   {
     "id": "applied-psychology-f1",
+    "departments": [
+      "applied-psychology"
+    ],
+    "primaryDepartment": "applied-psychology",
     "sNo": 1,
     "name": "Ajai Pratap Singh",
     "designation": "Professor",
@@ -9,14 +13,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Applied Psychology",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "Head, BA Coordinator, Chief Proctor",
-    "departments": [
-      "applied-psychology"
-    ],
-    "primaryDepartment": "applied-psychology"
+    "additionalResponsibility": "Head, BA Coordinator, Chief Proctor"
   },
   {
     "id": "applied-psychology-f2",
+    "departments": [
+      "applied-psychology"
+    ],
+    "primaryDepartment": "applied-psychology",
     "sNo": 2,
     "name": "Manoj Kumar Pandey",
     "designation": "Assistant Professor",
@@ -25,14 +29,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Applied Psychology",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "NCC Nodal Officer, Asst DSW",
-    "departments": [
-      "applied-psychology"
-    ],
-    "primaryDepartment": "applied-psychology"
+    "additionalResponsibility": "NCC Nodal Officer, Asst DSW"
   },
   {
     "id": "applied-psychology-f3",
+    "departments": [
+      "applied-psychology"
+    ],
+    "primaryDepartment": "applied-psychology",
     "sNo": 3,
     "name": "Janhvi Shrivastava",
     "designation": "Assistant Professor",
@@ -41,14 +45,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Applied Psychology",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "Women Studies Centre, Mission Shkati,Asst Proctor,Kaushal Vikas, Child Care Centre",
-    "departments": [
-      "applied-psychology"
-    ],
-    "primaryDepartment": "applied-psychology"
+    "additionalResponsibility": "Women Studies Centre, Mission Shkati,Asst Proctor,Kaushal Vikas, Child Care Centre"
   },
   {
     "id": "applied-psychology-f4",
+    "departments": [
+      "applied-psychology"
+    ],
+    "primaryDepartment": "applied-psychology",
     "sNo": 4,
     "name": "Annu Tyagi",
     "designation": "Assistant Professor",
@@ -57,14 +61,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Applied Psychology",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "Additional Chief Warden",
-    "departments": [
-      "applied-psychology"
-    ],
-    "primaryDepartment": "applied-psychology"
+    "additionalResponsibility": "Additional Chief Warden"
   },
   {
     "id": "computer-applications-f1",
+    "departments": [
+      "computer-applications"
+    ],
+    "primaryDepartment": "computer-applications",
     "sNo": 1,
     "name": "Prof. Saurabh Pal",
     "designation": "Professor",
@@ -73,14 +77,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "MCA",
     "teachingLoadHrsPerWeek": 11,
-    "additionalResponsibility": "Dean (Faculty ofEngineering)",
-    "departments": [
-      "computer-applications"
-    ],
-    "primaryDepartment": "computer-applications"
+    "additionalResponsibility": "Dean (Faculty ofEngineering)"
   },
   {
     "id": "computer-applications-f2",
+    "departments": [
+      "computer-applications"
+    ],
+    "primaryDepartment": "computer-applications",
     "sNo": 2,
     "name": "Prof. Noopur Goel",
     "designation": "Professor",
@@ -89,14 +93,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "MCA",
     "teachingLoadHrsPerWeek": 12,
-    "additionalResponsibility": null,
-    "departments": [
-      "computer-applications"
-    ],
-    "primaryDepartment": "computer-applications"
+    "additionalResponsibility": null
   },
   {
     "id": "computer-applications-f3",
+    "departments": [
+      "computer-applications"
+    ],
+    "primaryDepartment": "computer-applications",
     "sNo": 3,
     "name": "Prof. Surjeet Kumar",
     "designation": "Professor",
@@ -105,14 +109,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "MCA",
     "teachingLoadHrsPerWeek": 13,
-    "additionalResponsibility": "Head (Computer Applications), Nodal Officer (AISHE), Convenor (Internet Maintenance Committee), Member GEM Technical Evaluation Committee, Convenor EMD",
-    "departments": [
-      "computer-applications"
-    ],
-    "primaryDepartment": "computer-applications"
+    "additionalResponsibility": "Head (Computer Applications), Nodal Officer (AISHE), Convenor (Internet Maintenance Committee), Member GEM Technical Evaluation Committee, Convenor EMD"
   },
   {
     "id": "computer-applications-f4",
+    "departments": [
+      "computer-applications"
+    ],
+    "primaryDepartment": "computer-applications",
     "sNo": 4,
     "name": "Dr. Sanjeev Gangwar",
     "designation": "Associate Professor",
@@ -120,15 +124,15 @@
     "dateOfJoining": "2010-12-03",
     "hasPhd": true,
     "programmesAppointedFor": "MCA",
-    "teachingLoadHrsPerWeek": 16,
-    "additionalResponsibility": "University Website Incharge, Coordinator Samarth Module (Data Management System), Coordinator Samarth All Module (Departmental), Member IQAC, Coordinator AICTE Approval, Coordinator Counselling (BCA, MCA, Integrated MCA), Member Academic Council",
-    "departments": [
-      "computer-applications"
-    ],
-    "primaryDepartment": "computer-applications"
+    "teachingLoadHrsPerWeek": 18,
+    "additionalResponsibility": "University Website Incharge, Coordinator Samarth Module (Data Management System), Coordinator Samarth All Module (Departmental), Member IQAC, Coordinator AICTE Approval, Coordinator Counselling (BCA, MCA, Integrated MCA), Member Academic Council"
   },
   {
     "id": "computer-applications-f5",
+    "departments": [
+      "computer-applications"
+    ],
+    "primaryDepartment": "computer-applications",
     "sNo": 5,
     "name": "Dr. Munindra Kumar Singh",
     "designation": "Assistant Professor",
@@ -137,14 +141,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "MCA",
     "teachingLoadHrsPerWeek": 23,
-    "additionalResponsibility": "Course Coordinator MCA, Member AICTE, Member Counselling Committe (BCA, MCA, Integrated MCA)",
-    "departments": [
-      "computer-applications"
-    ],
-    "primaryDepartment": "computer-applications"
+    "additionalResponsibility": "Course Coordinator MCA, Member AICTE, Member Counselling Committe (BCA, MCA, Integrated MCA)"
   },
   {
     "id": "computer-applications-f6",
+    "departments": [
+      "computer-applications"
+    ],
+    "primaryDepartment": "computer-applications",
     "sNo": 6,
     "name": "Mr. Pankaj Kumar",
     "designation": "Assistant Professor",
@@ -152,15 +156,15 @@
     "dateOfJoining": "2018-08-14",
     "hasPhd": false,
     "programmesAppointedFor": "Computer Applications",
-    "teachingLoadHrsPerWeek": 28,
-    "additionalResponsibility": "Coordinator MCA 1st Year, Member AICTE, Member Counselling Committe (BCA, MCA, Integrated MCA), Samarth Module Manager (Computer Applications) , Departmental Data Coordinator, Member Result Distribution Committee",
-    "departments": [
-      "computer-applications"
-    ],
-    "primaryDepartment": "computer-applications"
+    "teachingLoadHrsPerWeek": 25,
+    "additionalResponsibility": "Coordinator MCA 1st Year, Member AICTE, Member Counselling Committe (BCA, MCA, Integrated MCA), Samarth Module Manager (Computer Applications) , Departmental Data Coordinator, Member Result Distribution Committee"
   },
   {
     "id": "computer-applications-f7",
+    "departments": [
+      "computer-applications"
+    ],
+    "primaryDepartment": "computer-applications",
     "sNo": 7,
     "name": "Mr. Saurabh Kumar",
     "designation": "Assistant Professor",
@@ -169,14 +173,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "Computer Applications",
     "teachingLoadHrsPerWeek": 24,
-    "additionalResponsibility": "Coordinator MCA 2nd Year, Time-Table In-charge (MCA), Member Counselling Committe (BCA, MCA, Integrated MCA), Member Result Distribution Committee",
-    "departments": [
-      "computer-applications"
-    ],
-    "primaryDepartment": "computer-applications"
+    "additionalResponsibility": "Coordinator MCA 2nd Year, Time-Table In-charge (MCA), Member Counselling Committe (BCA, MCA, Integrated MCA), Member Result Distribution Committee"
   },
   {
     "id": "computer-applications-f8",
+    "departments": [
+      "computer-applications"
+    ],
+    "primaryDepartment": "computer-applications",
     "sNo": 8,
     "name": "Dr. Mithilesh Kumar Pandey",
     "designation": "Assistant Professor",
@@ -185,14 +189,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "BCA",
     "teachingLoadHrsPerWeek": 30,
-    "additionalResponsibility": "Course Coordinator BCA",
-    "departments": [
-      "computer-applications"
-    ],
-    "primaryDepartment": "computer-applications"
+    "additionalResponsibility": "Course Coordinator BCA"
   },
   {
     "id": "computer-applications-f9",
+    "departments": [
+      "computer-applications"
+    ],
+    "primaryDepartment": "computer-applications",
     "sNo": 9,
     "name": "Mrs. Priyanka Jaiswal",
     "designation": "Assistant Professor",
@@ -201,14 +205,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "BCA",
     "teachingLoadHrsPerWeek": 22,
-    "additionalResponsibility": "Coordinator BCA 3rd Year, Time Table Incharge (BCA)",
-    "departments": [
-      "computer-applications"
-    ],
-    "primaryDepartment": "computer-applications"
+    "additionalResponsibility": "Coordinator BCA 3rd Year, Time Table Incharge (BCA)"
   },
   {
     "id": "computer-applications-f10",
+    "departments": [
+      "computer-applications"
+    ],
+    "primaryDepartment": "computer-applications",
     "sNo": 10,
     "name": "Mr. Avdhesh Kumar Yadav",
     "designation": "Assistant Professor",
@@ -217,14 +221,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "BCA",
     "teachingLoadHrsPerWeek": 28,
-    "additionalResponsibility": "Coordinator BCA & Int MCA 2nd Year, Result distribution BCA",
-    "departments": [
-      "computer-applications"
-    ],
-    "primaryDepartment": "computer-applications"
+    "additionalResponsibility": "Coordinator BCA & Int MCA 2nd Year, Result distribution BCA"
   },
   {
     "id": "computer-applications-f11",
+    "departments": [
+      "computer-applications"
+    ],
+    "primaryDepartment": "computer-applications",
     "sNo": 11,
     "name": "Mr. Aditya Kumar",
     "designation": "Assistant Professor",
@@ -233,14 +237,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "BCA",
     "teachingLoadHrsPerWeek": 24,
-    "additionalResponsibility": "Coordinator BCA & Int MCA 1st Year",
-    "departments": [
-      "computer-applications"
-    ],
-    "primaryDepartment": "computer-applications"
+    "additionalResponsibility": "Coordinator BCA & Int MCA 1st Year"
   },
   {
     "id": "department-of-business-economics-and-department-f1",
+    "departments": [
+      "department-of-business-economics-and-department"
+    ],
+    "primaryDepartment": "department-of-business-economics-and-department",
     "sNo": 1,
     "name": "Prof Manas Pandey",
     "designation": "Professor",
@@ -249,14 +253,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "MBA(BE)",
     "teachingLoadHrsPerWeek": 14,
-    "additionalResponsibility": null,
-    "departments": [
-      "business-economics"
-    ],
-    "primaryDepartment": "business-economics"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-business-economics-and-department-f2",
+    "departments": [
+      "department-of-business-economics-and-department"
+    ],
+    "primaryDepartment": "department-of-business-economics-and-department",
     "sNo": 2,
     "name": "Dr Ashutosh Kumar Singh",
     "designation": "Associate Professor",
@@ -265,14 +269,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "MBA(BE)",
     "teachingLoadHrsPerWeek": 14,
-    "additionalResponsibility": null,
-    "departments": [
-      "business-economics"
-    ],
-    "primaryDepartment": "business-economics"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-business-economics-and-department-f3",
+    "departments": [
+      "department-of-business-economics-and-department"
+    ],
+    "primaryDepartment": "department-of-business-economics-and-department",
     "sNo": 3,
     "name": "Dr Nisha Pandey",
     "designation": "Guest Faculty",
@@ -281,14 +285,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "MBA(BE)",
     "teachingLoadHrsPerWeek": 24,
-    "additionalResponsibility": null,
-    "departments": [
-      "business-economics"
-    ],
-    "primaryDepartment": "business-economics"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-business-economics-and-department-f4",
+    "departments": [
+      "department-of-business-economics-and-department"
+    ],
+    "primaryDepartment": "department-of-business-economics-and-department",
     "sNo": 4,
     "name": "Dr Anjany kr Mishra",
     "designation": "Guest Faculty",
@@ -297,14 +301,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "MBA(BE)",
     "teachingLoadHrsPerWeek": 24,
-    "additionalResponsibility": null,
-    "departments": [
-      "business-economics"
-    ],
-    "primaryDepartment": "business-economics"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-business-economics-and-department-f5",
+    "departments": [
+      "department-of-business-economics-and-department"
+    ],
+    "primaryDepartment": "department-of-business-economics-and-department",
     "sNo": 5,
     "name": "Dr. Krishna Singh",
     "designation": "Assistant Professor",
@@ -313,14 +317,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Com (Hons.)",
     "teachingLoadHrsPerWeek": 16,
-    "additionalResponsibility": "Assistant Warden",
-    "departments": [
-      "business-economics"
-    ],
-    "primaryDepartment": "business-economics"
+    "additionalResponsibility": "Assistant Warden"
   },
   {
     "id": "department-of-business-economics-and-department-f6",
+    "departments": [
+      "department-of-business-economics-and-department"
+    ],
+    "primaryDepartment": "department-of-business-economics-and-department",
     "sNo": 6,
     "name": "Dr. Suneel Kumar Patel",
     "designation": "Assistant Professor",
@@ -329,14 +333,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Com (Hons.)",
     "teachingLoadHrsPerWeek": 28,
-    "additionalResponsibility": null,
-    "departments": [
-      "business-economics"
-    ],
-    "primaryDepartment": "business-economics"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-business-economics-and-department-f7",
+    "departments": [
+      "department-of-business-economics-and-department"
+    ],
+    "primaryDepartment": "department-of-business-economics-and-department",
     "sNo": 7,
     "name": "Dr. Krishna Kumar Kasaudhan",
     "designation": "Assistant Professor",
@@ -345,14 +349,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Com (Hons.)",
     "teachingLoadHrsPerWeek": 28,
-    "additionalResponsibility": null,
-    "departments": [
-      "business-economics"
-    ],
-    "primaryDepartment": "business-economics"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-business-economics-and-department-f8",
+    "departments": [
+      "department-of-business-economics-and-department"
+    ],
+    "primaryDepartment": "department-of-business-economics-and-department",
     "sNo": 8,
     "name": "Dr. Pradeep Kumar Sonkar",
     "designation": "Assistant Professor",
@@ -361,14 +365,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Com (Hons.)",
     "teachingLoadHrsPerWeek": 20,
-    "additionalResponsibility": null,
-    "departments": [
-      "business-economics"
-    ],
-    "primaryDepartment": "business-economics"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-business-economics-and-department-f9",
+    "departments": [
+      "department-of-business-economics-and-department"
+    ],
+    "primaryDepartment": "department-of-business-economics-and-department",
     "sNo": 9,
     "name": "Ms Sakshi Singh",
     "designation": "Assistant Professor",
@@ -377,15 +381,15 @@
     "hasPhd": false,
     "programmesAppointedFor": "B.Com (Hons.)",
     "teachingLoadHrsPerWeek": 28,
-    "additionalResponsibility": null,
-    "departments": [
-      "business-economics"
-    ],
-    "primaryDepartment": "business-economics"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-business-economics-and-department-f10",
-    "sNo": 1,
+    "departments": [
+      "department-of-business-economics-and-department"
+    ],
+    "primaryDepartment": "department-of-business-economics-and-department",
+    "sNo": 10,
     "name": "Prof. Murad Ali",
     "designation": "Professor",
     "appointmentType": "Regular",
@@ -393,15 +397,15 @@
     "hasPhd": true,
     "programmesAppointedFor": "MBA",
     "teachingLoadHrsPerWeek": 12,
-    "additionalResponsibility": null,
-    "departments": [
-      "business-management"
-    ],
-    "primaryDepartment": "business-management"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-business-economics-and-department-f11",
-    "sNo": 2,
+    "departments": [
+      "department-of-business-economics-and-department"
+    ],
+    "primaryDepartment": "department-of-business-economics-and-department",
+    "sNo": 11,
     "name": "Dr. Pramendra Vikram Singh",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -409,15 +413,15 @@
     "hasPhd": true,
     "programmesAppointedFor": "MBA",
     "teachingLoadHrsPerWeek": 20,
-    "additionalResponsibility": "NSS",
-    "departments": [
-      "business-management"
-    ],
-    "primaryDepartment": "business-management"
+    "additionalResponsibility": "NSS"
   },
   {
     "id": "department-of-business-economics-and-department-f12",
-    "sNo": 3,
+    "departments": [
+      "department-of-business-economics-and-department"
+    ],
+    "primaryDepartment": "department-of-business-economics-and-department",
+    "sNo": 12,
     "name": "Dr. Rajesh Kumar",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -425,15 +429,15 @@
     "hasPhd": true,
     "programmesAppointedFor": "MBA",
     "teachingLoadHrsPerWeek": 16,
-    "additionalResponsibility": null,
-    "departments": [
-      "business-management"
-    ],
-    "primaryDepartment": "business-management"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-business-economics-and-department-f13",
-    "sNo": 4,
+    "departments": [
+      "department-of-business-economics-and-department"
+    ],
+    "primaryDepartment": "department-of-business-economics-and-department",
+    "sNo": 13,
     "name": "Dr. Ritu Viswakarma",
     "designation": "Assistant Professor",
     "appointmentType": "Guest",
@@ -441,15 +445,15 @@
     "hasPhd": true,
     "programmesAppointedFor": "MBA",
     "teachingLoadHrsPerWeek": 24,
-    "additionalResponsibility": null,
-    "departments": [
-      "business-management"
-    ],
-    "primaryDepartment": "business-management"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-business-economics-and-department-f14",
-    "sNo": 5,
+    "departments": [
+      "department-of-business-economics-and-department"
+    ],
+    "primaryDepartment": "department-of-business-economics-and-department",
+    "sNo": 14,
     "name": "Mohd Shahabudin Rayeen",
     "designation": "Assistant Professor",
     "appointmentType": "Guest",
@@ -457,15 +461,15 @@
     "hasPhd": false,
     "programmesAppointedFor": "MBA",
     "teachingLoadHrsPerWeek": 24,
-    "additionalResponsibility": null,
-    "departments": [
-      "business-management"
-    ],
-    "primaryDepartment": "business-management"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-business-economics-and-department-f15",
-    "sNo": 6,
+    "departments": [
+      "department-of-business-economics-and-department"
+    ],
+    "primaryDepartment": "department-of-business-economics-and-department",
+    "sNo": 15,
     "name": "Dr. Asim Rajbhar",
     "designation": "Assistant Professor",
     "appointmentType": "Guest",
@@ -473,15 +477,15 @@
     "hasPhd": true,
     "programmesAppointedFor": "MBA E-Com",
     "teachingLoadHrsPerWeek": 24,
-    "additionalResponsibility": null,
-    "departments": [
-      "business-management"
-    ],
-    "primaryDepartment": "business-management"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-business-economics-and-department-f16",
-    "sNo": 7,
+    "departments": [
+      "department-of-business-economics-and-department"
+    ],
+    "primaryDepartment": "department-of-business-economics-and-department",
+    "sNo": 16,
     "name": "Dr. Nitin Chauhan",
     "designation": "Assistant Professor",
     "appointmentType": "Guest",
@@ -489,15 +493,15 @@
     "hasPhd": true,
     "programmesAppointedFor": "MBA E-Com",
     "teachingLoadHrsPerWeek": 24,
-    "additionalResponsibility": null,
-    "departments": [
-      "business-management"
-    ],
-    "primaryDepartment": "business-management"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-business-economics-and-department-f17",
-    "sNo": 8,
+    "departments": [
+      "department-of-business-economics-and-department"
+    ],
+    "primaryDepartment": "department-of-business-economics-and-department",
+    "sNo": 17,
     "name": "Dr. Asma",
     "designation": "Assistant Professor",
     "appointmentType": "Guest",
@@ -505,15 +509,15 @@
     "hasPhd": true,
     "programmesAppointedFor": "MBA Agri",
     "teachingLoadHrsPerWeek": 24,
-    "additionalResponsibility": null,
-    "departments": [
-      "business-management"
-    ],
-    "primaryDepartment": "business-management"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-business-economics-and-department-f18",
-    "sNo": 9,
+    "departments": [
+      "department-of-business-economics-and-department"
+    ],
+    "primaryDepartment": "department-of-business-economics-and-department",
+    "sNo": 18,
     "name": "Dr. Vikas Singh",
     "designation": "Assistant Professor",
     "appointmentType": "Guest",
@@ -521,15 +525,15 @@
     "hasPhd": true,
     "programmesAppointedFor": "MBA Agri",
     "teachingLoadHrsPerWeek": 20,
-    "additionalResponsibility": null,
-    "departments": [
-      "business-management"
-    ],
-    "primaryDepartment": "business-management"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-business-economics-and-department-f19",
-    "sNo": 10,
+    "departments": [
+      "department-of-business-economics-and-department"
+    ],
+    "primaryDepartment": "department-of-business-economics-and-department",
+    "sNo": 19,
     "name": "Bushra Jafri",
     "designation": "Assistant Professor",
     "appointmentType": "Guest",
@@ -537,15 +541,15 @@
     "hasPhd": false,
     "programmesAppointedFor": "BBA",
     "teachingLoadHrsPerWeek": 24,
-    "additionalResponsibility": null,
-    "departments": [
-      "business-management"
-    ],
-    "primaryDepartment": "business-management"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-business-economics-and-department-f20",
-    "sNo": 11,
+    "departments": [
+      "department-of-business-economics-and-department"
+    ],
+    "primaryDepartment": "department-of-business-economics-and-department",
+    "sNo": 20,
     "name": "Sristhi Singh",
     "designation": "Assistant Professor",
     "appointmentType": "Guest",
@@ -553,14 +557,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "BBA",
     "teachingLoadHrsPerWeek": 24,
-    "additionalResponsibility": null,
-    "departments": [
-      "business-management"
-    ],
-    "primaryDepartment": "business-management"
+    "additionalResponsibility": null
   },
   {
     "id": "cse-and-it-f1",
+    "departments": [
+      "cse-and-it"
+    ],
+    "primaryDepartment": "cse-and-it",
     "sNo": 1,
     "name": "Dr. Prashant Kr. Yadav",
     "designation": "Assistant Professor",
@@ -569,14 +573,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "CSE",
     "teachingLoadHrsPerWeek": 22,
-    "additionalResponsibility": null,
-    "departments": [
-      "cse"
-    ],
-    "primaryDepartment": "cse"
+    "additionalResponsibility": null
   },
   {
     "id": "cse-and-it-f2",
+    "departments": [
+      "cse-and-it"
+    ],
+    "primaryDepartment": "cse-and-it",
     "sNo": 2,
     "name": "Dr. Divyendu Kr. Mishra",
     "designation": "Assistant Professor",
@@ -585,14 +589,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "CSE",
     "teachingLoadHrsPerWeek": 26,
-    "additionalResponsibility": null,
-    "departments": [
-      "cse"
-    ],
-    "primaryDepartment": "cse"
+    "additionalResponsibility": null
   },
   {
     "id": "cse-and-it-f3",
+    "departments": [
+      "cse-and-it"
+    ],
+    "primaryDepartment": "cse-and-it",
     "sNo": 3,
     "name": "Mr. Dileep Kr. Yadav",
     "designation": "Assistant Professor",
@@ -601,14 +605,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "CSE",
     "teachingLoadHrsPerWeek": 22,
-    "additionalResponsibility": null,
-    "departments": [
-      "cse"
-    ],
-    "primaryDepartment": "cse"
+    "additionalResponsibility": null
   },
   {
     "id": "cse-and-it-f4",
+    "departments": [
+      "cse-and-it"
+    ],
+    "primaryDepartment": "cse-and-it",
     "sNo": 4,
     "name": "Ms. Deepti Pandey",
     "designation": "Assistant Professor",
@@ -617,14 +621,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "CSE",
     "teachingLoadHrsPerWeek": 22,
-    "additionalResponsibility": null,
-    "departments": [
-      "cse"
-    ],
-    "primaryDepartment": "cse"
+    "additionalResponsibility": null
   },
   {
     "id": "cse-and-it-f5",
+    "departments": [
+      "cse-and-it"
+    ],
+    "primaryDepartment": "cse-and-it",
     "sNo": 5,
     "name": "Mr. Krishna Kr. Yadav",
     "designation": "Assistant Professor",
@@ -633,14 +637,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "CSE",
     "teachingLoadHrsPerWeek": 24,
-    "additionalResponsibility": null,
-    "departments": [
-      "cse"
-    ],
-    "primaryDepartment": "cse"
+    "additionalResponsibility": null
   },
   {
     "id": "cse-and-it-f6",
+    "departments": [
+      "cse-and-it"
+    ],
+    "primaryDepartment": "cse-and-it",
     "sNo": 6,
     "name": "Dr. Sunil Yadav",
     "designation": "Assistant Professor",
@@ -649,14 +653,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "CSE",
     "teachingLoadHrsPerWeek": 22,
-    "additionalResponsibility": null,
-    "departments": [
-      "cse"
-    ],
-    "primaryDepartment": "cse"
+    "additionalResponsibility": null
   },
   {
     "id": "cse-and-it-f7",
+    "departments": [
+      "cse-and-it"
+    ],
+    "primaryDepartment": "cse-and-it",
     "sNo": 7,
     "name": "Mr. Ravikant Yadav",
     "designation": "Assistant Professor",
@@ -665,14 +669,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "CSE",
     "teachingLoadHrsPerWeek": 23,
-    "additionalResponsibility": null,
-    "departments": [
-      "cse"
-    ],
-    "primaryDepartment": "cse"
+    "additionalResponsibility": null
   },
   {
     "id": "cse-and-it-f8",
+    "departments": [
+      "cse-and-it"
+    ],
+    "primaryDepartment": "cse-and-it",
     "sNo": 8,
     "name": "Mr. Pravin Kr. Pandey",
     "designation": "Assistant Professor",
@@ -681,15 +685,15 @@
     "hasPhd": false,
     "programmesAppointedFor": "CSE",
     "teachingLoadHrsPerWeek": 23,
-    "additionalResponsibility": null,
-    "departments": [
-      "cse"
-    ],
-    "primaryDepartment": "cse"
+    "additionalResponsibility": null
   },
   {
     "id": "cse-and-it-f9",
-    "sNo": 1,
+    "departments": [
+      "cse-and-it"
+    ],
+    "primaryDepartment": "cse-and-it",
+    "sNo": 9,
     "name": "Dr. Gyanendra Kr. Pal",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -697,15 +701,15 @@
     "hasPhd": true,
     "programmesAppointedFor": "IT",
     "teachingLoadHrsPerWeek": 27,
-    "additionalResponsibility": null,
-    "departments": [
-      "it"
-    ],
-    "primaryDepartment": "it"
+    "additionalResponsibility": null
   },
   {
     "id": "cse-and-it-f10",
-    "sNo": 2,
+    "departments": [
+      "cse-and-it"
+    ],
+    "primaryDepartment": "cse-and-it",
+    "sNo": 10,
     "name": "Dr. Santosh Kr. Yadav",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -713,15 +717,15 @@
     "hasPhd": true,
     "programmesAppointedFor": "IT",
     "teachingLoadHrsPerWeek": 26,
-    "additionalResponsibility": null,
-    "departments": [
-      "it"
-    ],
-    "primaryDepartment": "it"
+    "additionalResponsibility": null
   },
   {
     "id": "cse-and-it-f11",
-    "sNo": 3,
+    "departments": [
+      "cse-and-it"
+    ],
+    "primaryDepartment": "cse-and-it",
+    "sNo": 11,
     "name": "Mr. Ashok Kr. Yadav",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -729,15 +733,15 @@
     "hasPhd": false,
     "programmesAppointedFor": "IT",
     "teachingLoadHrsPerWeek": 22,
-    "additionalResponsibility": null,
-    "departments": [
-      "it"
-    ],
-    "primaryDepartment": "it"
+    "additionalResponsibility": null
   },
   {
     "id": "cse-and-it-f12",
-    "sNo": 4,
+    "departments": [
+      "cse-and-it"
+    ],
+    "primaryDepartment": "cse-and-it",
+    "sNo": 12,
     "name": "Mr. Ritesh Kr. Srivastav",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -745,15 +749,15 @@
     "hasPhd": false,
     "programmesAppointedFor": "IT",
     "teachingLoadHrsPerWeek": 23,
-    "additionalResponsibility": null,
-    "departments": [
-      "it"
-    ],
-    "primaryDepartment": "it"
+    "additionalResponsibility": null
   },
   {
     "id": "cse-and-it-f13",
-    "sNo": 5,
+    "departments": [
+      "cse-and-it"
+    ],
+    "primaryDepartment": "cse-and-it",
+    "sNo": 13,
     "name": "Mr. Purnendra Kumar",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -761,15 +765,15 @@
     "hasPhd": false,
     "programmesAppointedFor": "IT",
     "teachingLoadHrsPerWeek": 23,
-    "additionalResponsibility": null,
-    "departments": [
-      "it"
-    ],
-    "primaryDepartment": "it"
+    "additionalResponsibility": null
   },
   {
     "id": "cse-and-it-f14",
-    "sNo": 6,
+    "departments": [
+      "cse-and-it"
+    ],
+    "primaryDepartment": "cse-and-it",
+    "sNo": 14,
     "name": "Mr. Manoj Kr. Yadav",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -777,14 +781,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "IT",
     "teachingLoadHrsPerWeek": 25,
-    "additionalResponsibility": null,
-    "departments": [
-      "it"
-    ],
-    "primaryDepartment": "it"
+    "additionalResponsibility": null
   },
   {
     "id": "chemistry-f1",
+    "departments": [
+      "chemistry"
+    ],
+    "primaryDepartment": "chemistry",
     "sNo": 1,
     "name": "Professor Ashok Kumar Srivastava",
     "designation": "Professor",
@@ -793,14 +797,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Tech. & Reseach",
     "teachingLoadHrsPerWeek": 14,
-    "additionalResponsibility": "Head of Department, Convenor of BOS. Coordinator of Diffrent Activities of the University, Member of Acdemic Council, Convenor of Moderation Commmitte, Paper Setter and Evaluators",
-    "departments": [
-      "chemistry"
-    ],
-    "primaryDepartment": "chemistry"
+    "additionalResponsibility": "Head of Department, Convenor of BOS. Coordinator of Diffrent Activities of the University, Member of Acdemic Council, Convenor of Moderation Commmitte, Paper Setter and Evaluators"
   },
   {
     "id": "chemistry-f2",
+    "departments": [
+      "chemistry"
+    ],
+    "primaryDepartment": "chemistry",
     "sNo": 2,
     "name": "Dr. Amrendra Kumar Singh",
     "designation": "Assistant Professor",
@@ -809,14 +813,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Tech. & Reseach",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "Coordinator of Technical Cell, Program Coordinator of Samarth Module, Member of Exicutive Council, Convenor of BOS, Convenor of Evaluation Conmmitte, Depty Coordinator of B.Tech I Year Academic Committe, Depty Director of Traning & Placement Cell, Cordinator of Evaluation & Result Preparation Comnmitte, Chairman/Member of Different Committies of University, Member of University Sport Committe.",
-    "departments": [
-      "chemistry"
-    ],
-    "primaryDepartment": "chemistry"
+    "additionalResponsibility": "Coordinator of Technical Cell, Program Coordinator of Samarth Module, Member of Exicutive Council, Convenor of BOS, Convenor of Evaluation Conmmitte, Depty Coordinator of B.Tech I Year Academic Committe, Depty Director of Traning & Placement Cell, Cordinator of Evaluation & Result Preparation Comnmitte, Chairman/Member of Different Committies of University, Member of University Sport Committe."
   },
   {
     "id": "chemistry-f3",
+    "departments": [
+      "chemistry"
+    ],
+    "primaryDepartment": "chemistry",
     "sNo": 3,
     "name": "Dr. Ram N Yadav",
     "designation": "Assistant Professor",
@@ -825,14 +829,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Tech. & Reseach",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "Departmental Cordinator for Computer related work",
-    "departments": [
-      "chemistry"
-    ],
-    "primaryDepartment": "chemistry"
+    "additionalResponsibility": "Departmental Cordinator for Computer related work"
   },
   {
     "id": "electrical-engineering-f1",
+    "departments": [
+      "electrical-engineering"
+    ],
+    "primaryDepartment": "electrical-engineering",
     "sNo": 1,
     "name": "Prof. Rajnish Bhasker",
     "designation": "Professor",
@@ -841,14 +845,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Electrical Engineering",
     "teachingLoadHrsPerWeek": 14,
-    "additionalResponsibility": "1. Headship, NIRF coordinator, 2.NAAC coordinator for criteria 5 (2020-2023), 3.BOS Convenor, 4. Chairman Admission cell , 5.Chief Warden (2021-2024), 6. Additional Chief Proctor (Since 2025), 7.President IIC, 8. Coordinator Samarth Academic Module",
-    "departments": [
-      "electrical-engineering"
-    ],
-    "primaryDepartment": "electrical-engineering"
+    "additionalResponsibility": "1. Headship 2.NIRF coordinator, 3.NAAC coordinator for criteria 5 (2020-2023), 4.BOS Convenor, 5. Chairman Admission cell , 6.Chief Warden (2021-2024), 7. Additional Chief Proctor (Since 2025), 8.President IIC, 9. Coordinator Samarth Academic Module 10. Member of Academic Counsil 11. Member of Vikas Samiti"
   },
   {
     "id": "electrical-engineering-f2",
+    "departments": [
+      "electrical-engineering"
+    ],
+    "primaryDepartment": "electrical-engineering",
     "sNo": 2,
     "name": "Dr. Satyam Kumar Upadhyay",
     "designation": "Assistant Professor",
@@ -857,14 +861,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Electrical Engineering",
     "teachingLoadHrsPerWeek": 21,
-    "additionalResponsibility": "1. Department Academic Coordinator 2. Assistant Coordinator Steering Committee SAMARTH 3. Member SAMARTH Programme Module 4. Member SAMARTH Academic Module 5. Assistant Coordinator AICTE Approval 6. Member NIRF Committee 7. Coordinator IIRS Nodal Centre(FOET) 8. Member NDL Committee 9. SPOC NPTEL (FOET) 10. Assistant Coordinator Data Processing/Result Declaration 11. Member Anti Ragging Squad 12. Assistant Proctor 13. Member Mahavidyalay Course Structure Formation Committee 14. SPOC, Smart India Hackathon 2026 FOET, VBSPU 15. NAAC Assistant Coordinator for criteria 2 (2020-2023) 16. Warden Transit Hostel (2022-2024) 17. Member Institution's Innovation Council(IIC)",
-    "departments": [
-      "electrical-engineering"
-    ],
-    "primaryDepartment": "electrical-engineering"
+    "additionalResponsibility": "1. Department Academic Coordinator 2. Assistant Coordinator Steering Committee SAMARTH 3. Member SAMARTH Programme Module 4. Member SAMARTH Academic Module 5. Assistant Coordinator AICTE Approval 6. Member NIRF Committee 7. Coordinator IIRS Nodal Centre(FOET) 8. Member NDL Committee 9. SPOC NPTEL (FOET) 10. Assistant Coordinator Data Processing/Result Declaration 11. Member Anti Ragging Squad 12. Assistant Proctor 13. Member Mahavidyalay Course Structure Formation Committee 14. SPOC, Smart India Hackathon 2026 FOET, VBSPU 15. NAAC Assistant Coordinator for criteria 2 (2020-2023) 16. Warden Transit Hostel (2022-2024) 17. Member Institution's Innovation Council(IIC)"
   },
   {
     "id": "electrical-engineering-f3",
+    "departments": [
+      "electrical-engineering"
+    ],
+    "primaryDepartment": "electrical-engineering",
     "sNo": 3,
     "name": "Dr. Jaya Shukla",
     "designation": "Assistant Professor",
@@ -873,14 +877,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Electrical Engineering",
     "teachingLoadHrsPerWeek": 21,
-    "additionalResponsibility": "Warden (Maharani Lakshmibai Girls Hostel ) ,Project co-ordinator,sessional co-ordinator(2023-25),women cell member(2024-25), mission life member,mission shakti member(till 2024-25),Naac cultural committiee member,",
-    "departments": [
-      "electrical-engineering"
-    ],
-    "primaryDepartment": "electrical-engineering"
+    "additionalResponsibility": "Warden (Maharani Lakshmibai Girls Hostel ) ,Project co-ordinator,sessional co-ordinator(2023-25),women cell member(2024-25), mission life member,mission shakti member(till 2024-25),Naac cultural committiee member,"
   },
   {
     "id": "electrical-engineering-f4",
+    "departments": [
+      "electrical-engineering"
+    ],
+    "primaryDepartment": "electrical-engineering",
     "sNo": 4,
     "name": "Dr. Saurabh V Kumar",
     "designation": "Assistant Professor",
@@ -889,14 +893,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Electrical Engineering",
     "teachingLoadHrsPerWeek": 22,
-    "additionalResponsibility": "Assistant coordinator campus evaluation Committee, Deputy academic coordinator, Deputy sessional coordinator . Co-Coordinator, Member, Campus Exam Result VBS Purvanchal University, Jaunpur. Marks uploading in Samarth Portal. Member, Electrical Engineering Department, for data communication & coordination in QS Ranking Executive Committee. Member, for AICTE Approval,Associate Coordinator of IIRS, ISRO outreach programme,Co-Coordinator, NAAC Criteria-5, Student Support & Progression,Member, Student Advisory Committee (SAC), VBS Purvanchal University, Jaunpur, 2021- Till Now ,Basic Electrical & Electrical Workshop Lab Incharge",
-    "departments": [
-      "electrical-engineering"
-    ],
-    "primaryDepartment": "electrical-engineering"
+    "additionalResponsibility": "Assistant coordinator campus evaluation Committee, Department Deputy academic coordinator, Deputy sessional coordinator . Assistant Coordinator Campus Evaluation, Member Marks Feeding Committee Samarth Portal, Department Executive Committee Member for data communication & coordination in QS Ranking, Member AICTE Approval Committee, Associate Coordinator of IIRS-ISRO outreach programme, Co-Coordinator, NAAC Criteria-5, Student Support & Progression,Member, Student Advisory Committee (SAC), VBS Purvanchal University, Jaunpur, 2021- Till Now"
   },
   {
     "id": "electrical-engineering-f5",
+    "departments": [
+      "electrical-engineering"
+    ],
+    "primaryDepartment": "electrical-engineering",
     "sNo": 5,
     "name": "Dr. Anurag Singh",
     "designation": "Assistant Professor",
@@ -905,14 +909,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Electrical Engineering",
     "teachingLoadHrsPerWeek": 22,
-    "additionalResponsibility": "Time Table Coordinator, Assistant Coordinator Training & Placement Cell, Member Grivance redressal commitee",
-    "departments": [
-      "electrical-engineering"
-    ],
-    "primaryDepartment": "electrical-engineering"
+    "additionalResponsibility": "Time Table Coordinator, Assistant Coordinator Training & Placement Cell, Member Grivance redressal commitee"
   },
   {
     "id": "electrical-engineering-f6",
+    "departments": [
+      "electrical-engineering"
+    ],
+    "primaryDepartment": "electrical-engineering",
     "sNo": 6,
     "name": "Maneesh Kumar Gupta",
     "designation": "Assistant Professor",
@@ -921,14 +925,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "Electrical Engineering",
     "teachingLoadHrsPerWeek": 21,
-    "additionalResponsibility": "Scholarship coordinator, Grivance redressal commitee, Sessional coordinator (2025-26), Duty for CCTV motering cell (2024), Sessions organizing commitee of Corporate Conclave (2024),",
-    "departments": [
-      "electrical-engineering"
-    ],
-    "primaryDepartment": "electrical-engineering"
+    "additionalResponsibility": "Scholarship coordinator, Grivance redressal commitee, Sessional coordinator (2025-26), Duty for CCTV motering cell (2024), Sessions organizing commitee of Corporate Conclave (2024),"
   },
   {
     "id": "electrical-engineering-f7",
+    "departments": [
+      "electrical-engineering"
+    ],
+    "primaryDepartment": "electrical-engineering",
     "sNo": 7,
     "name": "Dr. Shweta Singh",
     "designation": "Guest Faculty",
@@ -937,14 +941,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "Electrical Engineering",
     "teachingLoadHrsPerWeek": 22,
-    "additionalResponsibility": null,
-    "departments": [
-      "electrical-engineering"
-    ],
-    "primaryDepartment": "electrical-engineering"
+    "additionalResponsibility": "Deputy Project Coordinator"
   },
   {
     "id": "electrical-engineering-f8",
+    "departments": [
+      "electrical-engineering"
+    ],
+    "primaryDepartment": "electrical-engineering",
     "sNo": 8,
     "name": "Sharad Chandra",
     "designation": "Guest Faculty",
@@ -953,14 +957,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "Electrical Engineering",
     "teachingLoadHrsPerWeek": 21,
-    "additionalResponsibility": "Member samarth for student registration",
-    "departments": [
-      "electrical-engineering"
-    ],
-    "primaryDepartment": "electrical-engineering"
+    "additionalResponsibility": "Member samarth for student registration"
   },
   {
     "id": "electrical-engineering-f9",
+    "departments": [
+      "electrical-engineering"
+    ],
+    "primaryDepartment": "electrical-engineering",
     "sNo": 9,
     "name": "Dharmendra Yadav",
     "designation": "Guest Faculty",
@@ -969,14 +973,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "Electrical Engineering",
     "teachingLoadHrsPerWeek": 22,
-    "additionalResponsibility": "Member samarth for student registration",
-    "departments": [
-      "electrical-engineering"
-    ],
-    "primaryDepartment": "electrical-engineering"
+    "additionalResponsibility": "Member samarth for student registration"
   },
   {
     "id": "department-of-electronics-engineering-f1",
+    "departments": [
+      "department-of-electronics-engineering"
+    ],
+    "primaryDepartment": "department-of-electronics-engineering",
     "sNo": 1,
     "name": "Prof. Ravi Prakash",
     "designation": "Professor",
@@ -985,14 +989,16 @@
     "hasPhd": true,
     "programmesAppointedFor": "Department of Electronics Engineering",
     "teachingLoadHrsPerWeek": 11,
-    "additionalResponsibility": "Head Department of Electronics Engineering, NODAL officer CSIR- HRDG, Nodal officer -IPR cell VBSPU, Convenor BOS Dept of Electronics Engg,, FOET VBSPU, Member of admission committee VBSPU,",
-    "departments": [
-      "electronics-engineering"
-    ],
-    "primaryDepartment": "electronics-engineering"
+    "additionalResponsibility": "Head Department of Electronics Engineering, NODAL officer CSIR- HRDG, Nodal officer -IPR cell VBSPU, Convenor BOS Dept of Electronics Engg,, FOET VBSPU, Member of admission committee VBSPU,"
   },
   {
     "id": "department-of-electronics-engineering-f2",
+    "departments": [
+      "department-of-electronics-engineering",
+      "cse",
+      "it"
+    ],
+    "primaryDepartment": "department-of-electronics-engineering",
     "sNo": 2,
     "name": "Dr. Vikrant Bhateja",
     "designation": "Associate Professor",
@@ -1001,17 +1007,15 @@
     "hasPhd": true,
     "programmesAppointedFor": "Department of Electronics Engineering",
     "teachingLoadHrsPerWeek": 14,
-    "additionalResponsibility": "Head Department of CSE and IT, Convenor BOS of CSE and IT, FOET VBSPU, Member BOS dept of electronics engg,, FOET VBSPU, Member of admission committee VBSPU, member of quotation committee.",
-    "departments": [
-      "electronics-engineering",
-      "cse",
-      "it"
-    ],
-    "primaryDepartment": "electronics-engineering"
+    "additionalResponsibility": "Head Department of CSE and IT, Convenor BOS of CSE and IT, FOET VBSPU, Member BOS dept of electronics engg,, FOET VBSPU, Member of admission committee VBSPU, member of quotation committee."
   },
   {
     "id": "department-of-electronics-engineering-f3",
-    "sNo": 1,
+    "departments": [
+      "department-of-electronics-engineering"
+    ],
+    "primaryDepartment": "department-of-electronics-engineering",
+    "sNo": 3,
     "name": "Dr. Parul Trivedi",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1019,15 +1023,15 @@
     "hasPhd": true,
     "programmesAppointedFor": "Electronics and Comunication Engineering",
     "teachingLoadHrsPerWeek": 17,
-    "additionalResponsibility": "Class Councellor, Mentor Incharge, mentoring the student, Member NAAC Departmental committee, Member E-Samarth departmental committee, Lab Incharge, cordination committee for lab maintainence proposals",
-    "departments": [
-      "electronics-and-communication-engineering"
-    ],
-    "primaryDepartment": "electronics-and-communication-engineering"
+    "additionalResponsibility": "Class Councellor, Mentor Incharge, mentoring the student, Member NAAC Departmental committee, Member E-Samarth departmental committee, Lab Incharge, cordination committee for lab maintainence proposals"
   },
   {
     "id": "department-of-electronics-engineering-f4",
-    "sNo": 2,
+    "departments": [
+      "department-of-electronics-engineering"
+    ],
+    "primaryDepartment": "department-of-electronics-engineering",
+    "sNo": 4,
     "name": "Dr. Jyoti P. Singh",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1035,15 +1039,15 @@
     "hasPhd": true,
     "programmesAppointedFor": "Electronics and Comunication Engineering",
     "teachingLoadHrsPerWeek": 17,
-    "additionalResponsibility": "Member NAAC Departmental committee, Member E-Samarth departmental committee, Lab Incharge, mentoring the student",
-    "departments": [
-      "electronics-and-communication-engineering"
-    ],
-    "primaryDepartment": "electronics-and-communication-engineering"
+    "additionalResponsibility": "Member NAAC Departmental committee, Member E-Samarth departmental committee, Lab Incharge, mentoring the student"
   },
   {
     "id": "department-of-electronics-engineering-f5",
-    "sNo": 3,
+    "departments": [
+      "department-of-electronics-engineering"
+    ],
+    "primaryDepartment": "department-of-electronics-engineering",
+    "sNo": 5,
     "name": "Dr. Santosh Kumar Tripathi",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1051,15 +1055,15 @@
     "hasPhd": true,
     "programmesAppointedFor": "Electronics and Comunication Engineering",
     "teachingLoadHrsPerWeek": 14,
-    "additionalResponsibility": "Member NAAC Departmental committee, Member E-Samarth departmental committee, Lab Incharge, mentoring the student",
-    "departments": [
-      "electronics-and-communication-engineering"
-    ],
-    "primaryDepartment": "electronics-and-communication-engineering"
+    "additionalResponsibility": "Member NAAC Departmental committee, Member E-Samarth departmental committee, Lab Incharge, mentoring the student"
   },
   {
     "id": "department-of-electronics-engineering-f6",
-    "sNo": 4,
+    "departments": [
+      "department-of-electronics-engineering"
+    ],
+    "primaryDepartment": "department-of-electronics-engineering",
+    "sNo": 6,
     "name": "Dr Prem Chand Yadava",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1067,15 +1071,15 @@
     "hasPhd": true,
     "programmesAppointedFor": "Electronics and Comunication Engineering",
     "teachingLoadHrsPerWeek": 15,
-    "additionalResponsibility": "mmmber NAAC Departmental committee,l committee, Lab Incharge, mentoring the student,class counsellors,DepartmentTraining placement co-ordinator,",
-    "departments": [
-      "electronics-and-communication-engineering"
-    ],
-    "primaryDepartment": "electronics-and-communication-engineering"
+    "additionalResponsibility": "mmmber NAAC Departmental committee,l committee, Lab Incharge, mentoring the student,class counsellors,DepartmentTraining placement co-ordinator,"
   },
   {
     "id": "department-of-electronics-engineering-f7",
-    "sNo": 5,
+    "departments": [
+      "department-of-electronics-engineering"
+    ],
+    "primaryDepartment": "department-of-electronics-engineering",
+    "sNo": 7,
     "name": "Dr. Mohammad Aneesh",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1083,15 +1087,15 @@
     "hasPhd": true,
     "programmesAppointedFor": "Electronics and Comunication Engineering",
     "teachingLoadHrsPerWeek": 17,
-    "additionalResponsibility": "Class Counsellor, Mentor, Member of University Samarth Team (Colleges), Member of Samarth (Department), Member of NAAC criterion (Dept), Lab Incharge",
-    "departments": [
-      "electronics-and-communication-engineering"
-    ],
-    "primaryDepartment": "electronics-and-communication-engineering"
+    "additionalResponsibility": "Class Counsellor, Mentor, Member of University Samarth Team (Colleges), Member of Samarth (Department), Member of NAAC criterion (Dept), Lab Incharge"
   },
   {
     "id": "department-of-electronics-engineering-f8",
-    "sNo": 3,
+    "departments": [
+      "department-of-electronics-engineering"
+    ],
+    "primaryDepartment": "department-of-electronics-engineering",
+    "sNo": 8,
     "name": "Mr.Tushar Srivastava",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1099,15 +1103,15 @@
     "hasPhd": false,
     "programmesAppointedFor": "Electronics Engineering",
     "teachingLoadHrsPerWeek": 14,
-    "additionalResponsibility": "Member NAAC Departmental committee, Lab Incharge, mentoring the students",
-    "departments": [
-      "electronics-engineering"
-    ],
-    "primaryDepartment": "electronics-engineering"
+    "additionalResponsibility": "Member NAAC Departmental committee, Lab Incharge, mentoring the students"
   },
   {
     "id": "department-of-electronics-engineering-f9",
-    "sNo": 4,
+    "departments": [
+      "department-of-electronics-engineering"
+    ],
+    "primaryDepartment": "department-of-electronics-engineering",
+    "sNo": 9,
     "name": "Mr Sudhir Singh",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1115,15 +1119,15 @@
     "hasPhd": null,
     "programmesAppointedFor": "Electronics Engineering",
     "teachingLoadHrsPerWeek": 16,
-    "additionalResponsibility": "Member NAAC Departmental committee, Member E-Samarth departmental committee, Lab Incharge, mentoring the student",
-    "departments": [
-      "electronics-engineering"
-    ],
-    "primaryDepartment": "electronics-engineering"
+    "additionalResponsibility": "Member NAAC Departmental committee, Member E-Samarth departmental committee, Lab Incharge, mentoring the student"
   },
   {
     "id": "department-of-electronics-engineering-f10",
-    "sNo": 5,
+    "departments": [
+      "department-of-electronics-engineering"
+    ],
+    "primaryDepartment": "department-of-electronics-engineering",
+    "sNo": 10,
     "name": "Dr.Vishal Yadav",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1131,15 +1135,15 @@
     "hasPhd": true,
     "programmesAppointedFor": "Electronics Engineering",
     "teachingLoadHrsPerWeek": 17,
-    "additionalResponsibility": "Member NAAC Departmental committee, Member E-Samarth departmental/University committee, Lab Incharge, mentoring the student,NSS coordinator,Warden,CC",
-    "departments": [
-      "electronics-engineering"
-    ],
-    "primaryDepartment": "electronics-engineering"
+    "additionalResponsibility": "Member NAAC Departmental committee, Member E-Samarth departmental/University committee, Lab Incharge, mentoring the student,NSS coordinator,Warden,CC"
   },
   {
     "id": "department-of-electronics-engineering-f11",
-    "sNo": 6,
+    "departments": [
+      "department-of-electronics-engineering"
+    ],
+    "primaryDepartment": "department-of-electronics-engineering",
+    "sNo": 11,
     "name": "Dr Ritesh Baranwal",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1147,15 +1151,15 @@
     "hasPhd": true,
     "programmesAppointedFor": "Electronics Engineering",
     "teachingLoadHrsPerWeek": 17,
-    "additionalResponsibility": "Member NAAC Departmental committee, Member E-Samarth departmental committee, Lab Incharge, mentoring the student,Class Councellor, Academic Pgm Committee Departmental",
-    "departments": [
-      "electronics-engineering"
-    ],
-    "primaryDepartment": "electronics-engineering"
+    "additionalResponsibility": "Member NAAC Departmental committee, Member E-Samarth departmental committee, Lab Incharge, mentoring the student,Class Councellor, Academic Pgm Committee Departmental"
   },
   {
     "id": "department-of-electronics-engineering-f12",
-    "sNo": 7,
+    "departments": [
+      "department-of-electronics-engineering"
+    ],
+    "primaryDepartment": "department-of-electronics-engineering",
+    "sNo": 12,
     "name": "Miss. Poonam Sonkar",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1163,15 +1167,15 @@
     "hasPhd": null,
     "programmesAppointedFor": "Electronics Engineering",
     "teachingLoadHrsPerWeek": 14,
-    "additionalResponsibility": "Discipline committee/Anti Ragging Member Sport / Cultural Committee Member NAAC Member , Subject Load distributor Member, Class Councellor, Mentor",
-    "departments": [
-      "electronics-engineering"
-    ],
-    "primaryDepartment": "electronics-engineering"
+    "additionalResponsibility": "Discipline committee/Anti Ragging Member Sport / Cultural Committee Member NAAC Member , Subject Load distributor Member, Class Councellor, Mentor"
   },
   {
     "id": "department-of-electronics-engineering-f13",
-    "sNo": 6,
+    "departments": [
+      "department-of-electronics-engineering"
+    ],
+    "primaryDepartment": "department-of-electronics-engineering",
+    "sNo": 13,
     "name": "Mr. Shailesh Kumar Prajapati",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1179,15 +1183,15 @@
     "hasPhd": null,
     "programmesAppointedFor": "Electronics and Communication Engineering",
     "teachingLoadHrsPerWeek": 14,
-    "additionalResponsibility": "NAAC , Samarth",
-    "departments": [
-      "electronics-and-communication-engineering"
-    ],
-    "primaryDepartment": "electronics-and-communication-engineering"
+    "additionalResponsibility": "NAAC , Samarth"
   },
   {
     "id": "department-of-electronics-engineering-f14",
-    "sNo": 7,
+    "departments": [
+      "department-of-electronics-engineering"
+    ],
+    "primaryDepartment": "department-of-electronics-engineering",
+    "sNo": 14,
     "name": "Dr. Praveen Kumar Singh",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1195,15 +1199,15 @@
     "hasPhd": true,
     "programmesAppointedFor": "Electronics and Communication Engineering",
     "teachingLoadHrsPerWeek": 14,
-    "additionalResponsibility": "Proctorial Board, Evaluation work VBSPU, Mentor, Lab Incharge. Scrutiny committee, Departmental Sessional Exam , Warden",
-    "departments": [
-      "electronics-and-communication-engineering"
-    ],
-    "primaryDepartment": "electronics-and-communication-engineering"
+    "additionalResponsibility": "Proctorial Board, Evaluation work VBSPU, Mentor, Lab Incharge. Scrutiny committee, Departmental Sessional Exam , Warden"
   },
   {
     "id": "department-of-electronics-engineering-f15",
-    "sNo": 8,
+    "departments": [
+      "department-of-electronics-engineering"
+    ],
+    "primaryDepartment": "department-of-electronics-engineering",
+    "sNo": 15,
     "name": "Mrs. Priti Sharma",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1211,15 +1215,15 @@
     "hasPhd": null,
     "programmesAppointedFor": "Electronics and Communication Engineering",
     "teachingLoadHrsPerWeek": 19,
-    "additionalResponsibility": "Mentor, Warden (Girls Hostel), Lab Incharge, Member Mission Shakti,Member ICC cell, Perform duties in Convocation, Member NAAC committee, M.Tech part Time committee member, sports and cultural committee.",
-    "departments": [
-      "electronics-and-communication-engineering"
-    ],
-    "primaryDepartment": "electronics-and-communication-engineering"
+    "additionalResponsibility": "Mentor, Warden (Girls Hostel), Lab Incharge, Member Mission Shakti,Member ICC cell, Perform duties in Convocation, Member NAAC committee, M.Tech part Time committee member, sports and cultural committee."
   },
   {
     "id": "department-of-electronics-engineering-f16",
-    "sNo": 8,
+    "departments": [
+      "department-of-electronics-engineering"
+    ],
+    "primaryDepartment": "department-of-electronics-engineering",
+    "sNo": 16,
     "name": "Dr. Ajay Kumar Maurya",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1227,14 +1231,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Electronics Engineering",
     "teachingLoadHrsPerWeek": 17,
-    "additionalResponsibility": "Member NAAC Departmental committee,l committee, Lab Incharge, mentoring the student,class counsellors,Academic coordinator",
-    "departments": [
-      "electronics-engineering"
-    ],
-    "primaryDepartment": "electronics-engineering"
+    "additionalResponsibility": "Member NAAC Departmental committee,l committee, Lab Incharge, mentoring the student,class counsellors,Academic coordinator"
   },
   {
     "id": "h-r-d-f1",
+    "departments": [
+      "h-r-d"
+    ],
+    "primaryDepartment": "h-r-d",
     "sNo": 1,
     "name": "Dr. Rashi Kesh",
     "designation": "Associate Professor",
@@ -1243,14 +1247,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "H.R.D.",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "Head/UGC University Cultural Coordinator",
-    "departments": [
-      "h-r-d"
-    ],
-    "primaryDepartment": "h-r-d"
+    "additionalResponsibility": "Head/UGC University Cultural Coordinator"
   },
   {
     "id": "h-r-d-f2",
+    "departments": [
+      "h-r-d"
+    ],
+    "primaryDepartment": "h-r-d",
     "sNo": 2,
     "name": "Prof. Avinash D. Pathardikar",
     "designation": "Professor",
@@ -1259,14 +1263,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "H.R.D.",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "Dean/Chief Warden/Director, Incubation Center/CS",
-    "departments": [
-      "h-r-d"
-    ],
-    "primaryDepartment": "h-r-d"
+    "additionalResponsibility": "Dean/Chief Warden/Director, Incubation Center/CS"
   },
   {
     "id": "h-r-d-f3",
+    "departments": [
+      "h-r-d"
+    ],
+    "primaryDepartment": "h-r-d",
     "sNo": 3,
     "name": "Mr. Anupam Kumar",
     "designation": "Guest Faculty",
@@ -1275,14 +1279,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "H.R.D.",
     "teachingLoadHrsPerWeek": 24,
-    "additionalResponsibility": "Dept. Samarth ERP Incharge, ACS/Office Management/",
-    "departments": [
-      "h-r-d"
-    ],
-    "primaryDepartment": "h-r-d"
+    "additionalResponsibility": "Dept. Samarth ERP Incharge, ACS/Office Management/"
   },
   {
     "id": "h-r-d-f4",
+    "departments": [
+      "h-r-d"
+    ],
+    "primaryDepartment": "h-r-d",
     "sNo": 4,
     "name": "Dr. Praveen Kumar Mishra",
     "designation": "Guest Faculty",
@@ -1291,14 +1295,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "H.R.D.",
     "teachingLoadHrsPerWeek": 24,
-    "additionalResponsibility": "Time Table Incharge/Sessional Incharge",
-    "departments": [
-      "h-r-d"
-    ],
-    "primaryDepartment": "h-r-d"
+    "additionalResponsibility": "Time Table Incharge/Sessional Incharge"
   },
   {
     "id": "department-of-humanities-and-social-sciences-f1",
+    "departments": [
+      "department-of-humanities-and-social-sciences"
+    ],
+    "primaryDepartment": "department-of-humanities-and-social-sciences",
     "sNo": 1,
     "name": "Dr.Kamalesh Pal",
     "designation": "Assistant Professor",
@@ -1307,14 +1311,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Tech, Department of Humanities and Social Sciences",
     "teachingLoadHrsPerWeek": 22,
-    "additionalResponsibility": null,
-    "departments": [
-      "department-of-humanities-and-social-sciences"
-    ],
-    "primaryDepartment": "department-of-humanities-and-social-sciences"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-humanities-and-social-sciences-f2",
+    "departments": [
+      "department-of-humanities-and-social-sciences"
+    ],
+    "primaryDepartment": "department-of-humanities-and-social-sciences",
     "sNo": 2,
     "name": "Dr.Sonee Yadav",
     "designation": "Assistant Professor",
@@ -1323,14 +1327,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Tech, Department of Humanities and Social Sciences",
     "teachingLoadHrsPerWeek": 24,
-    "additionalResponsibility": null,
-    "departments": [
-      "department-of-humanities-and-social-sciences"
-    ],
-    "primaryDepartment": "department-of-humanities-and-social-sciences"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-humanities-and-social-sciences-f3",
+    "departments": [
+      "department-of-humanities-and-social-sciences"
+    ],
+    "primaryDepartment": "department-of-humanities-and-social-sciences",
     "sNo": 3,
     "name": "Dr.Prasansha Maddesiya",
     "designation": "Guest Faculty",
@@ -1339,14 +1343,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Tech, Department of Humanities and Social Sciences",
     "teachingLoadHrsPerWeek": 20,
-    "additionalResponsibility": null,
-    "departments": [
-      "department-of-humanities-and-social-sciences"
-    ],
-    "primaryDepartment": "department-of-humanities-and-social-sciences"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-law-f1",
+    "departments": [
+      "department-of-law"
+    ],
+    "primaryDepartment": "department-of-law",
     "sNo": 1,
     "name": "Prof. (Dr.)Vinod Kumar",
     "designation": "Professor",
@@ -1355,14 +1359,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Law",
     "teachingLoadHrsPerWeek": 6,
-    "additionalResponsibility": "HoD, Co-ordinator Ethics Committee IQAC",
-    "departments": [
-      "department-of-law"
-    ],
-    "primaryDepartment": "department-of-law"
+    "additionalResponsibility": "HoD, Co-ordinator Ethics Committee IQAC"
   },
   {
     "id": "department-of-law-f2",
+    "departments": [
+      "department-of-law"
+    ],
+    "primaryDepartment": "department-of-law",
     "sNo": 2,
     "name": "Dr. Vanita Singh",
     "designation": "Assistant Professor",
@@ -1371,14 +1375,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Law",
     "teachingLoadHrsPerWeek": 6,
-    "additionalResponsibility": "Member of Mission Shakti, Member of Women Studies Centre , Assistant DSW, Member of Anti Ragging Committee",
-    "departments": [
-      "department-of-law"
-    ],
-    "primaryDepartment": "department-of-law"
+    "additionalResponsibility": "Member of Mission Shakti, Member of Women Studies Centre , Assistant DSW, Member of Anti Ragging Committee"
   },
   {
     "id": "department-of-law-f3",
+    "departments": [
+      "department-of-law"
+    ],
+    "primaryDepartment": "department-of-law",
     "sNo": 3,
     "name": "Dr. Anurag Mishra",
     "designation": "Assistant Professor",
@@ -1387,14 +1391,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Law",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "NSS Program Officer, .Nodal Officer Road shefty, .Member of Pt. Dean Dayal Upadhyay Shodhpeeth",
-    "departments": [
-      "department-of-law"
-    ],
-    "primaryDepartment": "department-of-law"
+    "additionalResponsibility": "NSS Program Officer, .Nodal Officer Road shefty, .Member of Pt. Dean Dayal Upadhyay Shodhpeeth"
   },
   {
     "id": "department-of-law-f4",
+    "departments": [
+      "department-of-law"
+    ],
+    "primaryDepartment": "department-of-law",
     "sNo": 4,
     "name": "Sri Mangala Prasad Yadav",
     "designation": "Assistant Professor",
@@ -1403,14 +1407,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "Law",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "Co-ordinator Legal aid Clinic,",
-    "departments": [
-      "department-of-law"
-    ],
-    "primaryDepartment": "department-of-law"
+    "additionalResponsibility": "Co-ordinator Legal aid Clinic,"
   },
   {
     "id": "department-of-law-f5",
+    "departments": [
+      "department-of-law"
+    ],
+    "primaryDepartment": "department-of-law",
     "sNo": 5,
     "name": "Dr. Priyanka Kumari",
     "designation": "Assistant Professor",
@@ -1419,14 +1423,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Law",
     "teachingLoadHrsPerWeek": 12,
-    "additionalResponsibility": "Mission shakti, Mahila adhyan kendra",
-    "departments": [
-      "department-of-law"
-    ],
-    "primaryDepartment": "department-of-law"
+    "additionalResponsibility": "Mission shakti, Mahila adhyan kendra"
   },
   {
     "id": "department-of-law-f6",
+    "departments": [
+      "department-of-law"
+    ],
+    "primaryDepartment": "department-of-law",
     "sNo": 6,
     "name": "Mr. Shree Prakash Yadav",
     "designation": "Assistant Professor",
@@ -1435,14 +1439,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "Law",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "Time Committee, Member of admission Committee (Faculty Level)",
-    "departments": [
-      "department-of-law"
-    ],
-    "primaryDepartment": "department-of-law"
+    "additionalResponsibility": "Time Committee, Member of admission Committee (Faculty Level)"
   },
   {
     "id": "department-of-law-f7",
+    "departments": [
+      "department-of-law"
+    ],
+    "primaryDepartment": "department-of-law",
     "sNo": 7,
     "name": "Dr. Rajit Ram Sonker",
     "designation": "Assistant Professor",
@@ -1451,14 +1455,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Law",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "Admission Co-ordinator ( B.A.LL.B.Faculty Level)",
-    "departments": [
-      "department-of-law"
-    ],
-    "primaryDepartment": "department-of-law"
+    "additionalResponsibility": "Admission Co-ordinator ( B.A.LL.B.Faculty Level)"
   },
   {
     "id": "department-of-law-f8",
+    "departments": [
+      "department-of-law"
+    ],
+    "primaryDepartment": "department-of-law",
     "sNo": 8,
     "name": "Dr. Ankit Kumar",
     "designation": "Assistant Professor",
@@ -1467,14 +1471,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Law",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": null,
-    "departments": [
-      "department-of-law"
-    ],
-    "primaryDepartment": "department-of-law"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-law-f9",
+    "departments": [
+      "department-of-law"
+    ],
+    "primaryDepartment": "department-of-law",
     "sNo": 9,
     "name": "Dr. Dinesh Kumar Singh",
     "designation": "Assistant Professor",
@@ -1483,14 +1487,15 @@
     "hasPhd": true,
     "programmesAppointedFor": "Law",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "Co-ordinator Moot court Committee, Member of Legal Aid clinic",
-    "departments": [
-      "department-of-law"
-    ],
-    "primaryDepartment": "department-of-law"
+    "additionalResponsibility": "Co-ordinator Moot court Committee, Member of Legal Aid clinic"
   },
   {
     "id": "department-of-law-f10",
+    "departments": [
+      "department-of-law",
+      "rb-chemistry"
+    ],
+    "primaryDepartment": "department-of-law",
     "sNo": 10,
     "name": "Dr. Pramod Kumar",
     "designation": "Assistant Professor",
@@ -1499,15 +1504,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Law",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "Assistant Procter , ACS Faculty Level",
-    "departments": [
-      "department-of-law",
-      "rb-chemistry"
-    ],
-    "primaryDepartment": "department-of-law"
+    "additionalResponsibility": "Assistant Procter , ACS Faculty Level"
   },
   {
     "id": "department-of-law-f11",
+    "departments": [
+      "department-of-law"
+    ],
+    "primaryDepartment": "department-of-law",
     "sNo": 11,
     "name": "Dr. Rahul Kumar Rai",
     "designation": "Assistant Professor",
@@ -1516,14 +1520,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Law",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "Assistant Procter, Member of Cyber Club",
-    "departments": [
-      "department-of-law"
-    ],
-    "primaryDepartment": "department-of-law"
+    "additionalResponsibility": "Assistant Procter, Member of Cyber Club"
   },
   {
     "id": "department-of-law-f12",
+    "departments": [
+      "department-of-law"
+    ],
+    "primaryDepartment": "department-of-law",
     "sNo": 12,
     "name": "Dr. Indrajeet Singh",
     "designation": "Assistant Professor",
@@ -1532,14 +1536,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Law",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "Co-ordinator Admission LL.M.",
-    "departments": [
-      "department-of-law"
-    ],
-    "primaryDepartment": "department-of-law"
+    "additionalResponsibility": "Co-ordinator Admission LL.M."
   },
   {
     "id": "department-of-law-f13",
+    "departments": [
+      "department-of-law"
+    ],
+    "primaryDepartment": "department-of-law",
     "sNo": 13,
     "name": "Dr. Vipin Kumar Singh",
     "designation": "Assistant Professor",
@@ -1548,14 +1552,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Law",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": null,
-    "departments": [
-      "department-of-law"
-    ],
-    "primaryDepartment": "department-of-law"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-law-f14",
+    "departments": [
+      "department-of-law"
+    ],
+    "primaryDepartment": "department-of-law",
     "sNo": 14,
     "name": "Dr. Ashraya Dubey",
     "designation": "Assistant Professor",
@@ -1564,14 +1568,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Law",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": null,
-    "departments": [
-      "department-of-law"
-    ],
-    "primaryDepartment": "department-of-law"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-law-f15",
+    "departments": [
+      "department-of-law"
+    ],
+    "primaryDepartment": "department-of-law",
     "sNo": 15,
     "name": "Dr. Shubham Singh",
     "designation": "Assistant Professor",
@@ -1580,14 +1584,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Law",
     "teachingLoadHrsPerWeek": 12,
-    "additionalResponsibility": null,
-    "departments": [
-      "department-of-law"
-    ],
-    "primaryDepartment": "department-of-law"
+    "additionalResponsibility": null
   },
   {
     "id": "department-of-law-f16",
+    "departments": [
+      "department-of-law"
+    ],
+    "primaryDepartment": "department-of-law",
     "sNo": 16,
     "name": "Mr. Ravikesh Kumar Maurya",
     "designation": "Assistant Professor",
@@ -1596,14 +1600,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "Law",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "Co-ordinator ECI साक्षरता अभियान",
-    "departments": [
-      "department-of-law"
-    ],
-    "primaryDepartment": "department-of-law"
+    "additionalResponsibility": "Co-ordinator ECI साक्षरता अभियान"
   },
   {
     "id": "department-of-law-f17",
+    "departments": [
+      "department-of-law"
+    ],
+    "primaryDepartment": "department-of-law",
     "sNo": 17,
     "name": "Mr. Yogesh Uttam",
     "designation": "Assistant Professor",
@@ -1612,14 +1616,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "Law",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": null,
-    "departments": [
-      "department-of-law"
-    ],
-    "primaryDepartment": "department-of-law"
+    "additionalResponsibility": null
   },
   {
     "id": "institute-department-of-pharmacy-f1",
+    "departments": [
+      "institute-department-of-pharmacy"
+    ],
+    "primaryDepartment": "institute-department-of-pharmacy",
     "sNo": 1,
     "name": "Dr. Nripendra Singh",
     "designation": "Assistant Professor",
@@ -1628,14 +1632,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B. Pharm./D. Pharm.",
     "teachingLoadHrsPerWeek": 12,
-    "additionalResponsibility": "HOD",
-    "departments": [
-      "institute-department-of-pharmacy"
-    ],
-    "primaryDepartment": "institute-department-of-pharmacy"
+    "additionalResponsibility": "HOD"
   },
   {
     "id": "institute-department-of-pharmacy-f2",
+    "departments": [
+      "institute-department-of-pharmacy"
+    ],
+    "primaryDepartment": "institute-department-of-pharmacy",
     "sNo": 2,
     "name": "Dr. Narendra Kumar Singh",
     "designation": "Professor",
@@ -1644,14 +1648,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B. Pharm./D. Pharm.",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": null,
-    "departments": [
-      "institute-department-of-pharmacy"
-    ],
-    "primaryDepartment": "institute-department-of-pharmacy"
+    "additionalResponsibility": null
   },
   {
     "id": "institute-department-of-pharmacy-f3",
+    "departments": [
+      "institute-department-of-pharmacy"
+    ],
+    "primaryDepartment": "institute-department-of-pharmacy",
     "sNo": 3,
     "name": "Dr. Jyoti Nanda Sharma",
     "designation": "Professor",
@@ -1660,14 +1664,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B. Pharm./D. Pharm.",
     "teachingLoadHrsPerWeek": 11,
-    "additionalResponsibility": null,
-    "departments": [
-      "institute-department-of-pharmacy"
-    ],
-    "primaryDepartment": "institute-department-of-pharmacy"
+    "additionalResponsibility": null
   },
   {
     "id": "institute-department-of-pharmacy-f4",
+    "departments": [
+      "institute-department-of-pharmacy"
+    ],
+    "primaryDepartment": "institute-department-of-pharmacy",
     "sNo": 4,
     "name": "Dr. Rajeev Kumar",
     "designation": "Assistant Professor",
@@ -1676,14 +1680,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B. Pharm./D. Pharm.",
     "teachingLoadHrsPerWeek": 15,
-    "additionalResponsibility": null,
-    "departments": [
-      "institute-department-of-pharmacy"
-    ],
-    "primaryDepartment": "institute-department-of-pharmacy"
+    "additionalResponsibility": null
   },
   {
     "id": "institute-department-of-pharmacy-f5",
+    "departments": [
+      "institute-department-of-pharmacy"
+    ],
+    "primaryDepartment": "institute-department-of-pharmacy",
     "sNo": 5,
     "name": "Dr. Vijay Bahadur Maurya",
     "designation": "Assistant Professor",
@@ -1692,14 +1696,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B. Pharm./D. Pharm.",
     "teachingLoadHrsPerWeek": 20,
-    "additionalResponsibility": null,
-    "departments": [
-      "institute-department-of-pharmacy"
-    ],
-    "primaryDepartment": "institute-department-of-pharmacy"
+    "additionalResponsibility": null
   },
   {
     "id": "institute-department-of-pharmacy-f6",
+    "departments": [
+      "institute-department-of-pharmacy"
+    ],
+    "primaryDepartment": "institute-department-of-pharmacy",
     "sNo": 6,
     "name": "Dr. Jhanshee Mishra",
     "designation": "Assistant Professor",
@@ -1708,14 +1712,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B. Pharm./D. Pharm.",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": null,
-    "departments": [
-      "institute-department-of-pharmacy"
-    ],
-    "primaryDepartment": "institute-department-of-pharmacy"
+    "additionalResponsibility": null
   },
   {
     "id": "institute-department-of-pharmacy-f7",
+    "departments": [
+      "institute-department-of-pharmacy"
+    ],
+    "primaryDepartment": "institute-department-of-pharmacy",
     "sNo": 7,
     "name": "Mrs. Puja",
     "designation": "Assistant Professor",
@@ -1724,14 +1728,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "B. Pharm./D. Pharm.",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": null,
-    "departments": [
-      "institute-department-of-pharmacy"
-    ],
-    "primaryDepartment": "institute-department-of-pharmacy"
+    "additionalResponsibility": null
   },
   {
     "id": "institute-department-of-pharmacy-f8",
+    "departments": [
+      "institute-department-of-pharmacy"
+    ],
+    "primaryDepartment": "institute-department-of-pharmacy",
     "sNo": 8,
     "name": "Mr. Abhishek Yadav",
     "designation": "Assistant Professor",
@@ -1740,14 +1744,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "B. Pharm./D. Pharm.",
     "teachingLoadHrsPerWeek": 12,
-    "additionalResponsibility": null,
-    "departments": [
-      "institute-department-of-pharmacy"
-    ],
-    "primaryDepartment": "institute-department-of-pharmacy"
+    "additionalResponsibility": null
   },
   {
     "id": "institute-department-of-pharmacy-f9",
+    "departments": [
+      "institute-department-of-pharmacy"
+    ],
+    "primaryDepartment": "institute-department-of-pharmacy",
     "sNo": 9,
     "name": "Mr. Surendra Kumar Singh",
     "designation": "Assistant Professor",
@@ -1756,14 +1760,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "B. Pharm./D. Pharm.",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": null,
-    "departments": [
-      "institute-department-of-pharmacy"
-    ],
-    "primaryDepartment": "institute-department-of-pharmacy"
+    "additionalResponsibility": null
   },
   {
     "id": "institute-department-of-pharmacy-f10",
+    "departments": [
+      "institute-department-of-pharmacy"
+    ],
+    "primaryDepartment": "institute-department-of-pharmacy",
     "sNo": 10,
     "name": "Dr. Surendra Kumar Gautam",
     "designation": "Assistant Professor",
@@ -1772,14 +1776,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B. Pharm./D. Pharm.",
     "teachingLoadHrsPerWeek": 17,
-    "additionalResponsibility": null,
-    "departments": [
-      "institute-department-of-pharmacy"
-    ],
-    "primaryDepartment": "institute-department-of-pharmacy"
+    "additionalResponsibility": null
   },
   {
     "id": "institute-department-of-pharmacy-f11",
+    "departments": [
+      "institute-department-of-pharmacy"
+    ],
+    "primaryDepartment": "institute-department-of-pharmacy",
     "sNo": 11,
     "name": "Mr. Mithilesh Chaurasia",
     "designation": "Guest Faculty",
@@ -1788,14 +1792,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "B. Pharm./D. Pharm.",
     "teachingLoadHrsPerWeek": 21,
-    "additionalResponsibility": null,
-    "departments": [
-      "institute-department-of-pharmacy"
-    ],
-    "primaryDepartment": "institute-department-of-pharmacy"
+    "additionalResponsibility": null
   },
   {
     "id": "mathematics-engg-f1",
+    "departments": [
+      "mathematics-engg"
+    ],
+    "primaryDepartment": "mathematics-engg",
     "sNo": 1,
     "name": "Raj Kumar",
     "designation": "Professor",
@@ -1804,14 +1808,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Tech",
     "teachingLoadHrsPerWeek": 8,
-    "additionalResponsibility": "Head, Department of Mathematics, Honorary Liberarian",
-    "departments": [
-      "mathematics-engg"
-    ],
-    "primaryDepartment": "mathematics-engg"
+    "additionalResponsibility": "Head, Department of Mathematics, Honorary Liberarian"
   },
   {
     "id": "mathematics-engg-f2",
+    "departments": [
+      "mathematics-engg"
+    ],
+    "primaryDepartment": "mathematics-engg",
     "sNo": 2,
     "name": "Nimisha Yadav",
     "designation": "Assistant Professor",
@@ -1820,14 +1824,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Tech",
     "teachingLoadHrsPerWeek": 16,
-    "additionalResponsibility": "Warden Meera Bai Hostel",
-    "departments": [
-      "mathematics-engg"
-    ],
-    "primaryDepartment": "mathematics-engg"
+    "additionalResponsibility": "Warden Meera Bai Hostel"
   },
   {
     "id": "mathematics-engg-f3",
+    "departments": [
+      "mathematics-engg"
+    ],
+    "primaryDepartment": "mathematics-engg",
     "sNo": 3,
     "name": "Sushil shukla",
     "designation": "Assistant Professor",
@@ -1836,14 +1840,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Tech",
     "teachingLoadHrsPerWeek": 16,
-    "additionalResponsibility": null,
-    "departments": [
-      "mathematics-engg"
-    ],
-    "primaryDepartment": "mathematics-engg"
+    "additionalResponsibility": null
   },
   {
     "id": "mathematics-engg-f4",
+    "departments": [
+      "mathematics-engg"
+    ],
+    "primaryDepartment": "mathematics-engg",
     "sNo": 4,
     "name": "Dr. Uday Raj Prajapat",
     "designation": "Assistant Professor",
@@ -1852,14 +1856,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Tech",
     "teachingLoadHrsPerWeek": 17,
-    "additionalResponsibility": null,
-    "departments": [
-      "mathematics-engg"
-    ],
-    "primaryDepartment": "mathematics-engg"
+    "additionalResponsibility": null
   },
   {
     "id": "mechanical-engineering-f1",
+    "departments": [
+      "mechanical-engineering"
+    ],
+    "primaryDepartment": "mechanical-engineering",
     "sNo": 1,
     "name": "Prof Sandip Kumar Singh",
     "designation": "Professor",
@@ -1868,14 +1872,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Tech (Mechanical Engineering)",
     "teachingLoadHrsPerWeek": 24,
-    "additionalResponsibility": "Convenor Board of Studies, Head of Department till 23/06/2026,Member Academic Council",
-    "departments": [
-      "mechanical-engineering"
-    ],
-    "primaryDepartment": "mechanical-engineering"
+    "additionalResponsibility": "Convenor Board of Studies, Head of Department till 23/06/2026,Member Academic Council"
   },
   {
     "id": "mechanical-engineering-f2",
+    "departments": [
+      "mechanical-engineering"
+    ],
+    "primaryDepartment": "mechanical-engineering",
     "sNo": 2,
     "name": "Dr. Navin Chaurasiya",
     "designation": "Assistant Professor",
@@ -1884,14 +1888,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Tech (Mechanical Engineering)",
     "teachingLoadHrsPerWeek": 27,
-    "additionalResponsibility": "(Key Performance Indication) KP1, KPI-11, KPI-12, KPI-13 University) (Departmental level B.Tech Project Committee, NAAC, NIRF, Scholarship and Fee Refund Committee, Plantation, Building Maintenance)",
-    "departments": [
-      "mechanical-engineering"
-    ],
-    "primaryDepartment": "mechanical-engineering"
+    "additionalResponsibility": "(Key Performance Indication) KP1, KPI-11, KPI-12, KPI-13 University) (Departmental level B.Tech Project Committee, NAAC, NIRF, Scholarship and Fee Refund Committee, Plantation, Building Maintenance)"
   },
   {
     "id": "mechanical-engineering-f3",
+    "departments": [
+      "mechanical-engineering"
+    ],
+    "primaryDepartment": "mechanical-engineering",
     "sNo": 3,
     "name": "Dr. Deep Prakash Singh",
     "designation": "Assistant Professor",
@@ -1900,14 +1904,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Tech (Mechanical Engineering)",
     "teachingLoadHrsPerWeek": 29,
-    "additionalResponsibility": "Assistant Coordinator in CTPC, Sports Council, Office of International Affairs, Departmental Coordinator Training placement, Sports, Admission committee, Discipline Committee, Samarth Portal, Departmental Co-coordinator Women empowerment committee.",
-    "departments": [
-      "mechanical-engineering"
-    ],
-    "primaryDepartment": "mechanical-engineering"
+    "additionalResponsibility": "Assistant Coordinator in CTPC, Sports Council, Office of International Affairs, Departmental Coordinator Training placement, Sports, Admission committee, Discipline Committee, Samarth Portal, Departmental Co-coordinator Women empowerment committee."
   },
   {
     "id": "mechanical-engineering-f4",
+    "departments": [
+      "mechanical-engineering"
+    ],
+    "primaryDepartment": "mechanical-engineering",
     "sNo": 4,
     "name": "Mr. Himanshu Tiwari",
     "designation": "Assistant Professor",
@@ -1916,14 +1920,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "B. Tech. in Mechanical Engineering",
     "teachingLoadHrsPerWeek": 30,
-    "additionalResponsibility": "Coordinator Time Table Committee, Coordinator Building Maintenance Committee, Coordinator Practical Examination Committee, Co-Cordinator Admission Committee, Member NAAC committee, Coordinator General Category Scholarship, Cocordinator Extra cirricular Committee, Class Coordinator 3rd Year",
-    "departments": [
-      "mechanical-engineering"
-    ],
-    "primaryDepartment": "mechanical-engineering"
+    "additionalResponsibility": "Coordinator Time Table Committee, Coordinator Building Maintenance Committee, Coordinator Practical Examination Committee, Co-Cordinator Admission Committee, Member NAAC committee, Coordinator General Category Scholarship, Cocordinator Extra cirricular Committee, Class Coordinator 3rd Year"
   },
   {
     "id": "mechanical-engineering-f5",
+    "departments": [
+      "mechanical-engineering"
+    ],
+    "primaryDepartment": "mechanical-engineering",
     "sNo": 5,
     "name": "Mr. Subodh Kumar",
     "designation": "Assistant Professor",
@@ -1932,14 +1936,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "B.Tech In Mechanical engineering",
     "teachingLoadHrsPerWeek": 34,
-    "additionalResponsibility": "(1)Assistant Centre Superintendent for Examination in Engineering Faculty,(2)Member in College Post Evaluation Samarth Committee (3) Class Coordinator B.tech Mechanical First Year ,(4) Coordinator for SC/ST Category in Scholarship and Fee Refund Committee in Mechanical engineering Department, (5) Member in Departmental Plantation Committee, (6) Coordinator in Departmental Extra curricular Committee ,(7) Student Fee Varification Committee in Mechanical Engineering Department",
-    "departments": [
-      "mechanical-engineering"
-    ],
-    "primaryDepartment": "mechanical-engineering"
+    "additionalResponsibility": "(1)Assistant Centre Superintendent for Examination in Engineering Faculty,(2)Member in College Post Evaluation Samarth Committee (3) Class Coordinator B.tech Mechanical First Year ,(4) Coordinator for SC/ST Category in Scholarship and Fee Refund Committee in Mechanical engineering Department, (5) Member in Departmental Plantation Committee, (6) Coordinator in Departmental Extra curricular Committee ,(7) Student Fee Varification Committee in Mechanical Engineering Department"
   },
   {
     "id": "mechanical-engineering-f6",
+    "departments": [
+      "mechanical-engineering"
+    ],
+    "primaryDepartment": "mechanical-engineering",
     "sNo": 6,
     "name": "Dr. Shashank Dubey",
     "designation": "Assistant Professor",
@@ -1948,14 +1952,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Tech In Mechanical engineering",
     "teachingLoadHrsPerWeek": 29,
-    "additionalResponsibility": "Memebers of different department committee",
-    "departments": [
-      "mechanical-engineering"
-    ],
-    "primaryDepartment": "mechanical-engineering"
+    "additionalResponsibility": "Memebers of different department committee"
   },
   {
     "id": "mechanical-engineering-f7",
+    "departments": [
+      "mechanical-engineering"
+    ],
+    "primaryDepartment": "mechanical-engineering",
     "sNo": 7,
     "name": "Dr. Hemant Kumar Singh",
     "designation": "Assistant Professor",
@@ -1964,14 +1968,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Tech In Mechanical engineering",
     "teachingLoadHrsPerWeek": 27,
-    "additionalResponsibility": "Assistant Centre Superintendent for University Examination at UNSIET,Departmental Co-ordinator NAAC+NBA+NIRF+Library committee, Departmental Co - cordinator Samarth Portal Related Activities.",
-    "departments": [
-      "mechanical-engineering"
-    ],
-    "primaryDepartment": "mechanical-engineering"
+    "additionalResponsibility": "Assistant Centre Superintendent for University Examination at UNSIET,Departmental Co-ordinator NAAC+NBA+NIRF+Library committee, Departmental Co - cordinator Samarth Portal Related Activities."
   },
   {
     "id": "mechanical-engineering-f8",
+    "departments": [
+      "mechanical-engineering"
+    ],
+    "primaryDepartment": "mechanical-engineering",
     "sNo": 8,
     "name": "Mr. Ankush Gaurav",
     "designation": "Assistant Professor",
@@ -1980,14 +1984,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "B.Tech In Mechanical engineering",
     "teachingLoadHrsPerWeek": 31,
-    "additionalResponsibility": "1.Key point indicator 2.Engineering admission committee 3.Department time table B.tech 4.Training and placement 5.NAAC and NBA Committee department 6. Scholarship and Fee refund committee 7.Intership committee 8. Samarth committee 9. Class coordinator",
-    "departments": [
-      "mechanical-engineering"
-    ],
-    "primaryDepartment": "mechanical-engineering"
+    "additionalResponsibility": "1.Key point indicator 2.Engineering admission committee 3.Department time table B.tech 4.Training and placement 5.NAAC and NBA Committee department 6. Scholarship and Fee refund committee 7.Intership committee 8. Samarth committee 9. Class coordinator"
   },
   {
     "id": "mechanical-engineering-f9",
+    "departments": [
+      "mechanical-engineering"
+    ],
+    "primaryDepartment": "mechanical-engineering",
     "sNo": 9,
     "name": "Mohd. Rehan",
     "designation": "Assistant Professor",
@@ -1996,14 +2000,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "B.Tech In Mechanical engineering",
     "teachingLoadHrsPerWeek": 27,
-    "additionalResponsibility": "Class Coordinator",
-    "departments": [
-      "mechanical-engineering"
-    ],
-    "primaryDepartment": "mechanical-engineering"
+    "additionalResponsibility": "Class Coordinator"
   },
   {
     "id": "physics-f1",
+    "departments": [
+      "physics"
+    ],
+    "primaryDepartment": "physics",
     "sNo": 1,
     "name": "Prof. Santosh Kumar",
     "designation": "Professor",
@@ -2012,14 +2016,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B. Tech.",
     "teachingLoadHrsPerWeek": 13,
-    "additionalResponsibility": "Head",
-    "departments": [
-      "physics"
-    ],
-    "primaryDepartment": "physics"
+    "additionalResponsibility": "Head"
   },
   {
     "id": "physics-f2",
+    "departments": [
+      "physics"
+    ],
+    "primaryDepartment": "physics",
     "sNo": 2,
     "name": "Dr. Manish Pratap Singh",
     "designation": "Assistant Professor",
@@ -2028,14 +2032,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B. Tech.",
     "teachingLoadHrsPerWeek": 13,
-    "additionalResponsibility": "Convener Board of Studies (Physics-Engg.), Nodal Officer GeM, Convener anti-ragging committee, Warden of Trasit and Gangotri Hostel",
-    "departments": [
-      "physics"
-    ],
-    "primaryDepartment": "physics"
+    "additionalResponsibility": "Convener Board of Studies (Physics-Engg.), Nodal Officer GeM, Convener anti-ragging committee, Warden of Trasit and Gangotri Hostel"
   },
   {
     "id": "rb-centre-for-nanoscience-and-technology-f1",
+    "departments": [
+      "rb-centre-for-nanoscience-and-technology"
+    ],
+    "primaryDepartment": "rb-centre-for-nanoscience-and-technology",
     "sNo": 1,
     "name": "Dr. Sujeet Kumar Chaurasia",
     "designation": "Assistant Professor",
@@ -2044,14 +2048,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Centre for Nanoscience and Technology",
     "teachingLoadHrsPerWeek": 14,
-    "additionalResponsibility": "Head of the Department,",
-    "departments": [
-      "rb-centre-for-nanoscience-and-technology"
-    ],
-    "primaryDepartment": "rb-centre-for-nanoscience-and-technology"
+    "additionalResponsibility": "Head of the Department,"
   },
   {
     "id": "rb-centre-for-nanoscience-and-technology-f2",
+    "departments": [
+      "rb-centre-for-nanoscience-and-technology"
+    ],
+    "primaryDepartment": "rb-centre-for-nanoscience-and-technology",
     "sNo": 2,
     "name": "Dr. Kajal Kumar Dey",
     "designation": "Assistant Professor",
@@ -2060,14 +2064,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "Centre for Nanoscience and Technology",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "Coordinator-QS ranking Member-Technical Evaluation Committee, etc.",
-    "departments": [
-      "rb-centre-for-nanoscience-and-technology"
-    ],
-    "primaryDepartment": "rb-centre-for-nanoscience-and-technology"
+    "additionalResponsibility": "Coordinator-QS ranking Member-Technical Evaluation Committee, etc."
   },
   {
     "id": "rb-chemistry-f2",
+    "departments": [
+      "rb-chemistry"
+    ],
+    "primaryDepartment": "rb-chemistry",
     "sNo": 1,
     "name": "Dr. Dinesh Kumar Verma",
     "designation": "Assistant Professor",
@@ -2076,14 +2080,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Sc., M.Sc., Ph.D.",
     "teachingLoadHrsPerWeek": 25,
-    "additionalResponsibility": "General Lab Incharge",
-    "departments": [
-      "rb-chemistry"
-    ],
-    "primaryDepartment": "rb-chemistry"
+    "additionalResponsibility": "General Lab Incharge"
   },
   {
     "id": "rb-chemistry-f3",
+    "departments": [
+      "rb-chemistry"
+    ],
+    "primaryDepartment": "rb-chemistry",
     "sNo": 2,
     "name": "Dr. Nitesh Jaiswal",
     "designation": "Assistant Professor",
@@ -2092,14 +2096,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Sc., M.Sc., Ph.D.",
     "teachingLoadHrsPerWeek": 24,
-    "additionalResponsibility": "ADSW, Warden, Deputy Coordinator, CTPC",
-    "departments": [
-      "rb-chemistry"
-    ],
-    "primaryDepartment": "rb-chemistry"
+    "additionalResponsibility": "ADSW, Warden, Deputy Coordinator, CTPC"
   },
   {
     "id": "rb-chemistry-f4",
+    "departments": [
+      "rb-chemistry"
+    ],
+    "primaryDepartment": "rb-chemistry",
     "sNo": 3,
     "name": "Dr. Ajeet Singh",
     "designation": "Assistant Professor",
@@ -2108,14 +2112,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Sc., M.Sc., Ph.D.",
     "teachingLoadHrsPerWeek": 25,
-    "additionalResponsibility": "Convener of BOS",
-    "departments": [
-      "rb-chemistry"
-    ],
-    "primaryDepartment": "rb-chemistry"
+    "additionalResponsibility": "Convener of BOS"
   },
   {
     "id": "rb-chemistry-f5",
+    "departments": [
+      "rb-chemistry"
+    ],
+    "primaryDepartment": "rb-chemistry",
     "sNo": 4,
     "name": "Dr. Mithilesh Yadav",
     "designation": "Assistant Professor",
@@ -2124,14 +2128,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Sc., M.Sc., Ph.D.",
     "teachingLoadHrsPerWeek": 25,
-    "additionalResponsibility": "Chemical Purchasing Incharge, Convenor of ISO,Convenor of Plagiarism, BOS member, Member of Ph.D. program",
-    "departments": [
-      "rb-chemistry"
-    ],
-    "primaryDepartment": "rb-chemistry"
+    "additionalResponsibility": "Chemical Purchasing Incharge, Convenor of ISO,Convenor of Plagiarism, BOS member, Member of Ph.D. program"
   },
   {
     "id": "rb-chemistry-f6",
+    "departments": [
+      "rb-chemistry"
+    ],
+    "primaryDepartment": "rb-chemistry",
     "sNo": 5,
     "name": "Dr. Vijay Shankar Pandey",
     "designation": "Guest Faculty",
@@ -2140,14 +2144,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Sc.",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "Ex Member of Digi-Shakti Portal VBSPU, Jaunpur",
-    "departments": [
-      "rb-chemistry"
-    ],
-    "primaryDepartment": "rb-chemistry"
+    "additionalResponsibility": "Ex Member of Digi-Shakti Portal VBSPU, Jaunpur"
   },
   {
     "id": "rb-mathematics-f1",
+    "departments": [
+      "rb-mathematics"
+    ],
+    "primaryDepartment": "rb-mathematics",
     "sNo": 1,
     "name": "Prof. Mithilesh Singh",
     "designation": "Professor",
@@ -2156,14 +2160,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Sc., M.Sc. & Ph.D",
     "teachingLoadHrsPerWeek": 10,
-    "additionalResponsibility": "Head of Department, Director of Rajju Bhaiya Institute, Convenor of Admission campus, Nodel of Admission Samarth, Nodel of Admission of affilated colleges, memeber of quotation committee,",
-    "departments": [
-      "rb-mathematics"
-    ],
-    "primaryDepartment": "rb-mathematics"
+    "additionalResponsibility": "Head of Department, Director of Rajju Bhaiya Institute, Convenor of Admission campus, Nodel of Admission Samarth, Nodel of Admission of affilated colleges, memeber of quotation committee,"
   },
   {
     "id": "rb-mathematics-f2",
+    "departments": [
+      "rb-mathematics"
+    ],
+    "primaryDepartment": "rb-mathematics",
     "sNo": 2,
     "name": "Mr. Saurabh Kumar Singh",
     "designation": "Assistant Professor",
@@ -2172,14 +2176,14 @@
     "hasPhd": false,
     "programmesAppointedFor": "B.Sc., M.Sc.",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "BOS Convener, ACS (B.Sc. Examination)",
-    "departments": [
-      "rb-mathematics"
-    ],
-    "primaryDepartment": "rb-mathematics"
+    "additionalResponsibility": "BOS Convener, ACS (B.Sc. Examination)"
   },
   {
     "id": "rb-mathematics-f3",
+    "departments": [
+      "rb-mathematics"
+    ],
+    "primaryDepartment": "rb-mathematics",
     "sNo": 3,
     "name": "Dr. Deepak Kumar Maurya",
     "designation": "Assistant Professor",
@@ -2188,14 +2192,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Sc., M.Sc., and Ph.D",
     "teachingLoadHrsPerWeek": 19,
-    "additionalResponsibility": "Nodal Officer (Electoral Literacy Club), Member of BOS, Member of Time Table Committee, Member of B.Sc. Admission Committee, In Charge of Computer Lab of Rajju Bhaiya Institute",
-    "departments": [
-      "rb-mathematics"
-    ],
-    "primaryDepartment": "rb-mathematics"
+    "additionalResponsibility": "Nodal Officer (Electoral Literacy Club), Member of BOS, Member of Time Table Committee, Member of B.Sc. Admission Committee, In Charge of Computer Lab of Rajju Bhaiya Institute"
   },
   {
     "id": "rb-mathematics-f4",
+    "departments": [
+      "rb-mathematics"
+    ],
+    "primaryDepartment": "rb-mathematics",
     "sNo": 4,
     "name": "Dr. Ashish Verma",
     "designation": "Assistant Professor",
@@ -2204,14 +2208,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "B.Sc., M.Sc., and Ph.D",
     "teachingLoadHrsPerWeek": 18,
-    "additionalResponsibility": "Admission Coordinator of M.Sc., Member of BOS",
-    "departments": [
-      "rb-mathematics"
-    ],
-    "primaryDepartment": "rb-mathematics"
+    "additionalResponsibility": "Admission Coordinator of M.Sc., Member of BOS"
   },
   {
     "id": "rb-earth-and-planetary-sciences-f1",
+    "departments": [
+      "rb-earth-and-planetary-sciences"
+    ],
+    "primaryDepartment": "rb-earth-and-planetary-sciences",
     "sNo": 1,
     "name": "Dr. Neeraj Awasthi",
     "designation": "Assistant Professor",
@@ -2220,14 +2224,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "M.Sc. Geology",
     "teachingLoadHrsPerWeek": 38,
-    "additionalResponsibility": "Head in Charge, Co-Nodal Officer SWAYAM, Member QS Ranking, Member SAMARTH Commitee",
-    "departments": [
-      "rb-earth-and-planetary-sciences"
-    ],
-    "primaryDepartment": "rb-earth-and-planetary-sciences"
+    "additionalResponsibility": "Head in Charge, Co-Nodal Officer SWAYAM, Member QS Ranking, Member SAMARTH Commitee"
   },
   {
     "id": "rb-earth-and-planetary-sciences-f2",
+    "departments": [
+      "rb-earth-and-planetary-sciences"
+    ],
+    "primaryDepartment": "rb-earth-and-planetary-sciences",
     "sNo": 2,
     "name": "Dr. Shyam Kanhaiya",
     "designation": "Assistant Professor",
@@ -2236,14 +2240,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "M.Sc. Geology",
     "teachingLoadHrsPerWeek": 34,
-    "additionalResponsibility": null,
-    "departments": [
-      "rb-earth-and-planetary-sciences"
-    ],
-    "primaryDepartment": "rb-earth-and-planetary-sciences"
+    "additionalResponsibility": null
   },
   {
     "id": "rb-earth-and-planetary-sciences-f3",
+    "departments": [
+      "rb-earth-and-planetary-sciences"
+    ],
+    "primaryDepartment": "rb-earth-and-planetary-sciences",
     "sNo": 3,
     "name": "Dr. Shashi Kant Yadav",
     "designation": "Assistant Professor",
@@ -2252,14 +2256,14 @@
     "hasPhd": true,
     "programmesAppointedFor": "M.Sc. Geology",
     "teachingLoadHrsPerWeek": 30,
-    "additionalResponsibility": "Progamme Coordinator NSS and Assistant Proctor",
-    "departments": [
-      "rb-earth-and-planetary-sciences"
-    ],
-    "primaryDepartment": "rb-earth-and-planetary-sciences"
+    "additionalResponsibility": "Progamme Coordinator NSS and Assistant Proctor"
   },
   {
     "id": "rb-earth-and-planetary-sciences-f4",
+    "departments": [
+      "rb-earth-and-planetary-sciences"
+    ],
+    "primaryDepartment": "rb-earth-and-planetary-sciences",
     "sNo": 4,
     "name": "Dr. Sarvan Kumar",
     "designation": "Assistant Professor",
@@ -2268,94 +2272,126 @@
     "hasPhd": true,
     "programmesAppointedFor": "M.Sc. Geology",
     "teachingLoadHrsPerWeek": 8,
-    "additionalResponsibility": "Coordinator, IIRS-ISRO Outreach Program",
-    "departments": [
-      "rb-earth-and-planetary-sciences"
-    ],
-    "primaryDepartment": "rb-earth-and-planetary-sciences"
+    "additionalResponsibility": "Coordinator, IIRS-ISRO Outreach Program"
   },
   {
     "id": "rb-physics-f1",
+    "departments": [
+      "rb-physics"
+    ],
+    "primaryDepartment": "rb-physics",
     "sNo": 1,
     "name": "Prof. Devraj Singh",
     "designation": "Professor",
     "appointmentType": "Regular",
-    "dateOfJoining": null,
+    "dateOfJoining": "2020-01-01",
     "hasPhd": true,
-    "programmesAppointedFor": null,
-    "teachingLoadHrsPerWeek": null,
-    "additionalResponsibility": null,
-    "departments": [
-      "rb-physics"
-    ],
-    "primaryDepartment": "rb-physics"
+    "programmesAppointedFor": "M. Sc. Physics",
+    "teachingLoadHrsPerWeek": 16,
+    "additionalResponsibility": "Director, DTLI; Co-ordinator, R & D Cell; Director, Rankings"
   },
   {
     "id": "rb-physics-f2",
+    "departments": [
+      "rb-physics"
+    ],
+    "primaryDepartment": "rb-physics",
     "sNo": 2,
+    "name": "Prof. Giridhar Mishra",
+    "designation": "Professor",
+    "appointmentType": "Regular",
+    "dateOfJoining": "2022-12-23",
+    "hasPhd": true,
+    "programmesAppointedFor": "M. Sc. Physics",
+    "teachingLoadHrsPerWeek": 16,
+    "additionalResponsibility": "Head Department of Physics; Co-ordinator, IQAC; Co-ordinator Maharishi Parashar Insitute of Agricultural Sciences; Co-ordinator Department of Physical Education and Sports;"
+  },
+  {
+    "id": "rb-physics-f3",
+    "departments": [
+      "rb-physics"
+    ],
+    "primaryDepartment": "rb-physics",
+    "sNo": 3,
     "name": "Prof. Pramod Kumar Yadawa",
     "designation": "Professor",
     "appointmentType": "Regular",
     "dateOfJoining": "2018-09-15",
     "hasPhd": true,
-    "programmesAppointedFor": "UG & PG (B. Sc & M. Sc)",
-    "teachingLoadHrsPerWeek": null,
-    "additionalResponsibility": "Dean, Students’ Welfare (DSW), Convenor/ Nodal Officer- SWAYAM VBSPU, Coordinator- Grievance Redressal Committee, Coordinator-POSCO Act Programme, Convenor- Ph.D. Supervisor committee, Lab. In-charge of M. Sc. Spectroscopy lab, Member-Academic Council, Member- Board of Studies, Head- Department of Physics; Director- Prof. Rajendra Singh (Rajju Bhaiya) Institute; Convenor- Ph.D. related problem resolving committee; Convenor- Board of Studies",
-    "departments": [
-      "rb-physics"
-    ],
-    "primaryDepartment": "rb-physics"
-  },
-  {
-    "id": "rb-physics-f3",
-    "sNo": 3,
-    "name": "Dr. Punit Kumar Dhawan",
-    "designation": "Assistant Professor",
-    "appointmentType": "Regular",
-    "dateOfJoining": null,
-    "hasPhd": true,
-    "programmesAppointedFor": null,
-    "teachingLoadHrsPerWeek": null,
-    "additionalResponsibility": null,
-    "departments": [
-      "rb-physics"
-    ],
-    "primaryDepartment": "rb-physics"
+    "programmesAppointedFor": "M. Sc. Physics",
+    "teachingLoadHrsPerWeek": 16,
+    "additionalResponsibility": "Dean, Students’ Welfare (DSW), Convenor/ Nodal Officer- SWAYAM VBSPU, Coordinator- Grievance Redressal Committee, Coordinator-POSCO Act Programme, Convenor- Ph.D. Supervisor committee, Lab. In-charge of M. Sc. Spectroscopy lab, Member-Academic Council, Member- Board of Studies, Head- Department of Physics; Director- Prof. Rajendra Singh (Rajju Bhaiya) Institute; Convenor- Ph.D. related problem resolving committee; Convenor- Board of Studies"
   },
   {
     "id": "rb-physics-f4",
+    "departments": [
+      "rb-physics"
+    ],
+    "primaryDepartment": "rb-physics",
     "sNo": 4,
+    "name": "Dr. Alok Kumar Verma",
+    "designation": "Assistant Professor",
+    "appointmentType": "Regular",
+    "dateOfJoining": "2019-11-02",
+    "hasPhd": true,
+    "programmesAppointedFor": "M. Sc. Physics",
+    "teachingLoadHrsPerWeek": 20,
+    "additionalResponsibility": "Lab In-charge: B.Sc Physics 5th and 6th Semester, Lab In-charge: M.Sc Physics Prev Electronics Lab, Member-BoS Physics, Member-Core committee QS Ranking, Convener: Criteria 7 NAAC, Convener: Admission Committee-M.Sc Physics (2026-27), Member- Base Modules E Samarth etc."
+  },
+  {
+    "id": "rb-physics-f5",
+    "departments": [
+      "rb-physics"
+    ],
+    "primaryDepartment": "rb-physics",
+    "sNo": 5,
+    "name": "Dr. Punit Kumar Dhawan",
+    "designation": "Assistant Professor",
+    "appointmentType": "Regular",
+    "dateOfJoining": "2018-09-10",
+    "hasPhd": true,
+    "programmesAppointedFor": "M.Sc. (Physics)",
+    "teachingLoadHrsPerWeek": 20,
+    "additionalResponsibility": "Associate Nodal Officer- SAMARTH eGov.; Deputy Coordinator- IQAC; Member- PUCRET; Coordinator- 120 Prapatra Jan Bhavan Committee; Member- Manpower Outsourcing Committee; Member- Quotation Opening Committee; Member- Ph.D. Supervisor Eligibility Committee; Member- Minority Welfare Committee; Co-ordinator/In- charge (Condensed Matter Physics Laboratory); Member- Scrutiny Committee; Member- Admission Committee of M.Sc. (Physics); Associate Nodal- Kakori Train Action Shatabdi Samaroh; Member- Yoga Day Committee; Organizing Committee Member- Corporate Conclave- 2025; Organizing Committee Member- Convocation VBSPU; Member- NAAC Peer Team Visit"
+  },
+  {
+    "id": "rb-physics-f6",
+    "departments": [
+      "rb-physics"
+    ],
+    "primaryDepartment": "rb-physics",
+    "sNo": 6,
     "name": "Dr. Ramanshu Prabhakar Singh",
     "designation": "Assistant Professor",
     "appointmentType": "Regular",
     "dateOfJoining": "2019-11-02",
     "hasPhd": true,
-    "programmesAppointedFor": null,
-    "teachingLoadHrsPerWeek": null,
-    "additionalResponsibility": "B.Sc. I Physics Lab In-charge; Member in E-SAMARTH Programme Module Committee, E-SAMARTH College Admisson Committee, 120 Prapatra JanBhawan Committee, Incharge BSc class time table and Physics timetable",
+    "programmesAppointedFor": "M. Sc. Physics",
+    "teachingLoadHrsPerWeek": 20,
+    "additionalResponsibility": "B.Sc. I Physics Lab In-charge; Member in E-SAMARTH Programme Module Committee, E-SAMARTH College Admisson Committee, 120 Prapatra JanBhawan Committee, Incharge BSc class time table and Physics timetable, Member, BOS (MSc Physics, 2023-2025), Organizing Committee Member- Corporate Conclave- 2025, Organizing Committee Member- Convocation VBSPU"
+  },
+  {
+    "id": "rb-physics-f7",
     "departments": [
       "rb-physics"
     ],
-    "primaryDepartment": "rb-physics"
-  },
-  {
-    "id": "rb-physics-f5",
-    "sNo": 5,
+    "primaryDepartment": "rb-physics",
+    "sNo": 7,
     "name": "Dr. Sandeep Kumar Verma",
     "designation": "Assistant Professor",
     "appointmentType": "Regular",
-    "dateOfJoining": null,
+    "dateOfJoining": "2020-01-03",
     "hasPhd": true,
-    "programmesAppointedFor": null,
-    "teachingLoadHrsPerWeek": null,
-    "additionalResponsibility": null,
-    "departments": [
-      "rb-physics"
-    ],
-    "primaryDepartment": "rb-physics"
+    "programmesAppointedFor": "M. Sc. Physics",
+    "teachingLoadHrsPerWeek": 20,
+    "additionalResponsibility": "Co-ordinator, B. Sc. (PCMG)"
   },
   {
     "id": "rb-centre-for-renewable-energy-f1",
+    "departments": [
+      "rb-centre-for-renewable-energy"
+    ],
+    "primaryDepartment": "rb-centre-for-renewable-energy",
     "sNo": 1,
     "name": "Dr. Dhirendra Kumar Chaudhary",
     "designation": "Assistant Professor",
@@ -2364,10 +2400,6 @@
     "hasPhd": true,
     "programmesAppointedFor": "Centre for Renewable Energy",
     "teachingLoadHrsPerWeek": 4,
-    "additionalResponsibility": "Head, Centre for Renewable Energy",
-    "departments": [
-      "rb-centre-for-renewable-energy"
-    ],
-    "primaryDepartment": "rb-centre-for-renewable-energy"
+    "additionalResponsibility": "Head, Centre for Renewable Energy"
   }
 ]

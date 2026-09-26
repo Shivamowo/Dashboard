@@ -400,8 +400,38 @@
     "currentStatus": "Ongoing"
   },
   {
+    "id": "rb-physics-f1-pr1",
+    "facultyId": "rb-physics-f1",
+    "sponsoringAgency": "U.P. State Higher Education Board, Lucknow",
+    "yearOfGrant": 2022,
+    "duration": "2022-2023",
+    "sanctionedAmount": 475000,
+    "amountReleased": 475000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-physics-f1-pr2",
+    "facultyId": "rb-physics-f1",
+    "sponsoringAgency": "Council of Science & Technology, U.P., 9, Nabiullah Road, Suraj Kund Park, Lucknow (Co-PI)",
+    "yearOfGrant": 2025,
+    "duration": "2025-2028",
+    "sanctionedAmount": 1458000,
+    "amountReleased": null,
+    "currentStatus": null
+  },
+  {
     "id": "rb-physics-f2-pr1",
     "facultyId": "rb-physics-f2",
+    "sponsoringAgency": "Department of Higher Education, Govt. of Uttar Pradesh (R & D) (PI)",
+    "yearOfGrant": 2021,
+    "duration": "2021-2024",
+    "sanctionedAmount": 424500,
+    "amountReleased": 424500,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-physics-f3-pr1",
+    "facultyId": "rb-physics-f3",
     "sponsoringAgency": "Centre of Excellence (CoE) Uttar Pradesh Higher Education Council,",
     "yearOfGrant": 2024,
     "duration": "3",
@@ -410,8 +440,8 @@
     "currentStatus": "Ongoing"
   },
   {
-    "id": "rb-physics-f2-pr2",
-    "facultyId": "rb-physics-f2",
+    "id": "rb-physics-f3-pr2",
+    "facultyId": "rb-physics-f3",
     "sponsoringAgency": "R&D, Uttar Pradesh Higher Education Council,",
     "yearOfGrant": 2022,
     "duration": "1 year",
@@ -420,14 +450,64 @@
     "currentStatus": "Completed"
   },
   {
-    "id": "rb-physics-f2-pr3",
-    "facultyId": "rb-physics-f2",
+    "id": "rb-physics-f3-pr3",
+    "facultyId": "rb-physics-f3",
     "sponsoringAgency": "IQAC, VBSPU",
     "yearOfGrant": 2022,
     "duration": "1 Year",
     "sanctionedAmount": 100000,
     "amountReleased": 100000,
     "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-physics-f4-pr1",
+    "facultyId": "rb-physics-f4",
+    "sponsoringAgency": "UGC India",
+    "yearOfGrant": 2022,
+    "duration": "2022-2024",
+    "sanctionedAmount": 1000000,
+    "amountReleased": 998395,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-physics-f5-pr1",
+    "facultyId": "rb-physics-f5",
+    "sponsoringAgency": "Council for Science & Technology, Uttar Pradesh-UPCST (PI)",
+    "yearOfGrant": 2024,
+    "duration": "03 Years",
+    "sanctionedAmount": 1430000,
+    "amountReleased": 950000,
+    "currentStatus": "Ongoing"
+  },
+  {
+    "id": "rb-physics-f5-pr2",
+    "facultyId": "rb-physics-f5",
+    "sponsoringAgency": "Department of Higher Education, Govt. of Uttar Pradesh (CoE) (PI)",
+    "yearOfGrant": 2022,
+    "duration": "03 Years",
+    "sanctionedAmount": 645000,
+    "amountReleased": 645000,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-physics-f5-pr3",
+    "facultyId": "rb-physics-f5",
+    "sponsoringAgency": "Council for Science & Technology, Uttar Pradesh -UPCST (C0-PI)",
+    "yearOfGrant": 2021,
+    "duration": "03 Years",
+    "sanctionedAmount": 1144000,
+    "amountReleased": 821999,
+    "currentStatus": "Completed"
+  },
+  {
+    "id": "rb-physics-f5-pr4",
+    "facultyId": "rb-physics-f5",
+    "sponsoringAgency": "Department of Higher Education, Govt. of Uttar Pradesh (R & D) (PI)",
+    "yearOfGrant": 2023,
+    "duration": "03 Years",
+    "sanctionedAmount": 199500,
+    "amountReleased": 199500,
+    "currentStatus": "Ongoing"
   },
   {
     "id": "rb-centre-for-renewable-energy-f1-pr1",
