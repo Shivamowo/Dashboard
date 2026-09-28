@@ -3,7 +3,9 @@ import { IBM_Plex_Sans, Spectral } from "next/font/google";
 import "./globals.css";
 import AppShell from "@/components/AppShell";
 import LogoutButton from "@/components/LogoutButton";
+import AccountSettingsLink from "@/components/AccountSettingsLink";
 import { getSessionRole } from "@/lib/session";
+import { isSupabaseConfigured } from "@/lib/supabase/config";
 
 const plex = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -41,7 +43,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         </a>
 
         {role ? (
-          <AppShell role={role} logout={<LogoutButton />}>
+          <AppShell
+            role={role}
+            logout={<LogoutButton />}
+            accountLink={isSupabaseConfigured ? <AccountSettingsLink /> : undefined}
+          >
             {children}
           </AppShell>
         ) : (

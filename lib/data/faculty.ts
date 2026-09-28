@@ -49,7 +49,7 @@ export async function createFaculty(input: FacultyInput): Promise<Faculty> {
   if (dup) errors.employeeId = `Already on record as ${dup.name}. Add ${dup.name}'s other departments by editing that record.`;
   if (Object.keys(errors).length) throw new FacultyValidationError(errors);
 
-  const id = addFacultyRecord(input.departments, {
+  const id = await addFacultyRecord(input.departments, {
     name: input.name.trim(),
     employeeId: input.employeeId.trim(),
     email: input.email.trim(),
@@ -71,7 +71,7 @@ export async function updateFaculty(id: string, patch: Partial<FacultyInput>): P
   const f = facultyById(id);
   if (!f) return undefined;
   const { departments, ...rest } = patch;
-  updateFacultyRecord(id, { ...f, ...rest, hasPhd: rest.qualification ? isPhd(rest.qualification) : f.hasPhd });
+  await updateFacultyRecord(id, { ...f, ...rest, hasPhd: rest.qualification ? isPhd(rest.qualification) : f.hasPhd });
   if (departments?.length) {
     f.departments = departments;
     f.primaryDepartment = departments[0];
@@ -81,5 +81,5 @@ export async function updateFaculty(id: string, patch: Partial<FacultyInput>): P
 
 /** STUB — not wired to any UI yet. */
 export async function deleteFaculty(id: string): Promise<boolean> {
-  return removeFacultyRecord(id);
+  return await removeFacultyRecord(id);
 }

@@ -6,6 +6,8 @@ import { infrastructureByDept } from "./infrastructure";
 import { globalSingleton } from "./globalStore";
 import { imported, usingImportedData } from "./source";
 import { addNullable, avgOf, countTrue, sumOf } from "./nullable";
+import { isSupabaseConfigured } from "@/lib/supabase/config";
+import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 
 const submissionMeta: Record<
   string,
@@ -25,8 +27,19 @@ type SubmissionOverride = Partial<
 const overrides: Record<string, SubmissionOverride> = globalSingleton("hodSubmissionOverrides", () => ({}));
 
 /** Applied on approval of a HoD edit, or immediately for Admin. */
-export function updateHodSubmission(deptId: string, patch: SubmissionOverride) {
+export async function updateHodSubmission(deptId: string, patch: SubmissionOverride) {
   overrides[deptId] = { ...overrides[deptId], ...patch };
+  if (isSupabaseConfigured) {
+    const row: Record<string, string> = {};
+    if (patch.mobileContact !== undefined) row.mobile_contact = patch.mobileContact ?? "";
+    if (patch.certificationSignedBy !== undefined) row.certification_signed_by = patch.certificationSignedBy ?? "";
+    if (patch.certificationDate !== undefined) row.certification_date = patch.certificationDate ?? "";
+    if (patch.status !== undefined) row.status = patch.status;
+    if (Object.keys(row).length) {
+      const { error } = await createSupabaseAdminClient().from("hod_submissions").update(row).eq("dept_id", deptId);
+      if (error) throw error;
+    }
+  }
 }
 
 const importedSubmission = (deptId: string) =>

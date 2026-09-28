@@ -10,10 +10,12 @@ import type { Role } from "@/data";
 export default function AppShell({
   role,
   logout,
+  accountLink,
   children,
 }: {
   role: Role;
   logout: ReactNode;
+  accountLink?: ReactNode;
   children: ReactNode;
 }) {
   const [open, setOpen] = useState(false);
@@ -48,6 +50,7 @@ export default function AppShell({
         <p className="text-micro text-ink-500">Signed in as</p>
         <p className="mt-0.5 text-meta font-medium text-ink-300">{meta.label}</p>
       </div>
+      {accountLink}
       {logout}
       <p className="text-micro leading-relaxed text-ink-500">
         Demonstration build. Figures are sample data and nothing is saved.

@@ -118,7 +118,15 @@ for (const s of SPLITS) {
     ...s.targets.map((t) => ({ ...src, id: t.id, name: t.name, shortName: t.shortName, nameFromFilename: false }))
   );
   for (const p of programs) if (p.deptId === s.from) p.deptId = pick(s, s.programLabel(p));
-  for (const f of faculty) if (f.deptId === s.from) f.deptId = pick(s, s.facultyLabel(f));
+  // Faculty rows never carry `deptId` — import-excel-data.ts already writes
+  // them onto `departments`/`primaryDepartment` (the multi-department shape),
+  // so this must remap those instead of the (always-absent) `deptId` field.
+  for (const f of faculty) {
+    if (!f.departments?.includes(s.from) && f.primaryDepartment !== s.from) continue;
+    const target = pick(s, s.facultyLabel(f));
+    f.departments = (f.departments as string[]).map((d: string) => (d === s.from ? target : d));
+    if (f.primaryDepartment === s.from) f.primaryDepartment = target;
+  }
   for (const i of infra) if (i.deptId === s.from) i.deptId = pick(s, s.infraLabel(i));
 
   const h = hod.find((x) => x.deptId === s.from);
@@ -159,8 +167,6 @@ const normName = (n: string) =>
 const keyOf = (f: Row) => (f.employeeId ? "id:" + String(f.employeeId).trim().toLowerCase() : "nm:" + normName(f.name));
 
 for (const f of faculty) {
-  if (!f.departments) f.departments = [f.deptId];
-  delete f.deptId;
   for (const x of EXTRA_DEPTS)
     if (f.additionalResponsibility && x.test.test(f.additionalResponsibility))
       for (const d of x.add) if (!f.departments.includes(d)) f.departments.push(d);

@@ -26,6 +26,10 @@ import {
 import { getSessionUser } from "./session";
 import { createFaculty, FacultyValidationError } from "./data/faculty";
 import type { FacultyErrors, FacultyInput } from "./data/faculty-schema";
+import { isSupabaseConfigured } from "./supabase/config";
+import { createSupabaseServerClient } from "./supabase/server";
+import { createSupabaseAdminClient } from "./supabase/admin";
+import { ROLE_HOME } from "./demo-accounts";
 
 async function requireUser(roles: Role[]) {
   const user = await getSessionUser();
@@ -164,7 +168,7 @@ function readInfra(form: FormData) {
 
 export async function submitFacultyOnboarding(form: FormData) {
   const user = await requireUser(["faculty"]);
-  submitOnboarding({
+  await submitOnboarding({
     userId: user.id,
     targetEntity: "Faculty",
     deptId: user.deptId!,
@@ -179,7 +183,7 @@ export async function submitFacultyOnboarding(form: FormData) {
 
 export async function submitHodOnboarding(form: FormData) {
   const user = await requireUser(["hod"]);
-  submitOnboarding({
+  await submitOnboarding({
     userId: user.id,
     targetEntity: "HoD",
     deptId: user.deptId!,
@@ -196,7 +200,7 @@ export async function submitHodOnboarding(form: FormData) {
 export async function submitOwnFacultyProfile(form: FormData) {
   const user = await requireUser(["faculty"]);
   if (!user.facultyId) throw new Error("No faculty record yet.");
-  createChangeRequest({
+  await createChangeRequest({
     type: "edit",
     targetEntity: "Faculty",
     targetId: user.facultyId,
@@ -213,7 +217,7 @@ export async function submitOwnFacultyProfile(form: FormData) {
 export async function submitOwnFacultyResearch(form: FormData) {
   const user = await requireUser(["faculty"]);
   if (!user.facultyId) throw new Error("No faculty record yet.");
-  createChangeRequest({
+  await createChangeRequest({
     type: "edit",
     targetEntity: "Faculty",
     targetId: user.facultyId,
@@ -231,7 +235,7 @@ export async function submitOwnFacultyTarget(form: FormData) {
   const user = await requireUser(["faculty"]);
   if (!user.facultyId) throw new Error("No faculty record yet.");
   const existing = targetOf(user.facultyId);
-  createChangeRequest({
+  await createChangeRequest({
     type: "edit",
     targetEntity: "Faculty",
     targetId: user.facultyId,
@@ -248,7 +252,7 @@ export async function submitOwnFacultyTarget(form: FormData) {
 export async function submitOwnFacultyProjects(form: FormData) {
   const user = await requireUser(["faculty"]);
   if (!user.facultyId) throw new Error("No faculty record yet.");
-  createChangeRequest({
+  await createChangeRequest({
     type: "edit",
     targetEntity: "Faculty",
     targetId: user.facultyId,
@@ -266,7 +270,7 @@ export async function submitOwnFacultyProjects(form: FormData) {
 
 export async function submitHodOwnSubmission(form: FormData) {
   const user = await requireUser(["hod"]);
-  createChangeRequest({
+  await createChangeRequest({
     type: "edit",
     targetEntity: "HoD",
     targetId: user.deptId!,
@@ -292,7 +296,7 @@ function requireHodOwnsFaculty(user: { role: Role; deptId?: string }, facultyId:
 export async function submitHodFacultyProfile(facultyId: string, form: FormData) {
   const user = await requireUser(["hod"]);
   requireHodOwnsFaculty(user, facultyId);
-  createChangeRequest({
+  await createChangeRequest({
     type: "edit",
     targetEntity: "Faculty",
     targetId: facultyId,
@@ -309,7 +313,7 @@ export async function submitHodFacultyProfile(facultyId: string, form: FormData)
 export async function submitHodFacultyResearch(facultyId: string, form: FormData) {
   const user = await requireUser(["hod"]);
   requireHodOwnsFaculty(user, facultyId);
-  createChangeRequest({
+  await createChangeRequest({
     type: "edit",
     targetEntity: "Faculty",
     targetId: facultyId,
@@ -327,7 +331,7 @@ export async function submitHodFacultyTarget(facultyId: string, form: FormData) 
   const user = await requireUser(["hod"]);
   requireHodOwnsFaculty(user, facultyId);
   const existing = targetOf(facultyId);
-  createChangeRequest({
+  await createChangeRequest({
     type: "edit",
     targetEntity: "Faculty",
     targetId: facultyId,
@@ -344,7 +348,7 @@ export async function submitHodFacultyTarget(facultyId: string, form: FormData) 
 export async function submitHodFacultyProjects(facultyId: string, form: FormData) {
   const user = await requireUser(["hod"]);
   requireHodOwnsFaculty(user, facultyId);
-  createChangeRequest({
+  await createChangeRequest({
     type: "edit",
     targetEntity: "Faculty",
     targetId: facultyId,
@@ -364,7 +368,7 @@ export async function submitEtInfraEdit(infraId: string, form: FormData) {
   const user = await requireUser(["et"]);
   const infra = infrastructureById(infraId);
   if (!infra) throw new Error("Room not found.");
-  createChangeRequest({
+  await createChangeRequest({
     type: "edit",
     targetEntity: "Infrastructure",
     targetId: infraId,
@@ -381,8 +385,8 @@ export async function submitEtInfraEdit(infraId: string, form: FormData) {
 
 export async function adminUpdateDept(deptId: string, form: FormData) {
   await requireUser(["admin"]);
-  updateDepartmentHod(deptId, { hodContact: str(form, "mobileContact"), hodName: str(form, "certificationSignedBy") || undefined });
-  updateHodSubmission(deptId, {
+  await updateDepartmentHod(deptId, { hodContact: str(form, "mobileContact"), hodName: str(form, "certificationSignedBy") || undefined });
+  await updateHodSubmission(deptId, {
     mobileContact: str(form, "mobileContact"),
     certificationSignedBy: str(form, "certificationSignedBy"),
     certificationDate: str(form, "certificationDate"),
@@ -394,14 +398,14 @@ export async function adminUpdateDept(deptId: string, form: FormData) {
 
 export async function adminUpdateFacultyProfile(facultyId: string, form: FormData) {
   await requireUser(["admin"]);
-  updateFacultyRecord(facultyId, readFacultyProfile(form));
+  await updateFacultyRecord(facultyId, readFacultyProfile(form));
   revalidatePath(`/admin/faculty/${facultyId}`);
   redirect(`/admin/faculty/${facultyId}`);
 }
 
 export async function adminUpdateFacultyResearch(facultyId: string, form: FormData) {
   await requireUser(["admin"]);
-  setFacultyResearch(facultyId, readFacultyResearch(form));
+  await setFacultyResearch(facultyId, readFacultyResearch(form));
   revalidatePath(`/admin/faculty/${facultyId}`);
   redirect(`/admin/faculty/${facultyId}`);
 }
@@ -409,21 +413,21 @@ export async function adminUpdateFacultyResearch(facultyId: string, form: FormDa
 export async function adminUpdateFacultyTarget(facultyId: string, form: FormData) {
   await requireUser(["admin"]);
   const existing = targetOf(facultyId);
-  setFacultyTarget(facultyId, existing?.sNo ?? facultyById(facultyId)?.sNo ?? 0, readFacultyTarget(form));
+  await setFacultyTarget(facultyId, existing?.sNo ?? facultyById(facultyId)?.sNo ?? 0, readFacultyTarget(form));
   revalidatePath(`/admin/faculty/${facultyId}`);
   redirect(`/admin/faculty/${facultyId}`);
 }
 
 export async function adminUpdateFacultyProjects(facultyId: string, form: FormData) {
   await requireUser(["admin"]);
-  setFacultyProjects(facultyId, readFacultyProjects(form));
+  await setFacultyProjects(facultyId, readFacultyProjects(form));
   revalidatePath(`/admin/faculty/${facultyId}`);
   redirect(`/admin/faculty/${facultyId}`);
 }
 
 export async function adminUpdateInfra(infraId: string, form: FormData) {
   await requireUser(["admin"]);
-  updateInfrastructureRecord(infraId, readInfra(form));
+  await updateInfrastructureRecord(infraId, readInfra(form));
   revalidatePath("/admin/infrastructure");
   redirect("/admin/infrastructure");
 }
@@ -446,7 +450,7 @@ export async function adminAddFaculty(input: FacultyInput): Promise<AddFacultyRe
 
 export async function adminApprove(id: string, form: FormData) {
   const user = await requireUser(["admin"]);
-  approveChangeRequest(id, user.id, str(form, "reviewNotes") || undefined);
+  await approveChangeRequest(id, user.id, str(form, "reviewNotes") || undefined);
   revalidatePath("/admin/approvals");
   redirect("/admin/approvals");
 }
@@ -455,7 +459,39 @@ export async function adminReject(id: string, form: FormData) {
   const user = await requireUser(["admin"]);
   const reason = str(form, "reviewNotes");
   if (!reason) throw new Error("A rejection reason is required.");
-  rejectChangeRequest(id, user.id, reason);
+  await rejectChangeRequest(id, user.id, reason);
   revalidatePath("/admin/approvals");
   redirect("/admin/approvals");
+}
+
+/* -------------------------------------------------------------- Account settings */
+
+export type ChangePasswordResult = { ok: true } | { ok: false; error: string };
+
+/** Self-service password change — available to any signed-in role. Also
+ * clears profiles.must_change_password, ending the forced-change redirect
+ * middleware.ts applies after login with a temp password. */
+export async function changeOwnPassword(form: FormData): Promise<ChangePasswordResult> {
+  const user = await requireUser(["vc", "registrar", "hod", "faculty", "et", "admin"]);
+  if (!isSupabaseConfigured) {
+    return { ok: false, error: "Password changes require Supabase to be configured." };
+  }
+
+  const password = str(form, "password");
+  const confirm = str(form, "confirmPassword");
+  if (password.length < 8) return { ok: false, error: "Password must be at least 8 characters." };
+  if (password !== confirm) return { ok: false, error: "Passwords do not match." };
+
+  const supabase = await createSupabaseServerClient();
+  const { error } = await supabase.auth.updateUser({ password });
+  if (error) return { ok: false, error: error.message };
+
+  const { error: profileError } = await createSupabaseAdminClient()
+    .from("profiles")
+    .update({ must_change_password: false })
+    .eq("id", user.id);
+  if (profileError) return { ok: false, error: profileError.message };
+
+  revalidatePath("/account/password");
+  redirect(ROLE_HOME[user.role]);
 }

@@ -1,62 +1,124 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { createServerClient } from "@supabase/ssr";
 import { ROLE_HOME, SESSION_COOKIE, isRole } from "@/lib/demo-accounts";
 import { findUserById } from "@/data";
+import { SUPABASE_ANON_KEY, SUPABASE_URL, isSupabaseConfigured } from "@/lib/supabase/config";
 
 /**
- * DEMO-ONLY route protection. The session cookie is unsigned, so this enforces
- * navigation scoping for the demo — it is not a security boundary.
+ * Route protection. When Supabase is configured this refreshes the real auth
+ * session (via @supabase/ssr) and reads the caller's profile (role/dept/
+ * faculty/status) to enforce the same per-role path guards the demo cookie
+ * system used. Without Supabase configured it falls back to the unsigned demo
+ * cookie — see lib/demo-accounts.ts.
  *
- * Runs on the Node.js runtime (not edge) so it can read the same in-memory
- * store (data/store.ts, anchored on globalThis) as the rest of the app —
- * needed for the onboarding-status redirect below.
+ * Runs on the Node.js runtime (not edge) so the demo fallback can read the
+ * same in-memory store (data/store.ts, anchored on globalThis) as the rest of
+ * the app.
  */
 export const runtime = "nodejs";
 
 const SECTIONS = ["vc", "registrar", "hod", "faculty", "et", "admin"] as const;
-/** Roles that go through a post-signup onboarding step before their dashboard is usable. */
 const ONBOARDING_ROLES = ["faculty", "hod"] as const;
 
-/** Sends the browser to `path` and drops the session cookie on the way out. */
-function clearSessionAndRedirect(request: NextRequest, path: string) {
-  const response = NextResponse.redirect(new URL(path, request.url));
-  response.cookies.delete(SESSION_COOKIE);
-  return response;
+const ACCOUNT_PASSWORD_PATH = "/account/password";
+
+type SessionUser = {
+  role: (typeof SECTIONS)[number];
+  status: "onboarding_incomplete" | "pending_approval" | "active";
+  mustChangePassword: boolean;
+};
+
+function clearSessionAndRedirect(request: NextRequest, path: string, response?: NextResponse) {
+  const res = response ?? NextResponse.next();
+  const redirectRes = NextResponse.redirect(new URL(path, request.url));
+  res.cookies.getAll().forEach((c) => redirectRes.cookies.set(c));
+  redirectRes.cookies.delete(SESSION_COOKIE);
+  return redirectRes;
 }
 
-export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+async function resolveSupabaseUser(
+  request: NextRequest,
+  response: NextResponse
+): Promise<SessionUser | undefined> {
+  const supabase = createServerClient<any>(SUPABASE_URL!, SUPABASE_ANON_KEY!, {
+    cookies: {
+      getAll: () => request.cookies.getAll(),
+      setAll: (cookiesToSet) => {
+        cookiesToSet.forEach(({ name, value }) => request.cookies.set(name, value));
+        cookiesToSet.forEach(({ name, value, options }) => response.cookies.set(name, value, options));
+      },
+    },
+  });
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return undefined;
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("role,status,must_change_password")
+    .eq("id", user.id)
+    .maybeSingle();
+  if (!profile || !isRole(profile.role)) return undefined;
+  return {
+    role: profile.role as SessionUser["role"],
+    status: profile.status,
+    mustChangePassword: profile.must_change_password,
+  };
+}
+
+/** Forced password change only applies under real Supabase auth — see app/account/password. */
+function resolveDemoUser(request: NextRequest): SessionUser | undefined {
   const raw = request.cookies.get(SESSION_COOKIE)?.value;
   const [userId, role] = raw?.split("|") ?? [];
-
-  // Resolve the cookie to a real account before anything routes on it. The
-  // demo store is per-server-process, so a signup-created account vanishes on
-  // redeploy, cold start, or a second instance — while the browser keeps
-  // sending its cookie. Treating that stale cookie as a live session used to
-  // let requests through to pages that then dereferenced a null user and
-  // returned a 500; an unresolvable cookie is instead no session at all.
   const user = isRole(role) && userId ? findUserById(userId) : undefined;
-  const stale = Boolean(raw) && !user;
+  return user ? { role: user.role, status: user.status, mustChangePassword: false } : undefined;
+}
 
-  // Already signed in? Login, signup and root send you to your own home.
+export async function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+  let response = NextResponse.next();
+
+  const user = isSupabaseConfigured
+    ? await resolveSupabaseUser(request, response)
+    : resolveDemoUser(request);
+  const stale = !isSupabaseConfigured && Boolean(request.cookies.get(SESSION_COOKIE)?.value) && !user;
+
+  // Already signed in? Login, signup and root send you to your own home (or
+  // to the forced password change, if that's still outstanding).
   if (pathname === "/login" || pathname === "/signup" || pathname === "/") {
-    if (user) return NextResponse.redirect(new URL(ROLE_HOME[user.role], request.url));
-    if (stale) return clearSessionAndRedirect(request, "/login");
+    if (user) {
+      const dest = user.mustChangePassword ? ACCOUNT_PASSWORD_PATH : ROLE_HOME[user.role];
+      return NextResponse.redirect(new URL(dest, request.url));
+    }
+    if (stale) return clearSessionAndRedirect(request, "/login", response);
     if (pathname === "/") return NextResponse.redirect(new URL("/login", request.url));
-    return NextResponse.next();
+    return response;
   }
 
-  const section = SECTIONS.find(
-    (s) => pathname === `/${s}` || pathname.startsWith(`/${s}/`)
-  );
-  if (!section) return NextResponse.next();
+  // Account settings (password change) is reachable by any authenticated
+  // role — not gated by section/onboarding, since it must stay reachable
+  // even mid-onboarding or mid-forced-change.
+  if (pathname.startsWith("/account")) {
+    if (!user) return clearSessionAndRedirect(request, "/login", response);
+    response.headers.set("Cache-Control", "no-store, must-revalidate");
+    return response;
+  }
 
-  // No session at all — sign in first. A stale cookie is dropped on the way
-  // so the login page does not bounce straight back here.
-  if (!user) return clearSessionAndRedirect(request, "/login");
+  const section = SECTIONS.find((s) => pathname === `/${s}` || pathname.startsWith(`/${s}/`));
+  if (!section) return response;
+
+  // No session at all — sign in first.
+  if (!user) return clearSessionAndRedirect(request, "/login", response);
 
   // Valid session in the wrong section — send them to their own home, not login.
   if (user.role !== section) {
     return NextResponse.redirect(new URL(ROLE_HOME[user.role], request.url));
+  }
+
+  // Still on a temp password (real Supabase accounts only) — unskippable
+  // until they set their own. See app/account/password.
+  if (user.mustChangePassword) {
+    return NextResponse.redirect(new URL(ACCOUNT_PASSWORD_PATH, request.url));
   }
 
   // Faculty/HoD accounts must complete onboarding before using their real dashboard.
@@ -70,7 +132,6 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  const response = NextResponse.next();
   // Protected pages must not be served from the back/forward cache after logout.
   response.headers.set("Cache-Control", "no-store, must-revalidate");
   return response;
@@ -81,6 +142,7 @@ export const config = {
     "/",
     "/login",
     "/signup",
+    "/account/:path*",
     "/vc/:path*",
     "/registrar/:path*",
     "/hod/:path*",

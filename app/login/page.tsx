@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { DEMO_ACCOUNTS } from "@/lib/demo-accounts";
+import { isSupabaseConfigured } from "@/lib/supabase/config";
 import { TriangleAlert } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -27,21 +28,23 @@ export default async function LoginPage({
           office is responsible for.
         </p>
 
-        <div className="mt-8 rounded-panel border border-ink-200 bg-paper-raised px-5 py-5">
-          <h2 className="font-display text-lead font-semibold text-ink-900">Demonstration accounts</h2>
-          <p className="mt-1 text-meta text-ink-500">
-            This build ships with fixed sample accounts. Every one uses the password{" "}
-            <code className="rounded bg-ink-100 px-1.5 py-0.5 text-micro text-ink-800">demo123</code>.
-          </p>
-          <ul className="mt-4 divide-y divide-ink-200 border-t border-ink-200">
-            {DEMO_ACCOUNTS.map((a) => (
-              <li key={a.username} className="flex items-baseline justify-between gap-4 py-2.5">
-                <code className="text-meta text-ink-800">{a.username}</code>
-                <span className="text-micro text-ink-500">{a.displayName}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {!isSupabaseConfigured ? (
+          <div className="mt-8 rounded-panel border border-ink-200 bg-paper-raised px-5 py-5">
+            <h2 className="font-display text-lead font-semibold text-ink-900">Demonstration accounts</h2>
+            <p className="mt-1 text-meta text-ink-500">
+              This build ships with fixed sample accounts. Every one uses the password{" "}
+              <code className="rounded bg-ink-100 px-1.5 py-0.5 text-micro text-ink-800">demo123</code>.
+            </p>
+            <ul className="mt-4 divide-y divide-ink-200 border-t border-ink-200">
+              {DEMO_ACCOUNTS.map((a) => (
+                <li key={a.username} className="flex items-baseline justify-between gap-4 py-2.5">
+                  <code className="text-meta text-ink-800">{a.username}</code>
+                  <span className="text-micro text-ink-500">{a.displayName}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
       </div>
 
       <div className="rounded-panel border border-ink-200 bg-paper-raised px-6 py-7">
@@ -70,7 +73,7 @@ export default async function LoginPage({
               autoComplete="username"
               required
               className="input mt-1.5"
-              placeholder="vc-demo"
+              placeholder={isSupabaseConfigured ? "you@vbspu.local" : "vc-demo"}
             />
           </div>
 
@@ -95,7 +98,11 @@ export default async function LoginPage({
             >
               <TriangleAlert aria-hidden className="mt-0.5 h-4 w-4 shrink-0" />
               {expired
-                ? "Your session has ended because the server restarted. Accounts created by signing up do not survive a restart in this demo build — sign in with one of the accounts listed here."
+                ? isSupabaseConfigured
+                  ? "Your session has ended. Please sign in again."
+                  : "Your session has ended because the server restarted. Accounts created by signing up do not survive a restart in this demo build — sign in with one of the accounts listed here."
+                : isSupabaseConfigured
+                ? "That email and password combination is not recognised."
                 : "That username and password combination is not recognised. Pick an account from the list and use the password demo123."}
             </p>
           ) : null}
@@ -114,10 +121,12 @@ export default async function LoginPage({
           </a>
         </p>
 
-        <p className="mt-6 border-t border-ink-200 pt-4 text-micro leading-relaxed text-ink-500">
-          Demonstration build with mock authentication — credentials are held in source, nothing is
-          hashed and no session is stored on a server.
-        </p>
+        {!isSupabaseConfigured ? (
+          <p className="mt-6 border-t border-ink-200 pt-4 text-micro leading-relaxed text-ink-500">
+            Demonstration build with mock authentication — credentials are held in source, nothing is
+            hashed and no session is stored on a server.
+          </p>
+        ) : null}
       </div>
     </div>
   );

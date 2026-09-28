@@ -248,6 +248,9 @@ export interface UserAccount {
   status: UserStatus;
   rejectionReason?: string;
   createdAt: string;
+  /** True until the person changes their (temp) password — see app/account/password.
+   * Always false under the demo cookie system, where it doesn't apply. */
+  mustChangePassword: boolean;
 }
 
 export type ChangeRequestType = "edit" | "onboarding";

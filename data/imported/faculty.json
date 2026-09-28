@@ -242,9 +242,9 @@
   {
     "id": "department-of-business-economics-and-department-f1",
     "departments": [
-      "department-of-business-economics-and-department"
+      "business-economics"
     ],
-    "primaryDepartment": "department-of-business-economics-and-department",
+    "primaryDepartment": "business-economics",
     "sNo": 1,
     "name": "Prof Manas Pandey",
     "designation": "Professor",
@@ -258,9 +258,9 @@
   {
     "id": "department-of-business-economics-and-department-f2",
     "departments": [
-      "department-of-business-economics-and-department"
+      "business-economics"
     ],
-    "primaryDepartment": "department-of-business-economics-and-department",
+    "primaryDepartment": "business-economics",
     "sNo": 2,
     "name": "Dr Ashutosh Kumar Singh",
     "designation": "Associate Professor",
@@ -274,9 +274,9 @@
   {
     "id": "department-of-business-economics-and-department-f3",
     "departments": [
-      "department-of-business-economics-and-department"
+      "business-economics"
     ],
-    "primaryDepartment": "department-of-business-economics-and-department",
+    "primaryDepartment": "business-economics",
     "sNo": 3,
     "name": "Dr Nisha Pandey",
     "designation": "Guest Faculty",
@@ -290,9 +290,9 @@
   {
     "id": "department-of-business-economics-and-department-f4",
     "departments": [
-      "department-of-business-economics-and-department"
+      "business-economics"
     ],
-    "primaryDepartment": "department-of-business-economics-and-department",
+    "primaryDepartment": "business-economics",
     "sNo": 4,
     "name": "Dr Anjany kr Mishra",
     "designation": "Guest Faculty",
@@ -306,9 +306,9 @@
   {
     "id": "department-of-business-economics-and-department-f5",
     "departments": [
-      "department-of-business-economics-and-department"
+      "business-economics"
     ],
-    "primaryDepartment": "department-of-business-economics-and-department",
+    "primaryDepartment": "business-economics",
     "sNo": 5,
     "name": "Dr. Krishna Singh",
     "designation": "Assistant Professor",
@@ -322,9 +322,9 @@
   {
     "id": "department-of-business-economics-and-department-f6",
     "departments": [
-      "department-of-business-economics-and-department"
+      "business-economics"
     ],
-    "primaryDepartment": "department-of-business-economics-and-department",
+    "primaryDepartment": "business-economics",
     "sNo": 6,
     "name": "Dr. Suneel Kumar Patel",
     "designation": "Assistant Professor",
@@ -338,9 +338,9 @@
   {
     "id": "department-of-business-economics-and-department-f7",
     "departments": [
-      "department-of-business-economics-and-department"
+      "business-economics"
     ],
-    "primaryDepartment": "department-of-business-economics-and-department",
+    "primaryDepartment": "business-economics",
     "sNo": 7,
     "name": "Dr. Krishna Kumar Kasaudhan",
     "designation": "Assistant Professor",
@@ -354,9 +354,9 @@
   {
     "id": "department-of-business-economics-and-department-f8",
     "departments": [
-      "department-of-business-economics-and-department"
+      "business-economics"
     ],
-    "primaryDepartment": "department-of-business-economics-and-department",
+    "primaryDepartment": "business-economics",
     "sNo": 8,
     "name": "Dr. Pradeep Kumar Sonkar",
     "designation": "Assistant Professor",
@@ -370,9 +370,9 @@
   {
     "id": "department-of-business-economics-and-department-f9",
     "departments": [
-      "department-of-business-economics-and-department"
+      "business-economics"
     ],
-    "primaryDepartment": "department-of-business-economics-and-department",
+    "primaryDepartment": "business-economics",
     "sNo": 9,
     "name": "Ms Sakshi Singh",
     "designation": "Assistant Professor",
@@ -386,10 +386,10 @@
   {
     "id": "department-of-business-economics-and-department-f10",
     "departments": [
-      "department-of-business-economics-and-department"
+      "business-management"
     ],
-    "primaryDepartment": "department-of-business-economics-and-department",
-    "sNo": 10,
+    "primaryDepartment": "business-management",
+    "sNo": 1,
     "name": "Prof. Murad Ali",
     "designation": "Professor",
     "appointmentType": "Regular",
@@ -402,10 +402,10 @@
   {
     "id": "department-of-business-economics-and-department-f11",
     "departments": [
-      "department-of-business-economics-and-department"
+      "business-management"
     ],
-    "primaryDepartment": "department-of-business-economics-and-department",
-    "sNo": 11,
+    "primaryDepartment": "business-management",
+    "sNo": 2,
     "name": "Dr. Pramendra Vikram Singh",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -418,10 +418,10 @@
   {
     "id": "department-of-business-economics-and-department-f12",
     "departments": [
-      "department-of-business-economics-and-department"
+      "business-management"
     ],
-    "primaryDepartment": "department-of-business-economics-and-department",
-    "sNo": 12,
+    "primaryDepartment": "business-management",
+    "sNo": 3,
     "name": "Dr. Rajesh Kumar",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -434,10 +434,10 @@
   {
     "id": "department-of-business-economics-and-department-f13",
     "departments": [
-      "department-of-business-economics-and-department"
+      "business-management"
     ],
-    "primaryDepartment": "department-of-business-economics-and-department",
-    "sNo": 13,
+    "primaryDepartment": "business-management",
+    "sNo": 4,
     "name": "Dr. Ritu Viswakarma",
     "designation": "Assistant Professor",
     "appointmentType": "Guest",
@@ -450,10 +450,10 @@
   {
     "id": "department-of-business-economics-and-department-f14",
     "departments": [
-      "department-of-business-economics-and-department"
+      "business-management"
     ],
-    "primaryDepartment": "department-of-business-economics-and-department",
-    "sNo": 14,
+    "primaryDepartment": "business-management",
+    "sNo": 5,
     "name": "Mohd Shahabudin Rayeen",
     "designation": "Assistant Professor",
     "appointmentType": "Guest",
@@ -466,10 +466,10 @@
   {
     "id": "department-of-business-economics-and-department-f15",
     "departments": [
-      "department-of-business-economics-and-department"
+      "business-management"
     ],
-    "primaryDepartment": "department-of-business-economics-and-department",
-    "sNo": 15,
+    "primaryDepartment": "business-management",
+    "sNo": 6,
     "name": "Dr. Asim Rajbhar",
     "designation": "Assistant Professor",
     "appointmentType": "Guest",
@@ -482,10 +482,10 @@
   {
     "id": "department-of-business-economics-and-department-f16",
     "departments": [
-      "department-of-business-economics-and-department"
+      "business-management"
     ],
-    "primaryDepartment": "department-of-business-economics-and-department",
-    "sNo": 16,
+    "primaryDepartment": "business-management",
+    "sNo": 7,
     "name": "Dr. Nitin Chauhan",
     "designation": "Assistant Professor",
     "appointmentType": "Guest",
@@ -498,10 +498,10 @@
   {
     "id": "department-of-business-economics-and-department-f17",
     "departments": [
-      "department-of-business-economics-and-department"
+      "business-management"
     ],
-    "primaryDepartment": "department-of-business-economics-and-department",
-    "sNo": 17,
+    "primaryDepartment": "business-management",
+    "sNo": 8,
     "name": "Dr. Asma",
     "designation": "Assistant Professor",
     "appointmentType": "Guest",
@@ -514,10 +514,10 @@
   {
     "id": "department-of-business-economics-and-department-f18",
     "departments": [
-      "department-of-business-economics-and-department"
+      "business-management"
     ],
-    "primaryDepartment": "department-of-business-economics-and-department",
-    "sNo": 18,
+    "primaryDepartment": "business-management",
+    "sNo": 9,
     "name": "Dr. Vikas Singh",
     "designation": "Assistant Professor",
     "appointmentType": "Guest",
@@ -530,10 +530,10 @@
   {
     "id": "department-of-business-economics-and-department-f19",
     "departments": [
-      "department-of-business-economics-and-department"
+      "business-management"
     ],
-    "primaryDepartment": "department-of-business-economics-and-department",
-    "sNo": 19,
+    "primaryDepartment": "business-management",
+    "sNo": 10,
     "name": "Bushra Jafri",
     "designation": "Assistant Professor",
     "appointmentType": "Guest",
@@ -546,10 +546,10 @@
   {
     "id": "department-of-business-economics-and-department-f20",
     "departments": [
-      "department-of-business-economics-and-department"
+      "business-management"
     ],
-    "primaryDepartment": "department-of-business-economics-and-department",
-    "sNo": 20,
+    "primaryDepartment": "business-management",
+    "sNo": 11,
     "name": "Sristhi Singh",
     "designation": "Assistant Professor",
     "appointmentType": "Guest",
@@ -562,9 +562,9 @@
   {
     "id": "cse-and-it-f1",
     "departments": [
-      "cse-and-it"
+      "cse"
     ],
-    "primaryDepartment": "cse-and-it",
+    "primaryDepartment": "cse",
     "sNo": 1,
     "name": "Dr. Prashant Kr. Yadav",
     "designation": "Assistant Professor",
@@ -578,9 +578,9 @@
   {
     "id": "cse-and-it-f2",
     "departments": [
-      "cse-and-it"
+      "cse"
     ],
-    "primaryDepartment": "cse-and-it",
+    "primaryDepartment": "cse",
     "sNo": 2,
     "name": "Dr. Divyendu Kr. Mishra",
     "designation": "Assistant Professor",
@@ -594,9 +594,9 @@
   {
     "id": "cse-and-it-f3",
     "departments": [
-      "cse-and-it"
+      "cse"
     ],
-    "primaryDepartment": "cse-and-it",
+    "primaryDepartment": "cse",
     "sNo": 3,
     "name": "Mr. Dileep Kr. Yadav",
     "designation": "Assistant Professor",
@@ -610,9 +610,9 @@
   {
     "id": "cse-and-it-f4",
     "departments": [
-      "cse-and-it"
+      "cse"
     ],
-    "primaryDepartment": "cse-and-it",
+    "primaryDepartment": "cse",
     "sNo": 4,
     "name": "Ms. Deepti Pandey",
     "designation": "Assistant Professor",
@@ -626,9 +626,9 @@
   {
     "id": "cse-and-it-f5",
     "departments": [
-      "cse-and-it"
+      "cse"
     ],
-    "primaryDepartment": "cse-and-it",
+    "primaryDepartment": "cse",
     "sNo": 5,
     "name": "Mr. Krishna Kr. Yadav",
     "designation": "Assistant Professor",
@@ -642,9 +642,9 @@
   {
     "id": "cse-and-it-f6",
     "departments": [
-      "cse-and-it"
+      "cse"
     ],
-    "primaryDepartment": "cse-and-it",
+    "primaryDepartment": "cse",
     "sNo": 6,
     "name": "Dr. Sunil Yadav",
     "designation": "Assistant Professor",
@@ -658,9 +658,9 @@
   {
     "id": "cse-and-it-f7",
     "departments": [
-      "cse-and-it"
+      "cse"
     ],
-    "primaryDepartment": "cse-and-it",
+    "primaryDepartment": "cse",
     "sNo": 7,
     "name": "Mr. Ravikant Yadav",
     "designation": "Assistant Professor",
@@ -674,9 +674,9 @@
   {
     "id": "cse-and-it-f8",
     "departments": [
-      "cse-and-it"
+      "cse"
     ],
-    "primaryDepartment": "cse-and-it",
+    "primaryDepartment": "cse",
     "sNo": 8,
     "name": "Mr. Pravin Kr. Pandey",
     "designation": "Assistant Professor",
@@ -690,10 +690,10 @@
   {
     "id": "cse-and-it-f9",
     "departments": [
-      "cse-and-it"
+      "it"
     ],
-    "primaryDepartment": "cse-and-it",
-    "sNo": 9,
+    "primaryDepartment": "it",
+    "sNo": 1,
     "name": "Dr. Gyanendra Kr. Pal",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -706,10 +706,10 @@
   {
     "id": "cse-and-it-f10",
     "departments": [
-      "cse-and-it"
+      "it"
     ],
-    "primaryDepartment": "cse-and-it",
-    "sNo": 10,
+    "primaryDepartment": "it",
+    "sNo": 2,
     "name": "Dr. Santosh Kr. Yadav",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -722,10 +722,10 @@
   {
     "id": "cse-and-it-f11",
     "departments": [
-      "cse-and-it"
+      "it"
     ],
-    "primaryDepartment": "cse-and-it",
-    "sNo": 11,
+    "primaryDepartment": "it",
+    "sNo": 3,
     "name": "Mr. Ashok Kr. Yadav",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -738,10 +738,10 @@
   {
     "id": "cse-and-it-f12",
     "departments": [
-      "cse-and-it"
+      "it"
     ],
-    "primaryDepartment": "cse-and-it",
-    "sNo": 12,
+    "primaryDepartment": "it",
+    "sNo": 4,
     "name": "Mr. Ritesh Kr. Srivastav",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -754,10 +754,10 @@
   {
     "id": "cse-and-it-f13",
     "departments": [
-      "cse-and-it"
+      "it"
     ],
-    "primaryDepartment": "cse-and-it",
-    "sNo": 13,
+    "primaryDepartment": "it",
+    "sNo": 5,
     "name": "Mr. Purnendra Kumar",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -770,10 +770,10 @@
   {
     "id": "cse-and-it-f14",
     "departments": [
-      "cse-and-it"
+      "it"
     ],
-    "primaryDepartment": "cse-and-it",
-    "sNo": 14,
+    "primaryDepartment": "it",
+    "sNo": 6,
     "name": "Mr. Manoj Kr. Yadav",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -978,9 +978,9 @@
   {
     "id": "department-of-electronics-engineering-f1",
     "departments": [
-      "department-of-electronics-engineering"
+      "electronics-engineering"
     ],
-    "primaryDepartment": "department-of-electronics-engineering",
+    "primaryDepartment": "electronics-engineering",
     "sNo": 1,
     "name": "Prof. Ravi Prakash",
     "designation": "Professor",
@@ -994,11 +994,11 @@
   {
     "id": "department-of-electronics-engineering-f2",
     "departments": [
-      "department-of-electronics-engineering",
+      "electronics-engineering",
       "cse",
       "it"
     ],
-    "primaryDepartment": "department-of-electronics-engineering",
+    "primaryDepartment": "electronics-engineering",
     "sNo": 2,
     "name": "Dr. Vikrant Bhateja",
     "designation": "Associate Professor",
@@ -1012,10 +1012,10 @@
   {
     "id": "department-of-electronics-engineering-f3",
     "departments": [
-      "department-of-electronics-engineering"
+      "electronics-and-communication-engineering"
     ],
-    "primaryDepartment": "department-of-electronics-engineering",
-    "sNo": 3,
+    "primaryDepartment": "electronics-and-communication-engineering",
+    "sNo": 1,
     "name": "Dr. Parul Trivedi",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1028,10 +1028,10 @@
   {
     "id": "department-of-electronics-engineering-f4",
     "departments": [
-      "department-of-electronics-engineering"
+      "electronics-and-communication-engineering"
     ],
-    "primaryDepartment": "department-of-electronics-engineering",
-    "sNo": 4,
+    "primaryDepartment": "electronics-and-communication-engineering",
+    "sNo": 2,
     "name": "Dr. Jyoti P. Singh",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1044,10 +1044,10 @@
   {
     "id": "department-of-electronics-engineering-f5",
     "departments": [
-      "department-of-electronics-engineering"
+      "electronics-and-communication-engineering"
     ],
-    "primaryDepartment": "department-of-electronics-engineering",
-    "sNo": 5,
+    "primaryDepartment": "electronics-and-communication-engineering",
+    "sNo": 3,
     "name": "Dr. Santosh Kumar Tripathi",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1060,10 +1060,10 @@
   {
     "id": "department-of-electronics-engineering-f6",
     "departments": [
-      "department-of-electronics-engineering"
+      "electronics-and-communication-engineering"
     ],
-    "primaryDepartment": "department-of-electronics-engineering",
-    "sNo": 6,
+    "primaryDepartment": "electronics-and-communication-engineering",
+    "sNo": 4,
     "name": "Dr Prem Chand Yadava",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1076,10 +1076,10 @@
   {
     "id": "department-of-electronics-engineering-f7",
     "departments": [
-      "department-of-electronics-engineering"
+      "electronics-and-communication-engineering"
     ],
-    "primaryDepartment": "department-of-electronics-engineering",
-    "sNo": 7,
+    "primaryDepartment": "electronics-and-communication-engineering",
+    "sNo": 5,
     "name": "Dr. Mohammad Aneesh",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1092,10 +1092,10 @@
   {
     "id": "department-of-electronics-engineering-f8",
     "departments": [
-      "department-of-electronics-engineering"
+      "electronics-engineering"
     ],
-    "primaryDepartment": "department-of-electronics-engineering",
-    "sNo": 8,
+    "primaryDepartment": "electronics-engineering",
+    "sNo": 3,
     "name": "Mr.Tushar Srivastava",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1108,10 +1108,10 @@
   {
     "id": "department-of-electronics-engineering-f9",
     "departments": [
-      "department-of-electronics-engineering"
+      "electronics-engineering"
     ],
-    "primaryDepartment": "department-of-electronics-engineering",
-    "sNo": 9,
+    "primaryDepartment": "electronics-engineering",
+    "sNo": 4,
     "name": "Mr Sudhir Singh",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1124,10 +1124,10 @@
   {
     "id": "department-of-electronics-engineering-f10",
     "departments": [
-      "department-of-electronics-engineering"
+      "electronics-engineering"
     ],
-    "primaryDepartment": "department-of-electronics-engineering",
-    "sNo": 10,
+    "primaryDepartment": "electronics-engineering",
+    "sNo": 5,
     "name": "Dr.Vishal Yadav",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1140,10 +1140,10 @@
   {
     "id": "department-of-electronics-engineering-f11",
     "departments": [
-      "department-of-electronics-engineering"
+      "electronics-engineering"
     ],
-    "primaryDepartment": "department-of-electronics-engineering",
-    "sNo": 11,
+    "primaryDepartment": "electronics-engineering",
+    "sNo": 6,
     "name": "Dr Ritesh Baranwal",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1156,10 +1156,10 @@
   {
     "id": "department-of-electronics-engineering-f12",
     "departments": [
-      "department-of-electronics-engineering"
+      "electronics-engineering"
     ],
-    "primaryDepartment": "department-of-electronics-engineering",
-    "sNo": 12,
+    "primaryDepartment": "electronics-engineering",
+    "sNo": 7,
     "name": "Miss. Poonam Sonkar",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1172,10 +1172,10 @@
   {
     "id": "department-of-electronics-engineering-f13",
     "departments": [
-      "department-of-electronics-engineering"
+      "electronics-and-communication-engineering"
     ],
-    "primaryDepartment": "department-of-electronics-engineering",
-    "sNo": 13,
+    "primaryDepartment": "electronics-and-communication-engineering",
+    "sNo": 6,
     "name": "Mr. Shailesh Kumar Prajapati",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1188,10 +1188,10 @@
   {
     "id": "department-of-electronics-engineering-f14",
     "departments": [
-      "department-of-electronics-engineering"
+      "electronics-and-communication-engineering"
     ],
-    "primaryDepartment": "department-of-electronics-engineering",
-    "sNo": 14,
+    "primaryDepartment": "electronics-and-communication-engineering",
+    "sNo": 7,
     "name": "Dr. Praveen Kumar Singh",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1204,10 +1204,10 @@
   {
     "id": "department-of-electronics-engineering-f15",
     "departments": [
-      "department-of-electronics-engineering"
+      "electronics-and-communication-engineering"
     ],
-    "primaryDepartment": "department-of-electronics-engineering",
-    "sNo": 15,
+    "primaryDepartment": "electronics-and-communication-engineering",
+    "sNo": 8,
     "name": "Mrs. Priti Sharma",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",
@@ -1220,10 +1220,10 @@
   {
     "id": "department-of-electronics-engineering-f16",
     "departments": [
-      "department-of-electronics-engineering"
+      "electronics-engineering"
     ],
-    "primaryDepartment": "department-of-electronics-engineering",
-    "sNo": 16,
+    "primaryDepartment": "electronics-engineering",
+    "sNo": 8,
     "name": "Dr. Ajay Kumar Maurya",
     "designation": "Assistant Professor",
     "appointmentType": "Contractual",

@@ -10,6 +10,9 @@ import type {
   Program,
 } from "./types";
 
+import { getSupabaseSnapshot } from "@/lib/supabase/snapshot";
+import { isSupabaseConfigured as supabaseEnvConfigured } from "@/lib/supabase/config";
+
 import importedDepartments from "./imported/departments.json";
 import importedPrograms from "./imported/programs.json";
 import importedFaculty from "./imported/faculty.json";
@@ -46,7 +49,7 @@ export const usingImportedData = DATA_SOURCE === "imported";
  * but `resolveJsonModule` widens literal types (e.g. status: string), so each
  * dataset is asserted back to its declared shape on the way in.
  */
-export const imported = {
+const jsonImported = {
   departments: importedDepartments as Department[],
   programs: importedPrograms as Program[],
   faculty: importedFaculty as Faculty[],
@@ -56,6 +59,43 @@ export const imported = {
   hodSubmissions: importedHodSubmissions as unknown as HodSubmission[],
   facultyTargetSummaries: importedTargetSummaries as DeptFacultyTargetSummary[],
   facultyTargets: importedFacultyTargets as FacultyTarget[],
+};
+
+/** Supabase rows win over the Excel JSON on id match; JSON rows fill in the rest. */
+function mergeById<T extends { id: string }>(jsonRows: T[], supabaseRows: T[] | undefined): T[] {
+  if (!supabaseRows?.length) return jsonRows;
+  const supabaseIds = new Set(supabaseRows.map((r) => r.id));
+  return [...supabaseRows, ...jsonRows.filter((r) => !supabaseIds.has(r.id))];
+}
+
+function mergeByKey<T, K extends keyof T>(jsonRows: T[], supabaseRows: T[] | undefined, key: K): T[] {
+  if (!supabaseRows?.length) return jsonRows;
+  const supabaseKeys = new Set(supabaseRows.map((r) => r[key]));
+  return [...supabaseRows, ...jsonRows.filter((r) => !supabaseKeys.has(r[key]))];
+}
+
+/**
+ * data/source.ts is imported at module load by every data/*.ts module, well
+ * after instrumentation.ts (see repo root) has warmed the Supabase snapshot —
+ * so this merge runs once, with the snapshot already populated whenever
+ * Supabase is configured. See lib/supabase/snapshot.ts.
+ */
+const supabaseSnapshot = supabaseEnvConfigured ? getSupabaseSnapshot() : null;
+
+export const imported = {
+  departments: mergeById(jsonImported.departments, supabaseSnapshot?.departments),
+  programs: mergeById(jsonImported.programs, supabaseSnapshot?.programs),
+  faculty: mergeById(jsonImported.faculty, supabaseSnapshot?.faculty),
+  facultyResearch: mergeByKey(jsonImported.facultyResearch, supabaseSnapshot?.facultyResearch, "facultyId"),
+  facultyProjects: mergeById(jsonImported.facultyProjects, supabaseSnapshot?.facultyProjects),
+  infrastructure: mergeById(jsonImported.infrastructure, supabaseSnapshot?.infrastructure),
+  hodSubmissions: mergeByKey(jsonImported.hodSubmissions, supabaseSnapshot?.hodSubmissions, "deptId"),
+  facultyTargetSummaries: mergeByKey(
+    jsonImported.facultyTargetSummaries,
+    supabaseSnapshot?.facultyTargetSummaries,
+    "deptId"
+  ),
+  facultyTargets: mergeByKey(jsonImported.facultyTargets, supabaseSnapshot?.facultyTargets, "facultyId"),
 };
 
 /**

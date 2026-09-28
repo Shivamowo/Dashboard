@@ -23,6 +23,9 @@ import { updateHodSubmission } from "./submissions";
 import { globalSingleton } from "./globalStore";
 import { departments } from "./departments";
 import { faculty as facultyRecords } from "./faculty";
+import { isSupabaseConfigured } from "@/lib/supabase/config";
+import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { getSupabaseSnapshot } from "@/lib/supabase/snapshot";
 
 /**
  * Demo accounts are scoped to whichever dataset is loaded.
@@ -61,12 +64,12 @@ const seedUsers = (): UserAccount[] => {
   const facDept = populatedDeptId();
   const facId = firstFacultyIdIn(facDept);
   return [
-    { id: "u-vc", username: "vc-demo", password: "demo123", role: "vc", displayName: "Vice Chancellor", status: "active", createdAt: "2026-01-01T00:00:00.000Z" },
-    { id: "u-registrar", username: "registrar-demo", password: "demo123", role: "registrar", displayName: "Registrar", status: "active", createdAt: "2026-01-01T00:00:00.000Z" },
-    { id: "u-hod", username: "hod-demo", password: "demo123", role: "hod", displayName: "Head of Department", deptId: hodDept, status: "active", createdAt: "2026-01-01T00:00:00.000Z" },
-    { id: "u-faculty", username: "faculty-demo", password: "demo123", role: "faculty", displayName: "Faculty Member", deptId: facDept, facultyId: facId, status: "active", createdAt: "2026-01-01T00:00:00.000Z" },
-    { id: "u-et", username: "et-demo", password: "demo123", role: "et", displayName: "Engineering & Technical", status: "active", createdAt: "2026-01-01T00:00:00.000Z" },
-    { id: "u-admin", username: "admin-demo", password: "demo123", role: "admin", displayName: "Administrator", status: "active", createdAt: "2026-01-01T00:00:00.000Z" },
+    { id: "u-vc", username: "vc-demo", password: "demo123", role: "vc", displayName: "Vice Chancellor", status: "active", createdAt: "2026-01-01T00:00:00.000Z", mustChangePassword: false },
+    { id: "u-registrar", username: "registrar-demo", password: "demo123", role: "registrar", displayName: "Registrar", status: "active", createdAt: "2026-01-01T00:00:00.000Z", mustChangePassword: false },
+    { id: "u-hod", username: "hod-demo", password: "demo123", role: "hod", displayName: "Head of Department", deptId: hodDept, status: "active", createdAt: "2026-01-01T00:00:00.000Z", mustChangePassword: false },
+    { id: "u-faculty", username: "faculty-demo", password: "demo123", role: "faculty", displayName: "Faculty Member", deptId: facDept, facultyId: facId, status: "active", createdAt: "2026-01-01T00:00:00.000Z", mustChangePassword: false },
+    { id: "u-et", username: "et-demo", password: "demo123", role: "et", displayName: "Engineering & Technical", status: "active", createdAt: "2026-01-01T00:00:00.000Z", mustChangePassword: false },
+    { id: "u-admin", username: "admin-demo", password: "demo123", role: "admin", displayName: "Administrator", status: "active", createdAt: "2026-01-01T00:00:00.000Z", mustChangePassword: false },
   ];
 };
 
@@ -85,10 +88,10 @@ const seedOnboardingUsers = (): UserAccount[] => {
   const b = deptIdFor("computer-applications", "it");
   const c = deptIdFor("mechanical-engineering", "ece");
   return [
-    { id: "u-seed-faculty-new", username: "faculty-new", password: "demo123", role: "faculty", displayName: "Aarti Verma", deptId: a, status: "onboarding_incomplete", createdAt: "2026-01-01T00:00:00.000Z" },
-    { id: "u-seed-hod-new", username: "hod-new", password: "demo123", role: "hod", displayName: "Sanjay Mishra", deptId: b, status: "onboarding_incomplete", createdAt: "2026-01-01T00:00:00.000Z" },
-    { id: "u-seed-faculty-pending", username: "faculty-pending", password: "demo123", role: "faculty", displayName: "Rohit Yadav", deptId: a, status: "pending_approval", createdAt: "2026-01-01T00:00:00.000Z" },
-    { id: "u-seed-hod-pending", username: "hod-pending", password: "demo123", role: "hod", displayName: "Neha Gupta", deptId: c, status: "pending_approval", createdAt: "2026-01-01T00:00:00.000Z" },
+    { id: "u-seed-faculty-new", username: "faculty-new", password: "demo123", role: "faculty", displayName: "Aarti Verma", deptId: a, status: "onboarding_incomplete", createdAt: "2026-01-01T00:00:00.000Z", mustChangePassword: false },
+    { id: "u-seed-hod-new", username: "hod-new", password: "demo123", role: "hod", displayName: "Sanjay Mishra", deptId: b, status: "onboarding_incomplete", createdAt: "2026-01-01T00:00:00.000Z", mustChangePassword: false },
+    { id: "u-seed-faculty-pending", username: "faculty-pending", password: "demo123", role: "faculty", displayName: "Rohit Yadav", deptId: a, status: "pending_approval", createdAt: "2026-01-01T00:00:00.000Z", mustChangePassword: false },
+    { id: "u-seed-hod-pending", username: "hod-pending", password: "demo123", role: "hod", displayName: "Neha Gupta", deptId: c, status: "pending_approval", createdAt: "2026-01-01T00:00:00.000Z", mustChangePassword: false },
   ];
 };
 
@@ -156,11 +159,20 @@ const seedChangeRequests = (): ChangeRequest[] => {
   ];
 };
 
-export const users: UserAccount[] = globalSingleton("users", () => [
-  ...seedUsers(),
-  ...seedOnboardingUsers(),
-]);
-export const changeRequests: ChangeRequest[] = globalSingleton("changeRequests", seedChangeRequests);
+/**
+ * Real accounts (Supabase Auth + profiles) win when Supabase is configured —
+ * the demo seed accounts below only exist so the demo build is reachable
+ * without any setup. See lib/supabase/snapshot.ts (warmed by instrumentation.ts
+ * at boot) and upsertLocalUser (kept in sync on every signup/onboarding).
+ */
+const snapshot = isSupabaseConfigured ? getSupabaseSnapshot() : null;
+
+export const users: UserAccount[] = globalSingleton("users", () =>
+  snapshot ? snapshot.users : [...seedUsers(), ...seedOnboardingUsers()]
+);
+export const changeRequests: ChangeRequest[] = globalSingleton("changeRequests", () =>
+  snapshot ? snapshot.changeRequests : seedChangeRequests()
+);
 // Generated ids are "u-signup-<n>"/"cr-<n>"; the seeds above use "u-seed-*"/
 // "cr-seed-*" prefixes, so these counters cannot collide with them.
 const seq = globalSingleton("idSeq", () => ({ user: 1, cr: 1 }));
@@ -178,6 +190,18 @@ export function findUserById(id: string) {
 
 export function findUserByUsername(username: string) {
   return users.find((u) => u.username === username.trim().toLowerCase());
+}
+
+/**
+ * Syncs a Supabase Auth user + profile row into the in-memory `users` array
+ * so findUserById/findUserByUsername (used throughout the app, e.g. the Admin
+ * approvals list) keep working synchronously without a Supabase round trip
+ * per read. Called by app/api/signup, app/api/login and instrumentation.ts.
+ */
+export function upsertLocalUser(user: UserAccount) {
+  const i = users.findIndex((u) => u.id === user.id);
+  if (i >= 0) users[i] = user;
+  else users.push(user);
 }
 
 /**
@@ -205,6 +229,7 @@ export function createUserAccount(input: {
     deptId: input.deptId,
     status: "onboarding_incomplete",
     createdAt: new Date().toISOString(),
+    mustChangePassword: false,
   };
   users.push(user);
   return user;
@@ -215,15 +240,15 @@ export function createUserAccount(input: {
  * a pending 'onboarding' ChangeRequest and moves the account to
  * "pending_approval". Also used to resubmit after a rejection.
  */
-export function submitOnboarding(input: {
+export async function submitOnboarding(input: {
   userId: string;
   targetEntity: "Faculty" | "HoD";
   deptId: string;
   payload: Record<string, unknown>;
-}): ChangeRequest {
+}): Promise<ChangeRequest> {
   const user = findUserById(input.userId);
   if (!user) throw new Error("Unknown user.");
-  const cr = createChangeRequest({
+  const cr = await createChangeRequest({
     type: "onboarding",
     targetEntity: input.targetEntity,
     targetId: null,
@@ -234,12 +259,19 @@ export function submitOnboarding(input: {
   });
   user.status = "pending_approval";
   user.rejectionReason = undefined;
+  if (isSupabaseConfigured) {
+    const { error } = await createSupabaseAdminClient()
+      .from("profiles")
+      .update({ status: "pending_approval", rejection_reason: null })
+      .eq("id", user.id);
+    if (error) throw error;
+  }
   return cr;
 }
 
 /* ---------------------------------------------------------- change requests */
 
-export function createChangeRequest(input: {
+export async function createChangeRequest(input: {
   type: ChangeRequestType;
   targetEntity: ChangeRequestTargetEntity;
   targetId: string | null;
@@ -248,7 +280,7 @@ export function createChangeRequest(input: {
   deptId: string;
   section?: FacultyChangeSection;
   payload: Record<string, unknown>;
-}): ChangeRequest {
+}): Promise<ChangeRequest> {
   const cr: ChangeRequest = {
     id: "cr-" + seq.cr++,
     status: "pending",
@@ -256,6 +288,22 @@ export function createChangeRequest(input: {
     ...input,
   };
   changeRequests.push(cr);
+  if (isSupabaseConfigured) {
+    const { error } = await createSupabaseAdminClient().from("change_requests").insert({
+      id: cr.id,
+      type: cr.type,
+      target_entity: cr.targetEntity,
+      target_id: cr.targetId,
+      submitted_by_user_id: cr.submittedByUserId,
+      submitted_by_role: cr.submittedByRole,
+      dept_id: cr.deptId,
+      section: cr.section ?? null,
+      payload: cr.payload,
+      status: cr.status,
+      submitted_at: cr.submittedAt,
+    });
+    if (error) throw error;
+  }
   return cr;
 }
 
@@ -322,7 +370,7 @@ export const pendingSectionForFaculty = (facultyId: string, section: FacultyChan
 
 /* ------------------------------------------------------------ applying a CR */
 
-function applyChangeRequest(cr: ChangeRequest) {
+async function applyChangeRequest(cr: ChangeRequest) {
   if (cr.targetEntity === "Faculty") {
     if (cr.type === "onboarding") {
       const dept = departmentById(cr.deptId);
@@ -332,20 +380,27 @@ function applyChangeRequest(cr: ChangeRequest) {
         research: FacultyResearchEdit;
         projects: FacultyProjectEdit[];
       };
-      const fid = addFacultyRecord(cr.deptId, payload.profile);
-      setFacultyResearch(fid, payload.research);
-      setFacultyProjects(fid, payload.projects ?? []);
+      const fid = await addFacultyRecord(cr.deptId, payload.profile);
+      await setFacultyResearch(fid, payload.research);
+      await setFacultyProjects(fid, payload.projects ?? []);
       const user = findUserById(cr.submittedByUserId);
       if (user) user.facultyId = fid;
+      if (isSupabaseConfigured) {
+        const { error } = await createSupabaseAdminClient()
+          .from("profiles")
+          .update({ faculty_id: fid })
+          .eq("id", cr.submittedByUserId);
+        if (error) throw error;
+      }
     } else if (cr.targetId) {
       const section = cr.section ?? "profile";
-      if (section === "research") setFacultyResearch(cr.targetId, cr.payload as FacultyResearchEdit);
+      if (section === "research") await setFacultyResearch(cr.targetId, cr.payload as FacultyResearchEdit);
       else if (section === "projects")
-        setFacultyProjects(cr.targetId, (cr.payload as { projects: FacultyProjectEdit[] }).projects);
+        await setFacultyProjects(cr.targetId, (cr.payload as { projects: FacultyProjectEdit[] }).projects);
       else if (section === "target") {
         const sNo = (cr.payload as { sNo?: number }).sNo ?? 0;
-        setFacultyTarget(cr.targetId, sNo, cr.payload as FacultyTargetEdit);
-      } else updateFacultyRecord(cr.targetId, cr.payload as FacultyProfileEdit);
+        await setFacultyTarget(cr.targetId, sNo, cr.payload as FacultyTargetEdit);
+      } else await updateFacultyRecord(cr.targetId, cr.payload as FacultyProfileEdit);
     }
   } else if (cr.targetEntity === "HoD") {
     const payload = cr.payload as {
@@ -355,23 +410,30 @@ function applyChangeRequest(cr: ChangeRequest) {
       certificationDate?: string;
     };
     if (cr.type === "onboarding") {
-      updateDepartmentHod(cr.deptId, { hodName: payload.name, hodContact: payload.mobileContact });
-      updateHodSubmission(cr.deptId, { mobileContact: payload.mobileContact, certificationSignedBy: payload.name });
+      await updateDepartmentHod(cr.deptId, { hodName: payload.name, hodContact: payload.mobileContact });
+      await updateHodSubmission(cr.deptId, { mobileContact: payload.mobileContact, certificationSignedBy: payload.name });
       const user = findUserById(cr.submittedByUserId);
       if (user) user.deptId = cr.deptId;
+      if (isSupabaseConfigured) {
+        const { error } = await createSupabaseAdminClient()
+          .from("profiles")
+          .update({ dept_id: cr.deptId })
+          .eq("id", cr.submittedByUserId);
+        if (error) throw error;
+      }
     } else {
-      updateHodSubmission(cr.deptId, payload);
-      if (payload.mobileContact) updateDepartmentHod(cr.deptId, { hodContact: payload.mobileContact });
+      await updateHodSubmission(cr.deptId, payload);
+      if (payload.mobileContact) await updateDepartmentHod(cr.deptId, { hodContact: payload.mobileContact });
     }
   } else if (cr.targetEntity === "Infrastructure" && cr.targetId) {
-    updateInfrastructureRecord(cr.targetId, cr.payload as InfrastructureEdit);
+    await updateInfrastructureRecord(cr.targetId, cr.payload as InfrastructureEdit);
   }
 }
 
-export function approveChangeRequest(id: string, reviewerId: string, reviewNotes?: string) {
+export async function approveChangeRequest(id: string, reviewerId: string, reviewNotes?: string) {
   const cr = changeRequestById(id);
   if (!cr || cr.status !== "pending") return;
-  applyChangeRequest(cr);
+  await applyChangeRequest(cr);
   cr.status = "approved";
   cr.reviewedByUserId = reviewerId;
   cr.reviewedAt = new Date().toISOString();
@@ -383,12 +445,27 @@ export function approveChangeRequest(id: string, reviewerId: string, reviewNotes
       user.rejectionReason = undefined;
     }
   }
+  if (isSupabaseConfigured) {
+    const db = createSupabaseAdminClient();
+    const { error } = await db
+      .from("change_requests")
+      .update({ status: "approved", reviewed_by_user_id: reviewerId, reviewed_at: cr.reviewedAt, review_notes: reviewNotes ?? null })
+      .eq("id", id);
+    if (error) throw error;
+    if (cr.type === "onboarding") {
+      const { error: profileError } = await db
+        .from("profiles")
+        .update({ status: "active", rejection_reason: null })
+        .eq("id", cr.submittedByUserId);
+      if (profileError) throw profileError;
+    }
+  }
 }
 
 /** On rejection an onboarding submission sends the account back to
  * "onboarding_incomplete" (not a separate 'rejected' status) so the user is
  * routed back to the onboarding form to correct and resubmit. */
-export function rejectChangeRequest(id: string, reviewerId: string, reviewNotes: string) {
+export async function rejectChangeRequest(id: string, reviewerId: string, reviewNotes: string) {
   const cr = changeRequestById(id);
   if (!cr || cr.status !== "pending") return;
   cr.status = "rejected";
@@ -400,6 +477,21 @@ export function rejectChangeRequest(id: string, reviewerId: string, reviewNotes:
     if (user) {
       user.status = "onboarding_incomplete";
       user.rejectionReason = reviewNotes;
+    }
+  }
+  if (isSupabaseConfigured) {
+    const db = createSupabaseAdminClient();
+    const { error } = await db
+      .from("change_requests")
+      .update({ status: "rejected", reviewed_by_user_id: reviewerId, reviewed_at: cr.reviewedAt, review_notes: reviewNotes })
+      .eq("id", id);
+    if (error) throw error;
+    if (cr.type === "onboarding") {
+      const { error: profileError } = await db
+        .from("profiles")
+        .update({ status: "onboarding_incomplete", rejection_reason: reviewNotes })
+        .eq("id", cr.submittedByUserId);
+      if (profileError) throw profileError;
     }
   }
 }

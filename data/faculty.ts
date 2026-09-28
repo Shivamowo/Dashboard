@@ -10,6 +10,8 @@ import { makeRng, hashString, int, pick, chance } from "./rng";
 import { programsByDept } from "./programs";
 import { globalSingleton } from "./globalStore";
 import { imported, usingImportedData } from "./source";
+import { isSupabaseConfigured } from "@/lib/supabase/config";
+import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 
 type NameSeed = {
   name: string;
@@ -434,42 +436,159 @@ export type FacultyResearchEdit = Omit<FacultyResearch, "id" | "facultyId" | "ye
 export type FacultyTargetEdit = Omit<FacultyTarget, "id" | "facultyId" | "sNo">;
 export type FacultyProjectEdit = Omit<FacultyProject, "id" | "facultyId">;
 
-/** Onboarding: creates the Faculty record and returns its new id. */
-export function addFacultyRecord(deptIds: string | string[], data: FacultyProfileEdit): string {
+/**
+ * Every function below updates the in-memory arrays immediately (so the
+ * current request's revalidatePath/redirect shows fresh data even if the
+ * network write below is still in flight) and, when Supabase is configured,
+ * persists to Supabase too — the durable copy that instrumentation.ts reloads
+ * on the next server boot. Supabase writes use the service-role client and
+ * bypass RLS, matching "writes go to Supabase only, not the JSON snapshot".
+ */
+
+const facultyRow = (f: { id: string; primaryDepartment: string } & FacultyProfileEdit) => ({
+  id: f.id,
+  dept_id: f.primaryDepartment,
+  s_no: (facultyById(f.id)?.sNo) ?? 0,
+  name: f.name,
+  designation: f.designation,
+  appointment_type: f.appointmentType,
+  date_of_joining: f.dateOfJoining,
+  has_phd: f.hasPhd,
+  programmes_appointed_for: f.programmesAppointedFor,
+  teaching_load_hrs_per_week: f.teachingLoadHrsPerWeek,
+  additional_responsibility: f.additionalResponsibility,
+});
+
+/** Onboarding / Admin "Add Faculty": creates the Faculty record and returns its new id. */
+export async function addFacultyRecord(deptIds: string | string[], data: FacultyProfileEdit): Promise<string> {
   const departments = Array.isArray(deptIds) ? deptIds : [deptIds];
   const primaryDepartment = departments[0];
   const id = primaryDepartment + "-f" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
   const sNo = facultyByDept(primaryDepartment).length + 1;
   faculty.push({ id, departments, primaryDepartment, sNo, ...data });
+
+  if (isSupabaseConfigured) {
+    const db = createSupabaseAdminClient();
+    const { error } = await db.from("faculty").insert({ ...facultyRow({ id, primaryDepartment, ...data }), s_no: sNo });
+    if (error) throw error;
+    const { error: joinError } = await db
+      .from("faculty_departments")
+      .insert(departments.map((dept_id) => ({ faculty_id: id, dept_id })));
+    if (joinError) throw joinError;
+  }
   return id;
 }
 
-export function removeFacultyRecord(id: string): boolean {
+export async function removeFacultyRecord(id: string): Promise<boolean> {
   const i = faculty.findIndex((f) => f.id === id);
   if (i < 0) return false;
   faculty.splice(i, 1);
+  if (isSupabaseConfigured) {
+    const { error } = await createSupabaseAdminClient().from("faculty").delete().eq("id", id);
+    if (error) throw error;
+  }
   return true;
 }
 
-export function updateFacultyRecord(id: string, data: FacultyProfileEdit) {
+export async function updateFacultyRecord(id: string, data: FacultyProfileEdit) {
   const f = facultyById(id);
-  if (f) Object.assign(f, data);
+  if (!f) return;
+  Object.assign(f, data);
+  if (isSupabaseConfigured) {
+    const { error } = await createSupabaseAdminClient()
+      .from("faculty")
+      .update(facultyRow({ id, primaryDepartment: f.primaryDepartment, ...data }))
+      .eq("id", id);
+    if (error) throw error;
+  }
 }
 
-export function setFacultyResearch(facultyId: string, data: FacultyResearchEdit) {
+export async function setFacultyResearch(facultyId: string, data: FacultyResearchEdit) {
   const idx = facultyResearch.findIndex((r) => r.facultyId === facultyId);
   if (idx >= 0) facultyResearch[idx] = { ...facultyResearch[idx], ...data };
   else facultyResearch.push({ id: facultyId + "-res", facultyId, yearly: [], ...data });
+
+  if (isSupabaseConfigured) {
+    const { error } = await createSupabaseAdminClient()
+      .from("faculty_research")
+      .upsert({
+        id: facultyId + "-res",
+        faculty_id: facultyId,
+        journal_sci_scie_ssci: data.journalPublications.sciScieSsci,
+        journal_scopus_ugc_care: data.journalPublications.scopusUgcCare,
+        journal_other: data.journalPublications.other,
+        conference_international: data.conferencePublications.international,
+        conference_national: data.conferencePublications.national,
+        h_index: data.hIndex,
+        i10_index: data.i10Index,
+        google_scholar_orcid_link: data.googleScholarOrcidLink,
+        patents_filed: data.patents.filed,
+        patents_published: data.patents.published,
+        patents_granted: data.patents.granted,
+        phd_registered: data.phdSupervision.registered,
+        phd_awarded: data.phdSupervision.awarded,
+      });
+    if (error) throw error;
+  }
 }
 
-export function setFacultyTarget(facultyId: string, sNo: number, data: FacultyTargetEdit) {
+export async function setFacultyTarget(facultyId: string, sNo: number, data: FacultyTargetEdit) {
   const idx = facultyTargets.findIndex((t) => t.facultyId === facultyId);
   const full: FacultyTarget = { id: facultyId + "-tgt", facultyId, sNo, ...data };
   if (idx >= 0) facultyTargets[idx] = full;
   else facultyTargets.push(full);
+
+  if (isSupabaseConfigured) {
+    const { error } = await createSupabaseAdminClient()
+      .from("faculty_targets")
+      .upsert({
+        id: full.id,
+        faculty_id: facultyId,
+        s_no: sNo,
+        designation: full.designation,
+        nature_of_appointment: full.natureOfAppointment,
+        date_of_joining: full.dateOfJoining,
+        review_period: full.reviewPeriod,
+        sci_scie_ssci_journal_papers: full.sciSciESsciJournalPapers,
+        scopus_ugc_care_journal_papers: full.scopusUgcCareJournalPapers,
+        q1q2_journal_papers_subset: full.q1q2JournalPapersSubset,
+        international_conference_papers: full.internationalConferencePapers,
+        national_conference_papers: full.nationalConferencePapers,
+        govt_sponsored_project_proposals: full.govtSponsoredProjectProposals,
+        industry_project_proposals: full.industryProjectProposals,
+        target_funding_lakh: full.targetFundingLakh,
+        funding_agencies_targeted: full.fundingAgenciesTargeted,
+        tentative_project_theme_title: full.tentativeProjectThemeTitle,
+        target_submission_month: full.targetSubmissionMonth,
+        consultancy_industry_assignment_proposals: full.consultancyIndustryAssignmentProposals,
+        patents_to_be_filed: full.patentsToBeFiled,
+        patents_expected_published: full.patentsExpectedPublished,
+        patents_expected_granted: full.patentsExpectedGranted,
+        prototype_product_technology_proposed: full.prototypeProductTechnologyProposed,
+        new_revised_course_syllabus_or_lab: full.newRevisedCourseSyllabusOrLab,
+        e_content_mooc_innovative_teaching: full.eContentMoocInnovativeTeaching,
+        student_mentoring_hackathon_internship_placement: full.studentMentoringHackathonInternshipPlacement,
+        contribution_to_dept_development: full.contributionToDeptDevelopment,
+        contribution_to_university_development: full.contributionToUniversityDevelopment,
+        expected_measurable_outcome_by_june_2027: full.expectedMeasurableOutcomeByJune2027,
+        q1_plan: full.q1Plan,
+        q2_plan: full.q2Plan,
+        q3_plan: full.q3Plan,
+        q4_plan: full.q4Plan,
+        q1_status: full.q1Status,
+        q2_status: full.q2Status,
+        q3_status: full.q3Status,
+        q4_status: full.q4Status,
+        milestone_achievement_pct: full.milestoneAchievementPct,
+        hod_priority: full.hodPriority,
+        hod_remarks_support_required: full.hodRemarksSupportRequired,
+        year_end_achievement_summary: full.yearEndAchievementSummary,
+      });
+    if (error) throw error;
+  }
 }
 
-export function setFacultyProjects(facultyId: string, list: FacultyProjectEdit[]) {
+export async function setFacultyProjects(facultyId: string, list: FacultyProjectEdit[]) {
   const others = facultyProjects.filter((p) => p.facultyId !== facultyId);
   const fresh: FacultyProject[] = list.map((p, i) => ({
     ...p,
@@ -478,4 +597,25 @@ export function setFacultyProjects(facultyId: string, list: FacultyProjectEdit[]
   }));
   facultyProjects.length = 0;
   facultyProjects.push(...others, ...fresh);
+
+  if (isSupabaseConfigured) {
+    const db = createSupabaseAdminClient();
+    const { error: delError } = await db.from("faculty_projects").delete().eq("faculty_id", facultyId);
+    if (delError) throw delError;
+    if (fresh.length) {
+      const { error } = await db.from("faculty_projects").insert(
+        fresh.map((p) => ({
+          id: p.id,
+          faculty_id: p.facultyId,
+          sponsoring_agency: p.sponsoringAgency,
+          year_of_grant: p.yearOfGrant,
+          duration: p.duration,
+          sanctioned_amount: p.sanctionedAmount,
+          amount_released: p.amountReleased,
+          current_status: p.currentStatus,
+        }))
+      );
+      if (error) throw error;
+    }
+  }
 }

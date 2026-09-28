@@ -4,6 +4,8 @@ import { facultyByDept } from "./faculty";
 import { programsByDept } from "./programs";
 import { globalSingleton } from "./globalStore";
 import { chooseData, imported } from "./source";
+import { isSupabaseConfigured } from "@/lib/supabase/config";
+import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 
 type RoomSeed = { room: string; floor: string; capacity: number; equipment: string };
 
@@ -124,9 +126,30 @@ export const infrastructureById = (id: string) => infrastructure.find((x) => x.i
 export type InfrastructureEdit = Omit<Infrastructure, "id" | "deptId" | "sNo">;
 
 /** Applied on approval of an ET edit, or immediately for Admin. */
-export function updateInfrastructureRecord(id: string, data: InfrastructureEdit) {
+export async function updateInfrastructureRecord(id: string, data: InfrastructureEdit) {
   const idx = infrastructure.findIndex((x) => x.id === id);
-  if (idx >= 0) infrastructure[idx] = { ...infrastructure[idx], ...data };
+  if (idx < 0) return;
+  infrastructure[idx] = { ...infrastructure[idx], ...data };
+  if (isSupabaseConfigured) {
+    const { error } = await createSupabaseAdminClient()
+      .from("infrastructure")
+      .update({
+        lab_classroom_name: data.labClassroomName,
+        floor_room_no: data.floorRoomNo,
+        hours_allotted_per_week: data.hoursAllottedPerWeek,
+        current_weekly_working_hours: data.currentWeeklyWorkingHours,
+        lab_room_in_charge: data.labRoomInCharge,
+        lab_assistant_support_staff: data.labAssistantSupportStaff,
+        student_capacity: data.studentCapacity,
+        major_equipment_available: data.majorEquipmentAvailable,
+        programmes_using_facility: data.programmesUsingFacility,
+        utilisation_pct: data.utilisationPct,
+        digital_smart_board: data.digitalSmartBoard,
+        projector: data.projector,
+      })
+      .eq("id", id);
+    if (error) throw error;
+  }
 }
 
 export type UtilisationFlag = "Under-utilised" | "Optimal" | "Over-utilised";

@@ -1,0 +1,734 @@
+{
+  "role:vc": {
+    "email": "vice@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "role:registrar": {
+    "email": "regi@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "role:et": {
+    "email": "engi@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "role:admin": {
+    "email": "admi@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:applied-psychology": {
+    "email": "ajai@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:biochemistry": {
+    "email": "hod.bc@vbspu.com",
+    "needsRealNameFix": true
+  },
+  "hod:biotechnology": {
+    "email": "hod.bt@vbspu.com",
+    "needsRealNameFix": true
+  },
+  "hod:business-economics": {
+    "email": "ashu@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:business-management": {
+    "email": "ashu2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:chemistry": {
+    "email": "asho@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:computer-applications": {
+    "email": "surj@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:cse": {
+    "email": "vikr@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:department-of-humanities-and-social-sciences": {
+    "email": "drka@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:department-of-law": {
+    "email": "vino@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:electrical-engineering": {
+    "email": "rajn@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:electronics-and-communication-engineering": {
+    "email": "ravi@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:electronics-engineering": {
+    "email": "ravi2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:environmental-studies": {
+    "email": "hod.env@vbspu.com",
+    "needsRealNameFix": true
+  },
+  "hod:finance-and-control": {
+    "email": "hod.fc@vbspu.com",
+    "needsRealNameFix": true
+  },
+  "hod:h-r-d": {
+    "email": "rash@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:institute-department-of-pharmacy": {
+    "email": "nrip@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:it": {
+    "email": "vikr2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:mass-comm-and-journalism": {
+    "email": "hod.mcj@vbspu.com",
+    "needsRealNameFix": true
+  },
+  "hod:mathematics-engg": {
+    "email": "raj@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:mechanical-engineering": {
+    "email": "saur@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:microbiology": {
+    "email": "hod.mb@vbspu.com",
+    "needsRealNameFix": true
+  },
+  "hod:physics": {
+    "email": "sant@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:rb-centre-for-nanoscience-and-technology": {
+    "email": "suje@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:rb-centre-for-renewable-energy": {
+    "email": "dhir@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:rb-chemistry": {
+    "email": "pram@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:rb-earth-and-planetary-sciences": {
+    "email": "neer@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:rb-mathematics": {
+    "email": "mith@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "hod:rb-physics": {
+    "email": "giri@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "applied-psychology-f1": {
+    "email": "ajai2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "applied-psychology-f2": {
+    "email": "mano@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "applied-psychology-f3": {
+    "email": "janh@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "applied-psychology-f4": {
+    "email": "annu@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "chemistry-f1": {
+    "email": "asho2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "chemistry-f2": {
+    "email": "amre@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "chemistry-f3": {
+    "email": "ram@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "computer-applications-f1": {
+    "email": "saur2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "computer-applications-f10": {
+    "email": "avdh@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "computer-applications-f11": {
+    "email": "adit@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "computer-applications-f2": {
+    "email": "noop@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "computer-applications-f3": {
+    "email": "surj2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "computer-applications-f4": {
+    "email": "sanj@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "computer-applications-f5": {
+    "email": "muni@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "computer-applications-f6": {
+    "email": "pank@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "computer-applications-f7": {
+    "email": "saur3@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "computer-applications-f8": {
+    "email": "mith2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "computer-applications-f9": {
+    "email": "priy@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "cse-and-it-f1": {
+    "email": "pras@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "cse-and-it-f10": {
+    "email": "sant2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "cse-and-it-f11": {
+    "email": "asho3@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "cse-and-it-f12": {
+    "email": "rite@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "cse-and-it-f13": {
+    "email": "purn@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "cse-and-it-f14": {
+    "email": "mano2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "cse-and-it-f2": {
+    "email": "divy@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "cse-and-it-f3": {
+    "email": "dile@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "cse-and-it-f4": {
+    "email": "deep@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "cse-and-it-f5": {
+    "email": "kris@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "cse-and-it-f6": {
+    "email": "suni@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "cse-and-it-f7": {
+    "email": "ravi3@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "cse-and-it-f8": {
+    "email": "prav@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "cse-and-it-f9": {
+    "email": "gyan@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-business-economics-and-department-f1": {
+    "email": "mana@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-business-economics-and-department-f10": {
+    "email": "mura@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-business-economics-and-department-f11": {
+    "email": "pram2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-business-economics-and-department-f12": {
+    "email": "raje@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-business-economics-and-department-f13": {
+    "email": "ritu@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-business-economics-and-department-f14": {
+    "email": "mohd@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-business-economics-and-department-f15": {
+    "email": "asim@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-business-economics-and-department-f16": {
+    "email": "niti@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-business-economics-and-department-f17": {
+    "email": "asma@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-business-economics-and-department-f18": {
+    "email": "vika@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-business-economics-and-department-f19": {
+    "email": "bush@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-business-economics-and-department-f2": {
+    "email": "ashu3@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-business-economics-and-department-f20": {
+    "email": "sris@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-business-economics-and-department-f3": {
+    "email": "nish@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-business-economics-and-department-f4": {
+    "email": "anja@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-business-economics-and-department-f5": {
+    "email": "kris2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-business-economics-and-department-f6": {
+    "email": "sune@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-business-economics-and-department-f7": {
+    "email": "kris3@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-business-economics-and-department-f8": {
+    "email": "prad@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-business-economics-and-department-f9": {
+    "email": "saks@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-electronics-engineering-f1": {
+    "email": "ravi4@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-electronics-engineering-f10": {
+    "email": "drvi@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-electronics-engineering-f11": {
+    "email": "rite2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-electronics-engineering-f12": {
+    "email": "poon@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-electronics-engineering-f13": {
+    "email": "shai@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-electronics-engineering-f14": {
+    "email": "prav2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-electronics-engineering-f15": {
+    "email": "prit@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-electronics-engineering-f16": {
+    "email": "ajay@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-electronics-engineering-f2": {
+    "email": "vikr3@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-electronics-engineering-f3": {
+    "email": "paru@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-electronics-engineering-f4": {
+    "email": "jyot@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-electronics-engineering-f5": {
+    "email": "sant3@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-electronics-engineering-f6": {
+    "email": "prem@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-electronics-engineering-f7": {
+    "email": "moha@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-electronics-engineering-f8": {
+    "email": "mrtu@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-electronics-engineering-f9": {
+    "email": "sudh@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-humanities-and-social-sciences-f1": {
+    "email": "drka2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-humanities-and-social-sciences-f2": {
+    "email": "drso@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-humanities-and-social-sciences-f3": {
+    "email": "drpr@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-law-f1": {
+    "email": "drvi2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-law-f10": {
+    "email": "pram3@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-law-f11": {
+    "email": "rahu@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-law-f12": {
+    "email": "indr@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-law-f13": {
+    "email": "vipi@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-law-f14": {
+    "email": "ashr@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-law-f15": {
+    "email": "shub@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-law-f16": {
+    "email": "ravi5@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-law-f17": {
+    "email": "yoge@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-law-f2": {
+    "email": "vani@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-law-f3": {
+    "email": "anur@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-law-f4": {
+    "email": "sri@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-law-f5": {
+    "email": "priy2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-law-f6": {
+    "email": "shre@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-law-f7": {
+    "email": "raji@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-law-f8": {
+    "email": "anki@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "department-of-law-f9": {
+    "email": "dine@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "electrical-engineering-f1": {
+    "email": "rajn2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "electrical-engineering-f2": {
+    "email": "saty@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "electrical-engineering-f3": {
+    "email": "jaya@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "electrical-engineering-f4": {
+    "email": "saur4@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "electrical-engineering-f5": {
+    "email": "anur2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "electrical-engineering-f6": {
+    "email": "mane@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "electrical-engineering-f7": {
+    "email": "shwe@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "electrical-engineering-f8": {
+    "email": "shar@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "electrical-engineering-f9": {
+    "email": "dhar@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "h-r-d-f1": {
+    "email": "rash2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "h-r-d-f2": {
+    "email": "avin@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "h-r-d-f3": {
+    "email": "anup@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "h-r-d-f4": {
+    "email": "prav3@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "institute-department-of-pharmacy-f1": {
+    "email": "nrip2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "institute-department-of-pharmacy-f10": {
+    "email": "sure@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "institute-department-of-pharmacy-f11": {
+    "email": "mith3@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "institute-department-of-pharmacy-f2": {
+    "email": "nare@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "institute-department-of-pharmacy-f3": {
+    "email": "jyot2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "institute-department-of-pharmacy-f4": {
+    "email": "raje2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "institute-department-of-pharmacy-f5": {
+    "email": "vija@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "institute-department-of-pharmacy-f6": {
+    "email": "jhan@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "institute-department-of-pharmacy-f7": {
+    "email": "puja@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "institute-department-of-pharmacy-f8": {
+    "email": "abhi@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "institute-department-of-pharmacy-f9": {
+    "email": "sure2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "mathematics-engg-f1": {
+    "email": "raj2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "mathematics-engg-f2": {
+    "email": "nimi@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "mathematics-engg-f3": {
+    "email": "sush@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "mathematics-engg-f4": {
+    "email": "uday@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "mechanical-engineering-f1": {
+    "email": "sand@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "mechanical-engineering-f2": {
+    "email": "navi@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "mechanical-engineering-f3": {
+    "email": "deep2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "mechanical-engineering-f4": {
+    "email": "hima@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "mechanical-engineering-f5": {
+    "email": "subo@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "mechanical-engineering-f6": {
+    "email": "shas@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "mechanical-engineering-f7": {
+    "email": "hema@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "mechanical-engineering-f8": {
+    "email": "anku@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "mechanical-engineering-f9": {
+    "email": "mohd2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "physics-f1": {
+    "email": "sant4@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "physics-f2": {
+    "email": "mani@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-centre-for-nanoscience-and-technology-f1": {
+    "email": "suje2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-centre-for-nanoscience-and-technology-f2": {
+    "email": "kaja@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-centre-for-renewable-energy-f1": {
+    "email": "dhir2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-chemistry-f2": {
+    "email": "dine2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-chemistry-f3": {
+    "email": "nite@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-chemistry-f4": {
+    "email": "ajee@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-chemistry-f5": {
+    "email": "mith4@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-chemistry-f6": {
+    "email": "vija2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-earth-and-planetary-sciences-f1": {
+    "email": "neer2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-earth-and-planetary-sciences-f2": {
+    "email": "shya@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-earth-and-planetary-sciences-f3": {
+    "email": "shas2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-earth-and-planetary-sciences-f4": {
+    "email": "sarv@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-mathematics-f1": {
+    "email": "mith5@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-mathematics-f2": {
+    "email": "saur5@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-mathematics-f3": {
+    "email": "deep3@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-mathematics-f4": {
+    "email": "ashi@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-physics-f1": {
+    "email": "devr@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-physics-f2": {
+    "email": "giri2@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-physics-f3": {
+    "email": "pram4@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-physics-f4": {
+    "email": "alok@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-physics-f5": {
+    "email": "puni@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-physics-f6": {
+    "email": "rama@vbspu.com",
+    "needsRealNameFix": false
+  },
+  "rb-physics-f7": {
+    "email": "sand2@vbspu.com",
+    "needsRealNameFix": false
+  }
+}

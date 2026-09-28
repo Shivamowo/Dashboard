@@ -1,6 +1,8 @@
 import type { Department } from "./types";
 import { globalSingleton } from "./globalStore";
 import { chooseData, imported } from "./source";
+import { isSupabaseConfigured } from "@/lib/supabase/config";
+import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 
 const seedDepartments = (): Department[] => [
   {
@@ -56,7 +58,17 @@ export const departments: Department[] = globalSingleton("departments", () =>
 export const departmentById = (id: string) => departments.find((d) => d.id === id);
 
 /** Applied on approval of a HoD edit/onboarding change request. */
-export function updateDepartmentHod(deptId: string, patch: { hodName?: string; hodContact?: string }) {
+export async function updateDepartmentHod(deptId: string, patch: { hodName?: string; hodContact?: string }) {
   const d = departmentById(deptId);
-  if (d) Object.assign(d, patch);
+  if (!d) return;
+  Object.assign(d, patch);
+  if (isSupabaseConfigured) {
+    const row: Record<string, string> = {};
+    if (patch.hodName !== undefined) row.hod_name = patch.hodName;
+    if (patch.hodContact !== undefined) row.hod_contact = patch.hodContact;
+    if (Object.keys(row).length) {
+      const { error } = await createSupabaseAdminClient().from("departments").update(row).eq("id", deptId);
+      if (error) throw error;
+    }
+  }
 }
