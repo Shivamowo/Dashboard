@@ -5,7 +5,7 @@ import { useState, type ReactNode } from "react";
 import { Menu, X } from "lucide-react";
 import RoleNav from "./RoleNav";
 import { roleMeta } from "./roles";
-import type { Role } from "@/data";
+import type { Role } from "@/data/types";
 
 export default function AppShell({
   role,

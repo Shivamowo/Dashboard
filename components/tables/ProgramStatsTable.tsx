@@ -2,7 +2,8 @@
 
 import DataTable, { type Column, type FilterDef } from "@/components/DataTable";
 import { BoolBadge } from "@/components/ui";
-import { addNullable, type Program } from "@/data";
+import { addNullable } from "@/data/nullable";
+import type { Program } from "@/data/types";
 import { admittedOfIntake, delta, inr, ratioBar, slashed, text } from "@/components/cells";
 import { programLevel } from "@/lib/labels";
 

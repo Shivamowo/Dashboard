@@ -2,7 +2,7 @@
 
 import DataTable, { type Column, type FilterDef } from "@/components/DataTable";
 import { num } from "@/components/cells";
-import { addNullable } from "@/data";
+import { addNullable } from "@/data/nullable";
 import type { FacultyRosterRow } from "@/lib/rows";
 
 export default function PublicationsTable({

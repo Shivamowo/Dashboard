@@ -2,7 +2,7 @@
 
 import DataTable, { type Column } from "@/components/DataTable";
 import { BoolBadge } from "@/components/ui";
-import type { Program } from "@/data";
+import type { Program } from "@/data/types";
 import { admittedOfIntake, inr, num, pctText, ratioBar, text } from "@/components/cells";
 import { programLevel } from "@/lib/labels";
 

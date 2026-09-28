@@ -10,7 +10,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { ROLE_SECTIONS, roleMeta } from "./roles";
-import type { Role } from "@/data";
+import type { Role } from "@/data/types";
 
 const ICONS: Record<string, LucideIcon> = {
   Landmark,

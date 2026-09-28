@@ -152,16 +152,8 @@ export async function updateInfrastructureRecord(id: string, data: Infrastructur
   }
 }
 
-export type UtilisationFlag = "Under-utilised" | "Optimal" | "Over-utilised";
-
-/**
- * A room that never reported a utilisation figure has no flag — null, not
- * "Under-utilised". Treating a blank as 0% would brand every unreported room
- * as under-used and inflate the under-utilisation counts on the ET dashboard.
- */
-export function utilisationFlag(pct: number | null | undefined): UtilisationFlag | null {
-  if (pct == null || !Number.isFinite(pct)) return null;
-  if (pct < 60) return "Under-utilised";
-  if (pct > 95) return "Over-utilised";
-  return "Optimal";
-}
+// utilisationFlag lives in ./nullable (pure, no data-layer imports) so Client
+// Components can import it directly without pulling in the Supabase admin
+// client this module chains into — re-exported here for existing server-side
+// importers of "@/data".
+export { utilisationFlag, type UtilisationFlag } from "./nullable";

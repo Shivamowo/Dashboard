@@ -10,6 +10,8 @@
     "import:excel": "tsx scripts/import-excel-data.ts && tsx scripts/split-departments.ts",
     "seed:supabase": "tsx scripts/seed-supabase.ts",
     "create:logins": "tsx scripts/create-logins.ts",
+    "create:test-accounts": "tsx scripts/create-test-accounts.ts",
+    "remove:test-accounts": "tsx scripts/remove-test-accounts.ts",
     "dev:mock": "VBSPU_DATA_SOURCE=mock next dev",
     "start:mock": "VBSPU_DATA_SOURCE=mock next start"
   },

@@ -5,7 +5,8 @@ import { pctBar } from "@/components/cells";
 import { Pencil } from "lucide-react";
 import DataTable, { type Column, type FilterDef } from "@/components/DataTable";
 import { BoolBadge, PendingBadge, ProgressBar, StatusBadge } from "@/components/ui";
-import { utilisationFlag, type Infrastructure } from "@/data";
+import { utilisationFlag } from "@/data/nullable";
+import type { Infrastructure } from "@/data/types";
 import { roomType } from "@/lib/labels";
 
 export default function InfrastructureTable({

@@ -67,3 +67,17 @@ export function pctOf(part: number | null, whole: number | null, dp = 1): number
 /** Treats null as zero — only for sums where an unreported figure adds nothing. */
 export const orZero = (v: number | null | undefined): number =>
   v == null || !Number.isFinite(v) ? 0 : v;
+
+export type UtilisationFlag = "Under-utilised" | "Optimal" | "Over-utilised";
+
+/**
+ * A room that never reported a utilisation figure has no flag — null, not
+ * "Under-utilised". Treating a blank as 0% would brand every unreported room
+ * as under-used and inflate the under-utilisation counts on the ET dashboard.
+ */
+export function utilisationFlag(pct: number | null | undefined): UtilisationFlag | null {
+  if (pct == null || !Number.isFinite(pct)) return null;
+  if (pct < 60) return "Under-utilised";
+  if (pct > 95) return "Over-utilised";
+  return "Optimal";
+}
