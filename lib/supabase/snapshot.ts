@@ -34,11 +34,25 @@ export interface SupabaseSnapshot {
   users: UserAccount[];
 }
 
-let snapshot: SupabaseSnapshot | null = null;
+declare global {
+  // eslint-disable-next-line no-var
+  var __vbspuSupabaseSnapshot: SupabaseSnapshot | null | undefined;
+}
+
+/**
+ * Anchored on globalThis, not a plain module-level variable — Next compiles
+ * Route Handlers, Server Components and Server Actions into separate module
+ * graphs, so a `let` here would not be the same binding instrumentation.ts
+ * populated (see data/globalStore.ts for the same issue elsewhere in this
+ * codebase).
+ */
+function setSnapshot(value: SupabaseSnapshot) {
+  globalThis.__vbspuSupabaseSnapshot = value;
+}
 
 /** Null until loadSupabaseSnapshot() has completed (see instrumentation.ts). */
 export function getSupabaseSnapshot(): SupabaseSnapshot | null {
-  return snapshot;
+  return globalThis.__vbspuSupabaseSnapshot ?? null;
 }
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -336,7 +350,7 @@ export async function loadSupabaseSnapshot(): Promise<void> {
     mustChangePassword: p.must_change_password,
   }));
 
-  snapshot = {
+  setSnapshot({
     departments: ((depts.data as Row[]) ?? []).map(mapDepartment),
     programs: ((progs.data as Row[]) ?? []).map(mapProgram),
     faculty: ((fac.data as Row[]) ?? []).map((r) => mapFaculty(r, deptsByFaculty)),
@@ -348,5 +362,5 @@ export async function loadSupabaseSnapshot(): Promise<void> {
     hodSubmissions: ((hodSubs.data as Row[]) ?? []).map(mapHodSubmission),
     changeRequests: ((changeRequests.data as Row[]) ?? []).map(mapChangeRequest),
     users,
-  };
+  });
 }
