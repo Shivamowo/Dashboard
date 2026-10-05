@@ -1,734 +1,734 @@
 {
   "role:vc": {
-    "email": "vice@vbspu.com",
+    "email": "vice@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "role:registrar": {
-    "email": "regi@vbspu.com",
+    "email": "regi@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "role:et": {
-    "email": "engi@vbspu.com",
+    "email": "engi@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "role:admin": {
-    "email": "admi@vbspu.com",
+    "email": "admi@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:applied-psychology": {
-    "email": "ajai@vbspu.com",
+    "email": "ajai@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:biochemistry": {
-    "email": "hod.bc@vbspu.com",
+    "email": "hod.bc@vbspu.ac.in",
     "needsRealNameFix": true
   },
   "hod:biotechnology": {
-    "email": "hod.bt@vbspu.com",
+    "email": "hod.bt@vbspu.ac.in",
     "needsRealNameFix": true
   },
   "hod:business-economics": {
-    "email": "ashu@vbspu.com",
+    "email": "ashu@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:business-management": {
-    "email": "ashu2@vbspu.com",
+    "email": "ashu2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:chemistry": {
-    "email": "asho@vbspu.com",
+    "email": "asho@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:computer-applications": {
-    "email": "surj@vbspu.com",
+    "email": "surj@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:cse": {
-    "email": "vikr@vbspu.com",
+    "email": "vikr@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:department-of-humanities-and-social-sciences": {
-    "email": "drka@vbspu.com",
+    "email": "drka@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:department-of-law": {
-    "email": "vino@vbspu.com",
+    "email": "vino@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:electrical-engineering": {
-    "email": "rajn@vbspu.com",
+    "email": "rajn@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:electronics-and-communication-engineering": {
-    "email": "ravi@vbspu.com",
+    "email": "ravi@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:electronics-engineering": {
-    "email": "ravi2@vbspu.com",
+    "email": "ravi2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:environmental-studies": {
-    "email": "hod.env@vbspu.com",
+    "email": "hod.env@vbspu.ac.in",
     "needsRealNameFix": true
   },
   "hod:finance-and-control": {
-    "email": "hod.fc@vbspu.com",
+    "email": "hod.fc@vbspu.ac.in",
     "needsRealNameFix": true
   },
   "hod:h-r-d": {
-    "email": "rash@vbspu.com",
+    "email": "rash@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:institute-department-of-pharmacy": {
-    "email": "nrip@vbspu.com",
+    "email": "nrip@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:it": {
-    "email": "vikr2@vbspu.com",
+    "email": "vikr2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:mass-comm-and-journalism": {
-    "email": "hod.mcj@vbspu.com",
+    "email": "hod.mcj@vbspu.ac.in",
     "needsRealNameFix": true
   },
   "hod:mathematics-engg": {
-    "email": "raj@vbspu.com",
+    "email": "raj@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:mechanical-engineering": {
-    "email": "saur@vbspu.com",
+    "email": "saur@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:microbiology": {
-    "email": "hod.mb@vbspu.com",
+    "email": "hod.mb@vbspu.ac.in",
     "needsRealNameFix": true
   },
   "hod:physics": {
-    "email": "sant@vbspu.com",
+    "email": "sant@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:rb-centre-for-nanoscience-and-technology": {
-    "email": "suje@vbspu.com",
+    "email": "suje@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:rb-centre-for-renewable-energy": {
-    "email": "dhir@vbspu.com",
+    "email": "dhir@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:rb-chemistry": {
-    "email": "pram@vbspu.com",
+    "email": "pram@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:rb-earth-and-planetary-sciences": {
-    "email": "neer@vbspu.com",
+    "email": "neer@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:rb-mathematics": {
-    "email": "mith@vbspu.com",
+    "email": "mith@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "hod:rb-physics": {
-    "email": "giri@vbspu.com",
+    "email": "giri@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "applied-psychology-f1": {
-    "email": "ajai2@vbspu.com",
+    "email": "ajai2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "applied-psychology-f2": {
-    "email": "mano@vbspu.com",
+    "email": "mano@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "applied-psychology-f3": {
-    "email": "janh@vbspu.com",
+    "email": "janh@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "applied-psychology-f4": {
-    "email": "annu@vbspu.com",
+    "email": "annu@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "chemistry-f1": {
-    "email": "asho2@vbspu.com",
+    "email": "asho2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "chemistry-f2": {
-    "email": "amre@vbspu.com",
+    "email": "amre@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "chemistry-f3": {
-    "email": "ram@vbspu.com",
+    "email": "ram@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "computer-applications-f1": {
-    "email": "saur2@vbspu.com",
+    "email": "saur2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "computer-applications-f10": {
-    "email": "avdh@vbspu.com",
+    "email": "avdh@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "computer-applications-f11": {
-    "email": "adit@vbspu.com",
+    "email": "adit@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "computer-applications-f2": {
-    "email": "noop@vbspu.com",
+    "email": "noop@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "computer-applications-f3": {
-    "email": "surj2@vbspu.com",
+    "email": "surj2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "computer-applications-f4": {
-    "email": "sanj@vbspu.com",
+    "email": "sanj@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "computer-applications-f5": {
-    "email": "muni@vbspu.com",
+    "email": "muni@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "computer-applications-f6": {
-    "email": "pank@vbspu.com",
+    "email": "pank@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "computer-applications-f7": {
-    "email": "saur3@vbspu.com",
+    "email": "saur3@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "computer-applications-f8": {
-    "email": "mith2@vbspu.com",
+    "email": "mith2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "computer-applications-f9": {
-    "email": "priy@vbspu.com",
+    "email": "priy@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "cse-and-it-f1": {
-    "email": "pras@vbspu.com",
+    "email": "pras@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "cse-and-it-f10": {
-    "email": "sant2@vbspu.com",
+    "email": "sant2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "cse-and-it-f11": {
-    "email": "asho3@vbspu.com",
+    "email": "asho3@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "cse-and-it-f12": {
-    "email": "rite@vbspu.com",
+    "email": "rite@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "cse-and-it-f13": {
-    "email": "purn@vbspu.com",
+    "email": "purn@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "cse-and-it-f14": {
-    "email": "mano2@vbspu.com",
+    "email": "mano2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "cse-and-it-f2": {
-    "email": "divy@vbspu.com",
+    "email": "divy@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "cse-and-it-f3": {
-    "email": "dile@vbspu.com",
+    "email": "dile@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "cse-and-it-f4": {
-    "email": "deep@vbspu.com",
+    "email": "deep@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "cse-and-it-f5": {
-    "email": "kris@vbspu.com",
+    "email": "kris@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "cse-and-it-f6": {
-    "email": "suni@vbspu.com",
+    "email": "suni@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "cse-and-it-f7": {
-    "email": "ravi3@vbspu.com",
+    "email": "ravi3@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "cse-and-it-f8": {
-    "email": "prav@vbspu.com",
+    "email": "prav@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "cse-and-it-f9": {
-    "email": "gyan@vbspu.com",
+    "email": "gyan@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-business-economics-and-department-f1": {
-    "email": "mana@vbspu.com",
+    "email": "mana@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-business-economics-and-department-f10": {
-    "email": "mura@vbspu.com",
+    "email": "mura@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-business-economics-and-department-f11": {
-    "email": "pram2@vbspu.com",
+    "email": "pram2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-business-economics-and-department-f12": {
-    "email": "raje@vbspu.com",
+    "email": "raje@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-business-economics-and-department-f13": {
-    "email": "ritu@vbspu.com",
+    "email": "ritu@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-business-economics-and-department-f14": {
-    "email": "mohd@vbspu.com",
+    "email": "mohd@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-business-economics-and-department-f15": {
-    "email": "asim@vbspu.com",
+    "email": "asim@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-business-economics-and-department-f16": {
-    "email": "niti@vbspu.com",
+    "email": "niti@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-business-economics-and-department-f17": {
-    "email": "asma@vbspu.com",
+    "email": "asma@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-business-economics-and-department-f18": {
-    "email": "vika@vbspu.com",
+    "email": "vika@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-business-economics-and-department-f19": {
-    "email": "bush@vbspu.com",
+    "email": "bush@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-business-economics-and-department-f2": {
-    "email": "ashu3@vbspu.com",
+    "email": "ashu3@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-business-economics-and-department-f20": {
-    "email": "sris@vbspu.com",
+    "email": "sris@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-business-economics-and-department-f3": {
-    "email": "nish@vbspu.com",
+    "email": "nish@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-business-economics-and-department-f4": {
-    "email": "anja@vbspu.com",
+    "email": "anja@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-business-economics-and-department-f5": {
-    "email": "kris2@vbspu.com",
+    "email": "kris2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-business-economics-and-department-f6": {
-    "email": "sune@vbspu.com",
+    "email": "sune@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-business-economics-and-department-f7": {
-    "email": "kris3@vbspu.com",
+    "email": "kris3@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-business-economics-and-department-f8": {
-    "email": "prad@vbspu.com",
+    "email": "prad@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-business-economics-and-department-f9": {
-    "email": "saks@vbspu.com",
+    "email": "saks@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-electronics-engineering-f1": {
-    "email": "ravi4@vbspu.com",
+    "email": "ravi4@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-electronics-engineering-f10": {
-    "email": "drvi@vbspu.com",
+    "email": "drvi@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-electronics-engineering-f11": {
-    "email": "rite2@vbspu.com",
+    "email": "rite2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-electronics-engineering-f12": {
-    "email": "poon@vbspu.com",
+    "email": "poon@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-electronics-engineering-f13": {
-    "email": "shai@vbspu.com",
+    "email": "shai@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-electronics-engineering-f14": {
-    "email": "prav2@vbspu.com",
+    "email": "prav2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-electronics-engineering-f15": {
-    "email": "prit@vbspu.com",
+    "email": "prit@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-electronics-engineering-f16": {
-    "email": "ajay@vbspu.com",
+    "email": "ajay@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-electronics-engineering-f2": {
-    "email": "vikr3@vbspu.com",
+    "email": "vikr3@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-electronics-engineering-f3": {
-    "email": "paru@vbspu.com",
+    "email": "paru@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-electronics-engineering-f4": {
-    "email": "jyot@vbspu.com",
+    "email": "jyot@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-electronics-engineering-f5": {
-    "email": "sant3@vbspu.com",
+    "email": "sant3@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-electronics-engineering-f6": {
-    "email": "prem@vbspu.com",
+    "email": "prem@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-electronics-engineering-f7": {
-    "email": "moha@vbspu.com",
+    "email": "moha@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-electronics-engineering-f8": {
-    "email": "mrtu@vbspu.com",
+    "email": "mrtu@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-electronics-engineering-f9": {
-    "email": "sudh@vbspu.com",
+    "email": "sudh@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-humanities-and-social-sciences-f1": {
-    "email": "drka2@vbspu.com",
+    "email": "drka2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-humanities-and-social-sciences-f2": {
-    "email": "drso@vbspu.com",
+    "email": "drso@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-humanities-and-social-sciences-f3": {
-    "email": "drpr@vbspu.com",
+    "email": "drpr@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-law-f1": {
-    "email": "drvi2@vbspu.com",
+    "email": "drvi2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-law-f10": {
-    "email": "pram3@vbspu.com",
+    "email": "pram3@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-law-f11": {
-    "email": "rahu@vbspu.com",
+    "email": "rahu@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-law-f12": {
-    "email": "indr@vbspu.com",
+    "email": "indr@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-law-f13": {
-    "email": "vipi@vbspu.com",
+    "email": "vipi@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-law-f14": {
-    "email": "ashr@vbspu.com",
+    "email": "ashr@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-law-f15": {
-    "email": "shub@vbspu.com",
+    "email": "shub@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-law-f16": {
-    "email": "ravi5@vbspu.com",
+    "email": "ravi5@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-law-f17": {
-    "email": "yoge@vbspu.com",
+    "email": "yoge@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-law-f2": {
-    "email": "vani@vbspu.com",
+    "email": "vani@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-law-f3": {
-    "email": "anur@vbspu.com",
+    "email": "anur@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-law-f4": {
-    "email": "sri@vbspu.com",
+    "email": "sri@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-law-f5": {
-    "email": "priy2@vbspu.com",
+    "email": "priy2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-law-f6": {
-    "email": "shre@vbspu.com",
+    "email": "shre@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-law-f7": {
-    "email": "raji@vbspu.com",
+    "email": "raji@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-law-f8": {
-    "email": "anki@vbspu.com",
+    "email": "anki@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "department-of-law-f9": {
-    "email": "dine@vbspu.com",
+    "email": "dine@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "electrical-engineering-f1": {
-    "email": "rajn2@vbspu.com",
+    "email": "rajn2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "electrical-engineering-f2": {
-    "email": "saty@vbspu.com",
+    "email": "saty@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "electrical-engineering-f3": {
-    "email": "jaya@vbspu.com",
+    "email": "jaya@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "electrical-engineering-f4": {
-    "email": "saur4@vbspu.com",
+    "email": "saur4@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "electrical-engineering-f5": {
-    "email": "anur2@vbspu.com",
+    "email": "anur2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "electrical-engineering-f6": {
-    "email": "mane@vbspu.com",
+    "email": "mane@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "electrical-engineering-f7": {
-    "email": "shwe@vbspu.com",
+    "email": "shwe@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "electrical-engineering-f8": {
-    "email": "shar@vbspu.com",
+    "email": "shar@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "electrical-engineering-f9": {
-    "email": "dhar@vbspu.com",
+    "email": "dhar@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "h-r-d-f1": {
-    "email": "rash2@vbspu.com",
+    "email": "rash2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "h-r-d-f2": {
-    "email": "avin@vbspu.com",
+    "email": "avin@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "h-r-d-f3": {
-    "email": "anup@vbspu.com",
+    "email": "anup@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "h-r-d-f4": {
-    "email": "prav3@vbspu.com",
+    "email": "prav3@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "institute-department-of-pharmacy-f1": {
-    "email": "nrip2@vbspu.com",
+    "email": "nrip2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "institute-department-of-pharmacy-f10": {
-    "email": "sure@vbspu.com",
+    "email": "sure@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "institute-department-of-pharmacy-f11": {
-    "email": "mith3@vbspu.com",
+    "email": "mith3@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "institute-department-of-pharmacy-f2": {
-    "email": "nare@vbspu.com",
+    "email": "nare@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "institute-department-of-pharmacy-f3": {
-    "email": "jyot2@vbspu.com",
+    "email": "jyot2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "institute-department-of-pharmacy-f4": {
-    "email": "raje2@vbspu.com",
+    "email": "raje2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "institute-department-of-pharmacy-f5": {
-    "email": "vija@vbspu.com",
+    "email": "vija@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "institute-department-of-pharmacy-f6": {
-    "email": "jhan@vbspu.com",
+    "email": "jhan@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "institute-department-of-pharmacy-f7": {
-    "email": "puja@vbspu.com",
+    "email": "puja@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "institute-department-of-pharmacy-f8": {
-    "email": "abhi@vbspu.com",
+    "email": "abhi@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "institute-department-of-pharmacy-f9": {
-    "email": "sure2@vbspu.com",
+    "email": "sure2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "mathematics-engg-f1": {
-    "email": "raj2@vbspu.com",
+    "email": "raj2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "mathematics-engg-f2": {
-    "email": "nimi@vbspu.com",
+    "email": "nimi@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "mathematics-engg-f3": {
-    "email": "sush@vbspu.com",
+    "email": "sush@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "mathematics-engg-f4": {
-    "email": "uday@vbspu.com",
+    "email": "uday@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "mechanical-engineering-f1": {
-    "email": "sand@vbspu.com",
+    "email": "sand@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "mechanical-engineering-f2": {
-    "email": "navi@vbspu.com",
+    "email": "navi@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "mechanical-engineering-f3": {
-    "email": "deep2@vbspu.com",
+    "email": "deep2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "mechanical-engineering-f4": {
-    "email": "hima@vbspu.com",
+    "email": "hima@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "mechanical-engineering-f5": {
-    "email": "subo@vbspu.com",
+    "email": "subo@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "mechanical-engineering-f6": {
-    "email": "shas@vbspu.com",
+    "email": "shas@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "mechanical-engineering-f7": {
-    "email": "hema@vbspu.com",
+    "email": "hema@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "mechanical-engineering-f8": {
-    "email": "anku@vbspu.com",
+    "email": "anku@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "mechanical-engineering-f9": {
-    "email": "mohd2@vbspu.com",
+    "email": "mohd2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "physics-f1": {
-    "email": "sant4@vbspu.com",
+    "email": "sant4@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "physics-f2": {
-    "email": "mani@vbspu.com",
+    "email": "mani@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-centre-for-nanoscience-and-technology-f1": {
-    "email": "suje2@vbspu.com",
+    "email": "suje2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-centre-for-nanoscience-and-technology-f2": {
-    "email": "kaja@vbspu.com",
+    "email": "kaja@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-centre-for-renewable-energy-f1": {
-    "email": "dhir2@vbspu.com",
+    "email": "dhir2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-chemistry-f2": {
-    "email": "dine2@vbspu.com",
+    "email": "dine2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-chemistry-f3": {
-    "email": "nite@vbspu.com",
+    "email": "nite@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-chemistry-f4": {
-    "email": "ajee@vbspu.com",
+    "email": "ajee@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-chemistry-f5": {
-    "email": "mith4@vbspu.com",
+    "email": "mith4@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-chemistry-f6": {
-    "email": "vija2@vbspu.com",
+    "email": "vija2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-earth-and-planetary-sciences-f1": {
-    "email": "neer2@vbspu.com",
+    "email": "neer2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-earth-and-planetary-sciences-f2": {
-    "email": "shya@vbspu.com",
+    "email": "shya@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-earth-and-planetary-sciences-f3": {
-    "email": "shas2@vbspu.com",
+    "email": "shas2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-earth-and-planetary-sciences-f4": {
-    "email": "sarv@vbspu.com",
+    "email": "sarv@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-mathematics-f1": {
-    "email": "mith5@vbspu.com",
+    "email": "mith5@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-mathematics-f2": {
-    "email": "saur5@vbspu.com",
+    "email": "saur5@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-mathematics-f3": {
-    "email": "deep3@vbspu.com",
+    "email": "deep3@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-mathematics-f4": {
-    "email": "ashi@vbspu.com",
+    "email": "ashi@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-physics-f1": {
-    "email": "devr@vbspu.com",
+    "email": "devr@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-physics-f2": {
-    "email": "giri2@vbspu.com",
+    "email": "giri2@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-physics-f3": {
-    "email": "pram4@vbspu.com",
+    "email": "pram4@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-physics-f4": {
-    "email": "alok@vbspu.com",
+    "email": "alok@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-physics-f5": {
-    "email": "puni@vbspu.com",
+    "email": "puni@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-physics-f6": {
-    "email": "rama@vbspu.com",
+    "email": "rama@vbspu.ac.in",
     "needsRealNameFix": false
   },
   "rb-physics-f7": {
-    "email": "sand2@vbspu.com",
+    "email": "sand2@vbspu.ac.in",
     "needsRealNameFix": false
   }
 }

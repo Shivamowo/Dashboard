@@ -5,7 +5,7 @@
  *
  *   npx tsx scripts/create-logins.ts
  *
- * Email scheme (@vbspu.com):
+ * Email scheme (@vbspu.ac.in):
  *  - Real name on file: strip a leading title (Dr./Prof./Mr./Mrs./Ms./Miss),
  *    take the first word of what's left, lowercase its first 4 letters (or
  *    the whole word if shorter) — "Dr. Ashutosh Kumar Singh" -> "ashu".
@@ -44,7 +44,7 @@ import { createClient } from "@supabase/supabase-js";
 import faculty from "../data/imported/faculty.json";
 import departments from "../data/imported/departments.json";
 
-const DOMAIN = "vbspu.com";
+const DOMAIN = "vbspu.ac.in";
 const ASSIGNMENTS_PATH = path.resolve(__dirname, "..", "data", "imported", "email-assignments.json");
 const CSV_PATH = path.resolve(__dirname, "..", "credentials-export.csv");
 

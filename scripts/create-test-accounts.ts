@@ -34,9 +34,9 @@ const TEST_FACULTY_ID = "test-demo-faculty";
 const TEST_DEPT_ID = "cse"; // has programmes + infrastructure already seeded, so the demo view isn't empty.
 
 const ACCOUNTS = [
-  { role: "vc", email: "demo-vc@vbspu.com", name: "TEST DEMO — Vice Chancellor" },
-  { role: "admin", email: "demo-admin@vbspu.com", name: "TEST DEMO — Administrator" },
-  { role: "faculty", email: "demo-faculty@vbspu.com", name: "TEST DEMO — Faculty" },
+  { role: "vc", email: "demo-vc@vbspu.ac.in", name: "TEST DEMO — Vice Chancellor" },
+  { role: "admin", email: "demo-admin@vbspu.ac.in", name: "TEST DEMO — Administrator" },
+  { role: "faculty", email: "demo-faculty@vbspu.ac.in", name: "TEST DEMO — Faculty" },
 ] as const;
 
 async function createDummyFacultyRecord() {

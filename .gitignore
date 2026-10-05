@@ -7,3 +7,4 @@ next-env.d.ts
 .env.local
 credentials-export.csv
 test-accounts-credentials.txt
+Claude outputs/VBSPU_Login_Credentials_v3.xlsx

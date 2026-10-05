@@ -20,7 +20,7 @@ if (!url || !key) {
 const db = createClient(url, key, { auth: { persistSession: false } });
 
 const TEST_FACULTY_ID = "test-demo-faculty";
-const TEST_EMAILS = ["demo-vc@vbspu.com", "demo-admin@vbspu.com", "demo-faculty@vbspu.com"];
+const TEST_EMAILS = ["demo-vc@vbspu.ac.in", "demo-admin@vbspu.ac.in", "demo-faculty@vbspu.ac.in"];
 
 async function main() {
   console.log("Removing test/demo accounts ...");
