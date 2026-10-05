@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { createServerClient } from "@supabase/ssr";
 import { ROLE_HOME, SESSION_COOKIE, isRole } from "@/lib/demo-accounts";
 import { findUserById } from "@/data";
-import { SUPABASE_ANON_KEY, SUPABASE_URL, isSupabaseConfigured } from "@/lib/supabase/config";
+import { SESSION_COOKIE_OPTIONS, SUPABASE_ANON_KEY, SUPABASE_URL, isSupabaseConfigured } from "@/lib/supabase/config";
 
 /**
  * Route protection. When Supabase is configured this refreshes the real auth
@@ -41,6 +41,7 @@ async function resolveSupabaseUser(
   response: NextResponse
 ): Promise<SessionUser | undefined> {
   const supabase = createServerClient<any>(SUPABASE_URL!, SUPABASE_ANON_KEY!, {
+    cookieOptions: SESSION_COOKIE_OPTIONS,
     cookies: {
       getAll: () => request.cookies.getAll(),
       setAll: (cookiesToSet) => {
