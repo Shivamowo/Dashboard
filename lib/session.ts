@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { findUserById, type Role, type UserAccount } from "@/data";
 import { SESSION_COOKIE, isRole } from "./demo-accounts";
 import { isSupabaseConfigured } from "./supabase/config";
+import { FACULTY_LOGINS_ENABLED } from "./feature-flags";
 import { createSupabaseServerClient } from "./supabase/server";
 
 /** Demo cookie value is "<userId>|<role>" — only used when Supabase is not configured. */
@@ -55,6 +56,8 @@ async function getSupabaseSessionUser(): Promise<UserAccount | null> {
 
   const { data: profile } = await supabase.from("profiles").select("*").eq("id", user.id).maybeSingle();
   if (!profile) return null;
+  // Faculty logins are locked for now — see lib/feature-flags.ts.
+  if (profile.role === "faculty" && !FACULTY_LOGINS_ENABLED) return null;
 
   return toUserAccount(user.email ?? "", profile as ProfileRow);
 }
@@ -62,7 +65,8 @@ async function getSupabaseSessionUser(): Promise<UserAccount | null> {
 /** Reads the signed-in user's role — Supabase session when configured, else the demo cookie. */
 export async function getSessionRole(): Promise<Role | null> {
   if (isSupabaseConfigured) return (await getSupabaseSessionUser())?.role ?? null;
-  return (await parseDemoSessionCookie())?.role ?? null;
+  const demoRole = (await parseDemoSessionCookie())?.role ?? null;
+  return demoRole === "faculty" && !FACULTY_LOGINS_ENABLED ? null : demoRole;
 }
 
 /** Full signed-in user record — role, scope (deptId/facultyId) and onboarding status. */
@@ -70,7 +74,8 @@ export async function getSessionUser(): Promise<UserAccount | null> {
   if (isSupabaseConfigured) return getSupabaseSessionUser();
   const parsed = await parseDemoSessionCookie();
   if (!parsed) return null;
-  return findUserById(parsed.userId) ?? null;
+  const demoUser = findUserById(parsed.userId) ?? null;
+  return demoUser?.role === "faculty" && !FACULTY_LOGINS_ENABLED ? null : demoUser;
 }
 
 /**

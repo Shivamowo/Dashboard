@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Pencil } from "lucide-react";
+import { Pencil, UserPlus } from "lucide-react";
 import { departmentById, hodSubmissionOf, latestOnboardingForUser } from "@/data";
 import { requireSessionUser } from "@/lib/session";
 import DeptDetailSections from "@/components/DeptDetailSections";
@@ -23,6 +23,10 @@ export default async function HodDashboard() {
         meta={
           <span className="flex items-center gap-2">
             {submission ? <StatusBadge status={submission.status} /> : null}
+            <Link href="/hod/faculty/new" className="btn-quiet">
+              <UserPlus aria-hidden className="h-3.5 w-3.5" />
+              Add faculty
+            </Link>
             <Link href="/hod/edit" className="btn-quiet">
               <Pencil aria-hidden className="h-3.5 w-3.5" />
               Edit my submission
@@ -37,7 +41,13 @@ export default async function HodDashboard() {
         </div>
       ) : null}
 
-      <DeptDetailSections deptId={dept.id} facultyHrefBase="/hod/faculty" facultyEditHrefBase="/hod/faculty" />
+      <DeptDetailSections
+        deptId={dept.id}
+        facultyHrefBase="/hod/faculty"
+        facultyEditHrefBase="/hod/faculty"
+        infraEditHrefBase="/hod/infra"
+        hodEditHref="/hod/edit"
+      />
     </div>
   );
 }

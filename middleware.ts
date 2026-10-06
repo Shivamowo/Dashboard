@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { createServerClient } from "@supabase/ssr";
 import { ROLE_HOME, SESSION_COOKIE, isRole } from "@/lib/demo-accounts";
 import { findUserById } from "@/data";
+import { FACULTY_LOGINS_ENABLED } from "@/lib/feature-flags";
 import { SESSION_COOKIE_OPTIONS, SUPABASE_ANON_KEY, SUPABASE_URL, isSupabaseConfigured } from "@/lib/supabase/config";
 
 /**
@@ -60,6 +61,8 @@ async function resolveSupabaseUser(
     .eq("id", user.id)
     .maybeSingle();
   if (!profile || !isRole(profile.role)) return undefined;
+  // Faculty logins are locked for now — see lib/feature-flags.ts.
+  if (profile.role === "faculty" && !FACULTY_LOGINS_ENABLED) return undefined;
   return {
     role: profile.role as SessionUser["role"],
     status: profile.status,
@@ -72,6 +75,7 @@ function resolveDemoUser(request: NextRequest): SessionUser | undefined {
   const raw = request.cookies.get(SESSION_COOKIE)?.value;
   const [userId, role] = raw?.split("|") ?? [];
   const user = isRole(role) && userId ? findUserById(userId) : undefined;
+  if (user?.role === "faculty" && !FACULTY_LOGINS_ENABLED) return undefined;
   return user ? { role: user.role, status: user.status, mustChangePassword: false } : undefined;
 }
 

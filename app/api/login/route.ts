@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { ROLE_HOME, SESSION_COOKIE } from "@/lib/demo-accounts";
 import { findUserByCredentials, type Role } from "@/data";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
+import { FACULTY_LOGINS_ENABLED } from "@/lib/feature-flags";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 /**
@@ -23,12 +24,19 @@ export async function POST(request: NextRequest) {
     }
     const { data: profile } = await supabase.from("profiles").select("role").eq("id", data.user.id).maybeSingle();
     const role = (profile?.role as Role | undefined) ?? "faculty";
+    if (role === "faculty" && !FACULTY_LOGINS_ENABLED) {
+      await supabase.auth.signOut();
+      return NextResponse.redirect(new URL("/login?error=locked", request.url), { status: 303 });
+    }
     return NextResponse.redirect(new URL(ROLE_HOME[role], request.url), { status: 303 });
   }
 
   const user = findUserByCredentials(username, password);
   if (!user) {
     return NextResponse.redirect(new URL("/login?error=1", request.url), { status: 303 });
+  }
+  if (user.role === "faculty" && !FACULTY_LOGINS_ENABLED) {
+    return NextResponse.redirect(new URL("/login?error=locked", request.url), { status: 303 });
   }
   const response = NextResponse.redirect(new URL(ROLE_HOME[user.role], request.url), { status: 303 });
   response.cookies.set(SESSION_COOKIE, `${user.id}|${user.role}`, {

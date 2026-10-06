@@ -17,6 +17,7 @@ export default async function LoginPage({
   const failed = error === "1";
   // Set when a session cookie outlived the account it named — see lib/session.ts.
   const expired = error === "expired";
+  const locked = error === "locked";
   return (
     <div className="mx-auto grid min-h-[calc(100vh-3rem)] max-w-5xl items-center gap-12 py-8 lg:grid-cols-[1.1fr_1fr]">
       <div>
@@ -91,13 +92,15 @@ export default async function LoginPage({
             />
           </div>
 
-          {failed || expired ? (
+          {failed || expired || locked ? (
             <p
               role="alert"
               className="flex items-start gap-2 rounded-control border border-alert-100 bg-alert-50 px-3 py-2.5 text-meta text-alert-700"
             >
               <TriangleAlert aria-hidden className="mt-0.5 h-4 w-4 shrink-0" />
-              {expired
+              {locked
+                ? "Faculty sign-in is switched off for now. Your Head of Department is entering faculty records for the time being."
+                : expired
                 ? isSupabaseConfigured
                   ? "Your session has ended. Please sign in again."
                   : "Your session has ended because the server restarted. Accounts created by signing up do not survive a restart in this demo build — sign in with one of the accounts listed here."

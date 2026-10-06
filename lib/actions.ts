@@ -24,6 +24,7 @@ import {
   type Role,
 } from "@/data";
 import { getSessionUser } from "./session";
+import { HOD_EDITS_NEED_APPROVAL } from "./feature-flags";
 import { createFaculty, FacultyValidationError } from "./data/faculty";
 import type { FacultyErrors, FacultyInput } from "./data/faculty-schema";
 import { isSupabaseConfigured } from "./supabase/config";
@@ -267,22 +268,42 @@ export async function submitOwnFacultyProjects(form: FormData) {
 }
 
 /* ----------------------------------------------------------------- HoD role */
+/**
+ * HoD edits apply immediately while HOD_EDITS_NEED_APPROVAL is off (the current
+ * setting — see lib/feature-flags.ts). Turn it on to route them back through the
+ * Admin approval queue; the change-request branches below are kept intact.
+ * A HoD may only touch their own department, its rooms and its faculty.
+ */
 
 export async function submitHodOwnSubmission(form: FormData) {
   const user = await requireUser(["hod"]);
-  await createChangeRequest({
-    type: "edit",
-    targetEntity: "HoD",
-    targetId: user.deptId!,
-    submittedByUserId: user.id,
-    submittedByRole: "hod",
-    deptId: user.deptId!,
-    payload: {
-      mobileContact: str(form, "mobileContact"),
-      certificationSignedBy: str(form, "certificationSignedBy"),
-      certificationDate: str(form, "certificationDate"),
-    },
-  });
+  const patch = {
+    mobileContact: str(form, "mobileContact"),
+    certificationSignedBy: str(form, "certificationSignedBy"),
+    certificationDate: str(form, "certificationDate"),
+  };
+  if (HOD_EDITS_NEED_APPROVAL) {
+    await createChangeRequest({
+      type: "edit",
+      targetEntity: "HoD",
+      targetId: user.deptId!,
+      submittedByUserId: user.id,
+      submittedByRole: "hod",
+      deptId: user.deptId!,
+      payload: patch,
+    });
+  } else {
+    await updateDepartmentHod(user.deptId!, {
+      hodContact: patch.mobileContact,
+      hodName: patch.certificationSignedBy || undefined,
+    });
+    const status = str(form, "status");
+    await updateHodSubmission(user.deptId!, {
+      ...patch,
+      ...(status ? { status: status as "Submitted" | "Pending" | "Partial" } : {}),
+    });
+  }
+  revalidatePath("/hod");
   revalidatePath("/hod/edit");
   redirect("/hod/edit?submitted=1");
 }
@@ -293,73 +314,90 @@ function requireHodOwnsFaculty(user: { role: Role; deptId?: string }, facultyId:
   return f;
 }
 
-export async function submitHodFacultyProfile(facultyId: string, form: FormData) {
+type HodFacultySection = "profile" | "research" | "target" | "projects";
+
+async function hodFacultyEdit(facultyId: string, section: HodFacultySection, payload: any) {
   const user = await requireUser(["hod"]);
   requireHodOwnsFaculty(user, facultyId);
-  await createChangeRequest({
-    type: "edit",
-    targetEntity: "Faculty",
-    targetId: facultyId,
-    submittedByUserId: user.id,
-    submittedByRole: "hod",
-    deptId: user.deptId!,
-    section: "profile",
-    payload: readFacultyProfile(form),
-  });
+  if (HOD_EDITS_NEED_APPROVAL) {
+    await createChangeRequest({
+      type: "edit",
+      targetEntity: "Faculty",
+      targetId: facultyId,
+      submittedByUserId: user.id,
+      submittedByRole: "hod",
+      deptId: user.deptId!,
+      section,
+      payload:
+        section === "target"
+          ? { ...payload, sNo: targetOf(facultyId)?.sNo ?? facultyById(facultyId)?.sNo ?? 0 }
+          : payload,
+    });
+  } else if (section === "profile") {
+    await updateFacultyRecord(facultyId, payload);
+  } else if (section === "research") {
+    await setFacultyResearch(facultyId, payload);
+  } else if (section === "target") {
+    await setFacultyTarget(facultyId, targetOf(facultyId)?.sNo ?? facultyById(facultyId)?.sNo ?? 0, payload);
+  } else {
+    await setFacultyProjects(facultyId, payload.projects);
+  }
+  revalidatePath("/hod");
+  revalidatePath(`/hod/faculty/${facultyId}`);
   revalidatePath(`/hod/faculty/${facultyId}/edit`);
   redirect(`/hod/faculty/${facultyId}/edit?submitted=1`);
+}
+
+export async function submitHodFacultyProfile(facultyId: string, form: FormData) {
+  await hodFacultyEdit(facultyId, "profile", readFacultyProfile(form));
 }
 
 export async function submitHodFacultyResearch(facultyId: string, form: FormData) {
-  const user = await requireUser(["hod"]);
-  requireHodOwnsFaculty(user, facultyId);
-  await createChangeRequest({
-    type: "edit",
-    targetEntity: "Faculty",
-    targetId: facultyId,
-    submittedByUserId: user.id,
-    submittedByRole: "hod",
-    deptId: user.deptId!,
-    section: "research",
-    payload: readFacultyResearch(form),
-  });
-  revalidatePath(`/hod/faculty/${facultyId}/edit`);
-  redirect(`/hod/faculty/${facultyId}/edit?submitted=1`);
+  await hodFacultyEdit(facultyId, "research", readFacultyResearch(form));
 }
 
 export async function submitHodFacultyTarget(facultyId: string, form: FormData) {
-  const user = await requireUser(["hod"]);
-  requireHodOwnsFaculty(user, facultyId);
-  const existing = targetOf(facultyId);
-  await createChangeRequest({
-    type: "edit",
-    targetEntity: "Faculty",
-    targetId: facultyId,
-    submittedByUserId: user.id,
-    submittedByRole: "hod",
-    deptId: user.deptId!,
-    section: "target",
-    payload: { ...readFacultyTarget(form), sNo: existing?.sNo ?? facultyById(facultyId)?.sNo ?? 0 },
-  });
-  revalidatePath(`/hod/faculty/${facultyId}/edit`);
-  redirect(`/hod/faculty/${facultyId}/edit?submitted=1`);
+  await hodFacultyEdit(facultyId, "target", readFacultyTarget(form));
 }
 
 export async function submitHodFacultyProjects(facultyId: string, form: FormData) {
+  await hodFacultyEdit(facultyId, "projects", { projects: readFacultyProjects(form) });
+}
+
+/** HoD edit of a room in their own department. */
+export async function submitHodInfraEdit(infraId: string, form: FormData) {
   const user = await requireUser(["hod"]);
-  requireHodOwnsFaculty(user, facultyId);
-  await createChangeRequest({
-    type: "edit",
-    targetEntity: "Faculty",
-    targetId: facultyId,
-    submittedByUserId: user.id,
-    submittedByRole: "hod",
-    deptId: user.deptId!,
-    section: "projects",
-    payload: { projects: readFacultyProjects(form) },
-  });
-  revalidatePath(`/hod/faculty/${facultyId}/edit`);
-  redirect(`/hod/faculty/${facultyId}/edit?submitted=1`);
+  const infra = infrastructureById(infraId);
+  if (!infra || infra.deptId !== user.deptId) throw new Error("That room is outside your department.");
+  if (HOD_EDITS_NEED_APPROVAL) {
+    await createChangeRequest({
+      type: "edit",
+      targetEntity: "Infrastructure",
+      targetId: infraId,
+      submittedByUserId: user.id,
+      submittedByRole: "hod",
+      deptId: infra.deptId,
+      payload: readInfra(form),
+    });
+  } else {
+    await updateInfrastructureRecord(infraId, readInfra(form));
+  }
+  revalidatePath("/hod");
+  revalidatePath(`/hod/infra/${infraId}/edit`);
+  redirect(`/hod/infra/${infraId}/edit?submitted=1`);
+}
+
+/** HoD "Add faculty" — always into the HoD's own department, whatever the client sends. */
+export async function hodAddFaculty(input: FacultyInput): Promise<AddFacultyResult> {
+  const user = await requireUser(["hod"]);
+  try {
+    const rec = await createFaculty({ ...input, departments: [user.deptId!] });
+    revalidatePath("/hod");
+    return { ok: true, id: rec.id };
+  } catch (e) {
+    if (e instanceof FacultyValidationError) return { ok: false, errors: e.errors };
+    throw e;
+  }
 }
 
 /* ------------------------------------------------------------------ ET role */

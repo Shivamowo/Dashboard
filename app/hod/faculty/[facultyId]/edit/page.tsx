@@ -18,6 +18,7 @@ import { CheckboxField, FormActions, FormGrid, NumberField, SelectField, TextAre
 import { PendingRequestNotice, RejectedRequestNotice } from "@/components/PendingNotice";
 import { EmptyState, PageHeading, Section } from "@/components/ui";
 import { Lock } from "lucide-react";
+import { HOD_EDITS_NEED_APPROVAL } from "@/lib/feature-flags";
 
 const DESIGNATIONS = ["Professor", "Associate Professor", "Assistant Professor", "Guest Faculty"] as const;
 const APPOINTMENT_TYPES = ["Regular", "Contractual", "Self-Financing", "Guest"] as const;
@@ -78,12 +79,12 @@ export default async function HodFacultyEditPage({
       <PageHeading
         crumbs={[...crumbRoot, { label: f.name, href: `/hod/faculty/${f.id}` }, { label: "Edit" }]}
         title={`Edit ${f.name}`}
-        subtitle="Changes are submitted for Admin approval and only apply once approved."
+        subtitle={HOD_EDITS_NEED_APPROVAL ? "Changes are submitted for Admin approval and only apply once approved." : "Changes are saved immediately."}
       />
 
       {submitted ? (
         <p className="mb-6 rounded-panel border border-success-100 bg-success-50 px-4 py-3 text-meta text-success-700">
-          Your change has been submitted for approval.
+          {HOD_EDITS_NEED_APPROVAL ? "Your change has been submitted for approval." : "Saved."}
         </p>
       ) : null}
 
