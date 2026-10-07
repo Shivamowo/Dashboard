@@ -61,19 +61,19 @@ export default async function AdminFacultyEditPage({ params }: { params: Promise
         <Section title="Research output">
           <form action={submitResearch} className="space-y-5">
             <FormGrid cols={4}>
-              <NumberField name="sciScieSsci" label="SCI / SCIE / SSCI Journal Papers" defaultValue={research?.journalPublications.sciScieSsci ?? 0} />
-              <NumberField name="scopusUgcCare" label="Scopus / UGC CARE Journal Papers" defaultValue={research?.journalPublications.scopusUgcCare ?? 0} />
-              <NumberField name="otherJournal" label="Other Journal Papers" defaultValue={research?.journalPublications.other ?? 0} />
-              <NumberField name="intlConference" label="International Conference Papers" defaultValue={research?.conferencePublications.international ?? 0} />
-              <NumberField name="nationalConference" label="National Conference Papers" defaultValue={research?.conferencePublications.national ?? 0} />
-              <NumberField name="hIndex" label="H-Index" defaultValue={research?.hIndex ?? 0} />
-              <NumberField name="i10Index" label="i10-Index" defaultValue={research?.i10Index ?? 0} />
+              <NumberField name="sciScieSsci" label="SCI / SCIE / SSCI Journal Papers" defaultValue={research?.journalPublications.sciScieSsci} />
+              <NumberField name="scopusUgcCare" label="Scopus / UGC CARE Journal Papers" defaultValue={research?.journalPublications.scopusUgcCare} />
+              <NumberField name="otherJournal" label="Other Journal Papers" defaultValue={research?.journalPublications.other} />
+              <NumberField name="intlConference" label="International Conference Papers" defaultValue={research?.conferencePublications.international} />
+              <NumberField name="nationalConference" label="National Conference Papers" defaultValue={research?.conferencePublications.national} />
+              <NumberField name="hIndex" label="H-Index" defaultValue={research?.hIndex} />
+              <NumberField name="i10Index" label="i10-Index" defaultValue={research?.i10Index} />
               <TextField name="googleScholarOrcidLink" label="Google Scholar / ORCID Link" defaultValue={research?.googleScholarOrcidLink ?? ""} />
-              <NumberField name="patentsFiled" label="Patents Filed" defaultValue={research?.patents.filed ?? 0} />
-              <NumberField name="patentsPublished" label="Patents Published" defaultValue={research?.patents.published ?? 0} />
-              <NumberField name="patentsGranted" label="Patents Granted" defaultValue={research?.patents.granted ?? 0} />
-              <NumberField name="phdRegistered" label="PhD Scholars Registered" defaultValue={research?.phdSupervision.registered ?? 0} />
-              <NumberField name="phdAwarded" label="PhD Scholars Awarded" defaultValue={research?.phdSupervision.awarded ?? 0} />
+              <NumberField name="patentsFiled" label="Patents Filed" defaultValue={research?.patents.filed} />
+              <NumberField name="patentsPublished" label="Patents Published" defaultValue={research?.patents.published} />
+              <NumberField name="patentsGranted" label="Patents Granted" defaultValue={research?.patents.granted} />
+              <NumberField name="phdRegistered" label="PhD Scholars Registered" defaultValue={research?.phdSupervision.registered} />
+              <NumberField name="phdAwarded" label="PhD Scholars Awarded" defaultValue={research?.phdSupervision.awarded} />
             </FormGrid>
             <FormActions submitLabel="Save" />
           </form>
@@ -112,27 +112,27 @@ export default async function AdminFacultyEditPage({ params }: { params: Promise
             </FormGrid>
 
             <FormGrid cols={4}>
-              <NumberField name="sciSciESsciJournalPapers" label="SCI/SCIE/SSCI Journal Papers (target)" defaultValue={target?.sciSciESsciJournalPapers ?? 0} />
-              <NumberField name="scopusUgcCareJournalPapers" label="Scopus/UGC-CARE Journal Papers (target)" defaultValue={target?.scopusUgcCareJournalPapers ?? 0} />
-              <NumberField name="q1q2JournalPapersSubset" label="Q1/Q2 Journal Papers (subset)" defaultValue={target?.q1q2JournalPapersSubset ?? 0} />
-              <NumberField name="internationalConferencePapers" label="International Conference Papers (target)" defaultValue={target?.internationalConferencePapers ?? 0} />
-              <NumberField name="nationalConferencePapers" label="National Conference Papers (target)" defaultValue={target?.nationalConferencePapers ?? 0} />
+              <NumberField name="sciSciESsciJournalPapers" label="SCI/SCIE/SSCI Journal Papers (target)" defaultValue={target?.sciSciESsciJournalPapers} />
+              <NumberField name="scopusUgcCareJournalPapers" label="Scopus/UGC-CARE Journal Papers (target)" defaultValue={target?.scopusUgcCareJournalPapers} />
+              <NumberField name="q1q2JournalPapersSubset" label="Q1/Q2 Journal Papers (subset)" defaultValue={target?.q1q2JournalPapersSubset} />
+              <NumberField name="internationalConferencePapers" label="International Conference Papers (target)" defaultValue={target?.internationalConferencePapers} />
+              <NumberField name="nationalConferencePapers" label="National Conference Papers (target)" defaultValue={target?.nationalConferencePapers} />
             </FormGrid>
 
             <FormGrid cols={3}>
-              <NumberField name="govtSponsoredProjectProposals" label="Govt. Sponsored Project Proposals (#)" defaultValue={target?.govtSponsoredProjectProposals ?? 0} />
-              <NumberField name="industryProjectProposals" label="Industry Project Proposals (#)" defaultValue={target?.industryProjectProposals ?? 0} />
-              <NumberField name="targetFundingLakh" label="Target Funding (₹ Lakh)" defaultValue={target?.targetFundingLakh ?? 0} />
+              <NumberField name="govtSponsoredProjectProposals" label="Govt. Sponsored Project Proposals (#)" defaultValue={target?.govtSponsoredProjectProposals} />
+              <NumberField name="industryProjectProposals" label="Industry Project Proposals (#)" defaultValue={target?.industryProjectProposals} />
+              <NumberField name="targetFundingLakh" label="Target Funding (₹ Lakh)" defaultValue={target?.targetFundingLakh} />
               <TextField name="fundingAgenciesTargeted" label="Funding Agency / Agencies to be Targeted" defaultValue={target?.fundingAgenciesTargeted ?? ""} />
               <TextField name="tentativeProjectThemeTitle" label="Tentative Project Theme / Title" defaultValue={target?.tentativeProjectThemeTitle ?? ""} />
               <TextField name="targetSubmissionMonth" label="Target Submission Month" defaultValue={target?.targetSubmissionMonth ?? ""} />
-              <NumberField name="consultancyIndustryAssignmentProposals" label="Consultancy/Industry Assignment Proposals (#)" defaultValue={target?.consultancyIndustryAssignmentProposals ?? 0} />
+              <NumberField name="consultancyIndustryAssignmentProposals" label="Consultancy/Industry Assignment Proposals (#)" defaultValue={target?.consultancyIndustryAssignmentProposals} />
             </FormGrid>
 
             <FormGrid cols={4}>
-              <NumberField name="patentsToBeFiled" label="Patents to be Filed" defaultValue={target?.patentsToBeFiled ?? 0} />
-              <NumberField name="patentsExpectedPublished" label="Patents Expected Published" defaultValue={target?.patentsExpectedPublished ?? 0} />
-              <NumberField name="patentsExpectedGranted" label="Patents Expected Granted" defaultValue={target?.patentsExpectedGranted ?? 0} />
+              <NumberField name="patentsToBeFiled" label="Patents to be Filed" defaultValue={target?.patentsToBeFiled} />
+              <NumberField name="patentsExpectedPublished" label="Patents Expected Published" defaultValue={target?.patentsExpectedPublished} />
+              <NumberField name="patentsExpectedGranted" label="Patents Expected Granted" defaultValue={target?.patentsExpectedGranted} />
               <TextField name="prototypeProductTechnologyProposed" label="Prototype / Product / Technology Proposed" defaultValue={target?.prototypeProductTechnologyProposed ?? ""} />
             </FormGrid>
 
@@ -157,7 +157,7 @@ export default async function AdminFacultyEditPage({ params }: { params: Promise
             </FormGrid>
 
             <FormGrid cols={4}>
-              <NumberField name="milestoneAchievementPct" label="Milestone Achievement %" defaultValue={target?.milestoneAchievementPct ?? 0} />
+              <NumberField name="milestoneAchievementPct" label="Milestone Achievement %" defaultValue={target?.milestoneAchievementPct} />
               <SelectField name="hodPriority" label="HoD Priority" defaultValue={target?.hodPriority ?? "Medium"} options={HOD_PRIORITIES} />
               <TextAreaField name="hodRemarksSupportRequired" label="HoD Remarks / Support Required" defaultValue={target?.hodRemarksSupportRequired ?? ""} />
               <TextAreaField name="yearEndAchievementSummary" label="Year-end Achievement Summary" defaultValue={target?.yearEndAchievementSummary ?? ""} />

@@ -3,6 +3,14 @@
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import {
+  addFacultyRecord,
+  addInfrastructureRecord,
+  addProgramRecord,
+  faculty as allFaculty,
+  programById,
+  updateDepartmentInfo,
+  updateProgramRecord,
+  type ProgramEdit,
   approveChangeRequest,
   createChangeRequest,
   facultyById,
@@ -25,8 +33,9 @@ import {
 } from "@/data";
 import { getSessionUser } from "./session";
 import { HOD_EDITS_NEED_APPROVAL } from "./feature-flags";
+import { createFacultyLogin } from "./data/faculty-accounts";
 import { createFaculty, FacultyValidationError } from "./data/faculty";
-import type { FacultyErrors, FacultyInput } from "./data/faculty-schema";
+import { normalizeName, type FacultyErrors, type FacultyInput } from "./data/faculty-schema";
 import { isSupabaseConfigured } from "./supabase/config";
 import { createSupabaseServerClient } from "./supabase/server";
 import { createSupabaseAdminClient } from "./supabase/admin";
@@ -43,8 +52,19 @@ async function requireUser(roles: Role[]) {
 }
 
 const str = (f: FormData, k: string) => String(f.get(k) ?? "").trim();
-const num = (f: FormData, k: string) => Number(f.get(k) ?? 0) || 0;
 const bool = (f: FormData, k: string) => f.get(k) === "on";
+// Excel-migration helpers: a blank field is NULL ("Not provided"), never 0 or "".
+const strN = (f: FormData, k: string): string | null => str(f, k) || null;
+const numN = (f: FormData, k: string): number | null => {
+  const v = str(f, k);
+  if (v === "") return null;
+  const n = Number(v);
+  return Number.isFinite(n) ? n : null;
+};
+const triN = (f: FormData, k: string): boolean | null => {
+  const v = str(f, k);
+  return v === "Yes" ? true : v === "No" ? false : null;
+};
 
 /* ---------------------------------------------------------- faculty profile */
 
@@ -53,80 +73,80 @@ function readFacultyProfile(form: FormData): FacultyProfileEdit {
     name: str(form, "name"),
     designation: str(form, "designation") as FacultyProfileEdit["designation"],
     appointmentType: str(form, "appointmentType") as FacultyProfileEdit["appointmentType"],
-    dateOfJoining: str(form, "dateOfJoining"),
+    dateOfJoining: strN(form, "dateOfJoining"),
     hasPhd: bool(form, "hasPhd"),
-    programmesAppointedFor: str(form, "programmesAppointedFor"),
-    teachingLoadHrsPerWeek: num(form, "teachingLoadHrsPerWeek"),
-    additionalResponsibility: str(form, "additionalResponsibility") || "NA",
+    programmesAppointedFor: strN(form, "programmesAppointedFor"),
+    teachingLoadHrsPerWeek: numN(form, "teachingLoadHrsPerWeek"),
+    additionalResponsibility: strN(form, "additionalResponsibility"),
   };
 }
 
 function readFacultyResearch(form: FormData): FacultyResearchEdit {
   return {
     journalPublications: {
-      sciScieSsci: num(form, "sciScieSsci"),
-      scopusUgcCare: num(form, "scopusUgcCare"),
-      other: num(form, "otherJournal"),
+      sciScieSsci: numN(form, "sciScieSsci"),
+      scopusUgcCare: numN(form, "scopusUgcCare"),
+      other: numN(form, "otherJournal"),
     },
     conferencePublications: {
-      international: num(form, "intlConference"),
-      national: num(form, "nationalConference"),
+      international: numN(form, "intlConference"),
+      national: numN(form, "nationalConference"),
     },
-    hIndex: num(form, "hIndex"),
-    i10Index: num(form, "i10Index"),
-    googleScholarOrcidLink: str(form, "googleScholarOrcidLink"),
+    hIndex: numN(form, "hIndex"),
+    i10Index: numN(form, "i10Index"),
+    googleScholarOrcidLink: strN(form, "googleScholarOrcidLink"),
     patents: {
-      filed: num(form, "patentsFiled"),
-      published: num(form, "patentsPublished"),
-      granted: num(form, "patentsGranted"),
+      filed: numN(form, "patentsFiled"),
+      published: numN(form, "patentsPublished"),
+      granted: numN(form, "patentsGranted"),
     },
     phdSupervision: {
-      registered: num(form, "phdRegistered"),
-      awarded: num(form, "phdAwarded"),
+      registered: numN(form, "phdRegistered"),
+      awarded: numN(form, "phdAwarded"),
     },
   };
 }
 
 function readFacultyTarget(form: FormData): FacultyTargetEdit {
   return {
-    designation: str(form, "designation"),
-    natureOfAppointment: str(form, "natureOfAppointment"),
-    dateOfJoining: str(form, "dateOfJoining"),
-    reviewPeriod: str(form, "reviewPeriod"),
-    sciSciESsciJournalPapers: num(form, "sciSciESsciJournalPapers"),
-    scopusUgcCareJournalPapers: num(form, "scopusUgcCareJournalPapers"),
-    q1q2JournalPapersSubset: num(form, "q1q2JournalPapersSubset"),
-    internationalConferencePapers: num(form, "internationalConferencePapers"),
-    nationalConferencePapers: num(form, "nationalConferencePapers"),
-    govtSponsoredProjectProposals: num(form, "govtSponsoredProjectProposals"),
-    industryProjectProposals: num(form, "industryProjectProposals"),
-    targetFundingLakh: num(form, "targetFundingLakh"),
-    fundingAgenciesTargeted: str(form, "fundingAgenciesTargeted"),
-    tentativeProjectThemeTitle: str(form, "tentativeProjectThemeTitle"),
-    targetSubmissionMonth: str(form, "targetSubmissionMonth"),
-    consultancyIndustryAssignmentProposals: num(form, "consultancyIndustryAssignmentProposals"),
-    patentsToBeFiled: num(form, "patentsToBeFiled"),
-    patentsExpectedPublished: num(form, "patentsExpectedPublished"),
-    patentsExpectedGranted: num(form, "patentsExpectedGranted"),
-    prototypeProductTechnologyProposed: str(form, "prototypeProductTechnologyProposed"),
-    newRevisedCourseSyllabusOrLab: str(form, "newRevisedCourseSyllabusOrLab"),
-    eContentMoocInnovativeTeaching: str(form, "eContentMoocInnovativeTeaching"),
-    studentMentoringHackathonInternshipPlacement: str(form, "studentMentoringHackathonInternshipPlacement"),
-    contributionToDeptDevelopment: str(form, "contributionToDeptDevelopment"),
-    contributionToUniversityDevelopment: str(form, "contributionToUniversityDevelopment"),
-    expectedMeasurableOutcomeByJune2027: str(form, "expectedMeasurableOutcomeByJune2027"),
-    q1Plan: str(form, "q1Plan"),
-    q2Plan: str(form, "q2Plan"),
-    q3Plan: str(form, "q3Plan"),
-    q4Plan: str(form, "q4Plan"),
+    designation: strN(form, "designation"),
+    natureOfAppointment: strN(form, "natureOfAppointment"),
+    dateOfJoining: strN(form, "dateOfJoining"),
+    reviewPeriod: strN(form, "reviewPeriod"),
+    sciSciESsciJournalPapers: numN(form, "sciSciESsciJournalPapers"),
+    scopusUgcCareJournalPapers: numN(form, "scopusUgcCareJournalPapers"),
+    q1q2JournalPapersSubset: numN(form, "q1q2JournalPapersSubset"),
+    internationalConferencePapers: numN(form, "internationalConferencePapers"),
+    nationalConferencePapers: numN(form, "nationalConferencePapers"),
+    govtSponsoredProjectProposals: numN(form, "govtSponsoredProjectProposals"),
+    industryProjectProposals: numN(form, "industryProjectProposals"),
+    targetFundingLakh: numN(form, "targetFundingLakh"),
+    fundingAgenciesTargeted: strN(form, "fundingAgenciesTargeted"),
+    tentativeProjectThemeTitle: strN(form, "tentativeProjectThemeTitle"),
+    targetSubmissionMonth: strN(form, "targetSubmissionMonth"),
+    consultancyIndustryAssignmentProposals: numN(form, "consultancyIndustryAssignmentProposals"),
+    patentsToBeFiled: numN(form, "patentsToBeFiled"),
+    patentsExpectedPublished: numN(form, "patentsExpectedPublished"),
+    patentsExpectedGranted: numN(form, "patentsExpectedGranted"),
+    prototypeProductTechnologyProposed: strN(form, "prototypeProductTechnologyProposed"),
+    newRevisedCourseSyllabusOrLab: strN(form, "newRevisedCourseSyllabusOrLab"),
+    eContentMoocInnovativeTeaching: strN(form, "eContentMoocInnovativeTeaching"),
+    studentMentoringHackathonInternshipPlacement: strN(form, "studentMentoringHackathonInternshipPlacement"),
+    contributionToDeptDevelopment: strN(form, "contributionToDeptDevelopment"),
+    contributionToUniversityDevelopment: strN(form, "contributionToUniversityDevelopment"),
+    expectedMeasurableOutcomeByJune2027: strN(form, "expectedMeasurableOutcomeByJune2027"),
+    q1Plan: strN(form, "q1Plan"),
+    q2Plan: strN(form, "q2Plan"),
+    q3Plan: strN(form, "q3Plan"),
+    q4Plan: strN(form, "q4Plan"),
     q1Status: str(form, "q1Status") as FacultyTargetEdit["q1Status"],
     q2Status: str(form, "q2Status") as FacultyTargetEdit["q2Status"],
     q3Status: str(form, "q3Status") as FacultyTargetEdit["q3Status"],
     q4Status: str(form, "q4Status") as FacultyTargetEdit["q4Status"],
-    milestoneAchievementPct: num(form, "milestoneAchievementPct"),
+    milestoneAchievementPct: numN(form, "milestoneAchievementPct"),
     hodPriority: str(form, "hodPriority") as FacultyTargetEdit["hodPriority"],
-    hodRemarksSupportRequired: str(form, "hodRemarksSupportRequired"),
-    yearEndAchievementSummary: str(form, "yearEndAchievementSummary"),
+    hodRemarksSupportRequired: strN(form, "hodRemarksSupportRequired"),
+    yearEndAchievementSummary: strN(form, "yearEndAchievementSummary"),
   };
 }
 
@@ -138,10 +158,10 @@ function readFacultyProjects(form: FormData): FacultyProjectEdit[] {
     if (!agency) continue;
     list.push({
       sponsoringAgency: agency,
-      yearOfGrant: num(form, `project-${i}-yearOfGrant`),
-      duration: str(form, `project-${i}-duration`),
-      sanctionedAmount: num(form, `project-${i}-sanctionedAmount`),
-      amountReleased: num(form, `project-${i}-amountReleased`),
+      yearOfGrant: numN(form, `project-${i}-yearOfGrant`),
+      duration: strN(form, `project-${i}-duration`),
+      sanctionedAmount: numN(form, `project-${i}-sanctionedAmount`),
+      amountReleased: numN(form, `project-${i}-amountReleased`),
       currentStatus: str(form, `project-${i}-currentStatus`) as FacultyProjectEdit["currentStatus"],
     });
   }
@@ -150,16 +170,16 @@ function readFacultyProjects(form: FormData): FacultyProjectEdit[] {
 
 function readInfra(form: FormData) {
   return {
-    labClassroomName: str(form, "labClassroomName"),
-    floorRoomNo: str(form, "floorRoomNo"),
-    hoursAllottedPerWeek: num(form, "hoursAllottedPerWeek"),
-    currentWeeklyWorkingHours: num(form, "currentWeeklyWorkingHours"),
-    labRoomInCharge: str(form, "labRoomInCharge"),
-    labAssistantSupportStaff: str(form, "labAssistantSupportStaff"),
-    studentCapacity: num(form, "studentCapacity"),
-    majorEquipmentAvailable: str(form, "majorEquipmentAvailable"),
-    programmesUsingFacility: str(form, "programmesUsingFacility"),
-    utilisationPct: num(form, "utilisationPct"),
+    labClassroomName: strN(form, "labClassroomName"),
+    floorRoomNo: strN(form, "floorRoomNo"),
+    hoursAllottedPerWeek: numN(form, "hoursAllottedPerWeek"),
+    currentWeeklyWorkingHours: numN(form, "currentWeeklyWorkingHours"),
+    labRoomInCharge: strN(form, "labRoomInCharge"),
+    labAssistantSupportStaff: strN(form, "labAssistantSupportStaff"),
+    studentCapacity: numN(form, "studentCapacity"),
+    majorEquipmentAvailable: strN(form, "majorEquipmentAvailable"),
+    programmesUsingFacility: strN(form, "programmesUsingFacility"),
+    utilisationPct: numN(form, "utilisationPct"),
     digitalSmartBoard: bool(form, "digitalSmartBoard"),
     projector: bool(form, "projector"),
   };
@@ -278,9 +298,9 @@ export async function submitOwnFacultyProjects(form: FormData) {
 export async function submitHodOwnSubmission(form: FormData) {
   const user = await requireUser(["hod"]);
   const patch = {
-    mobileContact: str(form, "mobileContact"),
-    certificationSignedBy: str(form, "certificationSignedBy"),
-    certificationDate: str(form, "certificationDate"),
+    mobileContact: strN(form, "mobileContact"),
+    certificationSignedBy: strN(form, "certificationSignedBy"),
+    certificationDate: strN(form, "certificationDate"),
   };
   if (HOD_EDITS_NEED_APPROVAL) {
     await createChangeRequest({
@@ -293,9 +313,14 @@ export async function submitHodOwnSubmission(form: FormData) {
       payload: patch,
     });
   } else {
-    await updateDepartmentHod(user.deptId!, {
+    // Department header block of the HoD workbook.
+    await updateDepartmentInfo(user.deptId!, {
+      facultyOfEngineering: strN(form, "facultyOfEngineering"),
+      deanName: strN(form, "deanName"),
+      hodName: strN(form, "hodName"),
       hodContact: patch.mobileContact,
-      hodName: patch.certificationSignedBy || undefined,
+      reportingPeriod: strN(form, "reportingPeriod"),
+      dateOfSubmission: strN(form, "dateOfSubmission"),
     });
     const status = str(form, "status");
     await updateHodSubmission(user.deptId!, {
@@ -387,17 +412,102 @@ export async function submitHodInfraEdit(infraId: string, form: FormData) {
   redirect(`/hod/infra/${infraId}/edit?submitted=1`);
 }
 
-/** HoD "Add faculty" — always into the HoD's own department, whatever the client sends. */
-export async function hodAddFaculty(input: FacultyInput): Promise<AddFacultyResult> {
+export type HodCreateFacultyResult =
+  | { ok: true; facultyId: string; name: string; email: string; password: string }
+  | { ok: true; facultyId: string; name: string; accountError: string }
+  | { ok: false; error: string };
+
+/**
+ * HoD "Add faculty": takes ONLY the fields the HoD workbook's Faculty Details
+ * sheet held, creates the record in the HoD's own department and auto-creates
+ * the faculty login (email + temporary password, returned once for the HoD to
+ * pass on). Faculty sign-in itself stays locked until FACULTY_LOGINS_ENABLED.
+ */
+export async function hodCreateFaculty(form: FormData): Promise<HodCreateFacultyResult> {
   const user = await requireUser(["hod"]);
-  try {
-    const rec = await createFaculty({ ...input, departments: [user.deptId!] });
-    revalidatePath("/hod");
-    return { ok: true, id: rec.id };
-  } catch (e) {
-    if (e instanceof FacultyValidationError) return { ok: false, errors: e.errors };
-    throw e;
+  const name = str(form, "name");
+  if (!name) return { ok: false, error: "Enter the faculty member's name." };
+  const designation = str(form, "designation");
+  if (!designation) return { ok: false, error: "Choose a designation." };
+  if (allFaculty.some((f) => normalizeName(f.name) === normalizeName(name))) {
+    return {
+      ok: false,
+      error: `${name} is already on record. Open the existing record to edit it (or ask Admin to add a second department).`,
+    };
   }
+
+  const facultyId = await addFacultyRecord([user.deptId!], {
+    name,
+    designation: designation as FacultyProfileEdit["designation"],
+    appointmentType: strN(form, "appointmentType"),
+    dateOfJoining: strN(form, "dateOfJoining"),
+    hasPhd: triN(form, "hasPhd"),
+    programmesAppointedFor: strN(form, "programmesAppointedFor"),
+    teachingLoadHrsPerWeek: numN(form, "teachingLoadHrsPerWeek"),
+    additionalResponsibility: strN(form, "additionalResponsibility"),
+  });
+  revalidatePath("/hod");
+
+  try {
+    const { email, password } = await createFacultyLogin({ facultyId, name, deptId: user.deptId! });
+    return { ok: true, facultyId, name, email, password };
+  } catch (e) {
+    return { ok: true, facultyId, name, accountError: e instanceof Error ? e.message : "Could not create the login." };
+  }
+}
+
+/* -- Programmes (intake vs admissions etc.) — HoD edits apply immediately. -- */
+
+function readProgram(form: FormData): ProgramEdit {
+  return {
+    name: str(form, "name"),
+    yearOfCommencement: numN(form, "yearOfCommencement"),
+    modeOfProgramme: strN(form, "modeOfProgramme"),
+    sanctionedFacultyPositions: {
+      professor: numN(form, "posProfessor"),
+      associateProfessor: numN(form, "posAssociate"),
+      assistantProfessor: numN(form, "posAssistant"),
+    },
+    semesterFeeByYear: { y2024: numN(form, "fee2024"), y2025: numN(form, "fee2025"), y2026: numN(form, "fee2026") },
+    sanctionedIntakeByYear: {
+      y2024: numN(form, "intake2024"),
+      y2025: numN(form, "intake2025"),
+      y2026: numN(form, "intake2026"),
+    },
+    admittedByYear: { y2024: numN(form, "admitted2024"), y2025: numN(form, "admitted2025"), y2026: numN(form, "admitted2026") },
+    nepAligned: triN(form, "nepAligned"),
+    multipleEntryExit: triN(form, "multipleEntryExit"),
+    internshipEndOfYear: triN(form, "internshipEndOfYear"),
+    minorSpecialisationAvailable: triN(form, "minorSpecialisationAvailable"),
+    remarks: strN(form, "remarks"),
+  };
+}
+
+export async function hodUpdateProgram(programId: string, form: FormData) {
+  const user = await requireUser(["hod"]);
+  const p = programById(programId);
+  if (!p || p.deptId !== user.deptId) throw new Error("That programme is outside your department.");
+  await updateProgramRecord(programId, readProgram(form));
+  revalidatePath("/hod");
+  revalidatePath("/hod/programs");
+  redirect(`/hod/programs/${programId}/edit?submitted=1`);
+}
+
+export async function hodAddProgram(form: FormData) {
+  const user = await requireUser(["hod"]);
+  if (!str(form, "name")) throw new Error("Programme name is required.");
+  const id = await addProgramRecord(user.deptId!, readProgram(form));
+  revalidatePath("/hod");
+  revalidatePath("/hod/programs");
+  redirect(`/hod/programs/${id}/edit?submitted=1`);
+}
+
+export async function hodAddInfra(form: FormData) {
+  const user = await requireUser(["hod"]);
+  if (!str(form, "labClassroomName")) throw new Error("Room name is required.");
+  const id = await addInfrastructureRecord(user.deptId!, readInfra(form));
+  revalidatePath("/hod");
+  redirect(`/hod/infra/${id}/edit?submitted=1`);
 }
 
 /* ------------------------------------------------------------------ ET role */

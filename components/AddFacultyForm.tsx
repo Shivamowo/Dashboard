@@ -3,7 +3,7 @@
 import { useState, useTransition, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { CheckCircle2 } from "lucide-react";
-import { adminAddFaculty, hodAddFaculty } from "@/lib/actions";
+import { adminAddFaculty } from "@/lib/actions";
 import {
   DESIGNATIONS,
   validateFaculty,
@@ -22,16 +22,9 @@ const empty: FacultyInput = {
   departments: [],
 };
 
-export default function AddFacultyForm({
-  departments,
-  hodDeptId,
-}: {
-  departments: { id: string; name: string }[];
-  /** HoD mode: the HoD's own department — fixed, no picker, lands on the edit page. */
-  hodDeptId?: string;
-}) {
+export default function AddFacultyForm({ departments }: { departments: { id: string; name: string }[] }) {
   const router = useRouter();
-  const [v, setV] = useState<FacultyInput>(hodDeptId ? { ...empty, departments: [hodDeptId] } : empty);
+  const [v, setV] = useState<FacultyInput>(empty);
   const [errors, setErrors] = useState<FacultyErrors>({});
   const [toast, setToast] = useState<string | null>(null);
   const [pending, start] = useTransition();
@@ -53,13 +46,13 @@ export default function AddFacultyForm({
       return;
     }
     start(async () => {
-      const res = hodDeptId ? await hodAddFaculty(v) : await adminAddFaculty(v);
+      const res = await adminAddFaculty(v);
       if (!res.ok) {
         setErrors(res.errors);
         return;
       }
       setToast(`${v.name.trim()} added.`);
-      setTimeout(() => router.push(hodDeptId ? `/hod/faculty/${res.id}/edit` : `/admin/faculty/${res.id}`), 900);
+      setTimeout(() => router.push(`/admin/faculty/${res.id}`), 900);
     });
   };
 
@@ -121,12 +114,7 @@ export default function AddFacultyForm({
         {field("email", "Email", { type: "email", autoComplete: "off" })}
       </div>
 
-      {hodDeptId ? (
-        <p className="text-meta text-ink-700">
-          Added to <strong>{departments.find((d) => d.id === hodDeptId)?.name ?? hodDeptId}</strong>. You can fill in the rest of the record on the next screen.
-        </p>
-      ) : null}
-      <fieldset hidden={Boolean(hodDeptId)} aria-describedby={errors.departments ? "err-departments" : "dept-hint"}>
+      <fieldset aria-describedby={errors.departments ? "err-departments" : "dept-hint"}>
         <legend className="field-label">
           Departments <span aria-hidden className="text-alert-700">*</span>
         </legend>
@@ -167,7 +155,7 @@ export default function AddFacultyForm({
         <button type="submit" className="btn-primary" disabled={pending || toast != null}>
           {pending ? "Adding…" : "Add faculty"}
         </button>
-        <button type="button" className="btn-quiet" onClick={() => router.push(hodDeptId ? "/hod" : "/admin")} disabled={pending}>
+        <button type="button" className="btn-quiet" onClick={() => router.push("/admin")} disabled={pending}>
           Cancel
         </button>
         <p className="text-micro text-ink-500">Stored in the demo store for now; a database can replace it later.</p>

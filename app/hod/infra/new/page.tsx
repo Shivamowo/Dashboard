@@ -1,32 +1,14 @@
-import { notFound } from "next/navigation";
-import { departmentById, infrastructureById } from "@/data";
-import { submitHodInfraEdit } from "@/lib/actions";
+import { departmentById, type Infrastructure } from "@/data";
+import { hodAddInfra } from "@/lib/actions";
 import { requireSessionUser } from "@/lib/session";
-import { HOD_EDITS_NEED_APPROVAL } from "@/lib/feature-flags";
-import { EmptyState } from "@/components/ui";
-import { Lock } from "lucide-react";
 import { CheckboxField, FormActions, FormGrid, NumberField, TextAreaField, TextField } from "@/components/forms";
 import { PageHeading, Section } from "@/components/ui";
 
-export default async function HodInfraEditPage({
-  params,
-  searchParams,
-}: {
-  params: Promise<{ infraId: string }>;
-  searchParams: Promise<{ submitted?: string }>;
-}) {
-  const { infraId } = await params;
-  const { submitted } = await searchParams;
+export default async function HodAddInfraPage() {
   const user = await requireSessionUser();
-  const infra = infrastructureById(infraId);
-  if (!infra) notFound();
-  const dept = departmentById(infra.deptId);
-  if (infra.deptId !== user.deptId) {
-    return (
-      <EmptyState icon={Lock} title="This room belongs to another department" message="You can edit rooms in your own department only." />
-    );
-  }
-  const submit = submitHodInfraEdit.bind(null, infra.id);
+  const infra = {} as Partial<Infrastructure>;
+  const dept = departmentById(user.deptId!);
+  const submit = hodAddInfra;
 
   return (
     <div>
@@ -34,17 +16,11 @@ export default async function HodInfraEditPage({
         crumbs={[
           { label: "Head of Department", href: "/hod" },
           { label: "Infrastructure", href: "/hod#infrastructure" },
-          { label: infra.labClassroomName ?? infra.id },
+          { label: "Add room" },
         ]}
-        title={`Edit ${infra.labClassroomName ?? infra.id}`}
-        subtitle={`${dept?.name ?? infra.deptId}. ${HOD_EDITS_NEED_APPROVAL ? "Changes are submitted for Admin approval." : "Changes are saved immediately."}`}
+        title="Add room / lab"
+        subtitle={`${dept?.name ?? ""}. Saved immediately.`}
       />
-
-      {submitted ? (
-        <p className="mb-6 rounded-panel border border-success-100 bg-success-50 px-4 py-3 text-meta text-success-700">
-          {HOD_EDITS_NEED_APPROVAL ? "Your change has been submitted for approval." : "Saved."}
-        </p>
-      ) : null}
 
       <Section title="Room record">
         <form action={submit} className="space-y-5">
@@ -64,7 +40,7 @@ export default async function HodInfraEditPage({
             <TextAreaField name="majorEquipmentAvailable" label="Major Equipment / Computers Available" defaultValue={infra.majorEquipmentAvailable} />
             <TextAreaField name="programmesUsingFacility" label="Programme(s) / Courses Using Facility" defaultValue={infra.programmesUsingFacility} />
           </FormGrid>
-          <FormActions submitLabel={HOD_EDITS_NEED_APPROVAL ? undefined : "Save"} />
+          <FormActions submitLabel="Add room" />
         </form>
       </Section>
     </div>

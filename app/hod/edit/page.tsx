@@ -19,7 +19,7 @@ export default async function HodEditPage({ searchParams }: { searchParams: Prom
     <div>
       <PageHeading
         crumbs={[{ label: `Head of Department · ${dept.shortName}`, href: "/hod" }, { label: "Edit submission" }]}
-        title="Edit my submission"
+        title="Edit department details"
         subtitle={HOD_EDITS_NEED_APPROVAL ? "Changes are submitted for Admin approval and only apply once approved." : "Changes are saved immediately."}
       />
 
@@ -29,19 +29,24 @@ export default async function HodEditPage({ searchParams }: { searchParams: Prom
         </p>
       ) : null}
 
-      <Section title="HoD submission details" description="Contact and certification details for this department's return.">
+      <Section title="Department details" description="The header block of the department workbook.">
         {pending ? <div className="mb-5"><PendingRequestNotice cr={pending} title="Submission update" /></div> : null}
         {!pending && rejected ? <div className="mb-5"><RejectedRequestNotice cr={rejected} title="Your last submission update" /></div> : null}
         <form action={submitHodOwnSubmission} className="space-y-5">
           <FormGrid cols={3}>
-            <TextField name="mobileContact" label="Mobile / Contact No." defaultValue={submission?.mobileContact} required />
-            <TextField name="certificationSignedBy" label="Certification Signed By" defaultValue={submission?.certificationSignedBy} required />
-            <TextField name="certificationDate" label="Certification Date" defaultValue={submission?.certificationDate} placeholder="YYYY-MM-DD" required />
+            <TextField name="facultyOfEngineering" label="Faculty / School / Institute" defaultValue={dept.facultyOfEngineering} />
+            <TextField name="deanName" label="Dean" defaultValue={dept.deanName} />
+            <TextField name="hodName" label="Head of Department" defaultValue={dept.hodName} />
+            <TextField name="mobileContact" label="Mobile / Contact No." defaultValue={submission?.mobileContact ?? dept.hodContact} />
+            <TextField name="reportingPeriod" label="Reporting Period" defaultValue={dept.reportingPeriod} />
+            <TextField name="dateOfSubmission" label="Date of Submission" defaultValue={dept.dateOfSubmission} placeholder="YYYY-MM-DD" />
+            <TextField name="certificationSignedBy" label="Certification Signed By" defaultValue={submission?.certificationSignedBy} />
+            <TextField name="certificationDate" label="Certification Date" defaultValue={submission?.certificationDate} placeholder="YYYY-MM-DD" />
             {HOD_EDITS_NEED_APPROVAL ? null : (
-              <SelectField name="status" label="Submission Status" defaultValue={submission?.status ?? "Pending"} options={["Submitted", "Pending", "Partial"] as const} required />
+              <SelectField name="status" label="Submission Status" defaultValue={submission?.status ?? "Pending"} options={["Submitted", "Pending", "Partial"] as const} />
             )}
           </FormGrid>
-          <FormActions />
+          <FormActions submitLabel={HOD_EDITS_NEED_APPROVAL ? undefined : "Save"} />
         </form>
       </Section>
     </div>

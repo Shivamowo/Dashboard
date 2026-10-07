@@ -1,23 +1,20 @@
-import { departments } from "@/data";
+import { departmentById } from "@/data";
 import { requireSessionUser } from "@/lib/session";
-import AddFacultyForm from "@/components/AddFacultyForm";
+import HodAddFacultyForm from "@/components/HodAddFacultyForm";
 import { PageHeading } from "@/components/ui";
 
 export default async function HodAddFacultyPage() {
   const user = await requireSessionUser();
-  const dept = departments.find((d) => d.id === user.deptId);
+  const dept = departmentById(user.deptId!)!;
   return (
     <div>
       <PageHeading
-        crumbs={[{ label: `Head of Department · ${dept?.shortName ?? ""}`, href: "/hod" }, { label: "Add faculty" }]}
+        crumbs={[{ label: `Head of Department · ${dept.shortName}`, href: "/hod" }, { label: "Add faculty" }]}
         title="Add faculty"
-        subtitle="Create a record for a faculty member who is missing from your department."
+        subtitle="Enter the details the department sheet used to hold. A login is created automatically."
       />
       <div className="max-w-3xl">
-        <AddFacultyForm
-          departments={departments.map((d) => ({ id: d.id, name: d.name }))}
-          hodDeptId={user.deptId}
-        />
+        <HodAddFacultyForm deptName={dept.name} />
       </div>
     </div>
   );

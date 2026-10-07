@@ -1,6 +1,9 @@
 import type { Program } from "./types";
 import { makeRng, hashString, int, chance } from "./rng";
 import { chooseData, imported } from "./source";
+import { globalSingleton } from "./globalStore";
+import { isSupabaseConfigured } from "@/lib/supabase/config";
+import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 
 type ProgramSeed = {
   name: string;
@@ -93,7 +96,58 @@ function buildPrograms(): Program[] {
   return out;
 }
 
-export const programs: Program[] = chooseData(imported.programs, buildPrograms);
+export const programs: Program[] = globalSingleton("programs", () => chooseData(imported.programs, buildPrograms));
 
 export const programsByDept = (deptId: string) =>
   programs.filter((p) => p.deptId === deptId);
+
+export const programById = (id: string) => programs.find((p) => p.id === id);
+
+export type ProgramEdit = Omit<Program, "id" | "deptId" | "sNo">;
+
+const programRow = (p: ProgramEdit) => ({
+  name: p.name,
+  year_of_commencement: p.yearOfCommencement,
+  mode_of_programme: p.modeOfProgramme,
+  sanctioned_professor: p.sanctionedFacultyPositions.professor,
+  sanctioned_associate_professor: p.sanctionedFacultyPositions.associateProfessor,
+  sanctioned_assistant_professor: p.sanctionedFacultyPositions.assistantProfessor,
+  semester_fee_2024: p.semesterFeeByYear.y2024,
+  semester_fee_2025: p.semesterFeeByYear.y2025,
+  semester_fee_2026: p.semesterFeeByYear.y2026,
+  sanctioned_intake_2024: p.sanctionedIntakeByYear.y2024,
+  sanctioned_intake_2025: p.sanctionedIntakeByYear.y2025,
+  sanctioned_intake_2026: p.sanctionedIntakeByYear.y2026,
+  admitted_2024: p.admittedByYear.y2024,
+  admitted_2025: p.admittedByYear.y2025,
+  admitted_2026: p.admittedByYear.y2026,
+  nep_aligned: p.nepAligned,
+  multiple_entry_exit: p.multipleEntryExit,
+  internship_end_of_year: p.internshipEndOfYear,
+  minor_specialisation_available: p.minorSpecialisationAvailable,
+  remarks: p.remarks,
+});
+
+/** Updates memory immediately, then persists to Supabase (service role). */
+export async function updateProgramRecord(id: string, data: ProgramEdit) {
+  const idx = programs.findIndex((p) => p.id === id);
+  if (idx < 0) return;
+  programs[idx] = { ...programs[idx], ...data };
+  if (isSupabaseConfigured) {
+    const { error } = await createSupabaseAdminClient().from("programs").update(programRow(data)).eq("id", id);
+    if (error) throw error;
+  }
+}
+
+export async function addProgramRecord(deptId: string, data: ProgramEdit): Promise<string> {
+  const id = `${deptId}-p${Date.now().toString(36)}${Math.random().toString(36).slice(2, 5)}`;
+  const sNo = programsByDept(deptId).length + 1;
+  programs.push({ id, deptId, sNo, ...data });
+  if (isSupabaseConfigured) {
+    const { error } = await createSupabaseAdminClient()
+      .from("programs")
+      .insert({ id, dept_id: deptId, s_no: sNo, ...programRow(data) });
+    if (error) throw error;
+  }
+  return id;
+}

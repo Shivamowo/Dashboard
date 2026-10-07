@@ -72,3 +72,33 @@ export async function updateDepartmentHod(deptId: string, patch: { hodName?: str
     }
   }
 }
+
+export type DepartmentInfoPatch = Partial<
+  Pick<Department, "facultyOfEngineering" | "deanName" | "hodName" | "hodContact" | "reportingPeriod" | "dateOfSubmission">
+>;
+
+/** Department header details from the HoD workbook. Blank -> null (never ""). */
+export async function updateDepartmentInfo(deptId: string, patch: DepartmentInfoPatch) {
+  const d = departmentById(deptId);
+  if (!d) return;
+  Object.assign(d, patch);
+  if (isSupabaseConfigured) {
+    const map: Record<keyof DepartmentInfoPatch, string> = {
+      facultyOfEngineering: "faculty_of_engineering",
+      deanName: "dean_name",
+      hodName: "hod_name",
+      hodContact: "hod_contact",
+      reportingPeriod: "reporting_period",
+      dateOfSubmission: "date_of_submission",
+    };
+    const row: Record<string, string | null> = {};
+    for (const [k, col] of Object.entries(map)) {
+      const v = patch[k as keyof DepartmentInfoPatch];
+      if (v !== undefined) row[col] = v;
+    }
+    if (Object.keys(row).length) {
+      const { error } = await createSupabaseAdminClient().from("departments").update(row).eq("id", deptId);
+      if (error) throw error;
+    }
+  }
+}

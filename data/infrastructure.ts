@@ -157,3 +157,30 @@ export async function updateInfrastructureRecord(id: string, data: Infrastructur
 // client this module chains into — re-exported here for existing server-side
 // importers of "@/data".
 export { utilisationFlag, type UtilisationFlag } from "./nullable";
+
+export async function addInfrastructureRecord(deptId: string, data: InfrastructureEdit): Promise<string> {
+  const id = `${deptId}-i${Date.now().toString(36)}${Math.random().toString(36).slice(2, 5)}`;
+  const sNo = infrastructureByDept(deptId).length + 1;
+  infrastructure.push({ id, deptId, sNo, ...data });
+  if (isSupabaseConfigured) {
+    const { error } = await createSupabaseAdminClient().from("infrastructure").insert({
+      id,
+      dept_id: deptId,
+      s_no: sNo,
+      lab_classroom_name: data.labClassroomName,
+      floor_room_no: data.floorRoomNo,
+      hours_allotted_per_week: data.hoursAllottedPerWeek,
+      current_weekly_working_hours: data.currentWeeklyWorkingHours,
+      lab_room_in_charge: data.labRoomInCharge,
+      lab_assistant_support_staff: data.labAssistantSupportStaff,
+      student_capacity: data.studentCapacity,
+      major_equipment_available: data.majorEquipmentAvailable,
+      programmes_using_facility: data.programmesUsingFacility,
+      utilisation_pct: data.utilisationPct,
+      digital_smart_board: data.digitalSmartBoard,
+      projector: data.projector,
+    });
+    if (error) throw error;
+  }
+  return id;
+}

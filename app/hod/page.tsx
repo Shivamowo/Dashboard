@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Pencil, UserPlus } from "lucide-react";
+import { BookOpen, DoorOpen, Pencil, UserPlus } from "lucide-react";
 import { departmentById, hodSubmissionOf, latestOnboardingForUser } from "@/data";
 import { requireSessionUser } from "@/lib/session";
 import DeptDetailSections from "@/components/DeptDetailSections";
@@ -27,9 +27,17 @@ export default async function HodDashboard() {
               <UserPlus aria-hidden className="h-3.5 w-3.5" />
               Add faculty
             </Link>
+            <Link href="/hod/programs" className="btn-quiet">
+              <BookOpen aria-hidden className="h-3.5 w-3.5" />
+              Programmes & intake
+            </Link>
+            <Link href="/hod/infra/new" className="btn-quiet">
+              <DoorOpen aria-hidden className="h-3.5 w-3.5" />
+              Add room
+            </Link>
             <Link href="/hod/edit" className="btn-quiet">
               <Pencil aria-hidden className="h-3.5 w-3.5" />
-              Edit my submission
+              Edit department
             </Link>
           </span>
         }
